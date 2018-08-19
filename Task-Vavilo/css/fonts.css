@@ -1,0 +1,43 @@
+/* font-family: "NotoSans"*/
+@font-face {
+	font-family: 'NotoSans';
+	src: url('../fonts/NotoSans/NotoSans.eot');
+	src: url('../fonts/NotoSans/NotoSans.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/NotoSans/NotoSans.woff') format('woff'),
+		 url('../fonts/NotoSans/NotoSans.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font-family: "NotoSans-Bold"*/
+@font-face {
+	font-family: 'NotoSans-Bold';
+	src: url('../fonts/NotoSans-Bold/NotoSans-Bold.eot');
+	src: url('../fonts/NotoSans-Bold/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/NotoSans-Bold/NotoSans-Bold.woff') format('woff'),
+		 url('../fonts/NotoSans-Bold/NotoSans-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font-family: "NotoSerif"*/
+@font-face {
+	font-family: 'NotoSerif';
+	src: url('../fonts/NotoSerif/NotoSerif.eot');
+	src: url('../fonts/NotoSerif/NotoSerif.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/NotoSerif/NotoSerif.woff') format('woff'),
+		 url('../fonts/NotoSerif/NotoSerif.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* font-family: "PlayfairDisplay-Regular"*/
+@font-face {
+	font-family: 'PlayfairDisplay-Regular';
+	src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot');
+	src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff'),
+		 url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
