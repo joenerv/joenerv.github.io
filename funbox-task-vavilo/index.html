@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Prototype</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+	<div class="box">
+		<div class="box-title">Ты сегодня покормил кота?</div>
+		<div class="box__feed">
+			<div class="box__foiegras">
+				<div class="foiegras__cnt">
+					<div class="foiegras__text">
+						Сказочное заморское яство
+					</div>
+					<!-- /.box__text -->
+					<h1 class="foiegras__title">Нямушка</h1>
+					<!-- /.box__title -->
+					<div class="foiegras__subtitle">с фуа-гра</div>
+					<!-- /.box__subtitle -->
+					<div class="foiegras__descr"><span>10</span> порций <br>мышь в подарок</div>
+					<!-- /.box__descr -->
+					<img class="foiegras__img" src="img/cat.png" alt="" class="foiegras__img">
+					<div class="foiegras__weight">
+						0,5<br><span class="ghh">кг</span>
+					</div>
+
+				</div>
+				<!-- /.box__cnt -->
+				<div class="foiegras__text-bottom">
+					Чего сидишь? Порадуй котэ, <span><a class="foiegras-link" href="#">купи</a>.</span>
+				</div>
+				<!-- /.box__text-bottom -->
+				<div contenteditable="true" class="foiegras__text-bottom-select">
+					Печень утки разварная с артишоками.
+				</div>
+				<!-- /.foiegras__text-bottom-select -->
+			</div>
+			<!-- /.box__foiegras -->
+			<div class="box__fish">
+				<div class="fish__cnt">
+					<div class="fish__text">
+						Сказочное заморское яство
+					</div>
+					<!-- /.box__text -->
+					<h1 class="fish__title">Нямушка</h1>
+					<!-- /.box__title -->
+					<div class="fish__subtitle">с рыбой</div>
+					<!-- /.box__subtitle -->
+					<div class="fish__descr"><span>40</span> порций <br>2 мыши в подарок</div>
+					<!-- /.box__descr -->
+					<img class="fish__img" src="img/cat.png" alt="" class="foiegras__img">
+					<div class="fish__weight">
+						2<br><span>кг</span>
+					</div>
+
+				</div>
+				<!-- /.box__cnt -->
+				<div class="fish__text-bottom">
+					Чего сидишь? Порадуй котэ, <span><a class="fish-link" href="#">купи</a>.</span>
+				</div>
+				<div contenteditable="true" class="fish__text-bottom-select">
+					Головы щучьи с чесноком да свежайшая сёмгушка.
+				</div>
+				<!-- /.fish__text-bottom-select -->
+			</div>
+			<!-- /.box__fish -->
+
+			<div class="box__hen">
+				<div class="hen__cnt">
+					<div class="hen__text">
+						Сказочное заморское яство
+					</div>
+					<!-- /.box__text -->
+					<h1 class="hen__title">Нямушка</h1>
+					<!-- /.box__title -->
+					<div class="hen__subtitle">с курой</div>
+					<!-- /.box__subtitle -->
+					<div class="hen__descr"><span>100</span> порций <br>5 мышей в подарок <br>заказчик доволен</div>
+					<!-- /.box__descr -->
+					<img class="hen__img" src="img/cat.png" alt="" class="foiegras__img">
+					<div class="hen__weight">
+						5<br><span>кг</span>
+					</div>
+
+				</div>
+				<!-- /.box__cnt -->
+				<div class="hen__text-bottom">
+					Чего сидишь? Порадуй котэ, <span><a	class="hen-link" href="#">купи</a>.</span>
+				</div>
+				<div  contenteditable="true" class="hen__text-bottom-select">
+					Филе из цыплят с трюфелями в бульоне.
+				</div>
+				<!-- /.hen__text-bottom-select -->
+			</div>
+			<!-- /.box__hen -->
+		</div>
+		<!-- /.box__feed -->
+	</div>
+   Печень утки разварная с артишоками.
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+  <script>
+  	$(document).ready(function() {
+  		var foiegras = $('.foiegras__cnt, .foiegras-link');
+  		var fish = $('.fish__cnt, .fish-link');
+  		var hen = $('.hen__cnt, .hen-link');
+
+  		foiegras.click(function(){
+  				foiegras.mouseleave(function() {
+  			$('.foiegras__cnt').addClass('foiegras__cnt_active');
+  			$('.foiegras__cnt:after').addClass('foiegras__cnt_active:after');
+  			$('.foiegras__weight').addClass('foiegras__weight_active');
+  			$('.foiegras__text-bottom').addClass('foiegras__text-bottom-active');
+  			$('.foiegras__text-bottom-select').addClass('foiegras__text-bottom-select-active');	
+  			});
+  		});
+
+  		foiegras.click(function(){
+  			$('.foiegras__cnt').removeClass('foiegras__cnt_active');
+  			$('.foiegras__cnt:after').removeClass('foiegras__cnt_active:after');
+  			$('.foiegras__weight').removeClass('foiegras__weight_active');
+  			$('.foiegras__text-bottom').removeClass('foiegras__text-bottom-active');
+  			$('.foiegras__text-bottom-select').removeClass('foiegras__text-bottom-select-active');	
+
+		});
+		foiegras.triggerHandler('mouseleave');
+
+  		fish.click(function(){
+  			fish.mouseleave(function() {
+		  		$('.fish__cnt').addClass('fish__cnt_active');
+		  		$('.fish__cnt:after').addClass('fish__cnt_active:after');
+		  		$('.fish__weight').addClass('fish__weight_active');
+		  		$('.fish__text-bottom').addClass('fish__text-bottom-active');
+		  		$('.fish__text-bottom-select').addClass('fish__text-bottom-select-active');	
+  			});
+
+   		});
+
+  		fish.click(function(){
+  			$('.fish__cnt').removeClass('fish__cnt_active');
+  			$('.fish__cnt:after').removeClass('fish__cnt_active:after');
+  			$('.fish__weight').removeClass('fish__weight_active');
+  			$('.fish__text-bottom').removeClass('fish__text-bottom-active');
+  			$('.fish__text-bottom-select').removeClass('fish__text-bottom-select-active');	
+  		});
+
+  		hen.click(function() {
+  				hen.bind('mouseleave', function() {	
+		  			$('.hen__cnt').addClass('hen__cnt_active');
+			  		$('.hen__cnt:after').addClass('hen__cnt_active:after');
+			  		$('.hen__weight').addClass('hen__weight_active');
+			  		$('.hen__text-bottom').addClass('hen__text-bottom_active');
+			  		$('.hen__text-bottom-select').addClass('hen__text-bottom-select_active');
+				});
+	  	});
+
+  		hen.click(function() {
+
+	  		$('.hen__cnt').removeClass('hen__cnt_active');
+	  		$('.hen__cnt:after').removeClass('hen__cnt_active:after');
+	  		$('.hen__weight').removeClass('hen__weight_active');
+	  		$('.hen__text-bottom').removeClass('hen__text-bottom_active');
+	  		$('.hen__text-bottom-select').removeClass('hen__text-bottom-select_active');
+	  		hen.off('mouseleave', function() {});
+	  	});
+  		
+	});
+
+  </script>
+
+</body>
+</html>
