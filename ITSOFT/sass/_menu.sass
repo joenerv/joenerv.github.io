@@ -1,0 +1,88 @@
+.menu
+	
+	position: fixed
+	width: 211px
+	height: 100vh
+	display: flex
+	flex-direction: column
+	background-color: #005494
+	z-index: 5
+	transition: 0.8s
+	
+
+	&-top 
+		flex: 1 0 auto
+
+		&__social
+			margin-top: 14px
+			margin-left: 24px
+		
+		&__block
+			margin-top: 49px
+			margin-left: 22px	
+
+	&-cont
+		flex: 0 0 auto
+		margin:
+			left: 22px
+			bottom: 10px		
+		
+		&__line
+			width: 68px
+			height: 1px
+			background-color: #81aaca
+
+		&__text			
+			color: #84b6dd			
+			font-size: 13px
+			font-weight: 400
+			line-height: 20px
+		&__tel
+			color: #ffffff
+			font-size: 16px
+			font-weight: 700
+			line-height: 30px
+
+
+
+.nav
+	font-family: 'Open Sans', sans-serif
+	color: #ffffff
+	font-size: 16px
+	font-weight: 700
+	line-height: 16px
+
+	& li 
+		width: 100%
+		padding-top: 22px
+		cursor: pointer
+		transition: 0.4s
+			
+		& a 
+			color: #fff
+			text-decoration: none
+			
+
+	& li:hover
+		margin-left: 10px
+
+	& li:first-child
+		padding-top: 0
+
+
+.fab
+	color: #a1c8e6
+	font-size: 18px
+	padding-left: 5px
+	cursor: pointer
+	
+	&:hover
+		color: #fff
+		
+@media (max-width: 768px)
+
+	.menu
+		transform: translateX(-100%)
+
+	.menu-active
+		transform: translateX(0%)

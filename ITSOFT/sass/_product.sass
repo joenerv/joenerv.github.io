@@ -1,0 +1,136 @@
+.product 
+	display: flex
+	flex-wrap: wrap
+
+
+	&-block
+		position: relative
+		flex: 0 0 50%
+		height: 50vh
+		transition: 0.8s
+
+
+	&-text
+		position: absolute
+		margin:
+			top: 39px
+			left: 25px
+		text-align: top
+		color: #ffffff
+		font-size: 16px
+		font-weight: 700
+		line-height: 24px
+		text-transform: uppercase
+		letter-spacing: 0.92px
+
+	&-img
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		margin: auto
+		max-width: 100%
+		max-height: 100%
+
+.blue 
+	background-color: #4282ad
+
+	&-active
+		display: none
+
+
+		&__text
+			position: absolute
+			margin-top: 43px
+			margin-left: 56%
+			opacity: 0.5
+			color: #ffffff
+			font-size: 20px
+			font-weight: 700
+			line-height: 24px
+			letter-spacing: 1.38px
+		
+		&__img
+			position: absolute
+			top: -12%
+			left: -2%
+			bottom: 0
+			right: 0
+			margin: auto
+			max-width: 100%
+			max-height: 100%
+
+		&__lutein
+			display: flex
+			padding-top: 40vh
+						
+.blue:hover .blue-active
+	display: block
+
+
+.blue:hover .blue-noneactive
+	display: none
+
+.red 
+	background-color: #cd5463
+
+	&__lutein-kompl
+		display: none
+		margin-top: 40vh
+
+.red:hover .red-text
+	display: none
+
+.red:hover .red__lutein-kompl
+	display: block
+
+.green 
+	background-color: #2bb673
+
+	&__lutein-kompl
+		display: none
+		margin-top: 40vh
+
+	&:hover .green-text
+		display: none
+
+	&:hover .green__lutein-kompl
+		display: block
+
+.yellow 
+	background-color: #fbb040
+	
+	&:hover .yellow-text
+		display: none
+
+	&:hover .yellow__lutein-kompl
+		display: block
+		
+	&__lutein-kompl
+		display: none
+		padding-top: 40vh
+
+@media (max-width: 768px)
+	
+	.product-block
+		height: 45vh
+
+	.blue-active__lutein
+		padding-top: 35vh
+
+	.red__lutein-kompl
+		margin-top: 35vh
+
+	.green__lutein-kompl
+		margin-top: 35vh
+
+	.yellow__lutein-kompl
+		padding-top: 35vh
+
+@media (max-width: 576px)
+	
+	.product-block
+		flex: 0 0 100%
+
+	

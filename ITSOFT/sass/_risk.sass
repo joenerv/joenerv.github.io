@@ -1,0 +1,131 @@
+.risk
+	width: 100%
+	background-image: url(../images/risk-bgr.jpg)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	position: relative
+
+	
+
+	&-img
+		
+
+	&__title
+		margin-bottom: 37px
+		color: #ffffff
+		font-family: "Open Sans"
+		font-size: 45px
+		font-weight: 700
+		line-height: 50px
+		text-align: center
+		padding-top: 55px
+
+	&-content
+		display: flex
+		justify-content: center
+		
+	&-text
+		width: 450px
+		margin-top: 37px
+		margin-left: 20px
+
+		&__title
+			margin-bottom: 21px
+			color: #ffffff
+			font-size: 24px
+			font-weight: 700
+			line-height: 50px
+
+		&__text
+			margin-bottom: 30px
+			color: #ffffff
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 300
+			line-height: 22px
+
+		&__button
+			width: 118px
+			height: 46px
+			border: 3px solid #ffffff
+			border-radius: 23px
+			background-color: transparent
+			padding-bottom: 3px
+			transition: 1s
+
+			&:hover
+				background-color: #fff
+
+			&:hover span 
+				color: #01376d
+
+			& span 
+				color: #ffffff
+				font-size: 13px
+				font-weight: 400
+				line-height: 18px
+				transition: 1s
+
+	&-list 
+		width: 100%
+		text-align: center
+		position: absolute
+		bottom: 35px
+
+		&__up
+			margin-bottom: 10px
+
+		& span 
+			color: #005494
+			font-size: 11px
+			font-weight: 400
+			line-height: 14.78px
+			background-color: #fff
+			padding: 7px 15px
+			border-radius: 16px
+			transition: 0.8s
+			margin-right: 10px
+			cursor: pointer
+
+		& span:hover
+			color: #fff 
+			background-color: #0c6db6
+
+@media (max-width: 970px)
+
+	.risk
+		&__title
+			font-size: 35px
+			padding-top: 25px
+			margin-bottom: 0
+
+		&-img
+			display: none
+
+		&-text
+			text-align: center
+			margin:
+				left: 0
+				top: 20px
+				bottom: 110px
+
+@media (max-width: 490px)
+
+	.risk-text
+		margin-bottom: 210px
+
+	.risk-list
+		bottom: 0
+
+		&__up 
+			margin-bottom: 0
+
+		& span
+			display: inline-block
+			width: 50%
+			margin-bottom: 10px
+
+		&__bottom span
+			display: inline-block
+			width: 63%
+			margin-bottom: 10px
