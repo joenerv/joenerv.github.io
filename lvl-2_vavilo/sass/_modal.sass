@@ -1,0 +1,89 @@
+.overlay
+    position: fixed
+    display: none
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 3
+    background-color: rgba(0,0,0, .4)
+
+.popup 
+    position: fixed
+    left: 50%
+    top: 284px
+    width: 466px
+    padding: 35px 62px 26px 62px
+    transform: translateX(-50%)
+    background-color: #fff
+
+    &-close
+        position: absolute
+        right: -28px
+        top: -28px
+        font-size: 30px
+        color: #ffffff
+        background-color: #777777
+        width: 28px
+        height: 28px
+        text-align: center
+        font-weight: 300
+        cursor: pointer
+
+    &-title 
+        margin-bottom: 35px
+        color: #545454
+        font-size: 20px
+        text-align: center
+        font-weight: 700
+        text-transform: uppercase
+
+    &-content 
+        text-align: center
+        
+        &__text
+            margin-bottom: 8px
+            color: #545454
+            font-size: 13px
+            font-weight: 700
+
+        & input 
+            width: 100%
+            height: 42px
+            margin-bottom: 19px 
+            border: 1px solid #c2c2c2
+             
+        & input:focus
+            outline: none    
+            border: 1px solid #e48282
+            box-shadow: inset 0 0 5px 4px #e48282
+
+        & input::placeholder
+            padding-left: 14px
+            color: #ffffff
+            font-size: 13px
+            font-style: oblique
+
+        & input:focus::placeholder
+            color: #e48282
+
+        & textarea 
+            width: 100%
+            margin-bottom: 21px
+            border: 1px solid #c2c2c2
+            padding: 10px 5px 
+        
+        & textarea:focus
+            outline: none    
+            border: 1px solid #e48282
+            box-shadow: inset 0 0 5px 4px #e48282
+
+.button 
+    width: 128px
+    height: 42px
+    background-color: #545454
+    border: none
+    color: #ffffff
+    text-transform: uppercase
+    cursor: pointer
+
+

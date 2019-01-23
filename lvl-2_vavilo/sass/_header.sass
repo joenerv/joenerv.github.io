@@ -1,0 +1,45 @@
+.header
+    background-color: #dbdbdb
+
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        padding-top: 65px
+        padding-bottom: 65px
+
+    &__logo
+        width: auto
+        height: 100%
+   
+    &__contact
+        height: 110px
+        display: flex
+        flex-direction: column
+    
+    &__feedback
+        margin-right: 0
+        margin-left: auto
+        margin-top: 10px
+        color: #757575
+        font-weight: 700
+        cursor: pointer
+        
+
+    &__feedback:hover
+        color: #757575
+        text-decoration: none
+        border-bottom: dashed
+
+@media (max-width: 767px)
+
+    .header__content
+        justify-content: center
+        
+        img 
+            margin-bottom: 20px
+    
+
+    
+        
