@@ -1,0 +1,50 @@
+.date
+    width: 100%
+    &-input
+        
+        display: flex
+        align-items: flex-end
+        & label
+            position: relative
+            color: #2f1b15
+            font-family: "PT Sans"
+            font-size: 22px
+            font-weight: 700
+            margin-right: 18px
+
+        & input
+            width: 184px
+            color: #231f20
+            font-family: "CourierNew"
+            font-size: 30px
+            font-weight: 400
+            background: transparent
+            border: none
+            padding-bottom: 8px
+            padding-left: 12px
+            
+        & label:after
+            position: absolute
+            content: url(../img/line-date.png)
+            top: 0
+            left: 180px
+@media (max-width: 625px) 
+    .date-input
+        & label:after
+            left: 166px
+            top: 20px
+@media (max-width: 600px) 
+    .date-input
+        & label:after
+            left: 180px
+            top: 0
+@media (max-width: 490px) 
+    .date-input
+        & label:after
+            left: 165px
+            top: 20px
+@media (max-width: 465px) 
+    .date-input
+        & label:after
+            left: 145px
+            top: 20px

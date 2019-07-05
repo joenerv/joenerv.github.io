@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;display=swap&amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Csssr Test Task</title>
+  </head>
+  <body>
+    <div class="wrap"> 
+      <header>
+        <div class="header">
+          <div class="header__logo"><img src="img/logo.png" alt="logo"></div>
+          <div class="header__secret"><img src="img/secret.png" alt="secret"></div>
+        </div>
+      </header>
+      <div class="about">
+        <div class="about__title"><img src="img/case.png" alt="case"></div>
+        <form action="#" method="post" name="about-form">
+          <div class="about__input">
+            <label for="name">Полное ФИО </label>
+            <input type="text" id="name" name="name" value="Вавило Евгений Николаевич">
+          </div>
+          <div class="about__input">   
+            <label for="year">Год рождения </label>
+            <input type="text" id="year" name="year" value="1986">
+          </div>
+          <div class="about__input">
+            <label for="city">Место жительства </label>
+            <input type="text" id="city" name="city" value="г. Москва, Россия">
+          </div>
+          <div class="about__input">
+            <label for="skype">Скайп </label>
+            <input type="text" id="skype" name="skype" value="joenerv">
+          </div>
+          <div class="about__input">
+            <label for="email">Почта </label>
+            <input type="email" id="email" name="email" value="joenerv@yandex.ru">
+          </div>
+        </form>
+      </div>
+      <div class="checkbox">
+        <h2 class="checkbox__title">Расскажите о себе чекбоксами</h2>
+        <p class="checkbox__text">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
+        <form class="checkbox-form" action="#" method="post" name="checkbox-form">
+          <ul class="checkbox-block">
+            <li>
+              <input type="checkbox" name="check-1" id="check-1" checked>
+              <label for="check-1">БЭМ/OOCSS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-2" id="check-2" checked>
+              <label for="check-2">Pug (Jade)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-3" id="check-3" checked>
+              <label for="check-3">Stylus/LESS/SASS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-4" id="check-4">
+              <label for="check-4">Работаю с SVG</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-5" id="check-5" checked>
+              <label for="check-5">Верстаю семантично</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-6" id="check-6">
+              <label for="check-6">Accessibility (A11Y)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-7" id="check-7">
+              <label for="check-7">ES2015/ES2016</label>
+            </li>
+          </ul>
+          <ul class="checkbox-block">
+            <li>
+              <input type="checkbox" name="check-8" id="check-8" checked>
+              <label for="check-8">Gulp/GRUNT</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-9" id="check-9">
+              <label for="check-9">Webpack</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-10" id="check-10">
+              <label for="check-10">Дружу с WebGL</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-11" id="check-11" checked>
+              <label for="check-11">jQuery</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-12" id="check-12">
+              <label for="check-12">Знаю/изучаю Angular</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-13" id="check-13">
+              <label for="check-13">Знаю/изучаю React</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-14" id="check-14">
+              <label for="check-14">Знаю/изучаю Node.js</label>
+            </li>
+          </ul>
+          <ul class="checkbox-block">
+            <li>
+              <input type="checkbox" name="check-15" id="check-15" checked>
+              <label for="check-15">Использую Git</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-16" id="check-16" checked>
+              <label for="check-16">С глазомером всё ок</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-17" id="check-17" checked>
+              <label for="check-17">Читаю </label><a href="http://blog.csssr.ru" target="_blank">blog.csssr.ru</a>
+            </li>
+            <li>
+              <input type="checkbox" name="check-18" id="check-18">
+              <label for="check-18">Я ленивый(-ая)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="check-19" id="check-19">
+              <label for="check-19">У меня хороший английский</label>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="slider"> 
+        <h2 class="slider__title">Уровень владения JavaScript</h2><img class="slider__line" src="img/line.png" alt="line">
+        <div class="slider-text">
+          <div class="slider-text-block1">
+            <p class="slider-text-block1__text1">Не владею </p><img class="slider-text-block1__arrow1" src="img/arrow.png" alt="arrow">
+          </div>
+          <div class="slider-text-block2">
+            <p class="slider-text-block2__text2">Использую готовые решения</p><img class="slider-text-block2__arrow2" src="img/arrow.png" alt="arrow">
+          </div>
+          <div class="slider-text-block3">
+            <p class="slider-text-block3__text3">Использую готовые решения </p>
+            <p class="slider-text-block3__text3">и умею их переделывать</p><img class="slider-text-block3__arrow3" src="img/arrow.png" alt="arrow">
+          </div>
+          <div class="slider-text-block4">
+            <p class="slider-text-block4__text4">Пишу сложный JS с нуля</p><img class="slider-text-block4__arrow4" src="img/arrow.png" alt="arrow">
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <h2 class="story__title">Расскажите о себе словами</h2>
+        <p class="story__text">Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
+        <form class="story-form" action="#" method="post">
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="Ознакомившись с описанием вакансии и ">
+            <label for="story"> </label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="с видео роликом, я понял, что хочу стать">
+            <label for="story"> </label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="частью этой команды.">
+            <label for="story"> </label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="Меня привлекла возможность работать">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="с профессионалами, развиваться и ">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="быть полезным делая то, что мне нравится.">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="Я ожидаю от работы в CSSSR того, что">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="я буду решать различные задачи, работать">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="в команде профессионалов и вносить свой">
+            <label for="story"></label>
+          </div>
+          <div class="story-form-enter">
+            <input class="story-form__input" type="text" name="story" value="вклад в конечный продукт.">
+            <label for="story"></label>
+          </div>
+        </form>
+      </div>
+      <div class="plans">
+        <h2 class="plans__title">Какие у вас планы на будущее?</h2>
+        <p class="plans__text">Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются. </p>
+        <form class="plans-radiocheck" action="#" method="post">
+          <div class="plans-radiocheck-block">
+            <input type="radio" name="plans" id="layout" value="layout">
+            <label for="layout">Верстать</label>
+          </div>
+          <div class="plans-radiocheck-block">
+            <input type="radio" name="plans" id="js" value="layout" checked>
+            <label for="js">Прокачиваться в JS</label>
+          </div>
+          <div class="plans-radiocheck-block">
+            <input type="radio" name="plans" id="manager" value="layout">
+            <label for="manager">Менеджерство</label>
+          </div>
+          <div class="plans-radiocheck-block">
+            <input type="radio" name="plans" id="other" value="layout">
+            <label for="other">Другое</label>
+          </div>
+        </form>
+      </div>
+      <div class="date"> 
+        <div class="date-input">
+          <label for="date">Дата заполнения</label>
+          <input type="text" name="date" id="date" value="04.07.2019">
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

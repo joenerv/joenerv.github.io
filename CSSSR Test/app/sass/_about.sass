@@ -1,0 +1,68 @@
+%about-input-style
+    padding-left: 15px
+    padding-bottom: 8px
+    background-color: transparent
+    border: none
+    border-bottom: 3px solid #3f241e
+    font-family: 'CourierNew'
+    font-size: 30px
+    font-weight: 400
+ 
+.about
+    margin-bottom: 72px
+    &__title
+        text-align: center
+        margin-bottom: 63px
+
+    &__input
+        display: flex
+        position: relative
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 20px
+           
+        & label
+            color: #2f1b15    
+            font-family: "PT Sans"
+            font-size: 22px
+            font-weight: 700
+            margin-right: 18px
+
+ 
+input 
+    &[name="name"]        
+        width: calc(100% - 163px)
+        @extend %about-input-style
+        
+        
+    &[name="year"]
+        width: calc(100% - 175px)
+        @extend %about-input-style
+
+    &[name="city"]
+        width: calc(100% - 216px)
+        @extend %about-input-style
+
+    &[name="skype"]    
+        width: calc(100% - 73px)
+        @extend %about-input-style
+
+    &[name="email"] 
+        width: calc(100% - 74px)  
+        @extend %about-input-style
+
+@media (max-width: 870px)
+    
+    
+    .about__input
+        display: inline-block
+        & input[type="text"],
+        input[type="email"]
+
+            width: 100%
+            margin-top: 15px
+            margin-bottom: 10px
+            padding-left: 0
+            font-size: 21px
+            padding-bottom: 0
+        
