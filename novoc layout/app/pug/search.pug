@@ -1,0 +1,69 @@
+.search
+    .search-call
+        i.fas.fa-phone-alt
+        |Обратный звонок
+    .search-show
+        i.far.fa-calendar-alt
+        |Записаться на показ
+    .search-title
+        h1 Купить квартиру в новостройке
+    .search-form
+        .search-form__text
+            |Стоимость, млн руб.
+            .form-price
+                .form-price__number
+                    p от 1
+                .form-price__line 
+                .form-price__number
+                    p до 69
+                form.form-price-checkbox(action="#", method="post")
+                    input(type="checkbox", name="moscow", id="moscow" checked)
+                    label(for="moscow") Москва и Новая Москва
+
+                    input(type="checkbox", name="region", id="region")
+                    label(for="region") Московская область
+            form.form-choice(action="#", method="post")
+                select(size='1' name='metro[]')
+                    option(selected disabled hidden) Станция метро
+                    option(value="Чеховская") Чеховская
+                    option(value="Боровицкая") Боровицкая
+                    option(value="Ясенево") Ясенево
+                    option(value="Ленинский проспект") Ленинский проспект
+                    option(value="Аннино") Аннино
+                    option(value="Южная") Южная
+                
+                select(size='1' name='flat[]')
+                    option(selected disabled hidden) Тип жилья
+                    option(value="Загородные дома") Загородные дома
+                    option(value="Коттеджи") Коттеджи
+                    option(value="Таунхаусы") Таунхаусы
+                    option(value="Пентхаусы") Пентхаусы
+                    option(value="Квартиры в новостройках") Квартиры в новостройках
+                    option(value="Квартиры на вторичном рынке") Квартиры на вторичном рынке
+
+                select(size='1' name='metro[]')
+                    option(selected disabled hidden) Площадь
+                    option(value="от 20 до 45 кв.м") от 20 до 45 кв.м
+                    option(value="от 45 до 70 кв.м") от 45 до 70 кв.м
+                    option(value="от 70 до 100 кв.м") от 70 до 100 кв.м
+                    option(value="более 100 кв.м") более 100 кв.м
+                
+                select(size='1' name='finish[]')
+                    option(selected disabled hidden) Тип отделки
+                    option(value="Ченовая") Ченовая
+                    option(value="Предчистовая") Предчистовая
+                    option(value="Чистовая") Чистовая
+                    option(value="Под ключ") Под ключ
+                    option(value="Аннино") Аннино
+                    option(value="Южная") Южная
+                
+                select(size='1' name='date[]')
+                    option(selected disabled hidden) Срок сдачи
+                    option(value="2019") 2019
+                    option(value="2020") 2020
+                    option(value="2021") 2021
+                    option(value="2022") 2022
+                
+                
+                input(type="submit", value="Отправить")
+                
