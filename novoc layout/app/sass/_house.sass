@@ -1,0 +1,148 @@
+.house
+    padding-top: 60px
+    position: relative
+    padding-bottom: 100px
+    margin-bottom: 188px
+    &-block
+        max-width: 1180px
+        display: flex
+        flex-wrap: wrap
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+    &-info
+        padding-top: 35px
+        padding-left: 50px
+        padding-right: 68px
+        padding-bottom: 51px
+        margin-left: auto
+        margin-right: auto
+        &__title
+            color: #1f252d
+            font-size: 24px
+            font-weight: 500
+            margin-bottom: 20px
+        &-address
+            margin-bottom: 13px
+            & p
+               @extend %text-style-normal 
+            &__metro
+                display: flex
+                margin-bottom: 22px
+                & p
+                    @extend %text-style-normal
+                    & span
+                        @extend %text-style-light
+                        margin-left: 20px
+                
+            &__img
+                margin-right: 13px
+        &-price
+            display: flex
+            margin-bottom: 20px
+            &__light
+                @extend %text-style-light
+                & p
+                    padding-top: 10px
+                    padding-bottom: 10px
+                    padding-right: 106px
+                    border-bottom: 1px solid #e7e7e7
+                    
+            &__normal
+                @extend %text-style-normal
+                
+                & p
+                    padding-top: 10px
+                    padding-bottom: 9px
+                    border-bottom: 1px solid #e7e7e7
+
+        &-descr
+            display: flex
+            margin-bottom: 29px
+            &__light
+                @extend %text-style-light
+                margin-right: 125px
+                & p
+                    padding-bottom: 10px
+                & p:first-child
+                    padding-bottom: 40px
+            &__normal
+                @extend %text-style-normal
+                & p
+                    padding-bottom: 10px
+        &-action 
+            display: flex
+            align-self: center
+            justify-content: space-between
+            & img
+                align-self: center    
+            
+    &-img
+        position: relative
+        margin-left: auto
+        margin-right: auto
+        & img 
+            width: 100%
+        &__button 
+            position: absolute
+            bottom: 0
+            margin-left: 50%
+            margin-bottom: 35px
+            width: 222px
+            height: 48px
+            border: none
+            border-radius: 4px
+            background-color: #079fc2
+            color: #ffffff
+            font-size: 13px
+            font-weight: 500
+            text-transform: uppercase
+            left: -111px
+            cursor: pointer
+            &:hover
+                background-color: lighten(#079fc2, 5)
+        &-offer
+            position: absolute
+            right: 0
+            top: 0
+            width: 229px
+            height: 70px
+            padding-top: 14px
+            border-radius: 0 0 0 4px
+            background-color: #f0f0f0
+            opacity: 0.75
+        &__sertif
+            color: #404853
+            font-size: 13px
+            font-weight: 400
+            margin-left: 20px
+            margin-bottom: 10px
+            &::before
+                content: url(../img/calendar.png)
+                margin-right: 17px
+        &__action
+            color: #404853
+            font-size: 13px
+            font-weight: 400
+            margin-left: 20px
+            &::before
+                content: url(../img/action-megaphone.png)
+                margin-right: 14px
+
+    &-button
+        position: absolute
+        bottom: 0
+        left: -140px
+        width: 280px
+        height: 48px
+        border-radius: 4px
+        background-color: #74cfb7
+        color: #ffffff
+        font-size: 13px
+        font-weight: 500
+        text-transform: uppercase
+        border: none
+        margin-left: 50%
+        cursor: pointer
+        &:hover
+            background-color: lighten(#74cfb7, 5)
