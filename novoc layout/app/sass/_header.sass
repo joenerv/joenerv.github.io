@@ -1,0 +1,100 @@
+.header
+    background-color: #f7f7f7
+    padding-left: 130px
+    padding-right: 130px
+    
+    &-contact 
+        display: flex
+        align-items: center
+        margin-bottom: 26px
+    &-info
+        width: 100%
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__logo
+        margin-right: 10px
+    &-address
+        &__title
+            color: #1f252d
+            font-size: 20px
+            font-weight: 500
+            margin-bottom: 7px
+        &__text
+            color: #1f252d
+            font-size: 14px
+            font-weight: 300
+            margin-bottom: 10px
+            & img
+                margin-right: 13px
+    &-telephone
+        margin-bottom: 10px
+        &__number
+            color: #1f252d
+            font-size: 20px
+            font-weight: 500
+            margin-bottom: 7px
+        &__time
+            color: #1f252d
+            font-size: 14px
+            font-weight: 300
+    &-button 
+        width: 222px
+        height: 48px
+        border: none
+        background-color: #079fc2
+        border-radius: 4px
+        color: #ffffff
+        font-size: 14px
+        font-weight: 400
+        cursor: pointer
+    &-button:hover
+        background-color: lighten(#079fc2, 3)
+    &-menu 
+        border-bottom: 4px solid #74cfb7
+        display: flex
+        justify-content: space-between
+        & ul
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 25px
+            & li:first-child
+                padding-left: 0
+            & li:last-child
+                padding-right: 0
+                border-right: none
+            & li
+                padding-left: 19px
+                padding-right: 19px
+                border-right: 1px solid #e1e1e1
+                margin-bottom: 10px
+                cursor: pointer
+                & a
+                    text-decoration: none
+                    color: #404853
+                    font-size: 13px
+                    font-weight: 500
+                    text-transform: uppercase
+                    transition: 0.5s
+                    border-bottom: 2px solid rgba(116, 207, 183, 0)
+                    &:hover
+                        border-bottom: 2px solid rgba(116, 207, 183, 1)
+                
+.fa-search
+    font-size: 15px
+    cursor: pointer
+    color: #74cfb7
+    &:hover
+        color: darken(#74cfb7, 10)
+
+@media (max-width: 1400px)
+    .header
+        padding-left: 50px
+        padding-right: 50px
+
+@media (max-width: 500px)
+    .header-contact
+        flex-wrap: wrap
+    .header__logo
+        margin-bottom: 10px
+        

@@ -1,0 +1,160 @@
+.search
+    width: 100%
+    padding-bottom: 20px
+    position: relative
+    background-image: url(../img/search-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 2
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+        z-index: -1
+    &-call
+        @extend %search-feedback        
+        top: 72px
+        &:hover
+            background-color: darken(#74cfb7, 10)
+
+    &-show
+        top: 141px
+        @extend %search-feedback
+        &:hover 
+            background-color: darken(#74cfb7, 10)
+    &-title 
+        padding-top: 72px
+        text-align: center
+        color: #ffffff
+        font-size: 40px
+        font-weight: 500
+    &-form
+        max-width: 1180px
+        background-color: #fff 
+        margin-top: 37px
+        margin-left: auto
+        margin-right: auto   
+        padding: 29px 
+        border-radius: 4px
+        &__text 
+            color: #1f252d
+            font-size: 14px
+            font-weight: 300
+.form-price
+    margin-top: 10px
+    display: flex
+    flex-wrap: wrap
+    
+    &__price
+        display: flex
+        align-items: flex-end
+        max-width: 100%
+
+    &__number
+        display: flex
+        width: 59px
+        color: #1f252d
+        font-size: 13px
+        font-weight: 400
+        & p
+            white-space: nowrap
+        
+    &__line
+        width: 700px
+        height: 8px
+        background-color: #74cfb7
+    &-checkbox
+        display: flex
+        flex-direction: column
+        
+        & input[type='checkbox'] 
+            display: none
+        & label 
+            position: relative
+            color: #1f252d
+            font-size: 13px
+            font-weight: 300
+            margin-top: 8px
+            margin-left: 72px
+            cursor: pointer
+        & label::before
+            position: absolute
+            content: url(../img/check-none.png)
+            top: 0
+            left: -38px
+        & input:checked + label::before
+            content: url(../img/check-check.png)
+.search-button
+    width: 152px
+    height: 48px
+    box-shadow: 0 4px 10px rgba(116, 207, 183, 0.46)
+    border-radius: 4px
+    background-color: #079fc2
+    border: none
+    color: #ffffff
+    font-size: 13px
+    font-weight: 500
+    text-transform: uppercase
+    cursor: pointer
+    margin-left: 5px
+input[type='submit']:hover
+    background-color: lighten(#079fc2, 3)
+.form-choice
+    margin-top: 25px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    
+    & select
+        width: 200px
+        border: none
+        border-right: 1px solid #e7e7e7
+        color: #1f252d
+        font-size: 13px
+        font-weight: 400
+        margin-bottom: 10px
+    & select:last-child
+        border-right: none
+
+.fa-phone-alt,
+.fa-calendar-alt
+    font-size: 19px
+    margin-bottom: 3px
+    margin-top: 9px
+.fa-angle-left
+    font-size: 15px
+    margin-right: 5px
+    margin-left: 5px
+.fa-angle-right
+    font-size: 15px
+    margin-left: 5px
+    margin-right: 5px
+
+
+@media( max-width: 1430px)
+    .search-call
+        top: 0px
+        right: 5px
+        border-radius: 0 0 4px 4px
+    .search-show
+        top: 0px
+        right: 80px
+        border-radius: 0 0 4px 4px
+
+@media( max-width: 1260px)
+    .search-form
+        position: relative
+        margin-left: 20px
+        margin-right: 20px
+        padding-bottom: 60px
+    .search-button
+        position: absolute
+        margin-left: 50%
+        left: -76px
+        bottom: 10px
+        
