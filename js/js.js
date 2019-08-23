@@ -28,8 +28,13 @@ while (remainingLetters > 0) {
     } else {
         for (var j = 0; j < word.length; j++) {
             if (word[j] === guess) {
-                answerArray[j] = guess;
-                remainingLetters--;
+                if (answerArray[j] !== '_') {
+                    alert('вы уже угадали эту букву');
+                } else {
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+                
             }
         }
     }
