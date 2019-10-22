@@ -1,0 +1,67 @@
+.contact
+    position: relative
+    margin-top: 97px
+    margin-bottom: 62px
+    &-addres
+        position: absolute
+        top: 27px
+        right: 0
+        width: 45%
+        height: 313px
+        background-color: #a30606
+        &__text
+            margin-top: 30px
+            margin-left: 36px
+            color: #ffffff
+            font-size: 16px
+            font-weight: 400
+            line-height: 36px
+            & p
+                font-size: 24px
+                text-transform: uppercase
+        &__form
+            margin-top: 33px
+            margin-left: 36px
+            display: flex
+            flex-direction: column
+            & input[type="tel"]
+                width: 272px
+                height: 45px
+                padding-left: 20px
+                border: 1px solid #ffffff
+                background-color: #a30606
+                margin-bottom: 12px
+                &::placeholder
+                    color: #ff9393
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 20px
+
+            & input[type="submit"]
+                width: 293px
+                height: 47px
+                background-color: #ffffff
+                border: none
+                color: #a30606
+                font-size: 16px
+                font-weight: bold
+                text-transform: uppercase
+                cursor: pointer
+                transition: 0.3s
+                &:hover
+                    opacity: 0.8
+.input-tel
+    color: #ff9393
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+.map
+    margin-left: auto
+    margin-right: auto
+    max-width: 945px
+    height: 373px
+    background-color: black
+
+@media (max-width: 1200px)
+    .contact
+        margin-top: 67px

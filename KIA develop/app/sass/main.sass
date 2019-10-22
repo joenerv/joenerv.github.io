@@ -7,14 +7,25 @@ body
     box-sizing: border-box
     font-family: 'KIA'
 .wrap
+    position: absolute
     display: flex
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -1
 .block-red
-    width: 45%
+    width: 44%
     height: 770px
     background-color:  #a30606
 .block-white
-    width: 55%
+    width: 56%
     height: 770px
-    background-color: gray
+.container
+    max-width: 1180px
+    margin-left: auto
+    margin-right: auto
 @import "header"
-@import "content-red"
+@import "content"
+@import "cars"
+@import "contact"
+@import "popup"

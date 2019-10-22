@@ -5,50 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=&lt;ваш API-ключ&gt;" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>KIA test</title>
   </head>
   <body>
     <div class="wrap"> 
-      <div class="block-red">
-        <div class="content-red">
-          <div class="red-header"><img class="red-header__logo" src="img/logo_avtoholding.png" alt="logo-avtoholding">
-            <div class="red-header-addres"><img class="red-header-addres__point" src="img/checkpoint.png" alt="point">
-              <p class="red-header-addres__text">Краснодар<br>Тургеневское шоссе, 25</p>
+      <div class="block-red"></div>
+      <div class="block-white"></div>
+    </div>
+    <div class="container">
+      <header class="header">
+        <div class="header-addres">
+          <div class="header-addres__logo"><img src="img/logo_avtoholding.png" alt="autoholding"></div>
+          <div class="header-addres__addres">           <img class="header-addres__point" src="img/checkpoint.png" alt="point">
+            <p class="header-addres__text">Краснодар<br>Тургеневское шоссе, 25</p>
+          </div>
+          <button class="header-addres__button">заказать звонок</button>
+        </div><img class="header__logo" src="img/logo_kia.png" alt="logo-kia">
+      </header>
+      <div class="content"><img class="content__img" src="img/auto-photo.jpg" alt="auto-photo">
+        <div class="content-offer">Только до конца октября <br><span>масштабные выгоды </span>
+          <p>на весь модельный ряд!</p>
+        </div><a data-fancybox data-src="#popup" href="#popup">
+          <button class="content-button">Забрать выгоду</button></a>
+        <div class="content-section">
+          <div class="content-selection">
+            <div class="content-selection__title">
+              <p>Подберите свой KIA</p>
+            </div>
+            <div class="content-selection__list">
+              <ul>
+                <li> <a href="#rio">Picanto  </a></li>
+                <li> <a href="#rio">Rio</a></li>
+                <li> <a href="#rio">Rio X-Line</a></li>
+                <li> <a href="#rio">Ceed SW</a></li>
+                <li> <a href="#rio">Cerato NEW</a></li>
+              </ul>
+              <ul>
+                <li> <a href="#ceed">Optima NEW</a></li>
+                <li> <a href="#ceed">Stinger</a></li>
+                <li> <a href="#ceed">Quoris</a></li>
+                <li> <a href="#ceed">Soul</a></li>
+                <li> <a href="#ceed">Sportage</a></li>
+              </ul>
+              <ul>
+                <li> <a href="#rio">Sorento </a></li>
+                <li> <a href="#rio">Sorento Prime </a></li>
+                <li> <a href="#rio">Mohave</a></li>
+              </ul>
             </div>
           </div>
-          <div class="red-header-text">Только до конца октября <br><span>масштабные выгоды </span>
-            <p>на весь модельный ряд!</p>
-          </div>
-          <button class="red-header-button">Забрать выгоду</button>
-          <div class="red-header-selection">
-            <p>Подберите свой KIA</p>
-            <div class="red-header-list">
-              <ul>
-                <li>Picanto  </li>
-                <li>Rio</li>
-                <li>Rio X-Line</li>
-                <li>Ceed SW</li>
-                <li>Cerato NEW</li>
-              </ul>
-              <ul>
-                <li>Optima NEW</li>
-                <li>Stinger</li>
-                <li>Quoris</li>
-                <li>Soul</li>
-                <li>Spotrage</li>
-              </ul>
-              <ul>
-                <li>Sorento </li>
-                <li>Sorento Prime </li>
-                <li>Mohave</li>
-              </ul>
+          <div class="content-credit"> 
+            <div class="content-credit__text">
+              <p>Супер кредит 0,1%</p><br>на Kia sportage, stinger, sorento, sorento prime
             </div>
+            <form class="content-credit__form" action="#">
+              <input class="content-input-tel" type="tel" name="telephone" placeholder="Введите телефон">
+              <input type="submit" value="получить кредит">
+            </form>
           </div>
         </div>
       </div>
-      <div class="block-white">
-        <p>hhhh</p>
+      <div class="cars">
+        <div class="cars-block">
+          <div class="cars-info" id="rio">
+            <div class="cars-info__title">KIA Rio X-Line</div><img class="cars-info__img" src="img/rio-xline.jpg" alt="xline">
+          </div>
+          <div class="cars-present">
+            <div class="cars-present-present"><img class="cars-present-present__img" src="img/present.png" alt="present">
+              <div class="cars-present-present__text">Зимняя резина<br>в подарок</div>
+            </div>
+            <div class="cars-present__text">Выгода до 60 000 руб.</div>
+            <button class="cars-present__credit">В кредит за 3 500 р./мес.</button><a data-fancybox data-src="#popup" href="#popup">
+              <button class="cars-present__benefit">получить выгоду</button></a>
+            <button class="cars-present__superpresent">спецпредложение</button>
+          </div>
+        </div>
+        <div class="cars-block">
+          <div class="cars-info" id="ceed">
+            <div class="cars-info__title">KIA Ceed <span>New</span></div><img class="cars-info__img" src="img/ceed.jpg" alt="xline">
+          </div>
+          <div class="cars-present">
+            <div class="cars-present-present"><img class="cars-present-present__img" src="img/present.png" alt="present">
+              <div class="cars-present-present__text">Зимняя резина<br>в подарок</div>
+            </div>
+            <div class="cars-present__text">Выгода до 60 000 руб.</div>
+            <button class="cars-present__credit">В кредит за 3 500 р./мес.</button><a data-fancybox data-src="#popup" href="#popup">
+              <button class="cars-present__benefit">получить выгоду</button></a>
+            <button class="cars-present__superpresent">спецпредложение</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="map" id="map"></div>
+      <div class="contact-addres">
+        <div class="contact-addres__text">
+          <p>Контакты</p>Краснодар Тургеневское шоссе, 25<br>+7 (861) 212-34-92
+        </div>
+        <form class="contact-addres__form" action="#">
+          <input class="input-tel" type="tel" name="telephone" placeholder="Введите телефон">
+          <input type="submit" value="заказать звонок">
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <form class="popup-form" action="#">
+          <p class="popup-form__title">Получите все выгоды!</p>
+          <input class="popup-tel" type="tel" name="telephone" placeholder="Введите номер">
+          <input type="submit" value="Получите все выгоды!">
+          <p class="popup-form__angrement">Нажав на кнопку "Отправить заявку", я даю согласие на обработку моих персональных данных и получение рекламных предложений. С условиями обработки персональных данных и получения предложений - ознакомлен и согласен.
+            <script src="js/map.js"></script>
+            <script src="js/script.js"></script>
+          </p>
+        </form><img class="popup__close" src="img/close.png" alt="close">
       </div>
     </div>
   </body>
