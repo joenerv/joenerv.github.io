@@ -1,16 +1,16 @@
 .content
     &-offer
-    margin-top: 94px
-    color: #ffffff
-    font-size: 30px
-    & span
-        position: absolute
-        font-size: 48px
-        text-transform: uppercase
-        font-weight: bold
-        margin-top: 10px
-        top: 220px
-        z-index: 2
+        margin-top: 94px
+        color: #ffffff
+        font-size: 30px
+        & span
+            position: absolute
+            font-size: 48px
+            text-transform: uppercase
+            font-weight: bold
+            margin-top: 10px
+            top: 220px
+            z-index: 2
     & p
         margin-top: 90px
     &-button
@@ -18,7 +18,7 @@
         width: 282px
         height: 62px
         background-color: #ffffff
-        border: none
+        border: 1px solid #a30606
         color: #a30606
         font-size: 16px
         font-weight: bold
@@ -58,6 +58,7 @@
                         text-decoration: none
                         color: #ffffff
                         transition: 0.3s
+                        white-space: nowrap
                         &:hover
                             opacity: 0.6
     &-credit
@@ -111,3 +112,46 @@
         top: 110px
         width: 55%
         z-index: 0
+@media (max-width: 1220px)
+    .content-credit__form 
+        margin-top: 33px
+        & input[type='submit']
+            margin-top: 10px
+@media (max-width: 1125px)
+    .content
+        &-selection
+            display: none
+        &-credit
+            margin-left: 0
+            &__form
+                flex-direction: column
+                & input[type='submit']
+                    border: 1px solid #ffffff
+                    margin-top: 10px
+        & p
+            margin-top: 40px
+        &__img
+            position: static
+            margin-top: 25px
+            width: 600px
+        &-offer 
+            margin-top: 40px
+            line-height: 50px
+            color: #000000
+            & span
+                position: static
+            & p
+                margin-top: 0
+@media (max-width: 650px)
+    .content
+        &-offer
+            font-size: 20px
+            & span
+                font-size: 30px
+        &-credit__text
+            font-size: 15px
+            & p 
+                font-size: 35px
+        &__img
+            width: 305px
+

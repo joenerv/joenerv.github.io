@@ -3,9 +3,14 @@
     display: flex
     justify-content: space-between
     align-items: flex-end
+    &__menu
+        display: none
+        width: 30px
+        cursor: pointer
     &-addres
         display: flex
         align-items: flex-end
+
         &__addres
             display: flex
             position: relative
@@ -34,5 +39,29 @@
             transition: 0.3s
             &:hover
                 opacity: 0.8
-        
-        
+
+@media (max-width: 1125px)
+    .header
+        &__menu
+            display: inline-block
+        &-addres
+
+            &__logo
+                display: none
+            &__button
+                display: none
+@media (max-width: 790px)
+    .header
+        &-addres__addres
+            margin-left: 20px
+@media (max-width: 620px)
+    .header
+        &-addres__addres
+            & p 
+                color: #000000
+@media (max-width: 485px)
+    .header-addres
+        align-items: flex-start
+@media (max-width: 380px)
+    .header-addres
+        width: 70%
