@@ -1,0 +1,55 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+
+.content {
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 660px;
+    font-family: $font-family-roboto;
+    background-image: url("/images/bg.png");
+};
+// .about {
+//     padding: 0 20px;
+
+//     &__img {
+//         margin-top: 30px;
+//         text-align: center;
+//     };
+
+//     &-form {
+//         margin-top: 30px;
+//     };
+
+//     & input {
+//         border: none;
+//         border-radius: 0;
+//         border-bottom: 2px solid #333;
+//         background-color: rgba($color-white, 0);
+//         color: #666666;
+//         font-size: 14px;
+//         font-weight: 500;
+//         line-height: 22px;
+//         text-transform: uppercase;
+//         letter-spacing: 1.2px;
+//         box-shadow: none;
+//         padding-left: 0;
+
+//         &:focus {
+//             background-color: rgba($color-white, 0);
+//             border: none;
+//             box-shadow: none;
+//             border-bottom: 2px solid #333;
+//         };
+
+
+//     };
+// };

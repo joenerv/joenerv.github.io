@@ -1,0 +1,37 @@
+extends pug/base
+
+append vars
+	title 9line-vavilo
+
+append links
+	link(rel="stylesheet", href="/foundation/app.css")
+	link(rel="stylesheet", href="/foundation/foundation.min.css")
+	link(rel="stylesheet", href="/css/main.css")
+
+
+
+
+
+block content
+	.content
+		.about.row.align-center
+			.columns.medium-3.about__img
+				img(src="/images/photo.png", alt="photo")
+			.columns.medium-9.small-12
+				form.about-form
+					.row
+						.columns
+							label(for="name")
+								input(type="text", name="name", id="name", placeholder="Евгений", minlength="2", maxlength="20")
+							label(for="age")
+								input(type="number", name="age", id="age", placeholder="24.05.1986", maxlength="10")
+							label(for="city")
+								input(type="text", name="city", id="city", placeholder="Москва", maxlength="20")
+							label(for="contact")
+								input(type="tel", name="contact", id="contact", placeholder="8-915-302-4440")
+
+	append script
+		script(src="/foundation/vendor/jquery.js")
+		script(src="/foundation/vendor/what-input.js")
+		script(src="/foundation/vendor/foundation.min.js")
+		script(src="/foundation/app.js")
