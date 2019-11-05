@@ -1,0 +1,32 @@
+.skill {
+    border: 1px solid red;
+    padding: 36px 21px 43px 21px;
+
+    &__title {
+        color: #010101;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+    };
+
+    &-list {
+        margin-bottom: 0;
+
+        &__item {
+            list-style-type: none;
+
+            & input[type="checkbox"] {
+                display: none;
+            };
+                
+
+            & label {
+                color: #666;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 22px;
+                text-transform: uppercase;
+            };
+        };
+    };
+};

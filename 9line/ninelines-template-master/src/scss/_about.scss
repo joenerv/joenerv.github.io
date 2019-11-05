@@ -1,0 +1,49 @@
+.about {
+    position: relative;
+    padding: 0 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+
+    &__img {
+        margin-top: 30px;
+        text-align: center;
+    };
+
+    &-form {
+        margin-top: 30px;
+    };
+
+    &__approved {
+        position: absolute;
+        bottom: 13px;
+        right: 0;
+
+    };
+
+    & input {
+        border: none;
+        border-bottom: 2px solid #333;
+        border-radius: 0;
+        font-weight: 500;
+        font-size: 14px;
+        color: #666;        
+        background-color: rgba($color-white, 0);
+        line-height: 22px;
+        padding-left: 0;
+        box-shadow: none;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+
+        &:focus {
+            border: none;
+            border-bottom: 2px solid #333;
+            background-color: rgba($color-white, 0);
+            font-weight: 500;
+            font-size: 14px;
+            color: #666;  
+            box-shadow: none;
+            
+        };
+
+    };
+};
