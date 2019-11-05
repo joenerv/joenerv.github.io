@@ -10,6 +10,7 @@
 @import "helpers";
 @import "about";
 @import "skill";
+@import "level";
 
 .content {
     margin-top: 60px;
@@ -18,4 +19,4 @@
     max-width: 660px;
     font-family: $font-family-roboto;
     background-image: url("/images/bg.png");
-};
+}
