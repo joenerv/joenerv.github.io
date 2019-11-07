@@ -4,31 +4,55 @@ append vars
 	title 9line-vavilo
 
 append links
-	link(rel="stylesheet", href="/foundation/app.css")
-	link(rel="stylesheet", href="/foundation/foundation.min.css")
-	link(rel="stylesheet", href="/css/main.css")
+	link(rel="stylesheet" href="foundation/app.css")
+	link(rel="stylesheet" href="foundation/foundation.min.css")
+	link(rel="stylesheet" href="css/main.css")
 
 block content
 
 	.content
-	
 		.about.row.align-center
 			.columns.medium-3.about__img
-				img(src="/images/photo.png", alt="photo")
+				img(src="images/photo.png" alt="photo")
+
 			.columns.medium-9.small-12
 				form(action="#", method="post").about-form
 					.row
 						.columns
 							label(for="name")
-								input(type="text" name="name" id="name" placeholder="Евгений" minlength="2" maxlength="20" title="Введите имя" required)
+								input(
+									type="text"
+									name="name"
+									id="name"
+									placeholder="Евгений"
+									minlength="2"
+									maxlength="20"
+								)
 							label(for="age")
-								input(type="number", name="age", id="age", placeholder="24.05.1986", maxlength="10")
+								input(
+									type="number"
+									name="age"
+									id="age" placeholder="24.05.1986"
+									maxlength="10"
+								)
 							label(for="city")
-								input(type="text", name="city", id="city", placeholder="Москва", maxlength="20")
+								input(
+									type="text"
+									name="city"
+									id="city"
+									placeholder="Москва"
+									maxlength="20"
+								)
 							label(for="contact")
-								input(type="tel", name="contact", id="contact", placeholder="8-915-302-4440")
+								input(
+									type="tel"
+									name="contact"
+									id="contact"
+									placeholder="8-915-302-4440"
+								)
+
 			.about__approved
-				img(src="/images/approved.png", alt="approved")
+				img(src="images/approved.png" alt="approved")
 
 		.skill
 			.skill__title
@@ -38,52 +62,68 @@ block content
 				.medium-3.small-6
 					ul.skill-list
 						li.skill-list__item
-							input(type="checkbox", name="html5", id="html5" checked)
-							label(for="html5") html5
+							input(type="checkbox" name="html5" id="html5" checked)
+							label(for="html5")
+								|html5
 						li.skill-list__item
-							input(type="checkbox", name="css3", id="css3" checked)
-							label(for="css3") css3
+							input(type="checkbox" name="css3" id="css3" checked)
+							label(for="css3") 
+								|css3
 						li.skill-list__item
-							input(type="checkbox", name="bem", id="bem" checked)
-							label(for="bem") БЭМ
+							input(type="checkbox" name="bem" id="bem" checked)
+							label(for="bem")
+								|БЭМ
+
 				.medium-3.small-6
 					ul.skill-list
 						li.skill-list__item
-							input(type="checkbox", name="sass", id="sass" checked)
-							label(for="sass") sass
+							input(type="checkbox" name="sass" id="sass" checked)
+							label(for="sass")
+								|sass
 						li.skill-list__item
-							input(type="checkbox", name="less", id="less" checked)
-							label(for="less") less
+							input(type="checkbox" name="less" id="less" checked)
+							label(for="less")
+								|less
 						li.skill-list__item
-							input(type="checkbox", name="gulp", id="gulp" checked)
-							label(for="gulp") gulp
+							input(type="checkbox" name="gulp" id="gulp" checked)
+							label(for="gulp")
+								|gulp
+
 				.medium-3.small-6
 					ul.skill-list
 						li.skill-list__item
-							input(type="checkbox", name="vanillajs", id="vanillajs")
-							label(for="vanillajs") vanillajs
+							input(type="checkbox" name="vanillajs" id="vanillajs")
+							label(for="vanillajs")
+								|vanillajs
 						li.skill-list__item
-							input(type="checkbox", name="angular", id="angular")
-							label(for="angular") angular
+							input(type="checkbox" name="angular" id="angular")
+							label(for="angular")
+								|angular
 						li.skill-list__item
-							input(type="checkbox", name="jquery", id="jquery" checked)
-							label(for="jquery") jquery
+							input(type="checkbox" name="jquery" id="jquery" checked)
+							label(for="jquery")
+								|jquery
+
 				.medium-3.small-6
 					ul.skill-list
 						li.skill-list__item
-							input(type="checkbox", name="git", id="git" checked)
-							label(for="git") git
+							input(type="checkbox" name="git" id="git" checked)
+							label(for="git")
+								|git
 						li.skill-list__item
-							input(type="checkbox", name="foundation", id="foundation" checked)
-							label(for="foundation") foundation
+							input(type="checkbox" name="foundation" id="foundation" checked)
+							label(for="foundation")
+								|foundation
 						li.skill-list__item
-							input(type="checkbox", name="", id="bootstrap" checked)
-							label(for="bootstrap") bootstrap
+							input(type="checkbox" name="" id="bootstrap" checked)
+							label(for="bootstrap")
+								|bootstrap
 
 		.level.row
 			.level-scale.medium-6.small-12
-				img(src="/images/scala.png", alt="scala")
-				img.level-scale__arrow(src="/images/arrow.png", alt="arrow")
+				img(src="images/scala.png" alt="scala")
+				img.level-scale__arrow(src="images/arrow.png" alt="arrow")
+
 			.level-text.medium-6.small-12
 				p.level-text__title
 					|Мой уровень владения 
@@ -98,3 +138,4 @@ block content
 		script(src="/foundation/vendor/foundation.min.js")
 		script(src="/foundation/app.js")
 		script(src="/maskinput/jquery.maskedinput.min.js")
+
