@@ -1,49 +1,49 @@
 .skill {
-    border-bottom: 2px solid #f0f0f0;
-    padding: 36px 21px 43px;
-    
-    &__title {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        color: #010101;
-    }
+	border-bottom: 2px solid #f0f0f0;
+	padding: 36px 21px 43px;
 
-    &-list {
-        margin-bottom: 0;
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: #010101;
+	}
 
-        &__item {
-            list-style-type: none;
-            margin-bottom: 40px;
+	&-list {
+		margin-bottom: 0;
 
-            & input[type="checkbox"] {
-                display: none;
-            }
+		&__item {
+			list-style-type: none;
+			margin-bottom: 40px;
 
-            & label {
-                position: relative;
-                padding-left: 28px;
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 22px;
-                text-transform: uppercase;
-                color: #666;
-                cursor: pointer;
+			input[type="checkbox"] {
+				display: none;
+			}
 
-                &:before {
-                    content: url("/images/ckeck-none.png");
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                }
-            }
+			label {
+				position: relative;
+				padding-left: 28px;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 22px;
+				text-transform: uppercase;
+				color: #666;
+				cursor: pointer;
 
-            & input:checked + label:before {
-                content: url("/images/check.png");
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
-    }
+				&::before {
+					content: url("../images/ckeck-none.png");
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+
+			input:checked + label::before {
+				content: url("../images/check.png");
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
 }
