@@ -1,35 +1,34 @@
 .level {
-    padding: 0 20px 65px;
+	padding: 0 20px 65px;
 
-    &-scale {
-        position: relative;
-        margin-top: 58px;
+	&-scale {
+		position: relative;
+		margin-top: 58px;
 
-        &__arrow {
-            position: absolute;
-            left: 80px;
-            bottom: -6px;
-        }
-    }
+		&__arrow {
+			position: absolute;
+			left: 80px;
+			bottom: -6px;
+		}
+	}
 
-    &-text {
-        margin-top: 67px;
+	&-text {
+		margin-top: 67px;
 
-        &__title {
-            margin-bottom: 25px;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 24px;
-            color: #010101;
-            
-        }
+		&__title {
+			margin-bottom: 25px;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 24px;
+			color: #010101;
+		}
 
-        &__number {
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 22.01px;
-            letter-spacing: 2.5px;
-            color: #0093d7;
-        }
-    }
+		&__number {
+			font-weight: 700;
+			font-size: 50px;
+			line-height: 22.01px;
+			letter-spacing: 2.5px;
+			color: #0093d7;
+		}
+	}
 }
