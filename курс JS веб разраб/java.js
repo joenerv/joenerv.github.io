@@ -1,13 +1,6 @@
 // 'use strict';
 
-// var budget = +prompt('Ваш бюджет', '15000');
-// var nameMagazine = prompt('Введите неазвание магазина', '5-ka');
 
-// var mainList = {
-// 	budgetMany: budget,
-// 	name: nameMagazine,
-// 	shopGoods: ['apple', 'tel', 'water'],
-// 	employers: {},
 // 	open: true
 // }
 
@@ -21,3 +14,7 @@
 // var budgetDay = budget/30;
 
 // alert('Ваш бюджет на 1 день ' + budgetDay + ' р.');
+weekend.textContent = week;
+
+console.log(week);
+>>>>>>> 7a642684852d124b0e7eb5f6c3e145a727341adb
