@@ -3,7 +3,7 @@
 let money, 
 	name,
 	time,
-	price
+	price = 100;
 
 
 let mainList = {
@@ -12,7 +12,7 @@ let mainList = {
 	shopGoods: [],
 	employers: {},
 	open: true,
-	discount: false
+	discount: true
 }
 
 function start() {
@@ -56,7 +56,34 @@ function workTime(time) {
 				console.log('такого не может быть');
 				}
 }
-workTime(23);
+// workTime(23);
+
+function priceDiscount() {
+	if (mainList.discount = true) {
+		price = price*0.8;
+		console.log("цена с учетом скидки = " + price);		
+	} else {
+		console.log("цена = " + price);
+		
+	}
+}
+// priceDiscount();
+
+function employers() {
+	for (let i = 0; i < 4; i++) {
+		let a = prompt("Введите имя сотрудника", "Мария");
+
+		if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 20) {
+			console.log('super');
+			let b = i + 1;
+			mainList.employers[i] = b + " - " + a;			
+		} else {
+			i = i - 1;
+		}
+	}
+}
+
+// employers();
 
 let budgetDay = money/30;
 
@@ -65,16 +92,25 @@ console.log('Ваш бюджет на 1 день ' + budgetDay + ' р.');
 console.log(mainList);
 
 
-// let week = ['понед', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'вскр'];
+//--------МАССИВ--------
 
-// let weekend = document.getElementById('mary');
+let first = [];
+let i = prompt('', '');
+first = i.split(',');
 
-// weekend.textContent = week;
-
-// console.log(week);
+console.log(first);
 
 
-//------FUNCTION
+// for (let i = 0; i < arr.length; i++) {
+// 	console.log(arr[i]);
+// }
+// console.log(arr.length);
+
+
+
+
+
+//------FUNCTION--------
 /*let num = 20;
 function showFirstMessage(text) {
 	//alert(text);
@@ -83,16 +119,19 @@ function showFirstMessage(text) {
 
 showFirstMessage('hello')*/
 
+
 /*function calc(a,b) {
 	return a+b
 }
 console.log(calc(5,10));
 console.log(calc(4,5)); - function-decloration - ф-я может быть вызвана в любом месте кода, она объявляется в потоке кода*/
 
+
 /*let calc = function (a,b) {
 	return a+b;
 }
 console.log(calc(5,10)); - function-expresion - ф-я присваивается в переменную. Может быть вызвана только тогда, когда код до нее доходит. не может быть вызвана заранее*/
+
 
 /*let calc = (a,b) => a+b
 
