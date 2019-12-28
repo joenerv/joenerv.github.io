@@ -12,8 +12,81 @@ let mainList = {
 	shopGoods: [],
 	employers: {},
 	open: true,
-	discount: true
+	discount: true,
+	shopItems: [],
+	chooseGoods: function chooseGoods() {
+
+		for (let i = 0; i < 5; i++) {
+			let a = prompt('какой тип товаров будем продавать?', 'картошка');
+			
+			if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50) {
+				console.log('все верно');
+				mainList.shopGoods[i] = a;
+			} else {
+				i = i - 1;
+				}
+		}
+	},
+	workTime: function workTime(time) {
+		if (time < 0) {
+			console.log('такого не может быть');
+		} else if(time > 8 && time < 20) {
+				console.log('магазин работает');	
+				mainList.open = true;	
+			} else if (time < 24) {
+				console.log('слишком поздно');
+				
+				} else {
+					console.log('такого не может быть');
+					}
+	},
+	dayBudget: function dayBadget() {
+		alert("Ежедневный бюджет " + mainList.budget / 30);		
+	},
+	makeDiscount: function makeDiscount() {
+		if (mainList.discount == true) {
+			price = price*0.8;
+			console.log("цена с учетом скидки = " + price);		
+		} else {
+			console.log("цена = " + price);
+			
+		}
+	},
+	hireEmployers: function hireEmployers() {
+		for (let i = 0; i < 4; i++) {
+			let a = prompt("Введите имя сотрудника", "Мария");
+	
+			if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 20) {
+				console.log('super');
+				let b = i + 1;
+				mainList.employers[i] = b + " - " + a;			
+			} else {
+				i = i - 1;
+			}
+		}
+	},
+	chooseShopItems: function chooseShopItems() {
+		for (let i = 0; i < 1; i++) {
+			let items = prompt("Перечислите через зяпятую товары", "");
+
+			if ((typeof(items)) === 'string' && (typeof(items)) != null && items != '' && items.length < 20) {
+				mainList.shopItems = items.split(",");
+				mainList.shopItems.push(prompt("Подождите, еще ", ""));
+				mainList.shopItems.sort();
+				console.log("ok google");
+				
+				for ( let i = 0; i < mainList.shopItems.length; i++) {
+					console.log("В нашем магазине вы найдете: " + mainList.shopItems[i]);
+					
+					}
+				
+			} else {
+				i = i - 1;
+			}
+		}
+	}
 }
+
 
 function start() {
 	money = prompt('Ваш бюджет', '15000');
@@ -25,80 +98,41 @@ function start() {
 	time  = 19;
 }
 
-// start();
 
-
-function chooseGoods() {
-
-	for (let i = 0; i < 5; i++) {
-		let a = prompt('какой тип товаров будем продавать?', 'картошка');
-		
-		if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50) {
-				console.log('все верно');
-				mainList.shopGoods[i] = a;
-			} else {
-				i = i - 1;
-			}
-	}
-}
-
-// chooseGoods();
-
-function workTime(time) {
-	if (time < 0) {
-		console.log('такого не может быть');
-	} else if(time > 8 && time < 20) {
-			console.log('магазин работает');		
-		} else if (time < 24) {
-			console.log('слишком поздно');
-			
-			} else {
-				console.log('такого не может быть');
-				}
-}
-// workTime(23);
-
-function priceDiscount() {
-	if (mainList.discount = true) {
-		price = price*0.8;
-		console.log("цена с учетом скидки = " + price);		
-	} else {
-		console.log("цена = " + price);
-		
-	}
-}
-// priceDiscount();
-
-function employers() {
-	for (let i = 0; i < 4; i++) {
-		let a = prompt("Введите имя сотрудника", "Мария");
-
-		if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 20) {
-			console.log('super');
-			let b = i + 1;
-			mainList.employers[i] = b + " - " + a;			
-		} else {
-			i = i - 1;
-		}
-	}
-}
-
-// employers();
-
-let budgetDay = money/30;
-
-console.log('Ваш бюджет на 1 день ' + budgetDay + ' р.');
 
 console.log(mainList);
 
 
-//--------МАССИВ--------
+function getSize(width,height,depth) {
+	let area = width * height;
+	let volume = width * height * depth;
+	let sizes = [area, volume];
+	return sizes;
+}
 
-let first = [];
-let i = prompt('', '');
-first = i.split(',');
+let areaOne = getSize(3,2,3)[1];
 
-console.log(first);
+console.log(areaOne);
+
+
+//--------ООП--------
+
+/*let soldier = {
+	health: 400,
+	armor: 100
+}
+
+let john = {
+	health: 100
+}
+
+john.__proto__ = soldier;
+
+console.log(john);
+console.log(john.armor);*/
+
+
+
 
 
 // for (let i = 0; i < arr.length; i++) {
