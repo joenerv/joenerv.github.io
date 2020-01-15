@@ -103,16 +103,6 @@ function start() {
 console.log(mainList);
 
 
-function getSize(width,height,depth) {
-	let area = width * height;
-	let volume = width * height * depth;
-	let sizes = [area, volume];
-	return sizes;
-}
-
-let areaOne = getSize(3,2,3)[1];
-
-console.log(areaOne);
 
 
 //--------ООП--------
