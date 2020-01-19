@@ -30,8 +30,14 @@ open.addEventListener('click', () => {
     }
 
     budget_value.textContent = money;
-
     name_value.textContent  = prompt('Введите неазвание магазина', 'пятерочка').toLocaleUpperCase();
+
+    let discount = confirm('У вас есть дисконтная карта?');
+    if (discount == true) {
+        discount_value.style.backgroundColor = 'green';
+    } else {
+            discount_value.style.backgroundColor = 'red';
+        }
 });
   
 goods_btn.addEventListener('click', () => {
@@ -54,62 +60,56 @@ choose_item.addEventListener('change', () => {
     let items = choose_item.value;
 
     if (isNaN(items) && items != '') {
-        mainList.shopItems = items.split(",");
+        mainList.shopItems = items.split(', ');
         mainList.shopItems.sort();
 
         items_value.textContent = mainList.shopItems;
     }
 });
+
+time_value.addEventListener('change', () => {
+    let time = time_value.value;
+
+    if (time < 0) {
+        console.log('такого не может быть');
+        mainList.open = false;
+    } else if(time > 8 && time < 20) {
+            console.log('магазин работает');	
+            mainList.open = true;	
+        } else if (time < 24) {
+            console.log('слишком поздно');  
+            mainList.open = false;          
+            } else {
+                console.log('такого не может быть');
+                mainList.open = false;
+                };
+
+    if (mainList.open == true) {
+        isopen_value.style.backgroundColor = 'green'
+    } else {
+        isopen_value.style.backgroundColor = 'red'
+    }
+});
+
+budget_btn.addEventListener('click', () => {
+    count_budget_value.value = money / 30;
+});
+
+employers_btn.addEventListener('click', () => {
+    for (let i = 0; i < hire_employers_item.length; i++) {
+        let name = hire_employers_item[i].value;
+        mainList.employers[i] = name;
+
+        employers_value.textContent += mainList.employers[i] + ', ';
+    }
+});
     
 let mainList = {
-    budget: money,
+    budget: money, 
     nameShop: name,
     shopGoods: [],
     employers: {},
     open: true,
     discount: true,
-    shopItems: [],
-
-    workTime: function workTime(time) {
-        if (time < 0) {
-            console.log('такого не может быть');
-        } else if(time > 8 && time < 20) {
-                console.log('магазин работает');	
-                mainList.open = true;	
-            } else if (time < 24) {
-                console.log('слишком поздно');
-                
-                } else {
-                    console.log('такого не может быть');
-                    }
-    },
-    dayBudget: function dayBadget() {
-        alert("Ежедневный бюджет " + mainList.budget / 30);		
-    },
-    makeDiscount: function makeDiscount() {
-        if (mainList.discount == true) {
-            price = price*0.8;
-            console.log("цена с учетом скидки = " + price);		
-        } else {
-            console.log("цена = " + price);
-            
-        }
-    },
-    hireEmployers: function hireEmployers() {
-        for (let i = 0; i < 4; i++) {
-            let a = prompt("Введите имя сотрудника", "Мария");
-    
-            if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 20) {
-                console.log('super');
-                let b = i + 1;
-                mainList.employers[i] = b + " - " + a;			
-            } else {
-                i = i - 1;
-            }
-        }
-    },
-    chooseShopItems: function chooseShopItems() {
-
+    shopItems: []
 }
-    
-console.log(mainList);
