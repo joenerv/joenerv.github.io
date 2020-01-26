@@ -4,10 +4,52 @@ html(lang="ru-RU")
         meta(charset = 'utf-8')
         meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
+        //- bootstrap
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+
+        //- googlefont
+        link(href="https://fonts.googleapis.com/css?family=Roboto:400,500,700i&display=swap" rel="stylesheet")
+
+        //- style
         link(rel="stylesheet", href="css/reset.css")
         link(rel="stylesheet", href="css/main.css")
 
-        title Шаблон
+        title Picom_vavilo
         
     body
- 
+        header.header
+            .container
+                .row 
+                    .col-4
+                        img.header-logo(src="img/logo.png", alt="logo")
+                    .col-3
+                        .header-contact
+                            .header-contact__title
+                                |Телефон\факс:
+                            .header-contact__number
+                                |(3412) 48-32-98
+                            .header-contact__email
+                                | e-mail: 
+                                span bit@udol.ru
+                    .col-5
+                        .header-entr
+                            .header-registr
+                                button.header-registr__registr
+                                    |Регистрация
+                                button.header-registr__enter
+                                    |Вход
+                            form.header-search
+                                input(type="text", name="search")
+                                
+
+
+
+
+
+        //- bootsrap_script        
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous")
+
+        //- js_file
+        script(src="js/script.js")
