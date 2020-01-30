@@ -53,13 +53,31 @@ obj.sum();*/
 // console.log(sayName.call(user, 'Smith'));
 // console.log(sayName.apply(user, ['Snow']));
 
-let btn = document.getElementsByTagName('button')[0];
+// let btn = document.getElementsByTagName('button')[0];
 
-btn.addEventListener('click', function() {
+/*btn.addEventListener('click', function() {
 	this.style.backgroundColor = 'gray';
 	this.style.width = 100 + 'px';
 	this.style.height = 80 + 'px';
 	this.style.borderRadius = 20 + 'px';
-	
-	
 });
+
+let age = document.getElementById('age');
+
+function showUser(surname, name) { 
+	alert("Пользователь " + surname + " " + name + ", его возраст " + this.value); 
+}*/
+
+class Rectangle {
+	constructor(height, width) {
+		this.height = height;
+		this.width = width;
+	}
+
+	calcArea() {
+		return this.height * this.width;
+	}
+}
+
+const square = new Rectangle(10, 15);
+console.log(square.calcArea());
