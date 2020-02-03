@@ -80,4 +80,14 @@ class Rectangle {
 }
 
 const square = new Rectangle(10, 15);
+
 console.log(square.calcArea());
+
+let div = document.createElement('div');
+document.body.appendChild(div);
+div.classList.add('block');
+
+div.style.width = 100 + 'px';
+div.style.height = 100 + 'px';
+div.style.backgroundColor = 'gray';
+
