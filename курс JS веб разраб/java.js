@@ -68,15 +68,21 @@ function showUser(surname, name) {
 	alert("Пользователь " + surname + " " + name + ", его возраст " + this.value); 
 }*/
 
-class Rectangle {
-	constructor(height, width) {
+class Options {
+	constructor(height, width, bg, fontSize, textAlign) {
 		this.height = height;
 		this.width = width;
+		this.bg = bg;
+		this.fontSize = fontSize;
+		this.textAlign = textAlign;
+
 	}
 
-	calcArea() {
+	newBlock() {
+		
 		return this.height * this.width;
 	}
+
 }
 
 const square = new Rectangle(10, 15);
