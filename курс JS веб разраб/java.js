@@ -79,21 +79,34 @@ class Options {
 	}
 
 	newBlock() {
-		
-		return this.height * this.width;
+
+		let div = document.createElement('div');
+		document.body.appendChild(div);
+		div.classList.add('block');
+
+		div.style.cssText = `
+			width: 100px;
+			height: 150px;
+			background-color: gray;
+			font-size: 20px;
+			text-align: center;
+		`;
+		// div.style.width = this.height + 'px';
+		// div.style.height = this.width + 'px';
+		// div.style.backgroundColor = this.bg;
+		// div.style.fontSize = this.fontSize + 'px';
+		// div.style.textAlign = this.textAlign;
+		div.textContent = 'new block';
 	}
+
 
 }
 
-const square = new Rectangle(10, 15);
+const square = new Options(150, 100, 'gray', 15, 'center');
 
-console.log(square.calcArea());
+square.newBlock();
 
-let div = document.createElement('div');
-document.body.appendChild(div);
-div.classList.add('block');
 
-div.style.width = 100 + 'px';
-div.style.height = 100 + 'px';
-div.style.backgroundColor = 'gray';
+
+
 
