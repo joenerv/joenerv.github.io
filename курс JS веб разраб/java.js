@@ -68,6 +68,7 @@ function showUser(surname, name) {
 	alert("Пользователь " + surname + " " + name + ", его возраст " + this.value); 
 }*/
 
+/*
 class Options {
 	constructor(height, width, bg, fontSize, textAlign) {
 		this.height = height;
@@ -85,28 +86,23 @@ class Options {
 		div.classList.add('block');
 
 		div.style.cssText = `
-			width: 100px;
-			height: 150px;
-			background-color: gray;
-			font-size: 20px;
-			text-align: center;
+			width: ${this.width}px;
+			height: ${this.height}px;
+			background-color: ${this.bg};
+			font-size: ${this.fontSize}px;
+			text-align: ${this.textAlign};
 		`;
-		// div.style.width = this.height + 'px';
-		// div.style.height = this.width + 'px';
-		// div.style.backgroundColor = this.bg;
-		// div.style.fontSize = this.fontSize + 'px';
-		// div.style.textAlign = this.textAlign;
+
 		div.textContent = 'new block';
 	}
 
-
 }
 
-const square = new Options(150, 100, 'gray', 15, 'center');
+const square = new Options(150, 800, 'gray', 15, 'center');
 
-square.newBlock();
+square.newBlock();*/
 
+let request = new XMLHttpRequest();
 
-
-
+request.open("GET", 'server.php');
 

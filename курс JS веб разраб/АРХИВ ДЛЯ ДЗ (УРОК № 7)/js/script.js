@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 //timer
 
-    let deadline = '2020-02-02';
+    let deadline = '2020-02-12';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -127,8 +127,51 @@ window.addEventListener('DOMContentLoaded', function() {
             let target = event.target;
             let section = document.getElementById(target.getAttribute('href').slice(1));
             window.scrollBy(0, section.getBoundingClientRect().top / 20 - 3);
-        }, 1500)
-    })
+        }, 1500);
+    });
 
+    //Form
+    let message = new Object();
+    message.loading = "Загрузка...";
+    message.success = "Спасибо! Скоро мы с вами свяжемся.";
+    message.failure = "Что-то пошло не так";
+
+    let form = document.getElementsByClassName('main-form')[0],
+        input = form.getElementsByTagName('input'),
+        statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            form.appendChild(statusMessage);
+
+            // AJAX
+            let request = new XMLHttpRequest();
+            
+            request.open('POST', 'server.php')
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            let formData = new FormData(form);
+
+            request.send(formData);
+
+            request.onreadystatechange = function() {
+                if (request.readyState < 4) {
+                    statusMessage.innerHTML = message.loading;
+                } else if (request.readyState === 4) {
+                    if (request.status == 200 && request.status < 300) {
+                        statusMessage.innerHTML = message.success;
+                        //Добавить контент на страницу
+                    }
+                    else {
+                        statusMessage.innerHTML = message.failure;
+                    }
+                }
+            } 
+            for (let i = 0; i < input.length; i++) {
+                input[i].value = '';
+                //очищаем поля ввода
+            }
+        });
 
 });
