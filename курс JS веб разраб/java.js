@@ -102,7 +102,23 @@ const square = new Options(150, 800, 'gray', 15, 'center');
 
 square.newBlock();*/
 
-let request = new XMLHttpRequest();
+let user = (function() {
+	let privat = function() {
+		console.log('i am privat!' );		
+	};
 
-request.open("GET", 'server.php');
+	let sayHello = function(){
+		console.log('Hello');
+		
+	};
+
+	return {
+		sayHello : sayHello,
+		privat : privat
+	}
+
+}());
+
+console.log(user.sayHello());
+console.log(user.privat());
 
