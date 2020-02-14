@@ -1,12 +1,21 @@
 function timer() {
     
-    let deadline = '2020-02-12';
+    let deadline = '2020-04-14';
 
     function getTimeRemaining(endtime) {
-        let t = Date.parse(endtime) - Date.parse(new Date()),
-        seconds = Math.floor( (t/1000) % 60 ),
-        minutes = Math.floor( (t/1000/60) % 60 ),
+        let t = Date.parse(endtime) - Date.parse(new Date());
+        seconds = Math.floor( (t/1000) % 60 );
+        if(seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        minutes = Math.floor( (t/1000/60) % 60 );
+        if(minutes < 10) {
+            minutes = '0' + minutes;
+        }
         hours = Math.floor( (t/(1000*60*60)) );
+        if(hours < 10) {
+            hours = '0' + hours;
+        }
 
         return {
             'total': t,
