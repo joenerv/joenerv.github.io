@@ -10,6 +10,7 @@
  
 .about
     margin-bottom: 72px
+
     &__title
         text-align: center
         margin-bottom: 63px
@@ -30,6 +31,11 @@
 
  
 input 
+    outline: none
+
+    &::placeholder
+        color: #231f20
+
     &[name="name"]        
         width: calc(100% - 163px)
         @extend %about-input-style
@@ -51,11 +57,11 @@ input
         width: calc(100% - 74px)  
         @extend %about-input-style
 
-@media (max-width: 870px)
-    
+@media (max-width: 870px)    
     
     .about__input
         display: inline-block
+
         & input[type="text"],
         input[type="email"]
 

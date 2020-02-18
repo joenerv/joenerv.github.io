@@ -22,23 +22,23 @@
         <form action="#" method="post" name="about-form">
           <div class="about__input">
             <label for="name">Полное ФИО </label>
-            <input type="text" id="name" name="name" value="Вавило Евгений Николаевич">
+            <input type="text" id="name" name="name" placeholder="Вавило Евгений Николаевич">
           </div>
           <div class="about__input">   
             <label for="year">Год рождения </label>
-            <input type="text" id="year" name="year" value="1986">
+            <input type="text" id="year" name="year" placeholder="1986">
           </div>
           <div class="about__input">
             <label for="city">Место жительства </label>
-            <input type="text" id="city" name="city" value="г. Москва, Россия">
+            <input type="text" id="city" name="city" placeholder="г. Москва, Россия">
           </div>
           <div class="about__input">
             <label for="skype">Скайп </label>
-            <input type="text" id="skype" name="skype" value="joenerv">
+            <input type="text" id="skype" name="skype" placeholder="joenerv">
           </div>
           <div class="about__input">
             <label for="email">Почта </label>
-            <input type="email" id="email" name="email" value="joenerv@yandex.ru">
+            <input type="email" id="email" name="email" placeholder="joenerv@yandex.ru">
           </div>
         </form>
       </div>
@@ -131,7 +131,10 @@
         </form>
       </div>
       <div class="slider"> 
-        <h2 class="slider__title">Уровень владения JavaScript</h2><img class="slider__line" src="img/line.png" alt="line">
+        <h2 class="slider__title">Уровень владения JavaScript</h2>
+        <div class="slider-container">
+          <input class="slider__range" type="range" min="1" max="100" value="50">
+        </div><img class="slider__line" src="img/line.png" alt="line">
         <div class="slider-text">
           <div class="slider-text-block1">
             <p class="slider-text-block1__text1">Не владею </p><img class="slider-text-block1__arrow1" src="img/arrow.png" alt="arrow">
@@ -152,46 +155,7 @@
         <h2 class="story__title">Расскажите о себе словами</h2>
         <p class="story__text">Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</p>
         <form class="story-form" action="#" method="post">
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="Ознакомившись с описанием вакансии и ">
-            <label for="story"> </label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="с видео роликом, я понял, что хочу стать">
-            <label for="story"> </label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="частью этой команды.">
-            <label for="story"> </label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="Меня привлекла возможность работать">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="с профессионалами, развиваться и ">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="быть полезным делая то, что мне нравится.">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="Я ожидаю от работы в CSSSR того, что">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="я буду решать различные задачи, работать">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="в команде профессионалов и вносить свой">
-            <label for="story"></label>
-          </div>
-          <div class="story-form-enter">
-            <input class="story-form__input" type="text" name="story" value="вклад в конечный продукт.">
-            <label for="story"></label>
-          </div>
+          <textarea class="story-form-enter" name="text" cols="30" rows="10" placeholder="Ознакомившись с описанием вакансии и с видео роликом, я понял, что хочу стать частью этой команды. Меня привлекла возможность работать с профессионалами, развиваться и быть полезным делая то, что мне нравится. Я ожидаю от работы в CSSSR того, что я буду решать различные задачи, работать в команде, вносить свой вклад в конечный продукт, постоянно учиться и развиваться."></textarea>
         </form>
       </div>
       <div class="plans">
@@ -219,7 +183,7 @@
       <div class="date"> 
         <div class="date-input">
           <label for="date">Дата заполнения</label>
-          <input type="text" name="date" id="date" value="04.07.2019">
+          <input type="text" name="date" id="date" placeholder="18.02.2020">
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@
         
         display: flex
         align-items: flex-end
+
         & label
             position: relative
             color: #2f1b15
@@ -22,27 +23,34 @@
             border: none
             padding-bottom: 8px
             padding-left: 12px
+            outline: none
+            &::placeholder
+                color: #231f20
             
         & label:after
             position: absolute
             content: url(../img/line-date.png)
             top: 0
             left: 180px
+
 @media (max-width: 625px) 
     .date-input
         & label:after
             left: 166px
             top: 20px
+
 @media (max-width: 600px) 
     .date-input
         & label:after
             left: 180px
             top: 0
+
 @media (max-width: 490px) 
     .date-input
         & label:after
             left: 165px
             top: 20px
+
 @media (max-width: 465px) 
     .date-input
         & label:after
