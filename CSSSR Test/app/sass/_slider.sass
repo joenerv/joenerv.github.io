@@ -6,26 +6,35 @@
         font-family: "PT Sans"
         font-size: 24px
         font-weight: 700
-        margin-bottom: 43px
+        margin-bottom: 28px
 
     &-container
-
+        position: relative        
+        
         & input[type='range']
-            width: 100%
+            position: absolute
+            top: 0
+            left: -9px
+            width: 101.5%
             -webkit-appearance: none
             background-color: transparent
             cursor: pointer
 
-        & input[type=range]::-webkit-slider-thumb 
-            -webkit-appearance: none
-            background: url(../img/arrow.png) no-repeat
-            width: 25px
-            height: 25px
+            &::-webkit-slider-thumb 
+                -webkit-appearance: none
+                background: url(../img/arrow.png) no-repeat
+                width: 17px
+                height: 14px
 
-
+            &::-moz-range-thumb
+                -webkit-appearance: none
+                background: url(../img/arrow.png) no-repeat
+                width: 17px
+                height: 14px
 
     &__line
         width: 100%
+        padding-top: 18px
 
     &-text 
         display: flex
@@ -43,11 +52,7 @@
         &-block1
             position: relative
             width: 145px
-            &__arrow1
-                display: none
-                position: absolute
-                left: -8px
-                top: -50px
+
         &-block1:before
             position: absolute
             left: -1px
@@ -56,28 +61,21 @@
             
         &-block2
             position: relative
-            width: 227px
-            &__arrow2
-                display: none
-                position: absolute
-                left: -8px
-                top: -50px
+            width: 230px
+
         &-block2:before
             position: absolute
-            left: 0
+            left: 3px
             top: -38px 
             content: url(../img/line-vertical-small.png)
 
         &-block3
             position: relative
             width: 230px
-            &__arrow3
-                position: absolute
-                left: -8px
-                top: -50px
+
         &-block3:before
             position: absolute
-            left: 0
+            left: 2px
             top: -38px
             content: url(../img/line-vertical-small.png)
             
@@ -85,11 +83,7 @@
             position: relative
             width: 170px
             text-align: right
-            &__arrow4
-                display: none
-                position: absolute
-                right: -6px
-                top: -50px
+
         &-block4:before
             position: absolute
             right: 0
