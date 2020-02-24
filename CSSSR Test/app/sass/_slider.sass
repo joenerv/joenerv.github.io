@@ -2,8 +2,8 @@
     margin-bottom: 38px
     
     &__title
-        color: #2f1b15
-        font-family: "PT Sans"
+        color: $color-text
+        font-family: $font-main
         font-size: 24px
         font-weight: 700
         margin-bottom: 28px
@@ -40,11 +40,12 @@
         display: flex
         width: 100%
         padding-top: 29px
-        color: #2f1b15
-        font-family: "PT Sans"
+        color: $color-text
+        font-family: $font-main
         font-size: 15px
         font-weight: 700
         line-height: 21px
+
         & p 
             cursor: pointer
             margin: 0
@@ -89,3 +90,21 @@
             right: 0
             top: -32px
             content: url(../img/line-vertical-big.png)
+
+@media (max-width: 850px)
+    .slider
+        &-container
+            & input[type='range']
+                left: -7px
+
+@media (max-width: 720px)
+    .slider
+        &-container
+            & input[type='range']
+                left: -5px
+
+@media (max-width: 360px)
+    .slider
+        &-container
+            & input[type='range']
+                left: -4px

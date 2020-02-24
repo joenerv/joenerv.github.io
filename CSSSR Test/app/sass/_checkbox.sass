@@ -1,29 +1,36 @@
 .checkbox 
     margin-bottom: 66px
+
     &__title
-        color: #2f1b15
-        font-family: "PT Sans"
+        color: $color-text
+        font-family: $font-main
         font-size: 24px
         font-weight: 700
         margin-bottom: 18px
+
     &__text
-        color: #3d3d3d
-        font-family: "PT Sans"
+        color: $color-text-desctription
+        font-family: $font-main
         font-size: 17px
         font-weight: 400
         line-height: 23px
         margin-bottom: 28px
+
     &-form 
         display: flex
         justify-content: space-between
         flex-wrap: wrap
+
     &-block
         width: 30%
         margin: 0
+
         & li
             margin-bottom: 20px
+
             & input[type='checkbox']
                 display: none
+
             & label 
                 position: relative
                 color: #000000
@@ -32,15 +39,19 @@
                 font-weight: 700
                 padding-left: 27px
                 cursor: pointer
+
             & label:before
                 position: absolute
-                content: url(../img/check-none.png)
+                content: url(../img/checked-none.png)
                 left: 0
                 top: 5px
+
             & input:checked + label:before
                 position: absolute
-                top: -5px
+                top: -4px
+                left: 0
                 content: url(../img/checked-checked.png)
+
             & a 
                 text-decoration: none
                 font-family: "PT Sans"
@@ -50,9 +61,11 @@
                 border-bottom: 2px solid #1f5f97
 
 @media (max-width: 830px)
+
     .checkbox-block
         width: 50%
 
 @media (max-width: 720px)
+    
     .checkbox-block
         width: 100%

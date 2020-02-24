@@ -1,22 +1,24 @@
 .plans
+
     h2.plans__title Какие у вас планы на будущее?
+
     p.plans__text
         | Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются. 
-    form.plans-radiocheck(action="#", method="post")
+
+    form.plans-radiocheck(action="#", method="post", id="plans")
 
         .plans-radiocheck-block
-            input(type="radio", name="plans", id="layout", value="layout")
+            input(type="radio", name="plans", id="layout", value="layout", form="plans")
             label(for="layout") Верстать
 
         .plans-radiocheck-block
-            input(type="radio", name="plans", id="js", value="layout" checked)
+            input(type="radio", name="plans", id="js", value="js", form="plans" checked)
             label(for="js") Прокачиваться в JS
 
         .plans-radiocheck-block
-            input(type="radio", name="plans", id="manager", value="layout")
+            input(type="radio", name="plans", id="manager", value="manager", form="plans")
             label(for="manager") Менеджерство
 
         .plans-radiocheck-block
-            input(type="radio", name="plans", id="other", value="layout")
+            input(type="radio", name="plans", id="other", value="other", form="plans")
             label(for="other") Другое
-    
