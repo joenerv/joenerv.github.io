@@ -10,9 +10,12 @@
  
 .about
     margin-bottom: 72px
+    width: 100%
 
     &__title
-        text-align: center
+        display: inline-block
+        margin-left: auto
+        margin-right: auto
         margin-bottom: 63px
 
     &__input
@@ -22,7 +25,8 @@
         align-items: flex-end
         margin-bottom: 20px
         width: 100%
-           
+
+          
         & label
             color: $color-text    
             font-family: $font-main
@@ -39,6 +43,10 @@ input
     &[name="name"]        
         width: calc(100% - 163px)
         @extend %about-input-style
+
+        &::before
+            content: '+'
+            position: absolute
                
     &[name="year"]
         width: calc(100% - 175px)
