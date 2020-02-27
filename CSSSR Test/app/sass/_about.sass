@@ -1,31 +1,29 @@
 %about-input-style
     padding-left: 15px
-    padding-bottom: 8px
     background-color: transparent
     border: none
-    border-bottom: 3px solid #3f241e
+    background-image: url(../img/line-bg.png)
     font-family: $font-input
     font-size: 30px
     font-weight: 400
+    line-height: 60px
  
 .about
     margin-bottom: 72px
     width: 100%
+    display: flex
+    flex-direction: column
 
-    &__title
-        display: inline-block
-        margin-left: auto
-        margin-right: auto
+    &__title        
         margin-bottom: 63px
-
+        align-self: center
+        
     &__input
         display: flex
         position: relative
         justify-content: space-between
         align-items: flex-end
-        margin-bottom: 20px
         width: 100%
-
           
         & label
             color: $color-text    
@@ -36,6 +34,7 @@
 
 input 
     outline: none
+    position: relative
 
     &::placeholder
         color: $color-placeholder
@@ -43,10 +42,6 @@ input
     &[name="name"]        
         width: calc(100% - 163px)
         @extend %about-input-style
-
-        &::before
-            content: '+'
-            position: absolute
                
     &[name="year"]
         width: calc(100% - 175px)
@@ -73,13 +68,27 @@ input
         input[type="email"]
 
             width: 100%
-            margin-top: 15px
             margin-bottom: 10px
             padding-left: 0
-            font-size: 21px
-            padding-bottom: 0
+            padding-bottom: 0     
 
 @media (max-width: 600px)
     
     .about
         margin-bottom: 40px  
+
+        &__input
+            & input[type="text"],
+            input[type="email"]
+                font-size: 21px
+                line-height: 45px
+                background-image: url(../img/line-bg-h40.png)
+        &__title
+            width: 200px
+
+@media (max-width: 450px)
+
+    .about
+
+        &__title
+            width: 160px
