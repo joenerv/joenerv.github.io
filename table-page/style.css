@@ -1,8 +1,18 @@
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
 
 html,
 body {
     color: #000;
-    
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
 }
 
 .firstpanel {
@@ -26,7 +36,7 @@ body {
     background-color: #e9ebee;
     padding: 0%;
     width: 100%;
-    height: 75vh;
+    height: 84vh;
     overflow-x: auto;
     overflow-y: auto;
 
@@ -53,7 +63,7 @@ body {
 }
 
 .serptable-th {
-    border: 1px solid #3896c1;
+    border: 1px solid black;
     background-color: #3896c1;
     color: #fff;
     text-align: center;
@@ -87,6 +97,3 @@ body {
     color: #000;
 }
 
-.first-string {
-    margin-right: 10px;
-}

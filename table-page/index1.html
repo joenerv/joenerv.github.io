@@ -8,7 +8,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
+
+    
+
+  </head>
+  <body>
+    
+  </body>
+</html>
+ 
+
     <!-- My custom CSS -->
     <style>
 
@@ -71,20 +84,12 @@
         </div>
 
         <div class="row">
-            <div class="col">
-                <table class="serptable">
-                    
-                </table>
-            </div>
-        </div>
-
-        <div class="row table-content">
             <div class="col thirdpanel">
-                <table class="serptable">
+                <table class="serptable" id="table">
 
-                    <thead class="first-string">
+                    <thead>
                         <tr class="serptable-tr table-string-top">
-                            <th class="serptable-th one">
+                            <th class="serptable-th">
                                 <input type="checkbox">
                             </th>
                             <th class="serptable-th">Növü</th>
@@ -752,6 +757,10 @@
     </div>
 
     <!-- Optional JavaScript -->
+
+  
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -762,10 +771,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="jquery.fixedheadertable.min.js"></script>
+    <script src="jquery.freezeheader.js"></script>
     <script>
-        $('table').fixedHeaderTable({ footer: false, cloneHeadToFoot: false, fixedColumn: false });
+        $('#table').freezheader();
+        
     </script>
+
 </body>
 
 </html>
