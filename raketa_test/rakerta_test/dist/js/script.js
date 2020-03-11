@@ -30,8 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
     countPaymentBankAll();
 
     //стоимость квартиры, расчет
-    priceRange.addEventListener('input', function(){
-        
+    priceRange.addEventListener('input', function(){        
         
         price.textContent = prettify(priceRange.value);
 
