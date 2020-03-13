@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'CourierNew';
+	src: url('../font/CourierNew.eot');
+	src: url('../font/CourierNew.eot?#iefix') format('embedded-opentype'),
+	url('CourierNewPSMT.woff2') format('woff2'),
+	url('../font/CourierNew.woff') format('woff'),
+	url('../font/CourierNew.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
