@@ -4,6 +4,10 @@ html(lang="ru-RU")
         meta(charset = 'utf-8')
         meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
+        //- swiper
+
+        link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+
         link(rel="stylesheet", href="css/reset.css")
         link(rel="stylesheet", href="css/main.css")
 
@@ -13,6 +17,28 @@ html(lang="ru-RU")
 
         include mixin
         
-        p тестовый текст 
+        p тестовый текст
+
+        .swiper-container
+
+            .swiper-wrapper
+
+                .swiper-slide 
+                    |Slide1
+                .swiper-slide 
+                    |Slide 2
+                .swiper-slide
+                    |Slide 3 
+
+            .swiper-pagination
+
+            .swiper-button-prev
+            
+            .swiper-button-next
+                
+
+            .swiper-scrollbar
+        //- swiper
+        script(src="https://unpkg.com/swiper/js/swiper.min.js")
 
         script(src="js/script.js")
