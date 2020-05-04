@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="566e0e36-7cd0-4eca-b05a-c66f27f723e1" name="Default Changelist" comment="" />
+    <list default="true" id="d9227d5e-f6f3-4432-8db9-441dd4da930e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1ZwyWLkUbGjKOZrLUbZOemd1PBp" />
+  <component name="ProjectId" id="1bQiS5gVNTKMRIG6mEVlvzzBK6t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -44,13 +40,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="566e0e36-7cd0-4eca-b05a-c66f27f723e1" name="Default Changelist" comment="" />
-      <created>1585764486531</created>
+      <changelist id="d9227d5e-f6f3-4432-8db9-441dd4da930e" name="Default Changelist" comment="" />
+      <created>1588570714882</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585764486531</updated>
-      <workItem from="1585764507081" duration="313000" />
-      <workItem from="1588230532693" duration="1755000" />
+      <updated>1588570714882</updated>
+      <workItem from="1588570725576" duration="157000" />
     </task>
     <servers />
   </component>
@@ -62,9 +57,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
