@@ -7,6 +7,8 @@
     height: 32rem;
     position: relative; 
     z-index: 10;
+    background-position: center;
+    background-size: cover
   }
   
   .video-text {
@@ -20,7 +22,9 @@
   }
   .open-video {
     left: calc(50% - 95px);
+    cursor: pointer;
   }
+
   .content-video {
     
     padding-bottom: 56%;
@@ -28,6 +32,6 @@
     padding-bottom: 56%;
     object-fit: cover;
     background-size: cover;
-
+    
   }
   
