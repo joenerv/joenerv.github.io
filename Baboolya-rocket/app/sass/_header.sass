@@ -1,0 +1,90 @@
+
+.header
+  display: flex
+  justify-content: space-between  
+
+  &-logo
+    font-size: rem(41)
+    font-family: $font-comfortaa
+    color: #FFFFFF
+    padding-top: rem(47)
+
+  &-radiobox
+    padding-top: rem(62)
+    display: flex
+
+    &__line
+      width: rem(65)
+      height: rem(32)
+      border-bottom: 1px solid #FFFFFF
+
+.radiobox   
+
+  &__input
+    display: none
+
+    &:checked + .radiobox__label
+      color: #FDDA1E
+      border-bottom: 1px solid #FDDA1E
+
+  &__label
+    font-family: $font-gilroy 
+    font-weight: normal
+    font-size: rem(20)
+    letter-spacing: rem(0.3)
+    color: #FFFFFF
+    cursor: pointer
+    transition: 0.5s
+    border-bottom: 1px solid #FFFFFF
+    padding-bottom: rem(9)
+    white-space: nowrap
+
+    &:hover
+      color: #FDDA1E
+      border-bottom: 1px solid #FDDA1E
+
+@media (max-width: 1180px)
+  .main-wrapper
+    padding-left: 10%
+    padding-right: 10%
+
+@media (max-width: 1025px) 
+
+  .main-wrapper
+    padding-left: rem(77)
+    padding-right: rem(81)
+
+  .header
+    padding-top: rem(0)
+
+    &-logo
+      padding-top: rem(17)
+      font-size: rem(28.5)
+
+    &-radiobox
+      padding-top: rem(25)
+
+      &__line
+        width: rem(54)
+        height: rem(24)
+      
+  .radiobox
+    &__label 
+      font-size: rem(15.8)
+      padding-bottom: rem(6)
+
+  .line-ipad
+    width: rem(42)
+
+@media (max-width: 767px) 
+  .header
+    justify-content: center
+
+    &-logo
+      padding-top: rem(10)
+      font-size: rem(37)
+      letter-spacing: rem(-1)
+      
+
+    &-radiobox
+      display: none

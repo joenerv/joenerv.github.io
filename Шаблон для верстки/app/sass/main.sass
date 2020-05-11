@@ -1,2 +1,8 @@
 @import "variables"
 @import "mixins"
+
+@function rem($pixels, $context: 16)
+  @return #{$pixels/$context}rem
+
+p
+  margin-left: (16)

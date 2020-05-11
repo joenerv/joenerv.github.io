@@ -1,0 +1,65 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        title Бабуля
+
+        //- google fonts
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap")
+
+        //- font gilroy
+        link(rel="stylesheet", href="font/stylesheet.css")
+
+
+        //- syle css
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="css/main.css")
+
+    body
+
+        include mixin
+        
+        .main-wrapper
+
+            header.header
+                .header-logo
+                    span Бабуля
+
+                .header-radiobox
+                    
+                    label.radiobox(for="flat")
+                        input.radiobox__input(type="radio", id="flat", name="choise-housing" checked)
+                        span.radiobox__label
+                            |Квартиры
+
+                    .header-radiobox__line.line-ipad
+
+                    label.radiobox(for="hause")
+                        input.radiobox__input(type="radio", id="hause", name="choise-housing")
+                        span.radiobox__label
+                            |Дома и дачи
+
+                    .header-radiobox__line
+                        
+
+                    label.radiobox(for="commercial")
+                        input.radiobox__input(type="radio", id="commercial", name="choise-housing")
+                        span.radiobox__label
+                            |Коммерческая недвижимость
+
+            .content
+                .content-title
+                    span.content-title__text Аренда без посредников в
+                    select(name="city", size="1").content-title__list
+                        option(value="Moscow" selected) Москве
+                        option(value="Moscow-region") Московской области
+
+            footer.footer
+                span 2020. Студия Ракета
+                    
+
+
+        script(src="js/script.js")
