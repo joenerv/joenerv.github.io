@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
   
-  // $(function() {
-  //   $('select').selectric();
-  // });
+  $(function() {
+    $('select').selectric();
+  });
     
     
   });
