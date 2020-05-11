@@ -4,6 +4,8 @@ html(lang="ru-RU")
         meta(charset = 'utf-8')
         meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
+
+
         title Бабуля
 
         //- google fonts
@@ -51,15 +53,28 @@ html(lang="ru-RU")
                             |Коммерческая недвижимость
 
             .content
+
                 .content-title
                     span.content-title__text Аренда без посредников в
                     select(name="city", size="1").content-title__list
                         option(value="Moscow" selected) Москве
                         option(value="Moscow-region") Московской области
 
-            footer.footer
-                span 2020. Студия Ракета
-                    
+                .content-select
+                    .select-wrapper
+                        select(name="metro")
+                            option(value="Авиамоторная") Авиамоторная
+                            option(value="Южная") Южная
+                            option(value="Авиамоторная") Авиамоторная
+                            option(value="Авиамоторная") Авиамоторная
+                            option(value="Авиамоторная") Авиамоторная
 
+                    button.select-button
+                        |Найти
+
+
+
+            footer.footer
+                span 2020. Студия Ракета 
 
         script(src="js/script.js")

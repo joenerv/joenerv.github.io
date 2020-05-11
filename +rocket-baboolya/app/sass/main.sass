@@ -1,0 +1,29 @@
+// function rem
+@function rem($pixels, $context: 16)
+  @return #{$pixels/$context}rem
+  
+@import "variables"
+@import "mixins"
+@import "header"
+@import "content"
+@import "footer"
+
+
+
+body
+  box-sizing: border-box
+
+.main-wrapper
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(90deg, #CE6FC8, #70A4F2)
+  padding-left: 16.05%
+  padding-right: 16.1%
+  font-family: $font-gilroy
+
+
+
+

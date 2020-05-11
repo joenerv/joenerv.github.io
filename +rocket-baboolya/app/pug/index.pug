@@ -1,0 +1,118 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        //- bootstrap
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+
+
+        title Бабуля
+
+        //- google fonts
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap")
+
+        //- font gilroy
+        link(rel="stylesheet", href="font/stylesheet.css")
+
+        //- selectric
+        link(rel="stylesheet", href="css/selectric.css")
+
+
+        //- syle css
+
+        link(rel="stylesheet", href="css/main.css")
+
+    body
+
+        include mixin
+        
+        .main-wrapper
+
+            header.header
+                .header-logo
+                    span Бабуля
+
+                .header-radiobox
+                    
+                    label.radiobox(for="flat")
+                        input.radiobox__input(type="radio", id="flat", name="choise-housing" checked)
+                        span.radiobox__label
+                            |Квартиры
+
+                    .header-radiobox__line.line-ipad
+
+                    label.radiobox(for="hause")
+                        input.radiobox__input(type="radio", id="hause", name="choise-housing")
+                        span.radiobox__label
+                            |Дома и дачи
+
+                    .header-radiobox__line
+                        
+
+                    label.radiobox(for="commercial")
+                        input.radiobox__input(type="radio", id="commercial", name="choise-housing")
+                        span.radiobox__label
+                            |Коммерческая недвижимость
+
+            .content
+
+                .content-title
+                    span.content-title__text Аренда без посредников в
+                    select(name="city", size="1").content-title__list
+                        option(value="Moscow" selected) Москве
+                        option(value="Moscow-region") Московской области
+
+                .content-select
+
+                    .input-group
+                        select#inputGroupSelect04.custom-select
+                            option(selected='') Все Варианты
+                            option(value='1') Авиамоторная
+                            option(value='2') Южная
+                            option(value='3') Авиамоторная
+                        .input-group-append
+                            button.btn.btn-outline-secondary.select-button(type='button')
+                                | Найти
+
+                    
+                    .selectric-wrapper
+                        .selectric-hide-select
+                            select#basic(tabindex='0')
+                                option(value='')
+                                | Metro
+                                option(value='strawberries') Strawberries
+                                option(value='mango') Mango
+                                option(value='bananas') Bananas
+                                option(value='watermelon') Watermelon
+                        .selectric
+                            span.label Metro
+                            b.button l
+                        .selectric-items(tabindex='-1' style='width: 363px; height: 300px;')
+                            .selectric-scroll
+                                ul
+                                    li.selected.highlighted(data-index='0')
+                                        | metro
+                                    li(data-index='1') Strawberries
+                                    li(data-index='2') Mango
+                                    li(data-index='3') Bananas
+                                    li(data-index='4') Watermelon
+
+                            input.selectric-input(tabindex='0')
+
+
+
+
+            footer.footer
+                span 2020. Студия Ракета 
+        
+        script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+
+        //- selectric
+        script(src="js/jquery.selectric.min.js")
+        script(src="js/script.js")

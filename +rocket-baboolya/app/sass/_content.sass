@@ -10,6 +10,8 @@
             font-weight: 500
             letter-spacing: rem(1.2)
             text-shadow: 0 3px 6px #00000029
+            white-space: nowrap
+
 
         &__list
             text-shadow: 0 3px 6px #00000029
@@ -22,6 +24,7 @@
             position: relative
             width: inherit
             transition: 0.5s
+            appearance: none
             &:hover
                 color: #FFF4BA
                 border-bottom: 2px solid #FFF4BA
@@ -32,4 +35,26 @@
                 font-weight: bold
                 padding-top: 10px
 
+.select
+
+    &-button
+        width: rem(200)
+        height: rem(73)
+        border: none
+        border-radius: 4px
+        font-size: rem(20)
+        font-weight: bold
+        letter-spacing: rem(0.1)
+        color: #FFFFFF
+        background: #7E187D
+        transition: 1s
+        cursor: pointer
+
+        &:hover
+            color: #FDDA1E
+            background: linear-gradient(90deg, #FD65A7, #962A9F)
+
+.input-group
+    width: 40%
+        
     
