@@ -254,3 +254,12 @@
 .selectric-items .selectric-group li {
   padding-left: 25px;
 }
+
+@media (max-width: 1025px) {
+  .selectric .label {
+    font-size: 26px;
+  }
+  .selectric-wrapper {
+    padding-top: 0;
+  }
+}

@@ -34,28 +34,62 @@
             <option value="Moscow-region">Московской области</option>
           </select>
         </div>
-        <div class="content-select">
-          <div class="input-group">
-            <div class="selectbox">
-              <div class="selectbox-wrap">
-                <div class="selectbox-wrap__title">метро</div>
-              </div>
-              <div class="selectbox-wrap">
-                <div class="selectbox-wrap__title">комнат</div>
-              </div>
-              <div class="selectbox-wrap">
-                <div class="selectbox-wrap__title">стоимость</div>
+        <div class="content-select">                   
+          <div class="selectbox">
+            <div class="selectbox-wrap">
+              <div class="selectbox-wrap__title">метро</div>
+              <div class="selectbox-text">Все варианты</div>
+              <div class="selectbox-popup popup-metro">
+                <ul class="popup-metro-list">
+                  <li class="popup-metro-list__item">Все варианты</li>
+                  <li class="popup-metro-list__item">Авиамоторная</li>
+                  <li class="popup-metro-list__item">Беляево</li>
+                  <li class="popup-metro-list__item">Калужская</li>
+                  <li class="popup-metro-list__item">Коньково</li>
+                  <li class="popup-metro-list__item">Южная</li>
+                  <li class="popup-metro-list__item">Боровицкая</li>
+                </ul>
               </div>
             </div>
-            <button class="btn btn-outline-secondary select-button" type="button">Найти</button>
+            <div class="selectbox-wrap">
+              <div class="selectbox-wrap__title">комнат</div>
+              <div class="selectbox-text">Только</div>
+              <div class="selectbox-popup popup-flat">
+                <label class="popup-flat-checkbox">
+                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="1"><span class="popup-flat-checkbox__label">1</span>
+                </label>
+                <label class="popup-flat-checkbox">
+                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="2" checked><span class="popup-flat-checkbox__label">2</span>
+                </label>
+                <label class="popup-flat-checkbox">
+                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="3" checked><span class="popup-flat-checkbox__label">3</span>
+                </label>
+                <label class="popup-flat-checkbox">
+                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="4+" checked><span class="popup-flat-checkbox__label">4+</span>
+                </label>
+              </div>
+            </div>
+            <div class="selectbox-wrap">
+              <div class="selectbox-wrap__title">стоимость</div>
+              <div class="selectbox-text">от <span class="selectbox-price__min">25 000</span>до<span class="selectbox-price__max">35 000</span>рублей</div>
+              <div class="selectbox-popup popup-price">
+                <div class="popup-price__content"><span>от</span>
+                  <div class="popup-price__input">
+                    <input class="popup-price__min" type="text" name="price-min" placeholder="25 000"><span class="popup-price-min__reset"></span>
+                  </div><span>до</span>
+                  <div class="popup-price__input">
+                    <input class="popup-price__max" type="text" name="price-min" placeholder="0"><span class="popup-price-min__reset popup-price-max__reset"></span>
+                  </div><span>рублей</span>
+                </div>
+              </div>
+            </div>
           </div>
+          <button class="select-button">Найти</button>
         </div>
       </div>
       <footer class="footer"><span>2020. Студия Ракета </span></footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/jquery.selectric.min.js"></script>
     <script src="js/script.js"></script>
   </body>
