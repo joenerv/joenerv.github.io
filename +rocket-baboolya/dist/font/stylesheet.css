@@ -33,4 +33,15 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('Comfortaa.eot');
+	src: local('Comfortaa'),
+		url('Comfortaa.eot?#iefix') format('embedded-opentype'),
+		url('Comfortaa.woff') format('woff'),
+		url('Comfortaa.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
