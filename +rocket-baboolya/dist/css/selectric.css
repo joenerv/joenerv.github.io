@@ -258,8 +258,12 @@
 @media (max-width: 1025px) {
   .selectric .label {
     font-size: 26px;
+    margin-bottom: 2px;
+    height: 32px;
+    
   }
   .selectric-wrapper {
     padding-top: 0;
+    margin-left: 0.3rem;
   }
 }

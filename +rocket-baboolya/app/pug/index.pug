@@ -58,7 +58,10 @@ html(lang="ru-RU")
             .content
 
                 .content-title
-                    span.content-title__text Аренда без посредников в
+                    span.content-title__text 
+                        |Аренда без посредников 
+                        br.content-title__wrap
+                        |в
                     select(name="city", size="1").content-title__list
                         option(value="Moscow" selected) Москве
                         option(value="Moscow-region") Московской области
@@ -81,7 +84,6 @@ html(lang="ru-RU")
                                     li.popup-metro-list__item Коньково
                                     li.popup-metro-list__item Южная
                                     li.popup-metro-list__item Боровицкая
-
 
                         .selectbox-wrap
                             .selectbox-wrap__title
@@ -119,15 +121,18 @@ html(lang="ru-RU")
                             
                             .selectbox-popup.popup-price
                                 .popup-price__content
-                                    span от
-                                    .popup-price__input
-                                        input.popup-price__min(type="text", name="price-min", placeholder="25 000")
-                                        span.popup-price-min__reset
-                                    span до
-                                    .popup-price__input
-                                        input.popup-price__max(type="text", name="price-min", placeholder="0")
-                                        span.popup-price-min__reset.popup-price-max__reset
-                                    span рублей
+                                    .popup-price-wrap
+                                        span от
+                                        .popup-price__input
+                                            input.popup-price__min(type="text", name="price-min", placeholder="25 000")
+                                            span.popup-price-min__reset
+                                        
+                                    .popup-price-wrap
+                                        span до
+                                        .popup-price__input
+                                            input.popup-price__max(type="text", name="price-min", placeholder="0")
+                                            span.popup-price-min__reset.popup-price-max__reset
+                                        span рублей
 
 
 

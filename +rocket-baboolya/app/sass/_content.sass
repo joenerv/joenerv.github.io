@@ -4,6 +4,9 @@
     &-title
         display: flex
 
+        &__wrap
+            display: none
+
         &__text
             font-size: rem(45)
             color: #FFFFFF
@@ -25,6 +28,7 @@
             width: inherit
             transition: 0.5s
             appearance: none
+
             &:hover
                 color: #FFF4BA
                 border-bottom: 2px solid #FFF4BA
@@ -35,10 +39,11 @@
                 font-weight: bold
                 padding-top: 10px
 
+// кнопка найти
 .select
 
     &-button
-        width: rem(200)
+        width: 15.4%
         height: rem(73)
         border: none
         border-radius: 4px
@@ -197,7 +202,10 @@
         font-size: rem(18)
         position: relative
         display: flex
-    
+        flex-wrap: wrap
+
+    &-wrap
+        display: flex
     &__input
         position: relative
 
@@ -239,12 +247,119 @@
     &-max__reset
         right: 12px
     
+@media (max-width: 1600px)
+    .selectbox-text
+        font-size: rem(16) 
+    .popup-price__content
+        font-size: rem(16)
+
+@media (max-width: 1460px)
+    .selectbox
+        &-wrap
+            padding-top: rem(7)
+            padding-left: rem(9)
+
+    .selectbox-text
+        font-size: rem(14.5)
+    
+
+
 @media (max-width: 1025px) 
+
     .content
         margin-top: 27%
         margin-left: rem(3)
+
         &-title
             &__text
                 font-size: rem(25)
                 letter-spacing: rem(0.95)
+
+
+    .selectbox
+        &-wrap
+            padding-top: rem(7)
+            padding-left: rem(9)
+
+            &::after
+                top: calc(50% - 5px)
+                right: rem(8)
+                width: 15px
+                height: 9px
+                background-size: contain
+      
+            &:last-child
+                &::after
+                    right: rem(9)
+
+            &__title
+                font-size: rem(13)
+                line-height: rem(17)
+
+        &-text
+            font-size: rem(14.5)
+            margin-left: 0
+        
+        &-price
+            &__max
+                margin-left: rem(2)
+
+
+
+    .select-button
+        width: 15.5%
+        height: rem(53)
+        font-size: rem(14)
                 
+@media (max-width: 767px)
+
+    .content
+        margin-top: 19%
+
+        &-title
+            display: inline-block
+            padding-left: rem(10)
+            
+
+            &__wrap
+                display: inline-block
+
+
+            &__text
+                white-space: nowrap
+                font-size: rem(24)
+                line-height: rem(29)
+                letter-spacing: rem(0.28)
+
+
+    .content-select
+        flex-direction: column
+
+    .selectbox
+        flex-direction: column
+        width: 100%
+        background-color: transparent
+
+
+        &-popup
+            display: none
+
+        &-wrap
+            width: 100%
+            margin-bottom: rem(11)
+            border-radius: 4px
+            background-color: #fff
+            padding-top: rem(8)
+            padding-left: rem(15)
+            padding-bottom: rem(10)
+            border: none
+            &::after
+                right: rem(13)
+            &:last-child::after
+                right: rem(13)
+
+            &__title
+                line-height: rem(15)
+
+
+            
