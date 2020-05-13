@@ -17,7 +17,8 @@ window.addEventListener('DOMContentLoaded', function() {
   let inputPriceMax = document.getElementById('input-price-max');
   let popupPriceMinReset = document.querySelector('.popup-price-min__reset');
   let popupPriceMaxReset = document.querySelector('.popup-price-max__reset');
-  let popupListMetroItem = document.querySelector('.popup-metro-list__item');
+  let popupListMetroItem = document.querySelectorAll('.popup-metro-list__item');
+  let nameMetro = document.querySelector('.selectbox-text');
 
   
   
@@ -85,12 +86,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
   });  
 
-
   inputPriceMax.addEventListener('change', () => {
     priceMax.textContent = prettify(inputPriceMax.value);
 
   });
 
+  // выбор станции метро
+  popupListMetroItem.addEventListener('click', function() {
+    this.textContent = nameMetro.textContent
+  })
   // ф-я разделения чисел
   function prettify(num) {
     var n = num.toString();
