@@ -10,6 +10,9 @@ html(lang="ru-RU")
 
         title Бабуля
 
+        //- swiper
+        link(rel="stylesheet", href="css/swiper.min.css")
+
         //- font
         link(rel="stylesheet", href="font/stylesheet.css")
 
@@ -53,7 +56,7 @@ html(lang="ru-RU")
                     label.radiobox(for="commercial")
                         input.radiobox__input(type="radio", id="commercial", name="choise-housing")
                         span.radiobox__label
-                            |Коммерческая недвижимость
+                            |Коммерческая недвижимость            
 
             .content
 
@@ -65,12 +68,43 @@ html(lang="ru-RU")
                     select(name="city", size="1").content-title__list
                         option(value="Moscow" selected) Москве
                         option(value="Moscow-region") Московской области
+                
+                
+
+                
+                
+
+                .mobile-slider
+                    // Additional required wrapper
+                    .swiper-wrapper.mobile-slider__wrapper
+                        // Slides
+                        .swiper-slide.mobile-slider__item 
+                       
+                            label.mobile-slider-checkbox(for="mobile-flat")
+                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-flat" checked)  
+                                span.mobile-slider-checkbox__label Квартиры
+
+                        .swiper-slide.mobile-slider__item 
+                            label.mobile-slider-checkbox(for="mobile-h")
+                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-h")  
+                                span.mobile-slider-checkbox__label Дома и дачи
+
+                        .swiper-slide.mobile-slider__item 
+                            label.mobile-slider-checkbox(for="mobile-c")
+                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-c")  
+                                span.mobile-slider-checkbox__label Коммерческая недвижимость
+                            
+
+                    .swiper-button-prev.mobile-slider__prev
+                        
+                    .swiper-button-next.mobile-slider__next
+                    
 
                 .content-select                    
 
                     .selectbox
 
-                        .selectbox-wrap
+                        .selectbox-wrap#metro-wrap
                             .selectbox-wrap__title
                                 |метро
                             .selectbox-text
@@ -85,7 +119,7 @@ html(lang="ru-RU")
                                     li.popup-metro-list__item Южная
                                     li.popup-metro-list__item Боровицкая
 
-                        .selectbox-wrap
+                        .selectbox-wrap#flat-wrap
                             .selectbox-wrap__title
                                 |комнат
                             .selectbox-text
@@ -94,22 +128,22 @@ html(lang="ru-RU")
                             .selectbox-popup.popup-flat
                                 
                                 label.popup-flat-checkbox
-                                    input.popup-flat-checkbox__input(type="checkbox", name="flat", value="1")
+                                    input.popup-flat-checkbox__input#flat-checkbox(type="checkbox", name="flat", value="1")
                                     span.popup-flat-checkbox__label 1
                                 
                                 label.popup-flat-checkbox
-                                    input.popup-flat-checkbox__input(type="checkbox", name="flat", value="2" checked)
+                                    input.popup-flat-checkbox__input#flat-checkbox(type="checkbox", name="flat", value="2" checked)
                                     span.popup-flat-checkbox__label 2
                                 
                                 label.popup-flat-checkbox
-                                    input.popup-flat-checkbox__input(type="checkbox", name="flat", value="3" checked)
+                                    input.popup-flat-checkbox__input#flat-checkbox(type="checkbox", name="flat", value="3" checked)
                                     span.popup-flat-checkbox__label 3
 
                                 label.popup-flat-checkbox
-                                    input.popup-flat-checkbox__input(type="checkbox", name="flat", value="4+" checked)
+                                    input.popup-flat-checkbox__input#flat-checkbox(type="checkbox", name="flat", value="4+" checked)
                                     span.popup-flat-checkbox__label 4+
 
-                        .selectbox-wrap
+                        .selectbox-wrap#price-wrap
                             .selectbox-wrap__title
                                 |стоимость
                             .selectbox-text
@@ -124,13 +158,13 @@ html(lang="ru-RU")
                                     .popup-price-wrap
                                         span от
                                         .popup-price__input
-                                            input.popup-price__min(type="text", name="price-min", placeholder="25 000")
+                                            input.popup-price__min#input-price-min(type="number", name="price-min", placeholder="25 000")
                                             span.popup-price-min__reset
                                         
                                     .popup-price-wrap
                                         span до
                                         .popup-price__input
-                                            input.popup-price__max(type="text", name="price-min", placeholder="0")
+                                            input.popup-price__max#input-price-max(type="number", name="price-min", placeholder="0")
                                             span.popup-price-min__reset.popup-price-max__reset
                                         span рублей
 
@@ -138,7 +172,6 @@ html(lang="ru-RU")
 
                     button.select-button
                         | Найти
-
                     
 
             footer.footer
@@ -149,8 +182,13 @@ html(lang="ru-RU")
         //- script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
 
         //- script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+        
+
 
         //- selectric
         script(src="js/jquery.selectric.min.js")
 
+        //- swiper
+        script(src="js/swiper.min.js")
+        
         script(src="js/script.js")

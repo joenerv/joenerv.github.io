@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Бабуля</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="font/stylesheet.css">
     <link rel="stylesheet" href="css/selectric.css">
     <link rel="stylesheet" href="css/main.css">
@@ -23,7 +24,7 @@
           </label>
           <div class="header-radiobox__line"></div>
           <label class="radiobox" for="commercial">
-            <input class="radiobox__input" type="radio" id="commercial" name="choise-housing"><span class="radiobox__label">Коммерческая недвижимость</span>
+            <input class="radiobox__input" type="radio" id="commercial" name="choise-housing"><span class="radiobox__label">Коммерческая недвижимость            </span>
           </label>
         </div>
       </header>
@@ -35,9 +36,32 @@
             <option value="Moscow-region">Московской области</option>
           </select>
         </div>
+        <div class="mobile-slider">
+          <!-- Additional required wrapper-->
+          <div class="swiper-wrapper mobile-slider__wrapper">
+            <!-- Slides-->
+            <div class="swiper-slide mobile-slider__item"> 
+              <label class="mobile-slider-checkbox" for="mobile-flat">
+                <input class="mobile-slider-checkbox__input" type="radio" name="mobile-slider" id="mobile-flat" checked><span class="mobile-slider-checkbox__label">Квартиры</span>
+              </label>
+            </div>
+            <div class="swiper-slide mobile-slider__item"> 
+              <label class="mobile-slider-checkbox" for="mobile-h">
+                <input class="mobile-slider-checkbox__input" type="radio" name="mobile-slider" id="mobile-h"><span class="mobile-slider-checkbox__label">Дома и дачи</span>
+              </label>
+            </div>
+            <div class="swiper-slide mobile-slider__item"> 
+              <label class="mobile-slider-checkbox" for="mobile-c">
+                <input class="mobile-slider-checkbox__input" type="radio" name="mobile-slider" id="mobile-c"><span class="mobile-slider-checkbox__label">Коммерческая недвижимость</span>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-button-prev mobile-slider__prev"></div>
+          <div class="swiper-button-next mobile-slider__next"></div>
+        </div>
         <div class="content-select">                   
           <div class="selectbox">
-            <div class="selectbox-wrap">
+            <div class="selectbox-wrap" id="metro-wrap">
               <div class="selectbox-wrap__title">метро</div>
               <div class="selectbox-text">Все варианты</div>
               <div class="selectbox-popup popup-metro">
@@ -52,37 +76,37 @@
                 </ul>
               </div>
             </div>
-            <div class="selectbox-wrap">
+            <div class="selectbox-wrap" id="flat-wrap">
               <div class="selectbox-wrap__title">комнат</div>
               <div class="selectbox-text">Только</div>
               <div class="selectbox-popup popup-flat">
                 <label class="popup-flat-checkbox">
-                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="1"><span class="popup-flat-checkbox__label">1</span>
+                  <input class="popup-flat-checkbox__input" id="flat-checkbox" type="checkbox" name="flat" value="1"><span class="popup-flat-checkbox__label">1</span>
                 </label>
                 <label class="popup-flat-checkbox">
-                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="2" checked><span class="popup-flat-checkbox__label">2</span>
+                  <input class="popup-flat-checkbox__input" id="flat-checkbox" type="checkbox" name="flat" value="2" checked><span class="popup-flat-checkbox__label">2</span>
                 </label>
                 <label class="popup-flat-checkbox">
-                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="3" checked><span class="popup-flat-checkbox__label">3</span>
+                  <input class="popup-flat-checkbox__input" id="flat-checkbox" type="checkbox" name="flat" value="3" checked><span class="popup-flat-checkbox__label">3</span>
                 </label>
                 <label class="popup-flat-checkbox">
-                  <input class="popup-flat-checkbox__input" type="checkbox" name="flat" value="4+" checked><span class="popup-flat-checkbox__label">4+</span>
+                  <input class="popup-flat-checkbox__input" id="flat-checkbox" type="checkbox" name="flat" value="4+" checked><span class="popup-flat-checkbox__label">4+</span>
                 </label>
               </div>
             </div>
-            <div class="selectbox-wrap">
+            <div class="selectbox-wrap" id="price-wrap">
               <div class="selectbox-wrap__title">стоимость</div>
               <div class="selectbox-text">от <span class="selectbox-price__min">25 000</span>до<span class="selectbox-price__max">35 000</span>рублей</div>
               <div class="selectbox-popup popup-price">
                 <div class="popup-price__content">
                   <div class="popup-price-wrap"><span>от</span>
                     <div class="popup-price__input">
-                      <input class="popup-price__min" type="text" name="price-min" placeholder="25 000"><span class="popup-price-min__reset"></span>
+                      <input class="popup-price__min" id="input-price-min" type="number" name="price-min" placeholder="25 000"><span class="popup-price-min__reset"></span>
                     </div>
                   </div>
                   <div class="popup-price-wrap"><span>до</span>
                     <div class="popup-price__input">
-                      <input class="popup-price__max" type="text" name="price-min" placeholder="0"><span class="popup-price-min__reset popup-price-max__reset"></span>
+                      <input class="popup-price__max" id="input-price-max" type="number" name="price-min" placeholder="0"><span class="popup-price-min__reset popup-price-max__reset"></span>
                     </div><span>рублей</span>
                   </div>
                 </div>
@@ -96,6 +120,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="js/jquery.selectric.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
