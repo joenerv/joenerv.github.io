@@ -65,7 +65,6 @@ window.addEventListener('DOMContentLoaded', function() {
     
   });
 
-
   // ф-ия удаляет введеную стоимость в полях ввода
   popupPriceMinReset.addEventListener('click', function() {
     inputPriceMin.placeholder = "";
@@ -92,9 +91,12 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   // выбор станции метро
-  popupListMetroItem.addEventListener('click', function() {
-    this.textContent = nameMetro.textContent
+  popupListMetroItem.forEach(elem => {
+    elem.addEventListener('click', () => {
+      nameMetro.textContent = elem.textContent;
+    });
   })
+
   // ф-я разделения чисел
   function prettify(num) {
     var n = num.toString();
@@ -107,7 +109,7 @@ window.addEventListener('DOMContentLoaded', function() {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 40,
 
 
     // Navigation arrows
@@ -115,7 +117,6 @@ window.addEventListener('DOMContentLoaded', function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-
 
   })
 

@@ -7,7 +7,6 @@
     <title>Бабуля</title>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="font/stylesheet.css">
-    <link rel="stylesheet" href="css/selectric.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -30,11 +29,13 @@
       </header>
       <div class="content">
         <div class="content-title"><span class="content-title__text">
-             Аренда без посредников <br class="content-title__wrap">в</span>
-          <select class="content-title__list" name="city" size="1">
-            <option value="Moscow" selected>Москве</option>
-            <option value="Moscow-region">Московской области</option>
-          </select>
+             Аренда без посредников <span class="content-letter-one">в</span></span>
+          <div class="content-title-list"><span class="content-title__text content-letter-two">в</span><span class="content-title-list__text">Москве</span>
+            <ul class="content-title-list__list">
+              <li class="content-title-list__item">Москве</li>
+              <li class="content-title-list__item">Московской области</li>
+            </ul>
+          </div>
         </div>
         <div class="mobile-slider">
           <!-- Additional required wrapper-->
@@ -61,9 +62,11 @@
         </div>
         <div class="content-select">                   
           <div class="selectbox">
-            <div class="selectbox-wrap" id="metro-wrap">
-              <div class="selectbox-wrap__title">метро</div>
-              <div class="selectbox-text">Все варианты</div>
+            <div class="selectbox-container">
+              <div class="selectbox-wrap" id="metro-wrap">
+                <div class="selectbox-wrap__title">метро</div>
+                <div class="selectbox-text">Все варианты</div>
+              </div>
               <div class="selectbox-popup popup-metro">
                 <ul class="popup-metro-list">
                   <li class="popup-metro-list__item">Все варианты</li>
@@ -76,9 +79,11 @@
                 </ul>
               </div>
             </div>
-            <div class="selectbox-wrap" id="flat-wrap">
-              <div class="selectbox-wrap__title">комнат</div>
-              <div class="selectbox-text">Только</div>
+            <div class="selectbox-container">
+              <div class="selectbox-wrap" id="flat-wrap">
+                <div class="selectbox-wrap__title">комнат</div>
+                <div class="selectbox-text">Только</div>
+              </div>
               <div class="selectbox-popup popup-flat">
                 <label class="popup-flat-checkbox">
                   <input class="popup-flat-checkbox__input" id="flat-checkbox" type="checkbox" name="flat" value="1"><span class="popup-flat-checkbox__label">1</span>
@@ -94,9 +99,11 @@
                 </label>
               </div>
             </div>
-            <div class="selectbox-wrap" id="price-wrap">
-              <div class="selectbox-wrap__title">стоимость</div>
-              <div class="selectbox-text">от <span class="selectbox-price__min">25 000</span>до<span class="selectbox-price__max">35 000</span>рублей</div>
+            <div class="selectbox-container">
+              <div class="selectbox-wrap" id="price-wrap">
+                <div class="selectbox-wrap__title">стоимость</div>
+                <div class="selectbox-text">от <span class="selectbox-price__min">25 000</span>до<span class="selectbox-price__max">35 000</span>рублей</div>
+              </div>
               <div class="selectbox-popup popup-price">
                 <div class="popup-price__content">
                   <div class="popup-price-wrap"><span>от</span>
@@ -118,7 +125,6 @@
       </div>
       <footer class="footer"><span>2020. Студия Ракета </span></footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="js/jquery.selectric.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
