@@ -17,27 +17,53 @@ window.addEventListener('DOMContentLoaded', function() {
   let inputPriceMax = document.getElementById('input-price-max');
   let popupPriceMinReset = document.querySelector('.popup-price-min__reset');
   let popupPriceMaxReset = document.querySelector('.popup-price-max__reset');
+  let popupListMetroItem = document.querySelector('.popup-metro-list__item');
 
-
+  
+  
+  // открытие/закрытие полей выбора
 
   metroWrap.addEventListener('click', function() {
 
-    if (popupMetro.style.display = 'none') {
+    if (popupMetro.style.display == 'none') {
       popupMetro.style.display = 'inline-block';
       metroWrap.classList.add('selectbox-wrap__open');
-    } 
+    } else {
+      popupMetro.style.display = 'none';
+      metroWrap.classList.remove('selectbox-wrap__open');
+    }
+    
 
   });
 
   flatWrap.addEventListener('click', function() {
-    popupFlat.style.display = 'inline-block';
-    flatWrap.classList.add('selectbox-wrap__open');
+
+    if (popupFlat.style.display == 'none') {
+      popupFlat.style.display = 'inline-block';
+      flatWrap.classList.add('selectbox-wrap__open');
+    } else {
+      popupFlat.style.display = 'none';
+      flatWrap.classList.remove('selectbox-wrap__open');
+    }
+
+    
   });
 
   priceWrap.addEventListener('click', function() {
-    popupPrice.style.display = 'inline-block';
-    priceWrap.classList.add('selectbox-wrap__open');
+    // popupPrice.style.display = 'inline-block';
+    // priceWrap.classList.add('selectbox-wrap__open');
+
+      priceWrap.classList.add('selectbox-wrap__open')
+    if (popupPrice.style.display == 'none') {
+      popupPrice.style.display = 'inline-block';
+      priceWrap.classList.add('selectbox-wrap__open');
+    } else {
+      popupPrice.style.display = 'none';
+      priceWrap.classList.remove('selectbox-wrap__open');
+    }
+    
   });
+
 
   // ф-ия удаляет введеную стоимость в полях ввода
   popupPriceMinReset.addEventListener('click', function() {
