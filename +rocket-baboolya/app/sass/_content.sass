@@ -18,6 +18,7 @@
             letter-spacing: rem(0.65)
             
         &-list__text
+            position: relative
             text-shadow: 0 3px 6px #00000029
             border: none
             border-bottom: 2px solid #FDDA1E
@@ -31,9 +32,25 @@
             appearance: none
             margin-left: rem(13)
 
+            &:after
+                position: absolute
+                content: ""
+                top: 10px
+                right: -52px
+                width: 40px
+                height: 40px
+                transition: 0.5s
+                background-size: contain
+                background-repeat: no-repeat
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='44.555' height='44.555' viewBox='0 0 44.555 44.555'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23fdda1e;%7D.b%7Bfilter:url(%23a);%7D%3C/style%3E%3Cfilter id='a' x='0' y='0' width='44.555' height='44.555' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeFlood flood-opacity='0.161'/%3E%3CfeComposite operator='in' in2='b'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg class='b' transform='matrix(1, 0, 0, 1, 0, 0)'%3E%3Cpath class='a' d='M41.555,18,15,27.787l12.576,4.192,4.192,12.576Z' transform='translate(-6 -12)'/%3E%3C/g%3E%3C/svg%3E")
+
+
+
             &:hover
                 color: #FFF4BA
                 border-bottom: 2px solid #FFF4BA
+                &::after
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='44.555' height='44.555' viewBox='0 0 44.555 44.555'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23fff4ba;%7D.b%7Bfilter:url(%23a);%7D%3C/style%3E%3Cfilter id='a' x='0' y='0' width='44.555' height='44.555' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeFlood flood-opacity='0.161'/%3E%3CfeComposite operator='in' in2='b'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg class='b' transform='matrix(1, 0, 0, 1, 0, 0)'%3E%3Cpath class='a' d='M41.555,18,15,27.787l12.576,4.192,4.192,12.576Z' transform='translate(-6 -12)'/%3E%3C/g%3E%3C/svg%3E")
 
             & option
                 color: #121212
@@ -43,6 +60,7 @@
 
         &-list
             position: relative
+
             &__list
                 display: none
                 position: absolute
@@ -53,6 +71,7 @@
                 border-radius: 4px
                 padding: 0
                 width: rem(280)
+                box-shadow: 0px 3px 6px #00000014
                 
             &__item
                 list-style-type: none
@@ -61,6 +80,7 @@
                 padding-top: rem(19)
                 padding-right: rem(20)
                 padding-bottom: rem(13)
+                cursor: pointer
 
                 &:hover
                     background-color: rgba(68, 119, 204, 0.05)
@@ -344,6 +364,19 @@ input[type=number]
             &-list__text
                 font-size: rem(25)
                 margin-left: rem(7)
+                &::after
+                    top: 4px
+                    right: -32px
+                    width: 28px
+
+            &-list__list
+                top: rem(60)
+                left: rem(7)
+                width: rem(220)
+
+            &-list__item
+                font-size: rem(15)
+
         &-select
             margin-top: rem(17)
     .selectbox
@@ -393,32 +426,51 @@ input[type=number]
 @media (max-width: 767px)
 
     .content
-        margin-top: 19%
+        margin-top: 21%
+        
 
         &-title
             justify-content: center
             flex-wrap: wrap
-
-            
 
             &__text
                 white-space: nowrap
                 font-size: rem(24)
                 line-height: rem(29)
                 letter-spacing: rem(0.28)
+                margin-left: rem(4)
+
             &-list__text
                 font-size: rem(21)
+                &::after
+                    top: 3px
+                    right: -28px
+                    width: 25px
 
+            &-list__list
+                top: rem(40)
+                left: rem(-110)
+                width: rem(190)
+
+            &-list__item 
+                font-size: rem(12)
+                padding-top: rem(10)
+                padding-left: rem(20)
+                padding-bottom: rem(10)
+                
     .content-select
         flex-direction: column
+        margin-top: rem(11)
         
     .select-button
-        margin-left: auto
+        margin-left: 23.5%
         margin-right: auto
-        width: 52%
+        width: 55%
+        height: rem(49)
+        margin-top: rem(4)
+        padding: 0
 
     .selectbox
-
         flex-direction: column
         width: 100%
         background-color: transparent
@@ -426,7 +478,6 @@ input[type=number]
         &-popup
             z-index: 10
             top: rem(65)
-
 
         &-wrap
             width: 100%
@@ -448,10 +499,8 @@ input[type=number]
     .mobile-slider
         width: 100%
         display: inline-block
-        margin-bottom: rem(8)
-        margin-top: rem(20)
+        margin-top: rem(30)
         position: relative
-
 
     .mobile-slider-checkbox__label
         color: #FFFFFF
@@ -469,7 +518,8 @@ input[type=number]
 
     .swiper-button-next
         top: 10px
-        background-color: reds
+        right: 0
+
         &::after
             content: ""
             width: 8px
@@ -483,6 +533,8 @@ input[type=number]
 
     .swiper-button-prev
         top: 10px
+        left: 0
+
         &::after
             content: ""
             width: 8px
@@ -494,13 +546,25 @@ input[type=number]
         &.swiper-button-disabled
             opacity: 0
 
-
     .swiper-slide
-        width: 45%
+        flex-shrink: 1
+
+        &.mobile-slider__hause
+            margin-left: 10%
+            margin-right: 10%
+
+        &.mobile-slider__commercial
+            margin-left: 0 
+            // flex-shrink: inherit
 
 @media (max-width: 480px)
+
     .content-letter-one
         display: none
+
     .content-letter-two
         display: inline-block
         margin-left: rem(7)
+
+    .content-title-list__list
+        left: rem(-50)

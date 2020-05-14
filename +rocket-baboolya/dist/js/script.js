@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', function() {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 2,
-    spaceBetween: 40,
+    spaceBetween: 0,
 
 
     // Navigation arrows
