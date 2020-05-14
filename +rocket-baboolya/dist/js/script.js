@@ -4,66 +4,103 @@ window.addEventListener('DOMContentLoaded', function() {
 
     'use strict';
 
-
-  let metroWrap = document.getElementById('metro-wrap');
-  let flatWrap = document.getElementById('flat-wrap');
-  let priceWrap = document.getElementById('price-wrap');
+  // всплывающие окна popup
+  let popupСhoiceCity = document.querySelector('.content-title-list__list');
   let popupMetro = document.querySelector('.popup-metro');
   let popupFlat = document.querySelector('.popup-flat');
   let popupPrice = document.querySelector('.popup-price');
-  let priceMin = document.querySelector('.selectbox-price__min');
-  let priceMax = document.querySelector('.selectbox-price__max');
-  let inputPriceMin = document.getElementById('input-price-min');
-  let inputPriceMax = document.getElementById('input-price-max');
-  let popupPriceMinReset = document.querySelector('.popup-price-min__reset');
-  let popupPriceMaxReset = document.querySelector('.popup-price-max__reset');
   let popupListMetroItem = document.querySelectorAll('.popup-metro-list__item');
+  let popupChoiceCityItem = document.querySelectorAll('.content-title-list__item');
+
+  // блок выбора
+  let nameCity = document.querySelector('.content-title-list__text');
+  let priceWrap = document.getElementById('price-wrap');
+  let flatWrap = document.getElementById('flat-wrap');
+  let metroWrap = document.getElementById('metro-wrap');
   let nameMetro = document.querySelector('.selectbox-text');
 
-  
-  
-  // открытие/закрытие полей выбора
+  // input цена
+  let inputPriceMin = document.getElementById('input-price-min');
+  let inputPriceMax = document.getElementById('input-price-max');
 
+  // выводимое значение цены
+  let priceMin = document.querySelector('.selectbox-price__min');
+  let priceMax = document.querySelector('.selectbox-price__max');
+  
+  
+  let popupPriceMinReset = document.querySelector('.popup-price-min__reset');
+  let popupPriceMaxReset = document.querySelector('.popup-price-max__reset');
+  
+  
+
+  
+  
+  // открытие/закрытие поля выбора метро
   metroWrap.addEventListener('click', function() {
 
-    if (popupMetro.style.display == 'none') {
-      popupMetro.style.display = 'inline-block';
-      metroWrap.classList.add('selectbox-wrap__open');
-    } else {
-      popupMetro.style.display = 'none';
+    if (popupMetro.classList.contains('show')) {
+      popupMetro.classList.remove('show');
       metroWrap.classList.remove('selectbox-wrap__open');
+    } else {
+    popupMetro.classList.add('show');
+    metroWrap.classList.add('selectbox-wrap__open');
     }
-    
-
   });
 
+   // выбор станции метро
+   popupListMetroItem.forEach(elem => {
+    elem.addEventListener('click', () => {
+      nameMetro.textContent = elem.textContent;
+      popupMetro.classList.remove('show');
+    });
+  })
+
+  // открытие/закрытие поля выбора количества комнат
   flatWrap.addEventListener('click', function() {
 
-    if (popupFlat.style.display == 'none') {
-      popupFlat.style.display = 'inline-block';
-      flatWrap.classList.add('selectbox-wrap__open');
-    } else {
-      popupFlat.style.display = 'none';
+    if(popupFlat.classList.contains('show')) {
+      popupFlat.classList.remove('show');
       flatWrap.classList.remove('selectbox-wrap__open');
-    }
-
-    
-  });
-
-  priceWrap.addEventListener('click', function() {
-    // popupPrice.style.display = 'inline-block';
-    // priceWrap.classList.add('selectbox-wrap__open');
-
-      priceWrap.classList.add('selectbox-wrap__open')
-    if (popupPrice.style.display == 'none') {
-      popupPrice.style.display = 'inline-block';
-      priceWrap.classList.add('selectbox-wrap__open');
     } else {
-      popupPrice.style.display = 'none';
-      priceWrap.classList.remove('selectbox-wrap__open');
+      popupFlat.classList.add('show');
+      flatWrap.classList.add('selectbox-wrap__open');
     }
-    
+        
   });
+
+  // открытие/закрытие поля выбора стоимости
+  priceWrap.addEventListener('click', function() {
+    
+    if(popupPrice.classList.contains('show')) {
+      popupPrice.classList.remove('show');
+      priceWrap.classList.remove('selectbox-wrap__open');
+    } else {
+      popupPrice.classList.add('show');
+      priceWrap.classList.add('selectbox-wrap__open');
+    }
+
+  });
+
+
+  // открытие/закрытие поля выбора города
+  nameCity.addEventListener('click', () => {
+
+    if(popupСhoiceCity.classList.contains('show')) {
+      popupСhoiceCity.classList.remove('show');
+    } else {
+      popupСhoiceCity.classList.add('show');
+    }
+  });
+
+
+  // ф-я выбора города
+  
+  popupChoiceCityItem.forEach(elem => {
+    elem.addEventListener('click', () => {
+      nameCity.textContent = elem.textContent;
+      popupСhoiceCity.classList.remove('show');
+    });
+  })
 
   // ф-ия удаляет введеную стоимость в полях ввода
   popupPriceMinReset.addEventListener('click', function() {
@@ -78,8 +115,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  // ф-ия добавляет введеное значение в поле
-  
+
+  // ф-ия добавляет введеное значение в поле стоимость
   inputPriceMin.addEventListener('change', () => {
     priceMin.textContent = prettify(inputPriceMin.value);
 
@@ -89,19 +126,23 @@ window.addEventListener('DOMContentLoaded', function() {
     priceMax.textContent = prettify(inputPriceMax.value);
 
   });
-
-  // выбор станции метро
-  popupListMetroItem.forEach(elem => {
-    elem.addEventListener('click', () => {
-      nameMetro.textContent = elem.textContent;
-    });
+  
+  // ф-я добавляет пробел при вводе цены
+  inputPriceMin.addEventListener('input', () => {
+    
+    
   })
 
+
+
+ 
   // ф-я разделения чисел
   function prettify(num) {
     var n = num.toString();
     return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
   }
+
+
 
   // swiper
   var mySwiper = new Swiper ('.mobile-slider', {
