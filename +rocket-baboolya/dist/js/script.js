@@ -208,7 +208,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 0,
 
 
