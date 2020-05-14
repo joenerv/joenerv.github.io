@@ -27,16 +27,48 @@ window.addEventListener('DOMContentLoaded', function() {
   let priceMin = document.querySelector('.selectbox-price__min');
   let priceMax = document.querySelector('.selectbox-price__max');
   
-  
   let popupPriceMinReset = document.querySelector('.popup-price-min__reset');
   let popupPriceMaxReset = document.querySelector('.popup-price-max__reset');
+
+  // чекбоксы количество комнат
+  let checkboxFlat = document.querySelectorAll('#flat-checkbox');
+
+  // отображает количество комнат
+  let numberRoomsText = document.querySelector('#selectbox-text__text');
+
+  // min/max текст цена для error
+  let textPriceErrorMin = document.querySelector('.selectbox-price__min');
+  let textPriceErrorMax = document.querySelector('.selectbox-price__max');
   
   
 
+
+  // добавляет комнаты
+
+  popupFlat.addEventListener('input', () => {
+
+    let arr = [];
+
+    checkboxFlat.forEach(function(entry) {
+      if (entry.checked) {
+        arr.push(entry.value);
+      }
+    });
   
+    let i = arr.join(', ');
+  
+    // console.log(i);
+    numberRoomsText.textContent = i; 
+    
+  });
   
   // открытие/закрытие поля выбора метро
   metroWrap.addEventListener('click', function() {
+
+    popupFlat.classList.remove('show');
+    flatWrap.classList.remove('selectbox-wrap__open');
+    popupPrice.classList.remove('show');
+    priceWrap.classList.remove('selectbox-wrap__open');
 
     if (popupMetro.classList.contains('show')) {
       popupMetro.classList.remove('show');
@@ -58,12 +90,18 @@ window.addEventListener('DOMContentLoaded', function() {
   // открытие/закрытие поля выбора количества комнат
   flatWrap.addEventListener('click', function() {
 
+    popupMetro.classList.remove('show');
+    metroWrap.classList.remove('selectbox-wrap__open');
+    popupPrice.classList.remove('show');
+    priceWrap.classList.remove('selectbox-wrap__open');
+
     if(popupFlat.classList.contains('show')) {
       popupFlat.classList.remove('show');
       flatWrap.classList.remove('selectbox-wrap__open');
     } else {
       popupFlat.classList.add('show');
       flatWrap.classList.add('selectbox-wrap__open');
+      
     }
         
   });
@@ -71,9 +109,15 @@ window.addEventListener('DOMContentLoaded', function() {
   // открытие/закрытие поля выбора стоимости
   priceWrap.addEventListener('click', function() {
     
+    popupFlat.classList.remove('show');
+    flatWrap.classList.remove('selectbox-wrap__open');
+    popupMetro.classList.remove('show');
+    metroWrap.classList.remove('selectbox-wrap__open');
+
     if(popupPrice.classList.contains('show')) {
       popupPrice.classList.remove('show');
       priceWrap.classList.remove('selectbox-wrap__open');
+      
     } else {
       popupPrice.classList.add('show');
       priceWrap.classList.add('selectbox-wrap__open');
@@ -116,33 +160,48 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  // ф-ия добавляет введеное значение в поле стоимость
+  // ф-ия добавляет введеное значение в поле минимальная стоимость
   inputPriceMin.addEventListener('change', () => {
-    priceMin.textContent = prettify(inputPriceMin.value);
+    
+    priceMin.textContent = inputPriceMin.value;
+
+     
 
   });  
 
+
+  // добавляет значение в максимальную стоимость + выдает ошибку, если минимальная больше максимальной
   inputPriceMax.addEventListener('change', () => {
+
     priceMax.textContent = prettify(inputPriceMax.value);
 
+    if (inputPriceMin.value > inputPriceMax.value) {
+      inputPriceMin.classList.add('error');
+      inputPriceMax.classList.add('error');
+      textPriceErrorMin.classList.add('error');
+      textPriceErrorMax.classList.add('error');
+    } 
   });
   
+
   // ф-я добавляет пробел при вводе цены
-  inputPriceMin.addEventListener('input', () => {
+  inputPriceMin.addEventListener('keyup', () => {
+    let a = prettify(inputPriceMin.value);
+   
+    console.log(a);
+
+    inputPriceMin.value = a;
     
-    
-  })
+  });
 
 
-
- 
   // ф-я разделения чисел
   function prettify(num) {
     var n = num.toString();
+    
     return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+
   }
-
-
 
   // swiper
   var mySwiper = new Swiper ('.mobile-slider', {
@@ -162,14 +221,3 @@ window.addEventListener('DOMContentLoaded', function() {
   })
 
 });
-
-//шаблон для jQuery(Обработчик готовности дерева DOM)
-
-$(document).ready(function(){
-  
-  $(function() {
-    $('select').selectric();
-  });
-    
-    
-  });
