@@ -184,15 +184,15 @@ window.addEventListener('DOMContentLoaded', function() {
   });
   
 
-  // ф-я добавляет пробел при вводе цены
-  inputPriceMin.addEventListener('keyup', () => {
-    let a = prettify(inputPriceMin.value);
+  // !!!!! Не получилось сделать пробелы ф-я добавляет пробел при вводе цены
+  // inputPriceMin.addEventListener('keyup', () => {
+  //   let a = prettify(inputPriceMin.value);
    
-    console.log(a);
+  //   console.log(a);
 
-    inputPriceMin.value = a;
+  //   inputPriceMin.value = a;
     
-  });
+  // });
 
 
   // ф-я разделения чисел
