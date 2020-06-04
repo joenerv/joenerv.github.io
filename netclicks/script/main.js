@@ -15,25 +15,26 @@ const leftMenu = document.querySelector('.left-menu'),
     description = document.querySelector('.description'),
     modalLink = document.querySelector('.modal__link'),
     searchForm = document.querySelector('.search__form'),
-    searchFormInput = document.querySelector('.search__form-input');
-
-
+    searchFormInput = document.querySelector('.search__form-input'),
+    preloader = document.querySelector('.preloader'),
+    dropdown = document.querySelectorAll('.dropdown'),
+    tvShowsHead = document.querySelector('.tv-shows__head'),
+    posterWrapper = document.querySelector('.poster__wrapper');
 
 
 const loading = document.createElement('div');
 loading.className = 'loading';
 
 
-
-
 class DBService {
+
     getData = async (url) => {
         const res = await fetch(url);
         if (res.ok) {
             return res.json();
             
         } else {
-            throw new Error(`Не удалось получить данные по адресу ${url}`)
+            throw new Error(`Не удалось получить данные по адресу ${url}`);
         }
         
     }
@@ -50,15 +51,33 @@ class DBService {
     
 
     getTvShow = id => this.getData(`${SERVER}/tv/${id}?api_key=${API_KEY}&language=ru-RU`);
+
+    getTopRated = () => this.getData(`${SERVER}/tv/top_rated?api_key=${API_KEY}&language=ru-RU`);
+
+    getPopular = () => this.getData(`${SERVER}/tv/popular?api_key=${API_KEY}&language=ru-RU`);
+    
+    getToday = () => this.getData(`${SERVER}/tv/airing_today?api_key=${API_KEY}&language=ru-RU`);
+
+    getWeek = () => this.getData(`${SERVER}/tv/on_the_air?api_key=${API_KEY}&language=ru-RU`);
     
 }
 
 console.log(new DBService().getSearchResult('Няня'));
 
 
-const renderCard = response => {
+const renderCard = (response, target) => {
     console.log(response);
     tvShowList.textContent = '';
+
+    if (!response.total_results) {
+        loading.remove();
+        tvShowsHead.textContent = 'К сожалению по вашему запросу ничего не найдено...';
+        tvShowsHead.style.cssText = 'red';
+        return;
+    }
+
+    tvShowsHead.textContent = target ? target.textContent : 'Результат поиска';
+    tvShowsHead.style.cssText = 'gray';
 
     response.results.forEach(item => {
 
@@ -110,15 +129,23 @@ searchForm.addEventListener('submit', event => {
 
 // открытие закрытие меню
 
+const closeDropdown = () => {
+    dropdown.forEach(item => {
+        item.classList.remove('active');
+    })
+};
+
 hamburger.addEventListener('click', () => {
     leftMenu.classList.toggle('openMenu');
     hamburger.classList.toggle('open');
+    closeDropdown();
 });
 
 document.addEventListener('click', (event) => {
     if (!event.target.closest('.left-menu')) {
         leftMenu.classList.remove('openMenu');
         hamburger.classList.remove('open');
+        closeDropdown();
     }
 });
 
@@ -132,6 +159,34 @@ leftMenu.addEventListener('click', event => {
         leftMenu.classList.add('openMenu');
         hamburger.classList.add('open');
     }
+
+    if (target.closest('#top-rated')) {
+        new DBService().getTopRated().then((response) => renderCard(response, target));
+    }
+
+    if (target.closest('#popular')) {
+        new DBService().getPopular().then((response) => renderCard(response, target));
+        
+    }
+
+    if (target.closest('#week')) {
+        new DBService().getWeek().then((response) => renderCard(response, target));
+        
+    }
+
+    if (target.closest('#today')) {
+        new DBService().getToday().then((response) => renderCard(response, target));
+        
+    }
+
+    if (target.closest('#search')) {
+        tvShowList.textContent = '';
+        tvShowsHead.textContent = '';
+
+    }
+
+    
+
 });
 
 // открытие модального окна
@@ -144,6 +199,8 @@ tvShowList.addEventListener('click', event => {
     
 
     if (card) {
+
+        preloader.style.display = 'block';
 
         new DBService().getTvShow(card.id)
             .then(data => {
@@ -164,10 +221,19 @@ tvShowList.addEventListener('click', event => {
                 modal.classList.remove('hide');
             })
 
+            .then(() => {
+                preloader.style.display = '';
+            })
+            .finally(() => {
+                preloader.style.display = '';
+            });
+
         
     }
     
 });
+
+
 
 // закрытие модального окна
 
