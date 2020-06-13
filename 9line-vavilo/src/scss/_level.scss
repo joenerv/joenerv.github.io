@@ -1,0 +1,76 @@
+.level {
+	display: flex;
+	padding: 0 20px 65px;
+
+	&-scale {
+		position: relative;
+		margin-top: 58px;
+		width: 51.7%;
+
+		&__orange {
+			position: absolute;
+			left: 0;
+			top: 27px;
+			cursor: pointer;
+		}
+
+		&__green {
+			position: absolute;
+			left: 55px;
+			top: -1px;
+			cursor: pointer;
+		}
+
+		&__blue {
+			position: absolute;
+			left: 171px;
+			top: 27px;
+			cursor: pointer;
+		}
+
+		&__arrow {
+			position: absolute;
+			left: 83px;
+			bottom: -16px;
+		}
+	}
+
+	&-text {
+		margin-top: 62px;
+
+		&__title {
+			margin-bottom: 27px;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0.15;
+			color: #010101;
+		}
+
+		&__number {
+			font-weight: 700;
+			font-size: 50px;
+			line-height: 22.01px;
+			letter-spacing: 2.5px;
+			color: #0093d7;
+		}
+	}
+}
+
+.green {
+	left: 100px;
+	bottom: 0;
+	transform: rotate(57deg);
+}
+
+.blue {
+	left: 120px;
+	bottom: -16px;
+	transform: rotate(140deg);
+}
+
+.orange {
+	left: 75px;
+	bottom: -20px;
+	transform: rotate(-30deg);
+}

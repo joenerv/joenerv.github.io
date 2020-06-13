@@ -1,0 +1,26 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+@import "about";
+@import "skill";
+@import "level";
+
+body {
+	background-color: $color-gallery;
+}
+
+.content {
+	margin-top: 60px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 660px;
+	font-family: $font-family-roboto;
+	background-image: url("/images/bg.png");
+}
