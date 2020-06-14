@@ -8,7 +8,7 @@ html(lang="ru-RU")
         title Бабуля
 
         //- swiper
-        link(rel="stylesheet", href="css/swiper.min.css")
+        //- link(rel="stylesheet", href="css/swiper.min.css")
 
         //- font
         link(rel="stylesheet", href="font/stylesheet.css")
@@ -65,20 +65,20 @@ html(lang="ru-RU")
                
                 .mobile-slider
                     // Additional required wrapper
-                    .swiper-wrapper.mobile-slider__wrapper
+                    .mobile-slider__wrapper
                         // Slides
-                        .swiper-slide.mobile-slider__flat 
+                        .mobile-slider__flat 
                        
                             label.mobile-slider-checkbox(for="mobile-flat")
                                 input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-flat" checked)  
                                 span.mobile-slider-checkbox__label Квартиры
 
-                        .swiper-slide.mobile-slider__hause 
+                        .mobile-slider__hause 
                             label.mobile-slider-checkbox(for="mobile-h")
                                 input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-h")  
                                 span.mobile-slider-checkbox__label Дома и дачи
 
-                        .swiper-slide.mobile-slider__commercial 
+                        .mobile-slider__commercial 
                             label.mobile-slider-checkbox(for="mobile-c")
                                 input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-c")  
                                 span.mobile-slider-checkbox__label Коммерческая недвижимость
