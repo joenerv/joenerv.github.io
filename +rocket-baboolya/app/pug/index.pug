@@ -7,9 +7,6 @@ html(lang="ru-RU")
         
         title Бабуля
 
-        //- swiper
-        //- link(rel="stylesheet", href="css/swiper.min.css")
-
         //- font
         link(rel="stylesheet", href="font/stylesheet.css")
 
@@ -68,25 +65,21 @@ html(lang="ru-RU")
                     .mobile-slider__wrapper
                         // Slides
                         .mobile-slider__flat 
-                       
                             label.mobile-slider-checkbox(for="mobile-flat")
                                 input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-flat" checked)  
                                 span.mobile-slider-checkbox__label Квартиры
 
                         .mobile-slider__hause 
-                            label.mobile-slider-checkbox(for="mobile-h")
-                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-h")  
+                            label.mobile-slider-checkbox(for="mobile-hause")
+                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-hause")  
                                 span.mobile-slider-checkbox__label Дома и дачи
 
                         .mobile-slider__commercial 
-                            label.mobile-slider-checkbox(for="mobile-c")
-                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-c")  
+                            label.mobile-slider-checkbox(for="mobile-commercial")
+                                input.mobile-slider-checkbox__input(type="radio", name="mobile-slider", id="mobile-commercial")  
                                 span.mobile-slider-checkbox__label Коммерческая недвижимость
-                            
 
-                    //- .swiper-button-prev.mobile-slider__prev
-                    //- .swiper-button-next.mobile-slider__next
-                    
+
                 .content-select                    
 
                     .selectbox
@@ -164,19 +157,11 @@ html(lang="ru-RU")
                                             span.popup-price-min__reset.popup-price-max__reset
                                         span рублей
 
-
-
                     button.select-button
                         | Найти
                     
 
             footer.footer
                 span 2020. Студия Ракета 
-        
-        //- selectric
-        script(src="js/jquery.selectric.min.js")
 
-        //- swiper
-        script(src="js/swiper.min.js")
-        
         script(src="js/script.js")

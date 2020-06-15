@@ -1,4 +1,3 @@
-// шаблон для js(Обработчик готовности дерева DOM)
 
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -39,12 +38,8 @@ window.addEventListener('DOMContentLoaded', function() {
   // min/max текст цена для error
   let textPriceErrorMin = document.querySelector('.selectbox-price__min');
   let textPriceErrorMax = document.querySelector('.selectbox-price__max');
-  
-  
-
 
   // добавляет комнаты
-
   popupFlat.addEventListener('input', () => {
 
     let arr = [];
@@ -100,8 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {
       flatWrap.classList.remove('selectbox-wrap__open');
     } else {
       popupFlat.classList.add('show');
-      flatWrap.classList.add('selectbox-wrap__open');
-      
+      flatWrap.classList.add('selectbox-wrap__open');      
     }
         
   });
@@ -164,9 +158,6 @@ window.addEventListener('DOMContentLoaded', function() {
   inputPriceMin.addEventListener('change', () => {
     
     priceMin.textContent = inputPriceMin.value;
-
-     
-
   });  
 
 
@@ -184,17 +175,6 @@ window.addEventListener('DOMContentLoaded', function() {
   });
   
 
-  // !!!!! Не получилось сделать пробелы ф-я добавляет пробел при вводе цены
-  // inputPriceMin.addEventListener('keyup', () => {
-  //   let a = prettify(inputPriceMin.value);
-   
-  //   console.log(a);
-
-  //   inputPriceMin.value = a;
-    
-  // });
-
-
   // ф-я разделения чисел
   function prettify(num) {
     var n = num.toString();
@@ -202,22 +182,4 @@ window.addEventListener('DOMContentLoaded', function() {
     return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
 
   }
-
-  // swiper
-  var mySwiper = new Swiper ('.mobile-slider', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 1,
-    spaceBetween: 0,
-
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-
-  })
-
 });
