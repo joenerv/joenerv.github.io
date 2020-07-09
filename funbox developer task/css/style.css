@@ -49,8 +49,6 @@ body {
 
 
 
-
-
 /* упаковка с фуагра */
 .foiegras__cnt {
 	font-family: 'TrebuchetMS';
@@ -58,35 +56,17 @@ body {
 	position: relative;
 	width: 320px;
 	height: 480px;
-	border: 4px solid #2ea8e6;
+	border: 4px solid #1698d9;
 	border-radius: 15px;
 	-webkit-clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 100%, 0 21%);
 	clip-path: polygon(15% 0%, 100% 0, 100% 100%, 0 100%, 0 10%);	
 	cursor: pointer;
 }
 
-.foiegras__cnt:hover .foiegras__text {
-	display: none;
-}
-.foiegras__cnt:hover .foiegras__text-hover {
-	display: inline-block;
-}
 .foiegras__cnt:hover {
-	border-color: #d91667;
+	border: 4px solid #2ea8e6; 
 }
-.foiegras__cnt:hover:after {
-	border-top: 27px solid #d91667;
-	border-left: 28px solid #d91667;
-}
-.foiegras__cnt:hover .foiegras__weight {
-	background: #d91667;
-}
-.foiegras__cnt:hover ~ .foiegras__text-bottom {
-	display: none;
-}
-.foiegras__cnt:hover ~ .foiegras__text-bottom-select {
-	display: block;
-}
+
 .foiegras__cnt:after {
 	content: '';
 	position: absolute;
@@ -94,16 +74,57 @@ body {
 	left: -4px;
 	display: block;
 	border: 27px solid transparent;
+	border-top: 27px solid #1698d9;
+	border-left: 28px solid #1698d9; 
+}
+
+.foiegras__cnt:hover:after {
 	border-top: 27px solid #2ea8e6;
 	border-left: 28px solid #2ea8e6; 
 }
+
+.foiegras__cnt:hover .foiegras__weight {
+	background: #2ea8e6;
+}
+
 .foiegras__cnt_active {
 	border-color: #d91667;
+}
+
+.foiegras__cnt_active:hover {
+	border-color: #e62e7a;
 }
 
 .foiegras__cnt_active:after {
 	border-top: 27px solid #d91667;
 	border-left: 28px solid #d91667;
+}
+
+.foiegras__cnt_active:hover:after {
+	border-top: 27px solid #e62e7a;
+	border-left: 28px solid #e62e7a;
+}
+
+.foiegras__cnt_active:hover .foiegras__weight_active {
+	background: #e62e7a;
+}
+
+.foiegras__cnt_active:hover .foiegras__text {
+	display: none;
+}
+
+.foiegras__cnt_active:hover .foiegras__text-hover {
+	display: block;
+}
+
+
+.foiegras__cnt_disabled {
+	border-color: #b3b3b3;
+}
+
+.foiegras__cnt_disabled:after {
+	border-top: 27px solid #b3b3b3;
+	border-left: 28px solid #b3b3b3;
 }
 
 .foiegras__text {
@@ -113,6 +134,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 }
+
 .foiegras__text-hover {
 	display: none;
 	padding-left: 48px;
@@ -129,12 +151,14 @@ body {
 	font-size: 48px;
 	font-weight: 700;
 }
+
 .foiegras__subtitle {
 
 	font-size: 24px;
 	font-weight: 700;
 	padding-left: 48px;
 }
+
 .foiegras__descr {
 	color: #666666;
 	font-family: "Trebuchet MS";
@@ -144,10 +168,12 @@ body {
 	padding-left: 48px;
 	padding-top: 16px;
 }
+
 .foiegras__img {
 	margin-top: 12px;
 	
 }
+
 .foiegras__text-bottom {
 	
 	text-shadow: 0 1px 0 #000000;
@@ -160,9 +186,11 @@ body {
 	padding-top: 15px;	
 	margin-bottom: 20px;		
 }
+
 .foiegras__text-bottom-active {
 	display: none;
 }
+
 .foiegras__text-bottom-select {
 	display: none;
 	text-shadow: 0 1px 0 #000000;
@@ -175,12 +203,15 @@ body {
 	padding-top: 15px;	
 	margin-bottom: 20px;
 }
+
 .foiegras__text-bottom-select-active {
 	display: block;
 }
+
 .foiegras__text-bottom span {
-	color: #2ea8e6;
+	color: #1698d9;
 }
+
 .foiegras__text-bottom-disabled {
 	display: none;
 	text-shadow: 0 1px 0 #000000;
@@ -193,10 +224,11 @@ body {
 	padding-top: 15px;	
 	margin-bottom: 20px;
 }
+
 .foiegras__text-bottom a {
 	color: #2ea8e6;
 	text-decoration: none;
-	border-bottom: 1px dashed #2ea8e6;
+	border-bottom: 1px dashed #1698d9;
 }
 
 .foiegras__weight {
@@ -204,7 +236,7 @@ body {
 	position: relative; 
 	width: 80px;
 	height: 80px;
-	background: #2ea8e6;
+	background: #1698d9;
 	top: -96px;
     left: 220px;
     border-radius: 50%;	
@@ -213,18 +245,35 @@ body {
 	font-size: 42px;
 	font-weight: 400;
 	line-height: 22px;
-	padding-top: 19px;
-	
+	padding-top: 19px;	
 }
+
 .foiegras__weight span {
 	font-size: 21px;
 }
+
 .foiegras__weight_active {
 	background: #d91667;
 }
+
 .foiegras__weight_disabled {
 	background: #b3b3b3;
 } 
+
+.foiegras__disabled {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f2f2f2;
+	opacity: 0.75;
+	z-index: 9;
+	border-radius: 10px;
+}
+
+
 
 /* упаковка с рыбой */
 .fish__cnt {
@@ -233,7 +282,7 @@ body {
 	position: relative;
 	width: 320px;
 	height: 480px;
-	border: 4px solid #2ea8e6;
+	border: 4px solid #1698d9;
 	border-radius: 15px;
 	-webkit-clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 100%, 0 21%);
 	clip-path: polygon(15% 0%, 100% 0, 100% 100%, 0 100%, 0 10%);	
@@ -241,26 +290,7 @@ body {
 }
 
 .fish__cnt:hover {
-	border-color: #d91667;
-}
-.fish__cnt:hover:after {
-	border-top: 27px solid #d91667;
-	border-left: 28px solid #d91667;
-}
-.fish__cnt:hover .fish__text {
-	display: none;
-} 
-.fish__cnt:hover .fish__text-hover{
-	display: block;
-}
-.fish__cnt:hover .fish__weight {
-	background: #d91667;
-}
-.fish__cnt:hover ~ .fish__text-bottom {
-	display: none;
-}
-.fish__cnt:hover ~ .fish__text-bottom-select {
-	display: block;
+	border: 4px solid #2ea8e6;
 }
 
 .fish__cnt:after {
@@ -270,16 +300,49 @@ body {
 	left: -4px;
 	display: block;
 	border: 27px solid transparent;
+	border-top: 27px solid #1698d9;
+	border-left: 28px solid #1698d9; 
+}
+
+.fish__cnt:hover:after {
 	border-top: 27px solid #2ea8e6;
 	border-left: 28px solid #2ea8e6; 
 }
+
+.fish__cnt:hover .fish__weight {
+	background: #2ea8e6;
+}
+
 .fish__cnt_active {
 	border-color: #d91667;
 }
+
+.fish__cnt_active:hover {
+	border-color: #e62e7a;
+}
+
 .fish__cnt_active:after {
 	border-top: 27px solid #d91667;
 	border-left: 28px solid #d91667;
 }
+
+.fish__cnt_active:hover:after {
+	border-top: 27px solid #e62e7a;
+	border-left: 28px solid #e62e7a;
+}
+
+.fish__cnt_active:hover .fish__weight_active {
+	background: #e62e7a;
+}
+
+.fish__cnt_active:hover .fish__text {
+	display: none;
+}
+
+.fish__cnt_active:hover .fish__text-hover {
+	display: block;
+}
+
 
 .fish__text {
 	padding-left: 48px;
@@ -353,20 +416,20 @@ body {
 	display: block;
 }
 .fish__text-bottom span {
-	color: #2ea8e6;
+	color: #1698d9;
 }
 
 .fish__text-bottom a {
-	color: #2ea8e6;
+	color: #1698d9;
 	text-decoration: none;
-	border-bottom: 1px dashed #2ea8e6;
+	border-bottom: 1px dashed #1698d9;
 }
 .fish__weight {
 	display: inline-block;
 	position: relative; 
 	width: 80px;
 	height: 80px;
-	background: #2ea8e6;
+	background: #1698d9;
 	top: -96px;
     left: 220px;
     border-radius: 50%;	
@@ -393,7 +456,7 @@ body {
 	position: relative;
 	width: 320px;
 	height: 480px;
-	border: 4px solid #2ea8e6;
+	border: 4px solid #1698d9;
 	border-radius: 15px;
 	-webkit-clip-path: polygon(25% 0%, 100% 0, 100% 100%, 0 100%, 0 21%);
 	clip-path: polygon(15% 0%, 100% 0, 100% 100%, 0 100%, 0 10%);	
@@ -429,8 +492,8 @@ body {
 	left: -4px;
 	display: block;
 	border: 27px solid transparent;
-	border-top: 27px solid #2ea8e6;
-	border-left: 28px solid #2ea8e6; 
+	border-top: 27px solid #1698d9;
+	border-left: 28px solid #1698d9; 
 }
 .hen__cnt_active {
 	border-color: #d91667;
@@ -516,7 +579,7 @@ body {
 .hen__text-bottom a {
 	color: #2ea8e6;
 	text-decoration: none;
-	border-bottom: 1px dashed #2ea8e6;
+	border-bottom: 1px dashed #1698d9;
 }
 .hen__text-bottom-disabled {
 	display: none;
@@ -535,7 +598,7 @@ body {
 	position: relative; 
 	width: 80px;
 	height: 80px;
-	background: #2ea8e6;
+	background: #1698d9;
 	top: -96px;
     left: 220px;
     border-radius: 50%;	
@@ -589,6 +652,13 @@ body {
 	opacity: 0.5;
 }
 
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
 
  @media (max-width: 1024px) {
 	

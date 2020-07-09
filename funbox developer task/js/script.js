@@ -1,38 +1,74 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    let foigrasCnt = document.getElementsByClassName('foiegras__cnt');
-        foigerasWeight = document.getElementsByClassName('foiegras__weight');
-        foigrasText = document.getElementsByClassName('foiegras__text-bottom');
-        foigrasTextActive = document.getElementsByClassName('foiegras__text-bottom-select');
 
-        fishCnt = document.getElementsByClassName('fish__cnt');
-        fishWeight = document.getElementsByClassName('fish__weight');
-        fishText = document.getElementsByClassName('fish__text-bottom');
-        fishTextActive = document.getElementsByClassName('fish__text-bottom-select');
+    let foigrasBox = document.querySelector('.foiegras__cnt');
+    let foigrasTextBottom = document.querySelector('.foiegras__text-bottom');
+    let foigrasTextBottomSelect = document.querySelector('.foiegras__text-bottom-select');
+    let foigrasWeight = document.querySelector('.foiegras__weight');
+    let foigrasLink = document.querySelector('.foiegras-link');
 
-    function addSelectFoigras() {
-        foigrasCnt[0].addEventListener('mouseout', () => {
-            foigrasCnt[0].className = "foiegras__cnt_active foiegras__cnt";
-            foigerasWeight[0].className = 'foiegras__weight_active foiegras__weight';
-            foigrasText[0].style.display = 'none';
-            foigrasTextActive[0].style.display = 'block';
-        });
-    }
+    let fishBox = document.querySelector('.fish__cnt');
+    let fishWeight = document.querySelector('.fish__weight');
+    let fishTextBottom = document.querySelector('.fish__text-bottom');
+    let fishTextBottomSelect = document.querySelector('.fish__text-bottom-select');
+    let fishLink = document.querySelector('.fish-link');
 
-    function addSelectFish() {
-        fishCnt[0].addEventListener('mouseout', () => {
-            fishCnt[0].className = "fish__cnt_active fish__cnt";
-            fishWeight[0].className = 'fish__weight_active fish__weight';
-            fishText[0].style.display = 'none';
-            fishTextActive[0].style.display = 'block';
-        });
-    }
-    
 
-    foigrasCnt[0].addEventListener('click', addSelectFoigras, false);
+    // упаковка с фуа-гра
+    foigrasBox.addEventListener('click', () => {
+        
+        if (foigrasBox.classList.contains('foiegras__cnt_active')) {
+            foigrasBox.addEventListener('mouseleave', () => {
+                foigrasBox.classList.remove('foiegras__cnt_active');
+                foigrasTextBottom.classList.remove('hide');
+                foigrasTextBottomSelect.classList.remove('show');
+                foigrasWeight.classList.remove('foiegras__weight_active');
+            }); 
+        } else {
+            foigrasBox.addEventListener('mouseleave', () => {
+                foigrasBox.classList.add('foiegras__cnt_active');
+                foigrasTextBottom.classList.add('hide');
+                foigrasTextBottomSelect.classList.add('show');
+                foigrasWeight.classList.add('foiegras__weight_active');
+            });
+            
+        }
+    });
 
-    fishCnt[0].addEventListener('click', addSelectFish, false);
+    foigrasLink.addEventListener('click', () => {
+            
+        foigrasBox.classList.toggle('foiegras__cnt_active');
+        foigrasTextBottom.classList.add('hide');
+        foigrasTextBottomSelect.classList.add('show');
+        foigrasWeight.classList.add('foiegras__weight_active');
 
-    // foigrasCnt[0].removeEventListener('click', foigrasClick, false);
+    });
 
+    // упаковка с рыбой
+    fishBox.addEventListener('click', () => {
+        if (fishBox.classList.contains('fish__cnt_active')) {
+            fishBox.addEventListener('mouseleave', () => {
+                fishBox.classList.remove('fish__cnt_active');
+                fishWeight.classList.remove('fish__weight_active');
+                fishTextBottom.classList.remove('hide');
+                fishTextBottomSelect.classList.remove('show');
+            })
+        } else {
+            fishBox.addEventListener('mouseleave', () => {
+                fishBox.classList.add('fish__cnt_active');
+                fishWeight.classList.add('fish__weight_active');
+                fishTextBottom.classList.add('hide');
+                fishTextBottomSelect.classList.add('show');
+
+            });
+        }
+    });
+
+    fishLink.addEventListener('click', () => {
+
+        fishBox.classList.add('fish__cnt_active');
+        fishWeight.classList.add('fish__weight_active');
+        fishTextBottom.classList.add('hide');
+        fishTextBottomSelect.classList.add('show');
+    });
 });
