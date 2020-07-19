@@ -1,0 +1,167 @@
+.popup
+    
+    width: 100%
+    height: 120vh   
+    background-color: rgba(255, 255, 255, 0.85)
+    background-size: 100% 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 150
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+    &-program
+        display: none
+        padding: 75px 104px
+        position: relative
+        width: 28vw
+        background: linear-gradient(45deg, #fcfdfd, #fcefea)
+        border-radius: 50px
+        text-align: center
+
+
+        &__close
+            position: absolute
+            right: 38px
+            top: 46px
+            cursor: pointer
+        
+        &__title
+            font-size: 2.2em
+            font-weight: 500
+
+            & span 
+                font-weight: 700
+            
+        &__text
+            margin-top: 23px
+            letter-spacing: 0.4px
+            font-size: 16px
+            color: #282828
+
+        
+        &__form
+            margin-top: 37px
+            z-index: 50
+            position: relative
+
+            
+            & select 
+                width: 110%
+                height: 80px
+                margin-bottom: 16px
+                border-radius: 40px
+                border: 1px solid #fbeeef
+                padding-left: 46px
+                color: #989797
+                font-size: 18px
+                font-weight: 300
+                letter-spacing: 0.45px
+                outline: none
+                cursor: pointer
+
+                &:before
+                    content: '55'
+                    position: absolute
+                    top: 0
+                    left: 0
+                    
+            
+            & input 
+                width: 100%
+                height: 80px
+                margin-bottom: 16px
+                border-radius: 40px
+                border: 1px solid #fbeeef
+                padding-left: 46px
+                color: #989797
+                font-size: 18px
+                font-weight: 300
+                letter-spacing: 0.45px
+                outline: none
+
+        &__button
+            width: 110%
+            height: 70px
+            border-radius: 35px
+            border: none
+            background-image: linear-gradient(to bottom, rgba(241, 153, 157, 0.47) 0%, rgba(252, 182, 182, 0.99) 98%, #fcb6b6 100%)
+            box-shadow: 0 5px 2px 0 rgba(215, 116, 122, 1)
+            cursor: pointer
+            position: relative
+
+            &:hover
+                background-image: linear-gradient(to bottom, rgba(241, 153, 157, 0.35) 0%, rgba(252, 182, 182, 0.85) 98%, #fcb6b6 100%)
+                box-shadow: 0 5px 2px 0 rgba(215, 116, 122, 0.85)
+
+            & span 
+                display: inline-block
+                margin-right: 95px
+                letter-spacing: 2.16px
+                color: #ffffff
+                font-size: 18px
+                font-weight: 500
+                text-transform: uppercase
+
+            & img
+                position: absolute
+                bottom: 15px
+                right: -70px
+
+        &__images
+            position: absolute
+            left: -110px
+            top: 120px
+
+    &-check
+        display: none
+        width: 524px
+        height: 337px
+        border-radius: 50px
+        border: 1px solid #fbeeef
+        background: linear-gradient(45deg, #fcfdfd, #fcefea)
+        position: relative
+        text-align: center
+
+        &__close
+            position: absolute
+            right: 38px
+            top: 46px
+            cursor: pointer
+
+        &__flower
+            position: absolute
+            bottom: 0
+            right: -3px
+
+        &__check
+            margin-top: 77px
+
+        &__text
+            margin-top: 26px
+            font-size: 30px
+            font-weight: 300
+            letter-spacing: 0.75px
+
+            & span
+                font-weight: bold
+
+@media (max-width: 1100px)
+    .popup
+        &-program
+            width: 50%
+
+@media (max-width: 800px)
+    .popup
+        &-program
+            width: 70%
+            &__images
+                display: none
+
+@media (max-width: 450px)
+    .popup
+        &-check__text
+            font-size: 20px

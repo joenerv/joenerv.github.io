@@ -1,0 +1,43 @@
+header.header
+
+    .header-wrapper
+        
+        img.header__logo(src="images/header-logo.png", alt="logo")
+
+        span.header__text
+            |Студия депиляции и
+            br
+            |массажный кабинет
+            br
+            |в Бресте
+        
+        .header-addres
+            img(src="images/header-map.png", alt="addres").header-addres__img
+
+            .header-addres__text
+                .header-addres__title
+                    span Мы находимся в центре:
+                    br
+                    |г. Брест, ул. Гоголя, д.65
+                .header-addres__link
+                    | Смотреть на карте
+
+                .header-addres__map
+                    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac87fa87f0e003b6ca4bb7eacc8bf6d546d83ce0e18c5cac4dc9f8782624451b1&amp;width=320&amp;height=320&amp;lang=ru_RU&amp;scroll=true")
+                    
+
+        .header-contact
+
+            .header-contact__phone
+                .header-contact__text
+                    |Звоните, мы сейчас работаем
+
+                .header-contact__number
+                    |+375 33 382 24 99
+
+            .header-contact__time
+                |Пн-Вс 9:00-21:00
+
+        button.header-button
+            img.header-button__images(src="images/header-calendar.png", alt="calendar")
+            .header-button__text Записаться онлайн

@@ -1,0 +1,211 @@
+.header
+    padding-top: 32px
+
+    &-wrapper
+        position: relative
+        z-index: 100
+        width: 80vw
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        align-items: center
+
+    &__text
+        color: #282828
+        margin-left: 2.4vw
+        font-size: 14px
+        letter-spacing: 0.7px
+    
+    &-addres
+        display: flex
+        align-items: center
+        margin-left: 7vw
+
+        &__text
+            margin-left: 1.2vw
+            position: relative
+        
+        &__title 
+            font-size: 16px
+            letter-spacing: 0.8px
+            line-height: 18px
+
+            & span
+                font-weight: 700
+        
+        &__link
+            display: inline-block
+            margin-top: 17px
+            text-transform: uppercase
+            color: #ff6078
+            font-size: 12px
+            font-weight: normal
+            cursor: pointer
+            padding-bottom: 6px
+            border-bottom: 2px dotted #ff6078
+            transition: 0.3s
+            letter-spacing: 1.2px
+
+            &:hover
+                color: lighten(#ff6078, 10)
+                border-bottom: 2px solid lighten(#ff6078, 10)
+            
+            &:hover ~ .header-addres__map
+                display: block
+        
+        &__map
+            display: none
+            position: absolute
+            top: 80px
+            left: 0
+            background-color: black
+            width: 320px
+            height: 320px
+            border-radius: 30px
+            z-index: 999
+    
+    &-contact
+        margin-left: 5.7vw
+
+        &__phone 
+            margin-bottom: 20px
+            position: relative
+
+            &:before
+                content: url(../images/header-phone.png)
+                position: absolute
+                top: -10px
+                left: -60px
+
+        &__text
+            font-size: 12px
+            color: #282828
+            font-weight: bold
+            letter-spacing: 0.96px
+            margin-bottom: 10px
+            margin-left: 14px
+            position: relative
+
+            &:before
+                content: url(../images/header-circle.png)
+                position: absolute
+                left: -18px
+                top: -4px
+
+        &__number
+            font-size: 24px
+            font-weight: 400
+            line-height: 18px
+            letter-spacing: 0.6px
+            white-space: nowrap
+
+        &__time
+            color: #282828
+            font-size: 16px
+            font-weight: 400
+            letter-spacing: 0.8px
+            position: relative
+
+            &:before
+                content: url(../images/header-time.png)
+                position: absolute
+                top: -20px
+                left: -60px
+
+    &-button 
+        margin-left: 3.2vw
+        width: 229px
+        height: 62px
+        border-radius: 30px
+        background-color: #fefcfb
+        border: none
+        box-shadow: 0 5px 0 0 #ebeaea
+        cursor: pointer
+        font-size: 15px
+        letter-spacing: 0.75px
+        color: #1f1d1d
+        font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:hover
+            color: lighten(#1f1d1d, 40)
+
+        &__images
+            margin-right: 10px
+
+@media (max-width: 1600px)
+    .header
+
+        &-wrapper 
+            width: 95vw
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+
+        &__text
+            margin-left: 0
+        
+        &-addres
+            margin-left: 0
+
+        &-contact
+            margin-left: 0
+        
+        &-button 
+            margin-left: 0
+
+@media (max-width: 1390px)
+
+    .header
+
+        &-contact
+            margin-top: 30px
+            margin-bottom: 30px
+            width: 50%
+
+        &-wrapper
+            justify-content: space-around
+
+@media (max-width: 992px)
+
+    .header
+
+        &-wrapper
+            
+            max-width: 95%
+            justify-content: space-between
+        
+        &-contact
+            width: 50%
+            margin-left: 40px
+
+        &__text
+            display: none
+        
+@media (max-width: 635px)
+
+    .header
+        &-wrapper
+            justify-content: center
+
+        &-addres
+            width: 100%
+            justify-content: center
+            margin-top: 20px
+
+        &-contact
+            width: 100%
+
+            &__phone
+                width: 50%
+                margin-left: auto
+                margin-right: auto
+            &__time
+                width: 50%
+                margin-left: auto
+                margin-right: auto
+                
+            
+            
