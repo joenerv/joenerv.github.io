@@ -4,15 +4,17 @@ html(lang="ru-RU")
         meta(charset = 'utf-8')
         meta(name='viewport', content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
+        //- font
+        link(rel="stylesheet", href="font/stylesheet.css")
+
         link(rel="stylesheet", href="css/reset.css")
         link(rel="stylesheet", href="css/main.css")
 
-        title Шаблон
+        title FunBox
         
     body
 
         include mixin
-        
-        p тестовый текст 
+        include content
 
         script(src="js/script.js")

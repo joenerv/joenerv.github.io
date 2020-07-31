@@ -1,2 +1,50 @@
 //- mixins
 
+mixin card( data )
+
+    .card-wrapper
+
+        .card
+            .card__text
+                span Сказочное заморское яство
+
+            .card__text_selected
+                span Котэ не одобряет?
+            
+            .card__title
+                span Нямушка
+
+            .card__subtitle
+                span c 
+                    = data.flavor
+
+            .card__description
+                span 
+                    mark= data.portion 
+                    |порций
+                    br
+                    span= data.present 
+                        |в подарок  
+                    br                  
+                    span= data.comment
+
+            .card-weight
+                span= data.weight
+                    br
+                    mark кг
+            
+            .card__img
+                img(src="images/cat.svg", alt="cat", width='315', height='273')
+
+        .card-footer
+            span Чего сидишь? Порадуй котэ, 
+                mark.card-footer__pay купи
+                span.card-footer__dot .
+
+        .card-footer_selected
+            span= data.description
+
+        .card-footer_disabled
+            span Печалька, с 
+                = data.flavor
+                |закончился.
