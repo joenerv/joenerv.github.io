@@ -27,8 +27,6 @@
         color: $border-color-hover
         border-bottom: 1px dashed $border-color-hover
 
-    
-
     &:after
         content: ''
         position: absolute
@@ -202,3 +200,41 @@
 
     & ~ .card-footer_disabled
         display: block
+
+@media (max-width: 1300px)
+
+    .card   
+        margin-right: 20px
+
+@media (max-width: 1080px)
+
+    .card
+        margin-right: 0
+
+        &-wrapper
+            margin-right: 40px
+
+            &:last-child
+                margin-top: 30px
+                margin-right: 0
+
+@media (max-width: 797px)
+
+    .card
+        &-wrapper
+            margin-top: 30px
+
+@media (max-width: 757px)
+
+    .card
+        &-wrapper
+            margin-right: 10px  
+
+@media (max-width: 715px)     
+
+    .card
+        &-wrapper
+            margin-right: 0   
+
+
+
