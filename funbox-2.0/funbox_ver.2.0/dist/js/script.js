@@ -7,6 +7,18 @@ window.addEventListener('DOMContentLoaded', function() {
     let card = document.querySelectorAll('.card');
     let pay = document.querySelectorAll('.card-footer__pay');
 
+
+    // выбор пачки  при нажатии на "купи"
+    let a = Array.from(pay);
+
+    a.forEach(elem => {
+
+      elem.addEventListener('click', () => {
+        let b = a.indexOf(elem);
+        card[b].classList.add('selected');
+      })
+    })
+
     // выбор пачки при нажатии на пачку
     card.forEach(elem => {
 
@@ -30,12 +42,7 @@ window.addEventListener('DOMContentLoaded', function() {
       });
     })
     
-    // выбор пачки  при нажатии на "купи"
-    pay.forEach(elem => {
-      elem.addEventListener('click', () => {
-        
-      })
-    })
+
 
     // двойной клик (пачка недоступна)
 
