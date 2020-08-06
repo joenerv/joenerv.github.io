@@ -1,0 +1,102 @@
+.menu
+    width: 100%
+    padding-top: 50px
+    font-family: 'Roboto', sans-serif
+    display: inline-block
+
+    &-list
+        width: 100%
+        height: 69px
+        position: relative
+        display: flex
+        padding-left: 216px
+        
+        & li 
+            width: 196px
+            height: 69px
+            border: 1px solid rgba(0, 0, 0, 0.1)
+            border-right: none
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            transition: 0.3s
+
+            &:hover
+                background-color: #E8EBEE
+
+            &:last-child
+                border-right: 1px solid rgba(0, 0, 0, 0.1)
+
+    &-item
+        &__img
+            margin-right: 17px
+
+        &__title
+            font-size: 14px
+            font-weight: 500
+            color: #A8A8A8
+
+    &-submenu
+        width: 100%
+        height: 69px
+        background-color: #144F7F
+        padding-left: 216px
+        display: flex
+        
+.submenu
+    
+    &-item
+        width: 176px
+        height: 69px
+        display: flex
+        align-items: center
+        border: 1px solid rgba(255, 255, 255, 0.15)
+        border-right: none
+        cursor: pointer
+        transition: 0.3s
+        position: relative
+
+        &:after
+            content: url(../images/arrow-bottom.svg)
+            position: absolute
+            top: 25px
+            right: 18px
+
+        &:hover
+            background-color: #E8EBEE
+
+            &:after
+                content: url(../images/arrow-bottom-active.svg)
+
+        &:hover .submenu-item__title
+            color: #123653
+            margin-left: 10px
+
+        &:hover .submenu-item__img
+            display: none
+
+        &:hover .submenu-item__img_active
+            display: inline
+        
+        &:last-child
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+
+        &__img
+            width: 27px
+            height: 33px
+            margin-left: 14px
+
+            &_active
+                margin-left: 14px
+                width: 27px
+                height: 33px
+                display: none
+
+        &__title
+            font-weight: 500
+            font-size: 12px
+            margin-left: 9px
+            text-transform: uppercase
+            color: #FFFFFF
+            transition: 0.3s
