@@ -10,5 +10,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
 
-  $('ul.menu.flex').flexMenu();
+  $('ul.menu.flex').flexMenu({
+    linkText: '',
+    cutoff: 0
   });
+
+});
