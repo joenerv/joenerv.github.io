@@ -82,7 +82,7 @@
 .submenu
     
     &-item
-        width: 176px
+        min-width: 176px
         height: 69px
         display: flex
         align-items: center
@@ -209,3 +209,16 @@
 
     .flexMenu-viewMore
         width: 125px !important
+
+@media (max-width: 700px)
+
+    .menu-submenu
+        overflow-x: auto   
+
+    .submenu-chemistry
+        right: 0
+        left: auto
+
+        &:before
+            left: auto
+            right: 100px
