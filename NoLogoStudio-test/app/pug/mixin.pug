@@ -1,2 +1,18 @@
 //- mixins
 
+mixin menu-item
+
+    li.menu-item
+        a(href="#")
+            .menu-item__img
+                img(src="images/tank.svg", alt="tank")
+
+            .menu-item__img_active
+                img(src="images/tank-active.svg", alt="tank")
+
+            .menu-item__title
+                span 
+                |Flat Rack
+                br
+                |контейнеры
+
