@@ -3,6 +3,7 @@
     padding-top: 50px
     padding-left: 216px
     font-family: 'Roboto', sans-serif
+    position: relative
 
     & li 
         display: inline-block
@@ -72,6 +73,7 @@
 .menu
 
     &-submenu
+        position: relative
         width: 100%
         background-color: #144F7F
         padding-left: 216px
@@ -143,7 +145,7 @@
         left: 0
         padding-left: 14px
         padding-top: 10px
-        width: 100%
+        width: 176px
         background-color: #ffffff
         padding-bottom: 12px
         border-radius: 4px
@@ -192,6 +194,14 @@
             left: 118px
             background-image: url("data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.09405 6.07785L1.04677 10.5733C0.869182 10.7702 0.581455 10.7702 0.403415 10.5733C0.225823 10.3765 0.225823 10.0568 0.403415 9.85998L4.12966 5.7212L0.403863 1.58241C0.226272 1.38559 0.226272 1.06589 0.403863 0.868567C0.581455 0.671741 0.86963 0.671741 1.04722 0.868567L5.09449 5.364C5.26936 5.55879 5.26936 5.88352 5.09405 6.07785Z' fill='%23123653'/%3E%3C/svg%3E%0A")
             background-repeat: no-repeat
+
+        &__sub1
+            position: absolute
+            top: 0
+            right: 60px
+
+            & li:after
+                background-image: none
 
 .show
     display: flex
