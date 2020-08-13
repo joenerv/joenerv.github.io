@@ -10,93 +10,153 @@
         +menu-item
         +menu-item
 
-        
-    ul.menu-submenu
-        li.submenu-item
+    .submenu-wrapper
 
-            .submenu-item__img
-                img(src="images/glass.svg", alt="glass")
-            
-            .submenu-item__img_active
-                img(src="images/glass-active.svg", alt="glass")
-            
-            .submenu-item__title
-                span
-                    |перевозка
-                    br
-                    |пищевых
-                    br
-                    |грузов
+        ul.menu-submenu
+            li.submenu-item
 
-            ul.submenu-food
-                li Спирты пищевые
-                li Масла
-                li Соки
-                li Концентраты соков
-                li Пищевые добавки
-                li Патока
-                li Виноматериал
-                li Прочее
+                .submenu-item__img
+                    img(src="images/glass.svg", alt="glass")
+                
+                .submenu-item__img_active
+                    img(src="images/glass-active.svg", alt="glass")
+                
+                .submenu-item__title
+                    span
+                        |перевозка
+                        br
+                        |пищевых
+                        br
+                        |грузов
+                        
+            li.submenu-item
+                .submenu-item__img
+                    img(src="images/gas.svg", alt="glass")
+
+                .submenu-item__img_active
+                    img(src="images/gas-active.svg", alt="glass")
+
+                .submenu-item__title
+                    span
+                        |перевозка
+                        br
+                        |сжиженных
+                        br
+                        |газов
+
+                ul.submenu-gas
+                    li Бутан технический
+                    li Пропан-бутан технический
+                    li Пропан-бутан автомобильный
+                    li Пропан автомобильный
+                    li Пропан технический
+
+            li.submenu-item
+                .submenu-item__img
+                    img(src="images/chemistry.svg", alt="glass")
+
+                .submenu-item__img_active
+                    img(src="images/chemistry-active.svg", alt="glass")
+
+                .submenu-item__title
+                    span
+                        |перевозка
+                        br
+                        |химических
+                        br
+                        |грузов
+
+                ul.submenu-chemistry
+                    li Кислоты
+                        ul.submenu-chemistry__sub1
+                            li
+                                a(href="#") Фенол расплавленный
+                            li
+                                a(href="#") Олеум
+                            li
+                                a(href="#") Хлорная кислота
+                            li
+                                a(href="#") Нитрилакриловая кислота
+                            li
+                                a(href="#") Серная кислота
+                            li
+                                a(href="#") Азотная кислота
+                            li
+                                a(href="#") Ортофосфорная кислота
+                    li Щелочи
+                        ul.submenu-chemistry__sub1
+                            li
+                                a(href="#") Фенол расплавленный
+                            li
+                                a(href="#") Олеум
+                            
+                    li Спирты
+                        ul.submenu-chemistry__sub1                        
+                            li
+                                a(href="#") Серная кислота
+                            li
+                                a(href="#") Азотная кислота
+                            li
+                                a(href="#") Ортофосфорная кислота
+
+                    li Растворители
+                        ul.submenu-chemistry__sub1
+                            li
+                                a(href="#") Серная кислота
+                            li
+                                a(href="#") Азотная кислота
+                            li
+                                a(href="#") Ортофосфорная кислота
+                                
+                    li Соли
+                        ul.submenu-chemistry__sub1
+                            li
+                                a(href="#") Фенол расплавленный
+                            li
+                                a(href="#") Олеум
+                            li
+                                a(href="#") Хлорная кислота
+                            li
+                                a(href="#") Нитрилакриловая кислота
+                            li
+                                a(href="#") Серная кислота
+                            li
+                                a(href="#") Азотная кислота
+                            li
+                                a(href="#") Ортофосфорная кислота
+                    li Эфиры
+                        ul.submenu-chemistry__sub1
+                            
+                            li
+                                a(href="#") Хлорная кислота
+                            li
+                                a(href="#") Нитрилакриловая кислота
+                            li
+                                a(href="#") Серная кислота
+                        
+                    li Хлориды
+                        ul.submenu-chemistry__sub1
+                            li
+                                a(href="#") Фенол расплавленный
+                            li
+                                a(href="#") Олеум
                     
-        li.submenu-item
-            .submenu-item__img
-                img(src="images/gas.svg", alt="glass")
+                    li Прочее
+                        ul.submenu-chemistry__sub1
+                        
+                            li
+                                a(href="#") Серная кислота
+                            li
+                                a(href="#") Азотная кислота
+                            li
+                                a(href="#") Ортофосфорная кислота
 
-            .submenu-item__img_active
-                img(src="images/gas-active.svg", alt="glass")
-
-            .submenu-item__title
-                span
-                    |перевозка
-                    br
-                    |сжиженных
-                    br
-                    |газов
-
-            ul.submenu-gas
-                li Бутан технический
-                li Пропан-бутан технический
-                li Пропан-бутан автомобильный
-                li Пропан автомобильный
-                li Пропан технический
-
-        li.submenu-item
-            .submenu-item__img
-                img(src="images/chemistry.svg", alt="glass")
-
-            .submenu-item__img_active
-                img(src="images/chemistry-active.svg", alt="glass")
-
-            .submenu-item__title
-                span
-                    |перевозка
-                    br
-                    |химических
-                    br
-                    |грузов
-
-            ul.submenu-chemistry
-                li Кислоты
-                    ul.submenu-chemistry__sub1
-                        li
-                            a(href="#") Фенол расплавленный
-                        li
-                            a(href="#") Олеум
-                        li
-                            a(href="#") Хлорная кислота
-                        li
-                            a(href="#") Нитрилакриловая кислота
-                        li
-                            a(href="#") Серная кислота
-                        li
-                            a(href="#") Азотная кислота
-                        li
-                            a(href="#") Ортофосфорная кислота
-                li Щелочи
-                li Спирты
-                li Растворители
-                li Соли
-                li Эфиры
-                li Хлориды
-                li Прочее
-
+        ul.submenu-food
+                    li Спирты пищевые
+                    li Масла
+                    li Соки
+                    li Концентраты соков
+                    li Пищевые добавки
+                    li Патока
+                    li Виноматериал
+                    li Прочее
