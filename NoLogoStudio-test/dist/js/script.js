@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     submenuMassive.forEach((elem, index) => {
 
-        console.log(index);
       elem.addEventListener('click', () => {
         let numberElementClick = submenuMassive.indexOf(elem);
         
