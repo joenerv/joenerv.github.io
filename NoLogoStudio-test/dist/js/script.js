@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
 
   $('ul.menu.flex').flexMenu({
-    linkText: '',
+    linkText: '...',
     cutoff: 0
   });
 
