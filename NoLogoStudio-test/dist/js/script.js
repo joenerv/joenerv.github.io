@@ -23,22 +23,23 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
     // клик на меню второго порядка
-    let a = Array.from(submenuItem);
+    let submenuMassive = Array.from(submenuItem);
 
-    a.forEach(elem => {
+    submenuMassive.forEach((elem, index) => {
 
+        console.log(index);
       elem.addEventListener('click', () => {
-        let b = a.indexOf(elem);
+        let numberElementClick = submenuMassive.indexOf(elem);
         
-        if (b == 0) {
+        if (numberElementClick == 0) {
           submenuFood.classList.toggle('show-submenu');
           submenuGas.classList.remove('show-submenu');
           submenuChemistry.classList.remove('show-submenu');
-        } else if (b == 1) {
+        } else if (numberElementClick == 1) {
           submenuGas.classList.toggle('show-submenu');
           submenuFood.classList.remove('show-submenu');
           submenuChemistry.classList.remove('show-submenu');
-        } else if (b == 2) {
+        } else if (numberElementClick == 2) {
           submenuChemistry.classList.toggle('show-submenu');
           submenuFood.classList.remove('show-submenu');
           submenuGas.classList.remove('show-submenu');
