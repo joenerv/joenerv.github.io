@@ -75,21 +75,19 @@
     &-submenu
         position: relative
         width: 100%
-        height: 69px
-        background-color: #144F7F
+        height: 260px
+        border: 1px solid black
         padding-left: 216px
         display: none
+        font-family: 'Roboto', sans-serif
+        overflow-x: scroll
 
 .submenu
-
-    &-wrapper        
-        font-family: 'Roboto', sans-serif
-        border: 1px solid black
-        position: relative
-        
     
     &-item
         min-width: 176px
+        height: 69px
+        background-color: #144F7F
         display: flex
         align-items: center
         border: 1px solid rgba(255, 255, 255, 0.15)
@@ -176,12 +174,12 @@
     &-gas
         @extend .submenu-food
         display: none
-        left: 176px
+        left: 0
 
     &-chemistry
         @extend .submenu-food
         width: 340px
-        left: 352px
+        left: 0
         display: none
 
         & li
@@ -234,7 +232,8 @@
 @media (max-width: 700px)
 
     .submenu-chemistry
-        left: 188px
+        left: auto
+        right: 0
 
         &:before
             left: auto
@@ -244,5 +243,4 @@
     .submenu-wrapper
         background-color: transparent
         height: 260px
-        overflow-x: auto
-        overflow-y: visible
+        overflow-x: scroll
