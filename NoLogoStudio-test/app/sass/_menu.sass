@@ -79,10 +79,11 @@
         background-color: #144F7F
         padding-left: 216px
         display: none
-        font-family: 'Roboto', sans-serif
 
 .submenu
-    &-wrapper
+
+    &-wrapper        
+        font-family: 'Roboto', sans-serif
         border: 1px solid black
         position: relative
         
@@ -175,10 +176,12 @@
     &-gas
         @extend .submenu-food
         display: none
+        left: 176px
 
     &-chemistry
         @extend .submenu-food
         width: 340px
+        left: 352px
         display: none
 
         & li
@@ -230,17 +233,15 @@
 
 @media (max-width: 700px)
 
-    
-
     .submenu-chemistry
-        right: 0
-        left: auto
+        left: 188px
 
         &:before
             left: auto
             right: 100px
 
 @media (max-width: 530px)
-    .menu-submenu
+    .submenu-wrapper
+        height: 260px
         overflow-x: auto
         overflow-y: visible
