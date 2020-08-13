@@ -12,6 +12,16 @@ window.addEventListener('DOMContentLoaded', function() {
     let submenuChemistry = document.querySelector('.submenu-chemistry');
 
 
+    // увеличение ширины подменю при наведении
+    
+    submenuChemistry.addEventListener('mouseover', () => {
+      submenuChemistry.style.width = '340' + 'px';
+    })
+
+    submenuChemistry.addEventListener('mouseout', () => {
+      submenuChemistry.style.width = '140' + 'px';
+    })
+
     // клик на меню второго порядка
     let a = Array.from(submenuItem);
 
