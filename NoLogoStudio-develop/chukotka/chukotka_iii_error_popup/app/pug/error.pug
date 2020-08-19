@@ -1,0 +1,32 @@
+section.error.js_error_popup
+    
+    .error-popup
+
+        .error-popup__close.js_error_popup_close
+            img(src="images/close.svg", alt="close")
+
+        .error-popup-content.js_error_popup_content
+            .error-popup__title
+                span Нашли ошибку?
+
+            .error-popup__text
+                p 
+                | «... Впечатления от просмотра новой документальной киноленты 
+                mark режиссера
+                |&nbsp Леонида Круглова «Великий Северный путь» об историческом 15-летнем походе Семена Дежнева на Чукотку ...»
+            
+            form.error-popup-form(action="#", method="GET" name="error")
+                textarea.error-popup-form__form(name="error-text", cols="30", rows="8", placeholder="Комментарий для автора (необязательно)")
+                input(type="submit", value="Отправить", name="submit").error-popup-form__button.js_error_button
+
+        .error-popup-sent.js_error_popup_content_sent
+
+            .error-popup-sent__title
+                span Спасибо!
+            
+            .error-popup-sent__text
+                p Мы получили ваше сообщение, проверим в ближайшее время!
+
+            button.error-popup-sent__button.js_error_button_sent продолжить чтение
+            
+
