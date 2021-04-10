@@ -1,0 +1,51 @@
+.main
+    position: relative
+    color: red
+    height: 100vh   
+
+    & .content-wrapper
+        position: relative
+        padding-top: 100px
+        z-index: 20
+
+    &-button-scroll
+        position: fixed
+        right: 74px
+        bottom: 74px
+        width: 57px
+        height: 46px
+        border: none
+        & img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__bg1
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        height: 794px
+        object-fit: cover
+
+    &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        &__menu
+            display: flex
+            width: 775px
+            display: flex
+            justify-content: space-between
+
+        &__button
+            border: none
+            width: 55px
+            height: 40px
+            & svg
+                width: 100%
+                height: 100%
+                object-fit: contain
+

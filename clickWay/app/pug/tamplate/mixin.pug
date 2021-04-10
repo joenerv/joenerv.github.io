@@ -1,0 +1,143 @@
+//- mixin
+
+
+//- стили в файле _main-product-item.sass
+mixin product-item(imgLink, price, discount, oldPrice, discountToday)
+
+    .product-item-wrapper
+        
+        .product-item__images
+            img(src= imgLink, alt="сапоги")
+        
+
+        .product-item__content
+
+            .product-item__content-heart.js_product_item_content_heart
+
+            .product-item__content-price
+                span= price 
+                span= discount 
+                span= oldPrice 
+
+            .product-item__content-text-wrap
+                .product-item__content-discount= discountToday  
+
+                .product-item__content-name
+                    |Мужские ботинки Keddo
+
+        button.product-item__button
+            span Добавить в корзину
+            span В корзину
+
+//- карточка товара без кнопки (стили в файле _main-product-item.sass )
+mixin product-item-catalog(imgLink, price, discount, oldPrice, discountToday)
+
+    .product-item-wrapper.catalog
+        
+        .product-item__images
+            img(src= imgLink, alt="сапоги")
+        
+
+        .product-item__content
+
+            .product-item__content-heart.js_product_item_content_heart
+
+            .product-item__content-price
+                span= price 
+                span= discount 
+                span= oldPrice 
+
+            .product-item__content-text-wrap
+                .product-item__content-discount= discountToday  
+
+                .product-item__content-name
+                    |Мужские ботинки Keddo
+
+//- слайдер с продуктом (стили в файле _slider-product)
+mixin slider-product
+
+    // СЛАЙДЕР ДЛЯ MOBILE
+    .products-slider-mobile
+
+        +product-item("img/main-product-img1.png", '9 658 ₽', '-30%', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+        +product-item("img/main-product-img2.png", '9 658 ₽', '-30%', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+        +product-item("img/main-product-img3.png", '9 658 ₽', '-30%', '11 478 ₽', '')
+        +product-item("img/main-product-img4.png", '9 658 ₽', '', '', '')
+        +product-item("img/main-product-img1.png", '9 658 ₽', '', '', '')
+
+    // СЛАЙДЕР ДЛЯ DESKTOP
+    .swiper-container.products-slider__container
+        // Additional required wrapper
+        .swiper-wrapper.products-slider__wrapper
+
+            // Slides
+            .swiper-slide.products-slider__slide 
+                +product-item("img/main-product-img1.png", '9 658 ₽', '-30%', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+
+            .swiper-slide.products-slider__slide 
+                +product-item("img/main-product-img2.png", '9 658 ₽', '-30%', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+
+            .swiper-slide.products-slider__slide 
+                +product-item("img/main-product-img3.png", '9 658 ₽', '-30%', '11 478 ₽', '')
+
+            .swiper-slide.products-slider__slide 
+                +product-item("img/main-product-img4.png", '9 658 ₽', '', '', '')
+
+        // If we need navigation buttons
+        .swiper-button-prev.products-slider__prev
+        .swiper-button-next.products-slider__next
+
+//- POPUP ТОВАР ДОБАВЛЕН В КОРЗИНУ (стили в файле _popup-product-add.sass)
+mixin popup-product-add
+
+    // POPUP ТОВАР ДОБАВЛЕН В КОРЗИНУ
+    .popup-product-add.js_popup_product_add
+
+        .popup-product-add__wrap.js_popup_product_add_wrap
+
+            svg.popup-product-add__close.js_product_add_close(width='22' height='22' viewbox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg') 
+                path(d='M22 1.925L20.075 0L11 9.075L1.925 0L0 1.925L9.075 11L0 20.075L1.925 22L11 12.925L20.075 22L22 20.075L12.925 11L22 1.925Z' fill='')
+
+            .popup-product-add__title Товар добавлен в корзину
+
+            .popup-product-add__cnt
+
+                .popup-product-add__cnt-product
+
+                    img(src="img/product-card-popup.png", alt="фото товара").popup-product-add__cnt-product-images
+                    .popup-product-add__cnt-product-text
+                        span Ботинки зимние 
+                            b Next Step
+                        span Размер: 37
+                        span Колличество: 1
+                        .popup-product-add__cnt-product-text-price 2 095 ₽ 
+
+
+                .popup-product-add__cnt-price 2 095 ₽ 
+
+            .popup-product-add__title Вам может потребоваться
+            
+            .popup-product-add__slider-mobile 
+                +product-item("img/popup-product-add-img1.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+                +product-item("img/popup-product-add-img2.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+                +product-item("img/popup-product-add-img3.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+
+            // Slider main container
+            .swiper-container.popup-product-add__slider
+        
+                .swiper-wrapper
+                    
+                    .swiper-slide 
+                        +product-item("img/popup-product-add-img1.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+                    .swiper-slide 
+                        +product-item("img/popup-product-add-img2.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+                    .swiper-slide 
+                        +product-item("img/popup-product-add-img3.png", '9 658 ₽', '', '11 478 ₽', 'Ваша цена сегодня: 6 797 ₽')
+                
+                .swiper-button-prev
+                .swiper-button-next
+
+            .popup-product-add__button
+
+                button.popup-product-add__button-proceed.js_popup_product_add_button_proceed Продолжить покупки
+                button.popup-product-add__button-arrange.js_popup_product_add_button_arrange Оформить заказ

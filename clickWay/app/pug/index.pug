@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset = 'utf-8')
+        include tamplate/style.pug
+        title ClickWay
+        
+    body
+
+        //- миксины
+        include tamplate/mixin
+
+
+        main 
+
+            section.main
+
+                button(arial-label="промотать страницу вниз").main-button-scroll
+                    img(src="img/button-scroll.png", alt="кнопка вниз")
+
+                img(src="img/main-bg.png", alt="фоновый рисунок").main__bg1
+
+
+                .content-wrapper
+
+                    header.main-header
+
+                        button(arial-label="кнопка открытия меню").main-header__button
+                            svg(xmlns='http://www.w3.org/2000/svg' width='55' height='40' viewbox='0 0 55 40')
+                                g(id='иконка_меню' data-name='иконка меню' transform='translate(-102 -102)')
+                                    rect(id='Прямоугольник_2_копия_2' data-name='Прямоугольник 2 копия 2' width='55' height='4.72' rx='2' transform='translate(102 137.28)' fill='#fff')
+                                    rect(id='Прямоугольник_2_копия' data-name='Прямоугольник 2 копия' width='55' height='4.69' rx='2' transform='translate(102 119.66)' fill='#fff')
+                                    rect(id='Прямоугольник_2' data-name='Прямоугольник 2' width='55' height='4.72' rx='2' transform='translate(102 102)' fill='#fff')
+
+                        nav 
+                            ul.main-header__menu
+
+                                li.main-header__menu-item
+                                    a(href="#") Кто мы
+                                li.main-header__menu-item
+                                    a(href="#") Этапы работы
+                                li.main-header__menu-item 
+                                    a(href="#") Связь
+
+
+                        a(href="#").main-header__email corp@clickway.pro
+
+
+
+        //- скрипты
+        include tamplate/script.pug
+
+
+    
+
