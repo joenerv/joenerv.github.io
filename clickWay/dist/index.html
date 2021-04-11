@@ -8,12 +8,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>ClickWay</title>
   </head>
   <body>
-    <main> 
+    <main class="wrapper">
       <section class="main">
         <!-- меню-->
         <div class="menu-popup js_menu_popup">
@@ -69,7 +68,13 @@
             </div>
           </div>
         </div>
-        <button class="main-button-scroll" arial-label="промотать страницу вниз"><img src="img/button-scroll.png" alt="кнопка вниз"></button><img class="main__bg1" src="img/main-bg.png" alt="фоновый рисунок">
+        <button class="main-button-scroll js_main_button_scroll" arial-label="промотать страницу вниз"><img src="img/button-scroll.png" alt="кнопка вниз"></button>
+        <div class="main_bg-1 rellax" data-rellax-speed="-1"><img src="img/main-mount-bg1.png" alt="картинка горы"></div>
+        <div class="main_bg-2 rellax" data-rellax-speed="-2"> <img src="img/main-mount-bg2.png" alt="картинка горы"></div>
+        <div class="main_bg-3 rellax" data-rellax-speed="-3"> <img src="img/main-mount-bg3.png" alt="картинка горы"></div>
+        <div class="main_bg-4 rellax" data-rellax-speed="-4"> <img src="img/main-mount-bg4.png" alt="картинка горы"></div>
+        <div class="main_bg-5 rellax" data-rellax-speed="-5"> <img src="img/main-mount-bg5.png" alt="картинка горы"></div>
+        <div class="main_bg-6"> <img src="img/main-mount-bg6.png" alt="картинка горы"></div>
         <div class="content-wrapper">
           <header class="main-header">
             <button class="main-header__button js_main_header_button" arial-label="кнопка открытия меню">
@@ -89,10 +94,12 @@
               </ul>
             </nav><a class="main-header__email" href="mailto:corp@clickway.pro">corp@clickway.pro</a>
           </header>
+          <h1 class="main__title"> <span>click</span><span>way</span></h1>
         </div>
       </section>
     </main>
-    <script src="js/swiper-bundle.min.js"> </script>
+    <!-- relax js-->
+    <script src="js/rellax.min.js"> </script>
     <script src="js/main.js"></script>
   </body>
 </html>

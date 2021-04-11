@@ -1,6 +1,6 @@
+
 .main
     position: relative
-    color: red
     height: 100vh   
 
     & .content-wrapper
@@ -20,15 +20,42 @@
             height: 100%
             object-fit: contain
 
-    &__bg1
+    &_bg-1,
+    &_bg-2,
+    &_bg-3,
+    &_bg-4,
+    &_bg-5,
+    &_bg-6
         position: absolute
-        top: 0
         left: 0
-        z-index: 1
         width: 100%
-        height: 794px
-        object-fit: cover
+        & img 
+            width: 100%
+            object-fit: cover
 
+    &_bg-1
+        top: 538px
+        z-index: 5
+    &_bg-2
+        top: 457px
+        z-index: 4
+    &_bg-3
+        top: 316px
+        z-index: 3
+    &_bg-4
+        top: 182px
+        z-index: 2
+    &_bg-5
+        top: 160px
+        z-index: 1
+
+    &_bg-6
+        top: 525px
+        z-index: 6
+    
+
+
+   
     &-header
         display: flex
         align-items: center
@@ -56,29 +83,28 @@
                     font-size: 25px
                     font-weight: 100
                     color: #FFFFFF
-                    transition: all 0.5s
-                    &::after
-                        content: ""
-                        position: absolute
-                        left: 0
-                        bottom: 5px                        
-                        display: inline-block
-                        width: 0
-                        height: 1px 
-                        background-color: rgba(255, 255, 255, 0)
-                        transition: all 0.5s
-
-                    &:hover::after
-                        width: 100%
-                        background-color: rgba(255, 255, 255, 1)
-                        transition: all 0.5s
-
         &__email
             font-size: 25px 
             line-height: 130%
             font-weight: 500
             color: #fff
             border-bottom: 5px solid #C0178F
+
+    &__title
+        padding-top: 90px
+        text-align: center
+        font-family: $font-jost
+        font-size: 125px
+        line-height: 110%
+        & span 
+            display: inline-block
+            &:first-child
+                font-weight: 900
+            &:last-child
+                font-weight: 100
+                
+
+
 
 
 // всплывающее меню

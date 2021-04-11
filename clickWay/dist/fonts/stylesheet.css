@@ -68,3 +68,27 @@
 }
 
 
+/* ШРИФТ JOST */
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Black.eot');
+    src: local('Jost Black'), local('Jost-Black'),
+        url('Jost-Black.eot?#iefix') format('embedded-opentype'),
+        url('Jost-Black.woff2') format('woff2'),
+        url('Jost-Black.woff') format('woff'),
+        url('Jost-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Thin.eot');
+    src: local('Jost Thin'), local('Jost-Thin'),
+        url('Jost-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Jost-Thin.woff2') format('woff2'),
+        url('Jost-Thin.woff') format('woff'),
+        url('Jost-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}

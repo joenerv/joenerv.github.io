@@ -11,7 +11,7 @@ html(lang="ru-RU")
         include tamplate/mixin
 
 
-        main 
+        main.wrapper
 
             section.main
 
@@ -86,10 +86,28 @@ html(lang="ru-RU")
                                         </svg>
 
 
-                button(arial-label="промотать страницу вниз").main-button-scroll
+                button(arial-label="промотать страницу вниз").main-button-scroll.js_main_button_scroll
                     img(src="img/button-scroll.png", alt="кнопка вниз")
 
-                img(src="img/main-bg.png", alt="фоновый рисунок").main__bg1
+                
+
+                .main_bg-1.rellax(data-rellax-speed="-1")
+                    img(src="img/main-mount-bg1.png", alt="картинка горы")
+
+                .main_bg-2.rellax(data-rellax-speed="-2") 
+                    img(src="img/main-mount-bg2.png", alt="картинка горы")
+                
+                .main_bg-3.rellax(data-rellax-speed="-3") 
+                    img(src="img/main-mount-bg3.png", alt="картинка горы")
+
+                .main_bg-4.rellax(data-rellax-speed="-4") 
+                    img(src="img/main-mount-bg4.png", alt="картинка горы")
+                
+                .main_bg-5.rellax(data-rellax-speed="-5") 
+                    img(src="img/main-mount-bg5.png", alt="картинка горы")
+
+                .main_bg-6 
+                        img(src="img/main-mount-bg6.png", alt="картинка горы")
 
 
                 .content-wrapper
@@ -116,7 +134,11 @@ html(lang="ru-RU")
 
                         a(href="mailto:corp@clickway.pro").main-header__email corp@clickway.pro
 
+                    h1.main__title 
+                        span click
+                        span way
 
+                    
 
         //- скрипты
         include tamplate/script.pug

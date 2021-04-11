@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	'use strict';
 
-	//открытие меню
+	//ОТКРЫТИЕ МЕНЮ
 		let menuBurger = document.querySelector('.js_main_header_button');//меню бургер
 		let menuPopup = document.querySelector('.js_menu_popup');//меню popup
 		let menuPopupClose = document.querySelector('.js_menu_popup_close');//закрыть меню Х
@@ -15,6 +15,17 @@ window.addEventListener('DOMContentLoaded', function() {
 		menuPopupClose.addEventListener('click', () => {
 			menuPopup.classList.remove('active');
 			bodyUnfixPosition();
+		});
+
+	// ИНИЦИАЛИЗАЦИЯ rellax.js
+		var rellax = new Rellax('.rellax');
+
+	// КНОПКА ПРОМОТАТЬ ВНИЗ НА ВЫСОТУ ЭКРАНА
+		let mainButtonScroll = document.querySelector('.js_main_button_scroll');//промотать вниз на высоту экрана
+		mainButtonScroll.addEventListener('click', () => {
+
+			window.scrollBy(0, (document.documentElement.clientHeight - 100));
+
 		});
 	
 	// 1. Фиксация <body>
