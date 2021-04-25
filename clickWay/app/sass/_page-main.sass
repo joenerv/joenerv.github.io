@@ -5,8 +5,10 @@
 
     & .content-wrapper
         position: relative
-        padding-top: 100px
+        padding-top: 50px
         z-index: 20
+        @media(min-width: 1200px)
+            padding-top: 100px
 
     &-button-scroll
         position: fixed
@@ -15,44 +17,79 @@
         width: 57px
         height: 46px
         border: none
-        z-index: 100
-        & img
+        z-index: 90
+        & svg
+            position: relative
             width: 100%
             height: 100%
             object-fit: contain
+            animation-name: animation-button-scroll
+            animation-duration: 1.5s
+            animation-timing-function: linear
+            animation-iteration-count: infinite
+
+
+    @keyframes animation-button-scroll
+
+        0%
+            top: 0
+        25%
+            top: -3px
+        50%
+            top: 0
+        75%
+            top: 3px
+        100% 
+            top: 0
 
     &_bg-1,
     &_bg-2,
     &_bg-3,
     &_bg-4,
     &_bg-5,
-    &_bg-6
+    &_bg-6,
+    &_bg-7
         position: absolute
         left: 0
         width: 100%
-        & img 
+        & svg
+            position: relative
             width: 100%
+            height: 100%
             object-fit: cover
+            
 
     &_bg-1
         top: 538px
-        z-index: 5
+        height: 280px
+        z-index: 6        
     &_bg-2
         top: 457px
-        z-index: 4
+        height: 430px
+        z-index: 5
     &_bg-3
         top: 316px
-        z-index: 3
+        height: 503px
+        z-index: 4
     &_bg-4
         top: 182px
-        z-index: 2
+        height: 679px
+        z-index: 3
     &_bg-5
-        top: 160px
-        z-index: 1
+        top: 289px
+        height: 647px
+        z-index: 2
 
     &_bg-6
+        top: 160px
+        height: 567px
+        z-index: 1
+    
+    // постамент
+    &_bg-7
         top: 525px
-        z-index: 6
+        height: 1582px
+        z-index: 7
    
     &-header
         display: flex
@@ -61,40 +98,56 @@
 
         &__button
             border: none
-            width: 55px
-            height: 40px
+            display: inline-block
+            min-width: 40px
+            height: 25px
+            margin-right: 20px
+            @media(min-width: 1200px)
+                min-width: 55px
+                height: 40px
+            @media(min-width: 1500px)
+                margin-right: 0
             & svg
                 width: 100%
                 height: 100%
                 object-fit: contain
 
         &__menu
-            display: flex
-            width: 775px
-            display: flex
-            justify-content: space-between
+            display: none
+            @media(min-width: 1200px)
+                display: flex
+                width: 775px
+                display: flex
+                justify-content: space-between
 
-            &-item 
-                & a
-                    display: inline-block
-                    position: relative
-                    font-size: 25px
-                    font-weight: 100
-                    color: #FFFFFF
+                &-item 
+                    & a
+                        display: inline-block
+                        position: relative
+                        font-size: 25px
+                        font-weight: 100
+                        color: #FFFFFF
         &__email
-            font-size: 25px 
+            font-size: 18px 
             line-height: 130%
             font-weight: 500
             color: #fff
             border-bottom: 5px solid #C0178F
+            margin-left: 20px
+            @media(min-width: 1200px)
+                font-size: 25px 
+            @media(min-width: 1500px)
+                margin-left: 0
 
     &__title
         padding-top: 90px
         text-align: center
         font-family: $font-jost
-        font-size: 125px
+        font-size: 75px
         line-height: 110%
         margin-bottom: 415px
+        @media(min-width: 1200px)
+            font-size: 125px
         & span 
             display: inline-block
             &:first-child
@@ -297,17 +350,22 @@
         position: relative
         margin-top: 137px
         width: 100%
-        height: 855px
+        // height: 855px
+        
 
         &__wrap
             display: flex
             width: 100%
-            height: 855px
+            // height: 855px
             flex-wrap: wrap
         
         &__item
-            width: 33.33%
+            width: 100%
             height: 50%
+            @media(min-width: 700px)
+                width: 50%
+            @media(min-width: 1200px)
+                width: 33.33%
 
         & img 
             width: 100%
@@ -541,7 +599,7 @@
         border: none
 
 .footer
-    margin-bottom: 96px
+    padding-bottom: 96px
 
     & .content-wrapper
         display: flex
