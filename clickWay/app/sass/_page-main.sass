@@ -8,23 +8,29 @@
         padding-top: 50px
         z-index: 20
         @media(min-width: 1200px)
-            padding-top: 100px
+            padding-top: 50px
 
     &-button-scroll
         position: fixed
-        right: 74px
-        bottom: 74px
-        width: 57px
-        height: 46px
+        right: 30px
+        bottom: 30px
+        width: 42px
+        height: 31px
         border: none
         z-index: 90
+        @media(min-width: 1200px)
+            width: 57px
+            height: 46px
+            right: 74px
+            bottom: 74px
+
         & svg
             position: relative
             width: 100%
             height: 100%
             object-fit: contain
             animation-name: animation-button-scroll
-            animation-duration: 1.5s
+            animation-duration: 2s
             animation-timing-function: linear
             animation-iteration-count: infinite
 
@@ -34,11 +40,11 @@
         0%
             top: 0
         25%
-            top: -3px
+            top: -5px
         50%
             top: 0
         75%
-            top: 3px
+            top: 5px
         100% 
             top: 0
 
@@ -87,14 +93,16 @@
     
     // постамент
     &_bg-7
-        top: 525px
+        top: 450px
         height: 1582px
         z-index: 7
    
     &-header
         display: flex
-        align-items: center
+        // align-items: center
         justify-content: space-between
+        @media(max-width: 1200px)
+            display: none
 
         &__button
             border: none
@@ -140,14 +148,14 @@
                 margin-left: 0
 
     &__title
-        padding-top: 90px
+        padding-top: 165px
         text-align: center
         font-family: $font-jost
-        font-size: 75px
+        font-size: 70px
         line-height: 110%
-        margin-bottom: 415px
+        margin-bottom: 370px
         @media(min-width: 1200px)
-            font-size: 125px
+            font-size: 100px
         & span 
             display: inline-block
             &:first-child
@@ -161,8 +169,8 @@
         & span 
             display: inline-block
             width: 100%
-            font-size: 28px
-            line-height: 33px
+            font-size: 22px
+            line-height: 27px
             font-weight: 100
             text-align: center
             margin-bottom: 26px
@@ -175,11 +183,12 @@
             border-radius: 2px
 
     &-greeting
-        font-size: 28px
-        line-height: 100%
+        font-size: 25px
+        line-height: 120%
         font-weight: 100
         width: 500px
-        margin-left: 295px
+        margin-left: 195px
+        margin-bottom: 30px
         & span 
             display: inline-block
             &:first-child
@@ -192,7 +201,7 @@
     &-who-we
         font-family: $font-jost
         width: 631px
-        margin-right: 0
+        margin-right: 200px
         margin-left: auto
 
         &__title
@@ -242,7 +251,7 @@
                 width: 100%
                 font-family: $font-roboto
                 font-weight: 100
-                font-size: 27px
+                font-size: 25px
                 margin-bottom: 32px
 
 
@@ -276,6 +285,7 @@
     &-year
         width: 700px
         font-family: $font-jost
+        margin-left: 81px
         &__title
             // display: inline-block
             width: 100%
@@ -329,7 +339,7 @@
                 flex-direction: column
                 font-family: $font-roboto
                 font-weight: 100
-                font-size: 27px
+                font-size: 25px
                 line-height: 27px
                 & span:last-child
                     display: inline-block
@@ -375,7 +385,7 @@
         &__content 
             position: absolute
             top: 35%
-            right: 20%
+            right: 9%
             width: 583px
             height: 310px
             &-title
@@ -384,12 +394,13 @@
                 font-size: 125px
                 line-height: 125px
                 font-weight: 900
+                
                 & span:last-child
-                    font-weight: 100
+                        font-weight: 100
 
             &-text
                 font-family: $font-roboto
-                font-size: 27px
+                font-size: 25px
                 line-height: 27px
                 font-weight: 100
                 & span:first-child
@@ -399,21 +410,24 @@
 
 // КАК МЫ РАБОТАЕМ
 .why-work
-    padding-top: 120px
+    padding-top: 140px
 
     &__title
         font-family: $font-jost
         font-size: 125px
-        line-height: 125px
+        line-height: 88px
         color: #18F18D
         font-weight: 900
         margin-left: 70px
-        & span:last-child
-            font-weight: 100
+        & span
+            display: inline-block
+            margin-right: 48px
+            &:last-child
+                font-weight: 100
 
     &__content 
         position: relative
-        width: 880px
+        width: 1100px
         height: 567px
 
         & .main-who-we__content-line-vertical
@@ -423,7 +437,7 @@
     &__text
         font-family: $font-roboto
         font-weight: 100
-        font-size: 27px
+        font-size: 25px
         line-height: 27px
         color: #fff
         margin-left: 268px
@@ -451,7 +465,8 @@
         justify-content: center
         text-align: center
         font-family: $font-roboto
-        font-size: 25px
+        font-size: 23px
+        line-height: 25px
         font-weight: 100
         &:nth-child(1)
             margin-left: 26px
@@ -465,7 +480,7 @@
             margin-right: 0
 
 .why-done
-    padding-top: 122px
+    padding-top: 140px
     
     &__title
         font-family: $font-jost
@@ -474,12 +489,13 @@
         color: #18F18D
         font-weight: 100
         margin-bottom: 49px
+        text-transform: uppercase
         & span:first-child
             font-weight: normal
             font-weight: 900
     
     &__subtitle
-        font-size: 27px
+        font-size: 25px
         line-height: 27px
         font-weight: 100
         margin-bottom: 95px
@@ -505,7 +521,7 @@
                     color: #5954D8
 
 .work-together
-    padding-top: 65px
+    padding-top: 140px
     margin-bottom: 105px
 
     &__title
@@ -515,6 +531,7 @@
         font-weight: 100
         color: #18F18D
         margin-bottom: 77px
+        text-transform: uppercase
         & span:first-child
             display: inline-block
             font-weight: 900
@@ -549,7 +566,7 @@
 
     &__form
         width: 100%
-        background-color: #171717
+        background-color: rgba(23, 23, 23, 0.8)
         padding: 45px 40px 50px
         border-radius: 57px
 
@@ -693,6 +710,11 @@
                     line-height: 50px
                     font-weight: bold
                     color: #6A6A6A
+                    transition: all 0.3s
+                    &:hover
+                        color: #fff
+                        transition: all 0.3s
+
                 &:last-child
                     margin-bottom: 0
 
@@ -740,6 +762,11 @@
                         width: 100%
                         height: 100%
                         object-fit: contain
+                        opacity: 0.4
+                        transition: all 0.3s
+                    &:hover svg
+                        opacity: 1
+                        transition: all 0.3s
 
                     &:last-child
                         margin-right: 0
