@@ -93,9 +93,16 @@
     
     // постамент
     &_bg-7
-        top: 450px
+        top: 250px
         height: 1582px
         z-index: 7
+        @media(min-width: 1300px)
+            top: 300px
+        @media(min-width: 1600px)
+            top: 400px
+        @media(min-width: 1800px)
+            top: 450px
+
    
     &-header
         display: flex
@@ -165,7 +172,9 @@
                 
     &__text 
         text-align: center
-        margin-bottom: 172px
+        margin-bottom: 90px
+        @media(min-width: 1600px)
+            margin-bottom: 172px
         & span 
             display: inline-block
             width: 100%
@@ -183,12 +192,22 @@
             border-radius: 2px
 
     &-greeting
-        font-size: 25px
+        font-size: 20px
         line-height: 120%
         font-weight: 100
-        width: 500px
-        margin-left: 195px
+        width: 90%
+        margin-left: 30px
         margin-bottom: 30px
+        @media(min-width: 600px)
+            width: 500px
+            font-size: 22px
+            line-height: 120%
+        @media(min-width: 1300px)
+            margin-left: 100px
+        @media(min-width: 1800px)
+            margin-left: 195px
+            font-size: 25px
+
         & span 
             display: inline-block
             &:first-child
@@ -200,27 +219,61 @@
 
     &-who-we
         font-family: $font-jost
-        width: 631px
-        margin-right: 200px
+        width: 280px
+        margin-right: 0
         margin-left: auto
+        margin-bottom: 40px
+        @media(min-width: 400px)
+            width: 300px
+        @media(min-width: 600px)
+            width: 400px
+        @media(min-width: 900px)
+            width: 450px
+        @media(min-width: 900px)
+            width: 550px
+            margin-right: 30px
+        @media(min-width: 1200px)
+            width: 631px
+            margin-bottom: 0
+            margin-right: 150px
+        @media(min-width: 1600px)
+            margin-right: 200px
+
 
         &__title
             // display: inline-block
             width: 100%
             height: auto
             text-align: right
-            font-size: 125px
-            line-height: 95px
+            font-size: 50px
+            line-height: 39px
+            @media(min-width: 600px)
+                font-size: 60px
+                line-height: 45px
+            @media(min-width: 900px)
+                font-size: 80px
+                line-height: 59px
+            @media(min-width: 1200px)
+                font-size: 100px
+                line-height: 75px
+            @media(min-width: 1600px)
+                font-size: 125px
+                line-height: 96px
+
             & span 
                 display: inline-block
                 color: #18F18D
-                margin-right: 48px
-                
+                         
                 &:first-child
                     font-weight: 900
+                    margin-right: 18px
+                    @media(min-width: 900px) 
+                        margin-right: 28px
+                    @media(min-width: 1200px)     
+                        margin-right: 48px  
                 &:last-child
                     font-weight: 100
-                    margin-left: 20px
+                    margin-right: 20px
        
         &__content
             position: relative
@@ -234,25 +287,41 @@
                     width: 100%
                     height: 1px
                     background-color: #C21AD1
-                    margin-bottom: 40px
+                    margin-bottom: 20px
+                    @media(min-width: 1600px)
+                        margin-bottom: 40px
+
                     &:last-child
                         margin-bottom: 63px
 
                 &-vertical
-                    display: inline-block
-                    position: absolute
-                    right: 165px
-                    top: 0
-                    width: 1px
-                    height: 100%
-                    background-color: #C21AD1
+                    display: none
+                    @media(min-width: 600px)
+                        display: inline-block
+                        position: absolute
+                        right: 110px
+                        top: 1px
+                        width: 1px
+                        height: 100%
+                        background-color: #C21AD1
+                   
+                    @media(min-width: 900px)
+                        right: 165px
+                    @media(min-width: 1600px)
+                        top: 0
 
             &-text
                 width: 100%
                 font-family: $font-roboto
                 font-weight: 100
-                font-size: 25px
-                margin-bottom: 32px
+                margin-bottom: 5px
+                font-size: 19px                
+                @media(min-width: 900px)
+                    font-size: 22px
+                    margin-bottom: 15px
+                @media(min-width: 1600px)
+                    margin-bottom: 32px
+                    font-size: 25px
 
 
                 &:last-child
@@ -261,8 +330,12 @@
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='163.91' height='23.22' viewBox='0 0 163.91 23.22'%3E%3Cg id='круг_копия_8' data-name='круг копия 8' transform='translate(-1216.59 -1874.94)'%3E%3Cellipse id='Эллипс_5_копия' data-name='Эллипс 5 копия' cx='6.72' cy='6.7' rx='6.72' ry='6.7' transform='translate(1362.09 1879.85)' fill='%237e2e39'/%3E%3Cg id='Эллипс_5' data-name='Эллипс 5' transform='translate(1357.16 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.67' cy='11.61' rx='11.67' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.67' cy='11.61' rx='10.67' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_7' data-name='круг копия 7' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-2' data-name='Эллипс 5' transform='translate(1328.84 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_6' data-name='круг копия 6' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-3' data-name='Эллипс 5' transform='translate(1300.5 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_5' data-name='круг копия 5' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-4' data-name='Эллипс 5' transform='translate(1273.18 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_4' data-name='круг копия 4' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-5' data-name='Эллипс 5' transform='translate(1244.84 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_3' data-name='круг копия 3' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-6' data-name='Эллипс 5' transform='translate(1216.59 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.66' cy='11.61' rx='11.66' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.66' cy='11.61' rx='10.66' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
 
                 &-wrap
-                    width: 305px                    
-                    margin-left: 105px
+                    width: 222px                    
+                    margin-left: 40px
+                    @media(min-width: 900px)
+                        width: 305px      
+                    @media(min-width: 1200px)
+                        margin-left: 105px
 
                 & span 
                     display: inline-block
@@ -271,28 +344,58 @@
                     text-align: right
 
                     &:first-child
-                        margin-bottom: 12px
+                        margin-bottom: 5px
+                        @media(min-width: 900px)
+                            margin-bottom: 12px
 
                     &:last-child::before
                         content: ""
                         display: inline-block
-                        width: 164px
-                        height: 23px
+                        width: 100px
+                        height: 14px
                         background-repeat: no-repeat
                         background-size: contain
+                        margin-right: 5px
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='163.9' height='23.18' viewBox='0 0 163.9 23.18'%3E%3Cg id='_6' data-name='6' transform='translate(140.56)'%3E%3Cellipse id='kr6' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.93 4.93)' fill='%23089d59'/%3E%3Cg id='obod6' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.67' cy='11.59' rx='11.67' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.67' cy='11.59' rx='10.67' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='_5' data-name='5' transform='translate(112.24)'%3E%3Cellipse id='kr5' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.97 4.93)' fill='%23089d59'/%3E%3Cg id='obod5' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.59' rx='11.69' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.59' rx='10.69' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='_4' data-name='4' transform='translate(83.93)'%3E%3Cellipse id='kr4' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.97 4.93)' fill='%23089d59'/%3E%3Cg id='obod4' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.59' rx='11.69' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.59' rx='10.69' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='_3' data-name='3' transform='translate(56.59)'%3E%3Cellipse id='kr3' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.97 4.93)' fill='%23089d59'/%3E%3Cg id='obod3' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.59' rx='11.69' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.59' rx='10.69' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='_2' data-name='2' transform='translate(28.27)'%3E%3Cellipse id='kr2' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.97 4.93)' fill='%23089d59'/%3E%3Cg id='obod2' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.59' rx='11.69' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.59' rx='10.69' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='_1' data-name='1'%3E%3Cellipse id='kr1' cx='6.72' cy='6.67' rx='6.72' ry='6.67' transform='translate(4.96 4.93)' fill='%23089d59'/%3E%3Cg id='obod1' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.67' cy='11.59' rx='11.67' ry='11.59' stroke='none'/%3E%3Cellipse cx='11.67' cy='11.59' rx='10.67' ry='10.59' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                        @media(min-width: 900px)
+                            height: 18px
+                            width: 125px
+                        @media(min-width: 1600px)
+                            width: 164px
+                            height: 20px
+                            margin-right: 0
+                            height: 23px
 
     &-year
-        width: 700px
+        width: 80%
         font-family: $font-jost
-        margin-left: 81px
+        margin-left: 20px
+        @media(min-width: 600px)
+            width: 500px
+        @media(min-width: 900px)
+            width: 700px
+            margin-left: 81px
+
         &__title
             // display: inline-block
             width: 100%
             height: auto
-            font-size: 125px
-            line-height: 95px
-            padding-left: 50px
+            font-size: 50px
+            line-height: 36px     
+            padding-left: 20px       
+            @media(min-width: 600px)
+                padding-left: 50px
+                font-size: 60px
+                line-height: 42px
+            @media(min-width: 900px)
+                font-size: 80px
+                line-height: 59px
+            @media(min-width: 1200px)
+                font-size: 100px
+                line-height: 70px
+            @media(min-width: 1600px)
+                font-size: 125px
+                line-height: 93px
             & span 
                 display: inline-block
                 color: #18F18D
@@ -307,54 +410,114 @@
             position: relative
 
             & .main-who-we__content-line-vertical
-                right: 495px
+                display: none
+                @media(min-width: 600px)
+                    display: inline-block
+                    right: 305px
+                @media(min-width: 900px)
+                    right: 495px
 
             &-item
                 display: flex
-                align-items: center
-                margin-left: -20px
-                margin-bottom: 34px
+                text-align: center             
+                margin-bottom: 25px
+                flex-direction: column
+                @media(min-width: 600px)
+                    text-align: left
+                    margin-left: -10px
+                    flex-direction: row
+                @media(min-width: 1600px)
+                    margin-left: -20px
+                    margin-bottom: 34px
+
+                &:nth-child(4)
+                    & .main-year__content-year
+                        width: 100%
+                        margin-bottom: 15px
+                        @media(min-width: 600px)
+                            width: auto
+
 
                 &:nth-child(5)
                     & .main-year__content-year
                         color: #5A168D
+                        width: 100%
+                        margin-bottom: 15px
+                        @media(min-width: 600px)
+                            width: auto
+                            margin-right: 90px
 
                 &:last-child
                     margin-bottom: 0
                     & .main-year__content-year
                         color: #7117AF
+                        width: 100%
+                        margin-bottom: 15px
+                        @media(min-width: 600px)
+                            width: auto
+                            margin-right: 80px
 
             &-year
                 display: inline-block
                 font-family: $font-jost
-                width: 200px
+                width: 180px
                 font-weight: 900
-                font-size: 69px
-                line-height: 69px
+                font-size: 50px
+                line-height: 50px
                 color: #381A5E
-                margin-right: 79px
+                margin-right: 30px
+                @media(min-width: 600px)
+                    font-size: 60px
+                    line-height: 60px
+                    margin-right: 70px
+                @media(min-width: 1600px)
+                    width: 200px
+                    font-size: 69px
+                    line-height: 69px
+                    margin-right: 79px
 
             &-text 
                 display: flex
                 flex-direction: column
                 font-family: $font-roboto
                 font-weight: 100
-                font-size: 25px
-                line-height: 27px
+                font-size: 17px
+                line-height: 18px
+                @media(min-width: 600px)
+                    font-size: 19px
+                    line-height: 20px
+                @media(min-width: 900px)
+                    font-size: 22px
+                    line-height: 23px
+                @media(min-width: 1600px)
+                    font-size: 25px
+                    line-height: 27px
+
                 & span:last-child
                     display: inline-block
                     margin-top: 10px
+                    @media(min-width: 900px)
+                        margin-top: 10px
                     &::before
                         content: ""
                         display: inline-block
                         position: relative
                         top: 2px
-                        width: 23px
-                        height: 23px
+                        width: 17px
+                        height: 17px
                         margin-right: 6px
                         background-repeat: no-repeat
                         background-size: contain
                         background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 297 297' style='enable-background:new 0 0 297 297;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%237117AF;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M151.8,0C92.5,0,44.3,49.7,44.3,110.8c0,91,96.8,179.9,100.9,183.6c1.9,1.7,4.2,2.6,6.6,2.6 c2.3,0,4.7-0.9,6.6-2.6c4.1-3.7,100.9-92.6,100.9-183.6C259.3,49.7,211,0,151.8,0z M151.8,272.7c-21.4-21.4-87.6-93-87.6-161.9 c0-49.8,39.3-90.3,87.6-90.3s87.6,40.5,87.6,90.3C239.4,179.7,173.2,251.3,151.8,272.7z'/%3E%3Cpath class='st0' d='M151.8,59.2c-27.4,0-49.8,23.2-49.8,51.6c0,28.5,22.3,51.6,49.8,51.6s49.8-23.2,49.8-51.6 C201.5,82.3,179.2,59.2,151.8,59.2z M151.8,141.9c-16.5,0-29.9-14-29.9-31.1c0-17.2,13.4-31.1,29.9-31.1s29.9,14,29.9,31.1 S168.2,141.9,151.8,141.9z'/%3E%3C/g%3E%3C/svg%3E%0A")
+                        @media(min-width: 900px)
+                            width: 19px
+                            height: 19px
+                        @media(min-width: 1200px)
+                            width: 20px
+                            height: 20px
+                        @media(min-width: 1600px)
+                            width: 23px
+                            height: 23px
 
     &-photo-block
         position: relative
@@ -362,7 +525,6 @@
         width: 100%
         // height: 855px
         
-
         &__wrap
             display: flex
             width: 100%
@@ -380,29 +542,57 @@
         & img 
             width: 100%
             height: 100%
-            object-fit: contain
+            object-fit: cover
 
         &__content 
             position: absolute
-            top: 35%
-            right: 9%
-            width: 583px
+            top: 14%
+            right: 5%
+            width: 80%
             height: 310px
+            @media(min-width: 700px)
+                top: 25%
+                right: 5%
+                width: 400px
+            @media(min-width: 1200px)
+                top: 35%
+                right: 9%
+                width: 583px
+
             &-title
                 color: #18F18D
                 font-family: $font-jost
-                font-size: 125px
-                line-height: 125px
+                font-size: 50px
+                line-height: 39px
                 font-weight: 900
+                @media(min-width: 600px)
+                    font-size: 60px
+                    line-height: 45px
+                @media(min-width: 900px)
+                    font-size: 80px
+                    line-height: 59px
+                @media(min-width: 1200px)
+                    font-size: 100px
+                    line-height: 75px
+                @media(min-width: 1600px)
+                    font-size: 125px
+                    line-height: 96px
+
                 
                 & span:last-child
                         font-weight: 100
 
             &-text
                 font-family: $font-roboto
-                font-size: 25px
-                line-height: 27px
                 font-weight: 100
+                font-size: 19px  
+                line-height: 19px              
+                @media(min-width: 900px)
+                    font-size: 22px
+                    margin-bottom: 15px
+                @media(min-width: 1600px)
+                    margin-bottom: 32px
+                    font-size: 25px
                 & span:first-child
                     display: inline-block
                     width: 100%
@@ -410,107 +600,221 @@
 
 // КАК МЫ РАБОТАЕМ
 .why-work
-    padding-top: 140px
+    padding-top: 80px
+    @media(min-width: 1200px)
+        padding-top: 140px
 
     &__title
         font-family: $font-jost
-        font-size: 125px
-        line-height: 88px
         color: #18F18D
-        font-weight: 900
-        margin-left: 70px
+        font-weight: 900        
+        font-size: 50px
+        line-height: 39px
+        @media(min-width: 600px)
+            font-size: 60px
+            line-height: 45px
+        @media(min-width: 900px)
+            font-size: 80px
+            line-height: 59px
+            margin-left: 70px
+        @media(min-width: 1200px)
+            font-size: 100px
+            line-height: 75px
+        @media(min-width: 1600px)
+            font-size: 125px
+            line-height: 96px
         & span
             display: inline-block
-            margin-right: 48px
+            &:not(:last-child)
+                margin-right: 20px
+                @media(min-width: 900px)
+                    margin-right: 35px
+                @media(min-width: 1200px)
+                    margin-right: 48px
             &:last-child
                 font-weight: 100
 
     &__content 
         position: relative
-        width: 1100px
-        height: 567px
+        width: 100%        
+        @media(min-width: 1400px)
+            width: 1100px
+            height: 567px
 
         & .main-who-we__content-line-vertical
-            right: auto
-            left: 200px
+            display: none
+            @media(min-width: 1650px)
+                display: inline-block
+                right: auto
+                left: 200px
 
     &__text
         font-family: $font-roboto
-        font-weight: 100
-        font-size: 25px
-        line-height: 27px
+        font-weight: 100        
         color: #fff
-        margin-left: 268px
         margin-bottom: 60px
+        font-size: 19px
+        line-height: 21px
+        @media(min-width: 900px)
+            font-size: 22px
+            line-height: 24px    
+            margin-left: 70px    
+        @media(min-width: 1600px)
+            font-size: 25px
+            line-height: 27px
+        @media(min-width: 1650px)
+            margin-left: 268px
         & span:last-child
             color: #18F18D
 
     &__descr
-        width: 1350px
-        height: 342px
-        margin-left: 268px
+        width: 100%    
+        margin-left: 0
         display: flex
-        align-items: center
-        background-repeat: no-repeat
-        background-size: contain
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1351' height='342.001' viewBox='0 0 1351 342.001'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' y1='0.5' x2='1' y2='0.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2306f2d6'/%3E%3Cstop offset='0.092' stop-color='%2307edd7'/%3E%3Cstop offset='0.199' stop-color='%230bdfdb'/%3E%3Cstop offset='0.313' stop-color='%2311c7e2'/%3E%3Cstop offset='0.432' stop-color='%231aa7ec'/%3E%3Cstop offset='0.504' stop-color='%232190f4'/%3E%3Cstop offset='0.657' stop-color='%234d68ec'/%3E%3Cstop offset='0.804' stop-color='%237149e6'/%3E%3Cstop offset='0.923' stop-color='%238736e3'/%3E%3Cstop offset='1' stop-color='%238f30e2'/%3E%3C/linearGradient%3E%3ClinearGradient id='linear-gradient-2' x1='0.12' y1='0.526' x2='0.88' y2='0.474' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2318f18d'/%3E%3Cstop offset='0.268' stop-color='%2308deca'/%3E%3Cstop offset='1' stop-color='%238e31e2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='krakozyabra_na_vse_krugi' transform='translate(-472 -3893)'%3E%3Cg id='krakozyabra_na_vse_krugi-2' data-name='krakozyabra_na_vse_krugi' transform='translate(182.866 3582.162)'%3E%3Cpath id='Контур_131' data-name='Контур 131' d='M1469.253,310.837c-94.225,0-170.882,76.71-170.882,171,0,91.338-74.257,165.644-165.531,165.644S967.311,573.175,967.311,481.837c0-94.29-76.657-171-170.882-171s-170.882,76.71-170.882,171c0,91.338-74.256,165.644-165.529,165.644S294.486,573.175,294.486,481.837s74.257-165.643,165.531-165.643a165.712,165.712,0,0,1,105.291,37.824l3.406-4.13a171.071,171.071,0,0,0-108.7-39.05c-94.225,0-170.882,76.71-170.882,171s76.657,171,170.882,171,170.882-76.711,170.882-171c0-91.336,74.256-165.643,165.529-165.643S961.958,390.5,961.958,481.837c0,94.29,76.657,171,170.882,171s170.884-76.711,170.884-171c0-91.336,74.255-165.643,165.529-165.643s165.528,74.307,165.528,165.643-74.255,165.644-165.528,165.644a164.063,164.063,0,0,1-98.9-32.807l-3.2,4.293a169.378,169.378,0,0,0,102.106,33.871c94.224,0,170.881-76.711,170.881-171S1563.477,310.837,1469.253,310.837Z' fill='url(%23linear-gradient)'/%3E%3C/g%3E%3Cpath id='Gradient_Overlay' data-name='Gradient Overlay' d='M1550.013,4201.13l3.2-4.292a164.065,164.065,0,0,0,98.905,32.807c91.274,0,165.529-74.307,165.529-165.645s-74.255-165.643-165.529-165.643-165.53,74.307-165.53,165.643c0,94.29-76.657,171-170.883,171s-170.882-76.712-170.882-171c0-91.337-74.257-165.643-165.53-165.643S813.765,3972.663,813.765,4064c0,94.29-76.658,171-170.883,171S472,4158.289,472,4064s76.658-171,170.882-171a171.076,171.076,0,0,1,108.7,39.05l-3.406,4.13a165.711,165.711,0,0,0-105.292-37.823c-91.273,0-165.53,74.307-165.53,165.643s74.257,165.645,165.53,165.645,165.53-74.307,165.53-165.645c0-94.29,76.658-171,170.882-171s170.882,76.71,170.882,171c0,91.338,74.256,165.645,165.53,165.645s165.531-74.307,165.531-165.645c0-94.29,76.657-171,170.882-171S1823,3969.709,1823,4064s-76.658,171-170.881,171A169.376,169.376,0,0,1,1550.013,4201.13Z' fill='url(%23linear-gradient-2)'/%3E%3C/g%3E%3C/svg%3E%0A")
+        align-items: center    
+        justify-content: space-between 
+        flex-wrap: wrap  
+        @media(min-width: 1400px)
+            width: 1350px    
+            height: 342px
+            flex-wrap: nowrap
+            justify-content: flex-start
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1351' height='342.001' viewBox='0 0 1351 342.001'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' y1='0.5' x2='1' y2='0.5' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2306f2d6'/%3E%3Cstop offset='0.092' stop-color='%2307edd7'/%3E%3Cstop offset='0.199' stop-color='%230bdfdb'/%3E%3Cstop offset='0.313' stop-color='%2311c7e2'/%3E%3Cstop offset='0.432' stop-color='%231aa7ec'/%3E%3Cstop offset='0.504' stop-color='%232190f4'/%3E%3Cstop offset='0.657' stop-color='%234d68ec'/%3E%3Cstop offset='0.804' stop-color='%237149e6'/%3E%3Cstop offset='0.923' stop-color='%238736e3'/%3E%3Cstop offset='1' stop-color='%238f30e2'/%3E%3C/linearGradient%3E%3ClinearGradient id='linear-gradient-2' x1='0.12' y1='0.526' x2='0.88' y2='0.474' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%2318f18d'/%3E%3Cstop offset='0.268' stop-color='%2308deca'/%3E%3Cstop offset='1' stop-color='%238e31e2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg id='krakozyabra_na_vse_krugi' transform='translate(-472 -3893)'%3E%3Cg id='krakozyabra_na_vse_krugi-2' data-name='krakozyabra_na_vse_krugi' transform='translate(182.866 3582.162)'%3E%3Cpath id='Контур_131' data-name='Контур 131' d='M1469.253,310.837c-94.225,0-170.882,76.71-170.882,171,0,91.338-74.257,165.644-165.531,165.644S967.311,573.175,967.311,481.837c0-94.29-76.657-171-170.882-171s-170.882,76.71-170.882,171c0,91.338-74.256,165.644-165.529,165.644S294.486,573.175,294.486,481.837s74.257-165.643,165.531-165.643a165.712,165.712,0,0,1,105.291,37.824l3.406-4.13a171.071,171.071,0,0,0-108.7-39.05c-94.225,0-170.882,76.71-170.882,171s76.657,171,170.882,171,170.882-76.711,170.882-171c0-91.336,74.256-165.643,165.529-165.643S961.958,390.5,961.958,481.837c0,94.29,76.657,171,170.882,171s170.884-76.711,170.884-171c0-91.336,74.255-165.643,165.529-165.643s165.528,74.307,165.528,165.643-74.255,165.644-165.528,165.644a164.063,164.063,0,0,1-98.9-32.807l-3.2,4.293a169.378,169.378,0,0,0,102.106,33.871c94.224,0,170.881-76.711,170.881-171S1563.477,310.837,1469.253,310.837Z' fill='url(%23linear-gradient)'/%3E%3C/g%3E%3Cpath id='Gradient_Overlay' data-name='Gradient Overlay' d='M1550.013,4201.13l3.2-4.292a164.065,164.065,0,0,0,98.905,32.807c91.274,0,165.529-74.307,165.529-165.645s-74.255-165.643-165.529-165.643-165.53,74.307-165.53,165.643c0,94.29-76.657,171-170.883,171s-170.882-76.712-170.882-171c0-91.337-74.257-165.643-165.53-165.643S813.765,3972.663,813.765,4064c0,94.29-76.658,171-170.883,171S472,4158.289,472,4064s76.658-171,170.882-171a171.076,171.076,0,0,1,108.7,39.05l-3.406,4.13a165.711,165.711,0,0,0-105.292-37.823c-91.273,0-165.53,74.307-165.53,165.643s74.257,165.645,165.53,165.645,165.53-74.307,165.53-165.645c0-94.29,76.658-171,170.882-171s170.882,76.71,170.882,171c0,91.338,74.256,165.645,165.53,165.645s165.531-74.307,165.531-165.645c0-94.29,76.657-171,170.882-171S1823,3969.709,1823,4064s-76.658,171-170.881,171A169.376,169.376,0,0,1,1550.013,4201.13Z' fill='url(%23linear-gradient-2)'/%3E%3C/g%3E%3C/svg%3E%0A")
+
+        @media(min-width: 1650px)
+            margin-left: 268px
 
     &__item
-        width: 284px
-        height: 284px
-        margin-right: 53px
-        border-radius: 50%
+        text-align: center
+        font-family: $font-roboto
+        font-size: 19px
+        line-height: 21px
+        font-weight: 100
         display: flex
         align-items: center
         justify-content: center
-        text-align: center
-        font-family: $font-roboto
-        font-size: 23px
-        line-height: 25px
-        font-weight: 100
-        &:nth-child(1)
-            margin-left: 26px
+        width: 100%
+        margin-bottom: 20px
+        @media(min-width: 620px)
+            width: 50%
+        @media(min-width: 900px)
+            font-size: 23px
+            line-height: 25px      
+        @media(min-width: 1200px)
+            width: auto
+        @media(min-width: 1400px)
+            margin-right: 53px
+            margin-bottom: 0
+        
+        & span 
+            display: inline-block
+            width: 284px
+            height: 284px  
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+
+        &:nth-child(1) span 
             border: 3px solid #19EA8C
-        &:nth-child(2)
+            @media(min-width: 1400px)
+                margin-left: 26px
+        &:nth-child(2) span 
             border: 3px solid #13CECF
-        &:nth-child(3)
+        &:nth-child(3) span
             border: 3px solid #4A87DA
-        &:nth-child(4)
+        &:nth-child(4) span 
             border: 3px solid #8240E0
             margin-right: 0
 
+// ЧТО МЫ УЖЕ СДЕЛАЛИ
 .why-done
     padding-top: 140px
     
     &__title
         font-family: $font-jost
-        font-size: 125px
-        line-height: 126px
         color: #18F18D
         font-weight: 100
-        margin-bottom: 49px
+        margin-bottom: 29px
         text-transform: uppercase
+        font-size: 50px
+        line-height: 39px
+        @media(min-width: 600px)
+            font-size: 60px
+            line-height: 51px
+            margin-bottom: 39px
+        @media(min-width: 900px)
+            font-size: 80px
+            line-height: 65px
+            margin-left: 70px
+        @media(min-width: 1200px)
+            margin-bottom: 49px
+            font-size: 100px
+            line-height: 75px
+        @media(min-width: 1600px)
+            font-size: 125px
+            line-height: 96px
+
         & span:first-child
             font-weight: normal
             font-weight: 900
     
     &__subtitle
-        font-size: 25px
-        line-height: 27px
         font-weight: 100
-        margin-bottom: 95px
+        margin-bottom: 55px
+        font-size: 19px
+        line-height: 21px
+        @media(min-width: 900px)
+            font-size: 22px
+            line-height: 24px    
+            margin-left: 70px 
+            margin-bottom: 75px   
+        @media(min-width: 1600px)
+            font-size: 25px
+            line-height: 27px
+            margin-bottom: 95px
+
     
     &__project
-        width: 1290px
+        width: 100%
+        @media(min-width: 1300px)
+            width: 1290px
+        
         &-row
-            margin-bottom: 93px
+            margin-bottom: 50px
             display: flex
             justify-content: space-between
+            flex-wrap: wrap
             font-family: $font-roboto
             font-weight: 500
-            font-size: 31px
-            line-height: 31px
+            font-size: 22px
+            line-height: 22px
             color: #8849D5
+            @media(min-width: 900px)
+                font-size: 24px
+                line-height: 24px
+            @media(min-width: 1200px)
+                font-size: 27px
+                line-height: 27px
+                margin-bottom: 93px
+            @media(min-width: 1600px)
+                font-size: 31px
+                line-height: 31px
+
+            & span 
+                display: inline-block
+                width: 100%
+                text-align: center
+                @media(min-width: 600px)
+                    width: 50%
+                @media(min-width: 900px)
+                    width: auto
+                &:not(:last-child)
+                    margin-bottom: 10px
+
+
             &:first-child
                 & span:nth-child(2n)
                     color: #5954D8
@@ -526,12 +830,26 @@
 
     &__title
         font-family: $font-jost
-        font-size: 125px
-        line-height: 125px
         font-weight: 100
         color: #18F18D
         margin-bottom: 77px
         text-transform: uppercase
+        font-size: 50px
+        line-height: 39px
+        @media(min-width: 600px)
+            font-size: 60px
+            line-height: 51px
+            margin-bottom: 39px
+        @media(min-width: 900px)
+            font-size: 80px
+            line-height: 65px
+        @media(min-width: 1200px)
+            margin-bottom: 49px
+            font-size: 100px
+            line-height: 75px
+        @media(min-width: 1600px)
+            font-size: 125px
+            line-height: 96px
         & span:first-child
             display: inline-block
             font-weight: 900
@@ -539,7 +857,9 @@
 
     &__content
         display: inline-block
-        width: 476px
+        width: 100%
+        @media(min-width: 600px)
+            width: 476px
         & span 
             display: inline-block
             width: 100%
