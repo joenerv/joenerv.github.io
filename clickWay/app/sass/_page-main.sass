@@ -18,11 +18,12 @@
         height: 31px
         border: none
         z-index: 90
+        transition: all 0.3s
         @media(min-width: 1200px)
             width: 57px
             height: 46px
             right: 74px
-            bottom: 74px
+            bottom: 40px
 
         & svg
             position: relative
@@ -33,6 +34,10 @@
             animation-duration: 2s
             animation-timing-function: linear
             animation-iteration-count: infinite
+        
+        &.up
+            transform: rotate(180deg)
+            transition: all 0.3s
 
 
     @keyframes animation-button-scroll
@@ -719,15 +724,78 @@
 
         &:nth-child(1) span 
             border: 3px solid #19EA8C
+            animation-name: animation-ring-one
+            animation-duration: 2s
+            animation-timing-function: linear
             @media(min-width: 1400px)
                 margin-left: 26px
         &:nth-child(2) span 
             border: 3px solid #13CECF
+            animation-name: animation-ring-two
+            animation-duration: 2s
+            animation-delay: 2s
+            animation-timing-function: linear
         &:nth-child(3) span
             border: 3px solid #4A87DA
+            animation-name: animation-ring-three
+            animation-duration: 2s
+            animation-delay: 4s
+            animation-timing-function: linear
         &:nth-child(4) span 
             border: 3px solid #8240E0
+            animation-name: animation-ring-four
+            animation-duration: 2s
+            animation-delay: 6s
+            animation-timing-function: linear
             margin-right: 0
+
+@keyframes animation-ring-one
+
+    0%
+        border: 3px solid #19EA8C
+
+    50% 
+        border: 5px solid #fff
+        box-shadow: 0 0 7px 1px #fff
+
+    100%
+        border: 3px solid #19EA8C
+
+@keyframes animation-ring-two
+
+    0%
+        border: 3px solid #13CECF
+
+    50% 
+        border: 5px solid #fff
+        box-shadow: 0 0 7px 1px #fff
+
+    100%
+        border: 3px solid #13CECF
+
+@keyframes animation-ring-three
+
+    0%
+        border: 3px solid #4A87DA
+
+    50% 
+        border: 5px solid #fff
+        box-shadow: 0 0 7px 1px #fff
+
+    100%
+        border: 3px solid #4A87DA
+
+@keyframes animation-ring-four
+
+    0%
+        border: 3px solid #8240E0
+
+    50% 
+        border: 5px solid #fff
+        box-shadow: 0 0 7px 1px #fff
+
+    100%
+        border: 3px solid #8240E0
 
 // ЧТО МЫ УЖЕ СДЕЛАЛИ
 .why-done
@@ -776,7 +844,6 @@
             line-height: 27px
             margin-bottom: 95px
 
-    
     &__project
         width: 100%
         @media(min-width: 1300px)
@@ -903,21 +970,36 @@
             font-size: 27px
             line-height: 27px
             font-weight: 100
+            transition: all 0.3s
             &::placeholder
                 font-family: $font-roboto
-                font-size: 27px
-                line-height: 27px
+                font-size: 22px
+                line-height: 22px
                 font-weight: 100
                 color: #fff
+                @media(min-width: 600px)
+                    font-size: 27px
+                    line-height: 27px
+            &:focus
+                border-bottom: 1px solid #eac995
+                transition: all 0.3s
+
+    
     &__input
         &-name
-            margin-bottom: 28px
+            margin-bottom: 15px
+            @media(min-width: 600px)
+                margin-bottom: 28px
 
         &-email
-            margin-bottom: 105px
+            margin-bottom: 50px
+            @media(min-width: 600px)
+                margin-bottom: 105px
 
         &-message
-            margin-bottom: 105px
+            margin-bottom: 50px
+            @media(min-width: 600px)
+                margin-bottom: 105px
 
     &__button
         position: relative
@@ -928,29 +1010,49 @@
         background-color: #24C57B
         border-radius: 14px
         font-family: $font-roboto
-        font-size: 27px
-        line-height: 27px
+        font-size: 22px
+        line-height: 22px
         font-weight: 300
         text-transform: uppercase
         color: #fff
         border: none
+        transition: all 0.3s
+        @media(min-width: 600px)
+            font-size: 27px
+            line-height: 27px
+        &:hover
+            background-color: #28d785
+            transition: all 0.3s
 
 .footer
-    padding-bottom: 96px
+    padding-bottom: 40px
+    @media(min-width: 600px)
+        padding-bottom: 96px
 
     & .content-wrapper
         display: flex
         justify-content: space-between
+        flex-direction: column
+        @media(min-width: 600px)
+            flex-direction: row
 
     &-text
         font-family: $font-roboto
-        font-size: 27px
-        line-height: 27px
+        font-size: 22px
+        line-height: 22px
         font-weight: 100
+        margin-bottom: 20px
+        @media(min-width: 600px)
+            margin-bottom: 0
+            font-size: 27px
+            line-height: 27px
 
     &-contact
+
         &__social
-            margin-bottom: 7px
+            margin-bottom: 15px
+            @media(min-width: 600px)
+                margin-bottom: 7px
             & a 
                 display: inline-block
                 margin-right: 12px
@@ -959,6 +1061,7 @@
                 &svg
                     width: 37px
                     height: 37px
+
         &__text
             font-family: $font-roboto
             font-size: 18px

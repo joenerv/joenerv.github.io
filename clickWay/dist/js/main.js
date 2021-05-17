@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	'use strict';
 
+	new WOW().init();
+
 	//ОТКРЫТИЕ МЕНЮ
 		let menuBurger = document.querySelector('.js_main_header_button');//меню бургер
 		let menuPopup = document.querySelector('.js_menu_popup');//меню popup
@@ -22,12 +24,31 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	// КНОПКА ПРОМОТАТЬ ВНИЗ НА ВЫСОТУ ЭКРАНА
 		let mainButtonScroll = document.querySelector('.js_main_button_scroll');//промотать вниз на высоту экрана
+		let main = document.querySelector('main');//вся страница
+
 		mainButtonScroll.addEventListener('click', () => {
-
-			window.scrollBy(0, (document.documentElement.clientHeight - 100));
-
+			if(mainButtonScroll.classList.contains('up')) {
+				window.scrollTo(0, 0);
+			} else {
+				window.scrollBy(0, (document.documentElement.clientHeight - 100));
+			}
+			
 		});
-	
+
+		// console.log(main.clientHeight);
+		// определить текущую прокрутку
+			window.addEventListener('scroll', () => {
+				// console.log(window.pageYOffset);
+				if(window.pageYOffset > (main.clientHeight - 1200)) {
+					mainButtonScroll.classList.add('up');
+				} else {
+					mainButtonScroll.classList.remove('up');
+				}
+			});
+ 
+
+
+
 	// 1. Фиксация <body>
 		function bodyFixPosition() {
 
