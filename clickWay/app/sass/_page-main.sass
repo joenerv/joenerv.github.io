@@ -2,6 +2,7 @@
 .main
     position: relative
     // height: 100vh   
+    overflow: hidden
 
     & .content-wrapper
         position: relative
@@ -61,8 +62,38 @@
     &_bg-6,
     &_bg-7
         position: absolute
-        left: 0
-        width: 100%
+        left: -100%
+        width: 300%
+        @media(min-width: 390px)
+            left: -90%
+            width: 280%
+        @media(min-width: 440px)
+            left: -75%
+            width: 250%
+        @media(min-width: 470px)
+            left: -65%
+            width: 230%
+        @media(min-width: 520px)
+            left: -55%
+            width: 210%
+        @media(min-width: 610px)
+            left: -40%
+            width: 180%
+        @media(min-width: 680px)
+            left: -30%
+            width: 160%
+        @media(min-width: 780px)
+            left: -20%
+            width: 140%
+        @media(min-width: 900px)
+            left: -15%
+            width: 130%
+        @media(min-width: 1000px)
+            left: -10%
+            width: 120%
+        @media(min-width: 1200px)
+            left: 0
+            width: 100%
         & svg
             position: relative
             width: 100%
@@ -71,36 +102,71 @@
             
 
     &_bg-1
-        top: 538px
+        top: 200px
         height: 280px
-        z-index: 6        
+        z-index: 6
+        @media(min-width: 360px)
+            top: 260px
+        @media(min-width: 1200px)
+            top: 538px
+
     &_bg-2
-        top: 457px
+        top: 150px
         height: 430px
         z-index: 5
+        @media(min-width: 360px)
+            top: 210px
+        @media(min-width: 1200px)
+            top: 457px
     &_bg-3
-        top: 316px
+        top: 56px
         height: 503px
         z-index: 4
+        @media(min-width: 360px)
+            top: 116px
+        @media(min-width: 1200px)
+            top: 316px
     &_bg-4
-        top: 182px
+        top: 22px
         height: 679px
         z-index: 3
+        @media(min-width: 360px)
+            top: 82px
+        @media(min-width: 1200px)
+            top: 182px
     &_bg-5
-        top: 289px
+        top: 29px
         height: 647px
         z-index: 2
+        @media(min-width: 360px)
+            top: 89px
+        @media(min-width: 1200px)
+            top: 289px
 
     &_bg-6
-        top: 160px
+        top: -30px
         height: 567px
         z-index: 1
+        @media(min-width: 360px)
+            top: 20px
+        @media(min-width: 1200px)
+            top: 160px
     
     // постамент
     &_bg-7
-        top: 250px
+        top: -120px
         height: 1582px
         z-index: 7
+        @media(min-width: 340px)
+            top: -99px
+        @media(min-width: 360px)
+            top: -10px
+        @media(min-width: 830px)
+            top: 20px
+        @media(min-width: 1050px)
+            top: 50px
+        @media(min-width: 1200px)
+            top: 270px
         @media(min-width: 1300px)
             top: 300px
         @media(min-width: 1600px)
@@ -160,14 +226,17 @@
                 margin-left: 0
 
     &__title
-        padding-top: 165px
+        padding-top: 35px
         text-align: center
         font-family: $font-jost
         font-size: 70px
         line-height: 110%
-        margin-bottom: 370px
+        margin-bottom: 330px
         @media(min-width: 1200px)
+            padding-top: 165px
+            margin-bottom: 370px
             font-size: 100px
+
         & span 
             display: inline-block
             &:first-child
@@ -177,9 +246,10 @@
                 
     &__text 
         text-align: center
-        margin-bottom: 90px
+        margin-bottom: 50px
         @media(min-width: 1600px)
             margin-bottom: 172px
+            margin-bottom: 90px
         & span 
             display: inline-block
             width: 100%
@@ -538,11 +608,13 @@
         
         &__item
             width: 100%
-            height: 50%
+            height: 300px
             @media(min-width: 700px)
                 width: 50%
             @media(min-width: 1200px)
                 width: 33.33%
+            @media(min-width: 1900px)
+                height: 350px
 
         & img 
             width: 100%
@@ -799,7 +871,34 @@
 
 // ЧТО МЫ УЖЕ СДЕЛАЛИ
 .why-done
+    position: relative
     padding-top: 140px
+
+    &__star1
+        position: absolute
+        width: 35px
+        height: 35px
+        top: -50%
+        left: 4%
+        z-index: 10
+
+    &__palnet
+        position: absolute
+        right: 2%
+        top: -210%
+        width: 171px
+        height: 144px
+        z-index: 10
+
+    & .content-wrapper
+        position: relative
+        z-index: 100
+        @media(min-width: 1500px)
+            padding-left: 150px
+            padding-right: 150px
+
+
+
     
     &__title
         font-family: $font-jost
@@ -816,7 +915,7 @@
         @media(min-width: 900px)
             font-size: 80px
             line-height: 65px
-            margin-left: 70px
+            // margin-left: 70px
         @media(min-width: 1200px)
             margin-bottom: 49px
             font-size: 100px
@@ -837,7 +936,7 @@
         @media(min-width: 900px)
             font-size: 22px
             line-height: 24px    
-            margin-left: 70px 
+            // margin-left: 70px 
             margin-bottom: 75px   
         @media(min-width: 1600px)
             font-size: 25px
@@ -892,8 +991,40 @@
                     color: #5954D8
 
 .work-together
+    position: relative
+    z-index: 100
     padding-top: 140px
     margin-bottom: 105px
+
+    &__rocket
+        position: absolute
+        top: 115%
+        right: 20%
+        width: 362px
+        height: 297px
+
+    &__meteorit
+        position: absolute
+        width: 755px
+        height: 394px
+        top: 82%
+        right: 5%
+    
+    &__star1
+        position: absolute
+        width: 35px
+        height: 35px
+        left: 2%
+        top: -20%
+
+    &__star2
+        position: absolute
+        right: 10%
+        top: -34%
+        width: 35px
+        height: 35px
+    
+
 
     &__title
         font-family: $font-jost
@@ -1025,14 +1156,27 @@
             transition: all 0.3s
 
 .footer
-    padding-bottom: 40px
+    width: 100%
+    position: relative
+    padding-bottom: 40px    
     @media(min-width: 600px)
         padding-bottom: 96px
 
+    &-img-bg1 
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 620px
+        object-fit: cover
+        z-index: 10
+
     & .content-wrapper
+        position: relative
         display: flex
         justify-content: space-between
         flex-direction: column
+        z-index: 100
         @media(min-width: 600px)
             flex-direction: row
 

@@ -10,6 +10,11 @@ html(lang="ru-RU")
         //- миксины
         include tamplate/mixin
 
+        header(itemscope='' itemtype='http://schema.org/WPHeader')
+            meta(itemprop='headline' content='clickway')
+            meta(itemprop='description' content='Описание сайта')
+            meta(itemprop='keywords' content='асфальт, москва, недорого, доставка')
+
 
         main.wrapper
 
@@ -123,7 +128,7 @@ html(lang="ru-RU")
 
                 .content-wrapper
 
-                    header.main-header
+                    .main-header
 
                         button(arial-label="кнопка открытия меню").main-header__button.js_main_header_button
                             svg(xmlns='http://www.w3.org/2000/svg' width='55' height='40' viewbox='0 0 55 40')
@@ -233,22 +238,22 @@ html(lang="ru-RU")
 
                     .main-photo-block__wrap
                         .main-photo-block__item
-                            img(src="img/main-photo-command1.png", alt="фото команды") 
+                            img(src="img/main-photo-command1.jpg", alt="фото команды") 
 
                         .main-photo-block__item
-                            img(src="img/main-photo-command2.png", alt="фото команды")
+                            img(src="img/main-photo-command2.jpg", alt="фото команды")
 
                         .main-photo-block__item
-                            img(src="img/main-photo-command3.png", alt="фото команды").
+                            img(src="img/main-photo-command3.jpg", alt="фото команды").
 
                         .main-photo-block__item
-                            img(src="img/main-photo-command4.png", alt="фото команды")
+                            img(src="img/main-photo-command4.jpg", alt="фото команды")
 
                         .main-photo-block__item
-                            img(src="img/main-photo-command5.png", alt="фото команды")
+                            img(src="img/main-photo-command5.jpg", alt="фото команды")
 
                         .main-photo-block__item
-                            img(src="img/main-photo-command6.png", alt="фото команды")
+                            img(src="img/main-photo-command6.jpg", alt="фото команды")
 
                     .main-photo-block__content 
                         .main-photo-block__content-title
@@ -290,6 +295,16 @@ html(lang="ru-RU")
                                 span.wow Создание успешных креативов, взлетающих в топ
 
             section.why-done
+
+                //- светящаяся звезда
+                svg.why-done__star1.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- светящаяся звезда
+                svg.why-done__palnet.rellax(data-rellax-speed="-5")
+                    use(xlink:href='img/sprite-svg.svg#palnet')
+
+
                 .content-wrapper
 
                     h2.why-done__title
@@ -315,6 +330,22 @@ html(lang="ru-RU")
 
             section.work-together(id="connection")
 
+                //- ракета
+                svg.work-together__rocket.rellax(data-rellax-speed="2") 
+                    use(xlink:href='img/sprite-svg.svg#rocket')
+
+                //- летящие звезды
+                svg.work-together__meteorit.rellax(data-rellax-speed="1")
+                    use(xlink:href='img/sprite-svg.svg#meteorit')
+
+                //- светящаяся звезда
+                svg.work-together__star1.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- светящаяся звезда
+                svg.work-together__star2.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
                 .content-wrapper
 
                     .work-together__title
@@ -333,6 +364,9 @@ html(lang="ru-RU")
                             button.work-together__button ОТПРАВИТЬ
 
             footer.footer
+
+                svg.footer-img-bg1
+                    use(xlink:href='img/sprite-svg.svg#mount-down1')
 
                 .content-wrapper
 

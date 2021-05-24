@@ -13,6 +13,11 @@
     <title>ClickWay</title>
   </head>
   <body>
+    <header itemscope="" itemtype="http://schema.org/WPHeader">
+      <meta itemprop="headline" content="clickway">
+      <meta itemprop="description" content="Описание сайта">
+      <meta itemprop="keywords" content="асфальт, москва, недорого, доставка">
+    </header>
     <main class="wrapper">
       <section class="main">
         <!-- меню-->
@@ -110,7 +115,7 @@
           </svg>
         </div>
         <div class="content-wrapper">
-          <header class="main-header">
+          <div class="main-header">
             <button class="main-header__button js_main_header_button" arial-label="кнопка открытия меню">
               <svg xmlns="http://www.w3.org/2000/svg" width="55" height="40" viewbox="0 0 55 40">
                 <g id="иконка_меню" data-name="иконка меню" transform="translate(-102 -102)">
@@ -127,7 +132,7 @@
                 <li class="main-header__menu-item"> <a href="#connection">Связь</a></li>
               </ul>
             </nav><a class="main-header__email" href="mailto:info@clickway.pro">info@clickway.pro</a>
-          </header>
+          </div>
           <h1 class="main__title"> <span>CLICK</span><span>WAY</span></h1>
           <section class="main__text"> <span>
                Центр создания заряженных креативов <br>для продвижения <br>мобильных игр и приложений</span>
@@ -175,12 +180,12 @@
       </section>
       <section class="main-photo-block">
         <div class="main-photo-block__wrap">
-          <div class="main-photo-block__item"><img src="img/main-photo-command1.png" alt="фото команды"></div>
-          <div class="main-photo-block__item"><img src="img/main-photo-command2.png" alt="фото команды"></div>
-          <div class="main-photo-block__item"><img src="img/main-photo-command3.png" alt="фото команды"></div>
-          <div class="main-photo-block__item"><img src="img/main-photo-command4.png" alt="фото команды"></div>
-          <div class="main-photo-block__item"><img src="img/main-photo-command5.png" alt="фото команды"></div>
-          <div class="main-photo-block__item"><img src="img/main-photo-command6.png" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command1.jpg" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command2.jpg" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command3.jpg" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command4.jpg" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command5.jpg" alt="фото команды"></div>
+          <div class="main-photo-block__item"><img src="img/main-photo-command6.jpg" alt="фото команды"></div>
         </div>
         <div class="main-photo-block__content"> 
           <div class="main-photo-block__content-title"><span>90</span><span>%</span></div>
@@ -205,6 +210,12 @@
         </div>
       </section>
       <section class="why-done">
+        <svg class="why-done__star1 rellax" data-rellax-speed="-2">
+          <use xlink:href="img/sprite-svg.svg#star"></use>
+        </svg>
+        <svg class="why-done__palnet rellax" data-rellax-speed="-5">
+          <use xlink:href="img/sprite-svg.svg#palnet"></use>
+        </svg>
         <div class="content-wrapper">
           <h2 class="why-done__title"><span>что </span><span>мы уже сделали</span></h2>
           <div class="why-done__subtitle">Имеем опыт создания креативов для проектов</div>
@@ -215,6 +226,18 @@
         </div>
       </section>
       <section class="work-together" id="connection">
+        <svg class="work-together__rocket rellax" data-rellax-speed="2"> 
+          <use xlink:href="img/sprite-svg.svg#rocket"></use>
+        </svg>
+        <svg class="work-together__meteorit rellax" data-rellax-speed="1">
+          <use xlink:href="img/sprite-svg.svg#meteorit"></use>
+        </svg>
+        <svg class="work-together__star1 rellax" data-rellax-speed="-2">
+          <use xlink:href="img/sprite-svg.svg#star"></use>
+        </svg>
+        <svg class="work-together__star2 rellax" data-rellax-speed="-2">
+          <use xlink:href="img/sprite-svg.svg#star"></use>
+        </svg>
         <div class="content-wrapper">
           <div class="work-together__title"><span>начнем </span><span>работать вместе</span></div>
           <div class="work-together__content"><a class="work-together__email" href="mailto:info@clickway.pro">info@clickway.pro</a><span>или</span>
@@ -228,6 +251,9 @@
         </div>
       </section>
       <footer class="footer">
+        <svg class="footer-img-bg1">
+          <use xlink:href="img/sprite-svg.svg#mount-down1"></use>
+        </svg>
         <div class="content-wrapper">
           <div class="footer-text"><span>Благодарим за внимание!</span><br><br><span>Команда Clickway</span></div>
           <div class="footer-contact">
