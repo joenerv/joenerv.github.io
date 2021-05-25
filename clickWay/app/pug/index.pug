@@ -11,7 +11,7 @@ html(lang="ru-RU")
         include tamplate/mixin
 
         header(itemscope='' itemtype='http://schema.org/WPHeader')
-            meta(itemprop='headline' content='clickway')
+            meta(itemprop='headline' content='clickway ')
             meta(itemprop='description' content='Описание сайта')
             meta(itemprop='keywords' content='асфальт, москва, недорого, доставка')
 
@@ -57,7 +57,7 @@ html(lang="ru-RU")
 
                             .menu-popup__content-contacts-title Контакты
                             a(href="mailto:corp@clickway.pro").menu-popup__content-contacts-email info@clickway.pro
-                            a(href="tel:+79999999999").menu-popup__content-contacts-phone +7 999 999 99 99
+                            a(href="tel:+79952209960").menu-popup__content-contacts-phone +7(995) 220-99-60
                             .menu-popup__content-contacts-social
 
                                 a(href="#")
@@ -122,8 +122,6 @@ html(lang="ru-RU")
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount7')
 
-
-                        
 
 
                 .content-wrapper
@@ -204,6 +202,34 @@ html(lang="ru-RU")
                                     span 10%
 
                     section.main-year 
+
+                        //- светящаяся звезда
+                        svg.main-year__star1.rellax(data-rellax-speed="-2")
+                            use(xlink:href='img/sprite-svg.svg#star')
+
+                        //- светящаяся звезда
+                        svg.main-year__star2.rellax(data-rellax-speed="-2")
+                            use(xlink:href='img/sprite-svg.svg#star')
+
+                        //- комета
+                        svg.main-year__comet.rellax(data-rellax-speed="4")
+                            use(xlink:href='img/sprite-svg.svg#comet')
+
+                        //- планета
+                        svg.main-year__palnet.rellax(data-rellax-speed="-5")
+                            use(xlink:href='img/sprite-svg.svg#palnet')
+
+                        //- звезды
+                        svg.main-year__constellation1.rellax(data-rellax-speed="-8")
+                            use(xlink:href='img/sprite-svg.svg#constellation')
+
+                        //- звезды
+                        svg.main-year__constellation2.rellax(data-rellax-speed="-8")
+                            use(xlink:href='img/sprite-svg.svg#constellation')
+
+
+
+
                         .main-year__title
                             span 12 
                             span ЛЕТ
@@ -264,6 +290,28 @@ html(lang="ru-RU")
                             span Есть решения. Мы поможем найти лучшую стратегию продвижения и повысим метрики
 
             section.why-work(id="work-stages")
+
+                //- светящаяся звезда
+                svg.why-work__star1.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- светящаяся звезда
+                svg.why-work__star2.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- светящаяся звезда
+                svg.why-work__star3.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- звезды
+                svg.why-work__constellation1.rellax(data-rellax-speed="-8")
+                    use(xlink:href='img/sprite-svg.svg#constellation')
+
+                //- комета
+                svg.why-work__comet.rellax(data-rellax-speed="4")
+                    use(xlink:href='img/sprite-svg.svg#comet-right')
+
+
                 .content-wrapper
 
                     .why-work__title
@@ -299,8 +347,12 @@ html(lang="ru-RU")
                 //- светящаяся звезда
                 svg.why-done__star1.rellax(data-rellax-speed="-2")
                     use(xlink:href='img/sprite-svg.svg#star')
-
+                
                 //- светящаяся звезда
+                svg.why-done__star2.rellax(data-rellax-speed="-2")
+                    use(xlink:href='img/sprite-svg.svg#star')
+
+                //- планета
                 svg.why-done__palnet.rellax(data-rellax-speed="-5")
                     use(xlink:href='img/sprite-svg.svg#palnet')
 
@@ -315,18 +367,18 @@ html(lang="ru-RU")
                     
                     .why-done__project
                         .why-done__project-row
-                            span Hustle Castle
-                            span Zero City
-                            span Bombastic Brothers
-                            span AXES
-                            span Fishdom
+                            span.wow Hustle Castle
+                            span.wow Zero City
+                            span.wow Bombastic Brothers
+                            span.wow AXES
+                            span.wow Fishdom
 
                         .why-done__project-row
-                            span Garden Scapes
-                            span Township
-                            span Ranchdale
-                            span Stack Ball
-                            span Zero to Hero
+                            span.wow Garden Scapes
+                            span.wow Township
+                            span.wow Ranchdale
+                            span.wow Stack Ball
+                            span.wow Zero to Hero
 
             section.work-together(id="connection")
 
@@ -345,6 +397,10 @@ html(lang="ru-RU")
                 //- светящаяся звезда
                 svg.work-together__star2.rellax(data-rellax-speed="-2")
                     use(xlink:href='img/sprite-svg.svg#star')
+
+                //- звезды
+                svg.work-together__constellation1.rellax(data-rellax-speed="-8")
+                    use(xlink:href='img/sprite-svg.svg#constellation')
 
                 .content-wrapper
 
@@ -408,7 +464,8 @@ html(lang="ru-RU")
                         .footer-contact__text
                             span ООО “ВИЖНПРО” 2021                                 
                             br
-                            span Тел:   + 7 999 999 99 99
+                            span Тел:   
+                                a(href="tel:+79952209960")  + 7 999 999 99 99
 
                     
         //- скрипты

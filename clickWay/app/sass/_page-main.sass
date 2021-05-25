@@ -64,6 +64,7 @@
         position: absolute
         left: -100%
         width: 300%
+        z-index: 100
         @media(min-width: 390px)
             left: -90%
             width: 280%
@@ -442,17 +443,74 @@
                             height: 23px
 
     &-year
+        position: relative
         width: 80%
         font-family: $font-jost
         margin-left: 20px
+        padding-bottom: 137px
+        z-index: 10
         @media(min-width: 600px)
             width: 500px
         @media(min-width: 900px)
             width: 700px
             margin-left: 81px
 
+        &__star1
+            position: absolute
+            width: 35px
+            height: 35px
+            top: 40%
+            right: -100%
+            z-index: 10
+            fill: #fff
+            animation-name: animation-star
+            animation-duration: 2.5s
+            animation-iteration-count: infinite 
+
+        &__star2
+            position: absolute
+            width: 35px
+            height: 35px
+            top: -9%
+            left: 100%
+            z-index: 10
+            fill: #fff
+            animation-name: animation-star
+            animation-duration: 4s
+            animation-iteration-count: infinite 
+
+        &__comet
+            position: absolute
+            width: 48px
+            height: 69px
+            top: 165%
+            left: 169%
+            z-index: 10
+
+        &__palnet
+            position: absolute
+            top: -66%
+            right: -130%
+
+        &__constellation1
+            position: absolute
+            width: 475px
+            height: 250px
+            top: -122%
+            right: -90%
+
+        &__constellation2
+            position: absolute
+            width: 475px
+            height: 250px
+            top: -163%
+            right: 39%
+
+
         &__title
             // display: inline-block
+            position: relative
+            z-index: 100
             width: 100%
             height: auto
             font-size: 50px
@@ -483,6 +541,8 @@
 
         &__content
             position: relative
+            position: relative
+            z-index: 100
 
             & .main-who-we__content-line-vertical
                 display: none
@@ -596,8 +656,8 @@
 
     &-photo-block
         position: relative
-        margin-top: 137px
         width: 100%
+        z-index: 100
         // height: 855px
         
         &__wrap
@@ -677,9 +737,64 @@
 
 // КАК МЫ РАБОТАЕМ
 .why-work
+    position: relative
     padding-top: 80px
     @media(min-width: 1200px)
         padding-top: 140px
+
+    &__star1
+        position: absolute
+        width: 35px
+        height: 35px
+        top: -25%
+        left: 7%
+        z-index: 10
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 2.5s
+        animation-iteration-count: infinite 
+
+    &__star2
+        position: absolute
+        width: 35px
+        height: 35px
+        top: -29%
+        right: 5%
+        z-index: 10
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 3.5s
+        animation-iteration-count: infinite 
+
+    &__star3
+        position: absolute
+        width: 35px
+        height: 35px
+        top: -68%
+        right: 47%
+        z-index: 10
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 3.9s
+        animation-iteration-count: infinite 
+
+    &__constellation1
+        position: absolute
+        width: 475px
+        height: 250px
+        top: -228%
+        right: 5%
+        z-index: 5
+
+    &__comet
+        position: absolute
+        width: 48px
+        height: 69px
+        top: 127%
+        left: 24%
+        z-index: 10
+
+
 
     &__title
         font-family: $font-jost
@@ -881,6 +996,22 @@
         top: -50%
         left: 4%
         z-index: 10
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 2.5s
+        animation-iteration-count: infinite 
+
+    &__star2
+        position: absolute
+        width: 35px
+        height: 35px
+        top: -89%
+        right: 6%
+        z-index: 10
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 3.5s
+        animation-iteration-count: infinite 
 
     &__palnet
         position: absolute
@@ -898,8 +1029,6 @@
             padding-right: 150px
 
 
-
-    
     &__title
         font-family: $font-jost
         color: #18F18D
@@ -982,13 +1111,81 @@
 
 
             &:first-child
-                & span:nth-child(2n)
-                    color: #5954D8
+                & span
+                    &:nth-child(2n)
+                        color: #5954D8
+                    
+                    &:nth-child(1)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                    &:nth-child(2)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 1s
+                    &:nth-child(3)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 2s
+                    &:nth-child(4)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 3s
+                    &:nth-child(5)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 4s
 
             &:last-child
                 margin-bottom: 0
-                & span:nth-child(odd)
-                    color: #5954D8
+                & span
+                    &:nth-child(odd)
+                        color: #5954D8
+
+                    &:nth-child(1)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 5s
+                    &:nth-child(2)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 6s
+                    &:nth-child(3)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 7s
+                    &:nth-child(4)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 8s
+                    &:nth-child(5)
+                        animation-name: animation-name-project-one
+                        animation-duration: 1s
+                        animation-delay: 9s
+
+
+// анимация для проектов
+@keyframes animation-name-project-one
+
+    0%
+        color: #8849D5
+
+    50% 
+        color: #fff
+
+    100%
+        color: #8849D5
+
+@keyframes animation-name-project-two
+
+    0%
+        color: #5954D8
+
+    50% 
+        color: #fff
+
+    100%
+        color: #5954D8
+
 
 .work-together
     position: relative
@@ -1002,6 +1199,7 @@
         right: 20%
         width: 362px
         height: 297px
+        z-index: 50
 
     &__meteorit
         position: absolute
@@ -1009,6 +1207,7 @@
         height: 394px
         top: 82%
         right: 5%
+        z-index: 50
     
     &__star1
         position: absolute
@@ -1016,6 +1215,10 @@
         height: 35px
         left: 2%
         top: -20%
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 5s
+        animation-iteration-count: infinite 
 
     &__star2
         position: absolute
@@ -1023,7 +1226,18 @@
         top: -34%
         width: 35px
         height: 35px
-    
+        fill: #fff
+        animation-name: animation-star
+        animation-duration: 3s
+        animation-iteration-count: infinite 
+
+    &__constellation1
+        position: absolute
+        width: 475px
+        height: 250px
+        top: -231%
+        right: 40%
+        z-index: 5
 
 
     &__title
@@ -1087,6 +1301,7 @@
         background-color: rgba(23, 23, 23, 0.8)
         padding: 45px 40px 50px
         border-radius: 57px
+        position: relative
 
         & input
             display: inline-block
@@ -1169,7 +1384,7 @@
         width: 100%
         height: 620px
         object-fit: cover
-        z-index: 10
+        z-index: 50
 
     & .content-wrapper
         position: relative
@@ -1220,8 +1435,17 @@
 
     
 
-        
+// анимация мерцание звезд 
+@keyframes animation-star
 
+    0%
+        opacity: 1
+
+    50%
+        opacity: 0.5
+
+    100% 
+        opacity: 1
 
 
 // всплывающее меню
