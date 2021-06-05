@@ -12,8 +12,8 @@ html(lang="ru-RU")
 
         header(itemscope='' itemtype='http://schema.org/WPHeader')
             meta(itemprop='headline' content='clickway ')
-            meta(itemprop='description' content='Описание сайта')
-            meta(itemprop='keywords' content='асфальт, москва, недорого, доставка')
+            meta(itemprop='description' content='CLICKWAY. Создание креативов для мобильных приложений и игр. Разработка стреляющих креативов. Высокий KPI. Максимальное привлечение пользователей. Рабочие методики. Увеличение прибыли')
+            meta(itemprop='keywords' content='Мобильная реклама, продвижение приложения, приложение, мобильная игра, закупка трафика, KPI, ROI, Бенчмарк, CTR, click, CPI, креатив, видеокреатив, видеореклама, видео креатив, видео реклама, тестирование, рекламная компания в мобильной рекламе, мобильный маркетинг,  mobile-first, mobile marketing, creative asset, testing process, AEO, App Event Optimization, VO, value optimization, benchmarks, creative, testing ad creatives, высокие показатели тестирования, конверсия, большая конверсия, Concept the creative, Test the creative, Monitor the creative, эффективность, повышение эффективности приложения, мобильное приложение, реклама игры, продвижение игры, повысить кликабельность, install, инсталл, ROAS, аналитика, количество скачиваний, download, Clickway')
 
 
         main.wrapper
@@ -33,22 +33,20 @@ html(lang="ru-RU")
 
                         ul.menu-popup__content-list
 
-                            li.menu-popup__content-list-item
-                                a(href="#") Главная
+                            li.menu-popup__content-list-item                           
+                                a(href="") Главная  
 
-                            li.menu-popup__content-list-item
-                                a(href="#") О нас
+                            li.menu-popup__content-list-item 
+                                a(href="#who-we") О нас
 
-                            li.menu-popup__content-list-item
-                                a(href="#") Этапы работ
+                            li.menu-popup__content-list-item 
+                                a(href="#work-stages") Этапы работ
 
-                            li.menu-popup__content-list-item
-                                a(href="#") Дизайнерам
+                            li.menu-popup__content-list-item 
+                                a(href="#connection") Дизайнерам
 
-
-                            li.menu-popup__content-list-item
-                                a(href="#") Связь
-
+                            li.menu-popup__content-list-item 
+                                a(href="#connection") Связь
 
 
                         .menu-popup__content-line
@@ -93,6 +91,15 @@ html(lang="ru-RU")
                 button(arial-label="промотать страницу вниз").main-button-scroll.js_main_button_scroll
                     svg
                         use(xlink:href='img/sprite-svg.svg#button_down')
+
+                //- звезды
+                svg.main__constellation1
+                    use(xlink:href='img/sprite-svg.svg#constellation')
+
+                //- звезды
+                svg.main__constellation2
+                    use(xlink:href='img/sprite-svg.svg#constellation')
+
 
                 .main_bg-1.rellax(data-rellax-speed="-1")
                     svg
@@ -148,9 +155,9 @@ html(lang="ru-RU")
 
                         a(href="mailto:info@clickway.pro").main-header__email info@clickway.pro
 
-                    h1.main__title 
-                        span CLICK
-                        span WAY
+                    .main__title 
+                        img(src="img/clickway_logo.png", alt="логотип")
+
 
                     section.main__text 
                         span 
@@ -219,13 +226,8 @@ html(lang="ru-RU")
                         svg.main-year__palnet.rellax(data-rellax-speed="-5")
                             use(xlink:href='img/sprite-svg.svg#palnet')
 
-                        //- звезды
-                        svg.main-year__constellation1.rellax(data-rellax-speed="-8")
-                            use(xlink:href='img/sprite-svg.svg#constellation')
+                        
 
-                        //- звезды
-                        svg.main-year__constellation2.rellax(data-rellax-speed="-8")
-                            use(xlink:href='img/sprite-svg.svg#constellation')
 
 
 
@@ -259,7 +261,6 @@ html(lang="ru-RU")
                                     span Перешли в рекламу мобильных игр и приложений
                                     span Во всем мире
 
-            
             section.main-photo-block
 
                     .main-photo-block__wrap
@@ -302,10 +303,6 @@ html(lang="ru-RU")
                 //- светящаяся звезда
                 svg.why-work__star3.rellax(data-rellax-speed="-2")
                     use(xlink:href='img/sprite-svg.svg#star')
-
-                //- звезды
-                svg.why-work__constellation1.rellax(data-rellax-speed="-8")
-                    use(xlink:href='img/sprite-svg.svg#constellation')
 
                 //- комета
                 svg.why-work__comet.rellax(data-rellax-speed="4")
@@ -398,9 +395,6 @@ html(lang="ru-RU")
                 svg.work-together__star2.rellax(data-rellax-speed="-2")
                     use(xlink:href='img/sprite-svg.svg#star')
 
-                //- звезды
-                svg.work-together__constellation1.rellax(data-rellax-speed="-8")
-                    use(xlink:href='img/sprite-svg.svg#constellation')
 
                 .content-wrapper
 
@@ -423,6 +417,9 @@ html(lang="ru-RU")
 
                 svg.footer-img-bg1
                     use(xlink:href='img/sprite-svg.svg#mount-down1')
+                
+                svg.footer-img-bg2
+                    use(xlink:href='img/sprite-svg.svg#mount-down2')
 
                 .content-wrapper
 
@@ -465,7 +462,7 @@ html(lang="ru-RU")
                             span ООО “ВИЖНПРО” 2021                                 
                             br
                             span Тел:   
-                                a(href="tel:+79952209960")  + 7 999 999 99 99
+                                a(href="tel:+79952209960")  +7 995 220 99 60
 
                     
         //- скрипты

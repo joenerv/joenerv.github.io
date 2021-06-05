@@ -39,8 +39,7 @@
         &.up
             transform: rotate(180deg)
             transition: all 0.3s
-
-
+    
     @keyframes animation-button-scroll
 
         0%
@@ -53,6 +52,22 @@
             top: 5px
         100% 
             top: 0
+
+    &__constellation1
+        position: fixed
+        width: 475px
+        height: 250px
+        top: 10%
+        left: 5%
+        z-index: 1
+
+    &__constellation2
+        position: fixed
+        width: 475px
+        height: 250px
+        top: 18%
+        right: 8%
+        z-index: 1
 
     &_bg-1,
     &_bg-2,
@@ -175,7 +190,6 @@
         @media(min-width: 1800px)
             top: 450px
 
-   
     &-header
         display: flex
         // align-items: center
@@ -238,12 +252,10 @@
             margin-bottom: 370px
             font-size: 100px
 
-        & span 
-            display: inline-block
-            &:first-child
-                font-weight: 900
-            &:last-child
-                font-weight: 100
+        & img 
+            width: 280px
+            @media(min-width: 1200px)
+                width: 500px
                 
     &__text 
         text-align: center
@@ -491,21 +503,6 @@
             position: absolute
             top: -66%
             right: -130%
-
-        &__constellation1
-            position: absolute
-            width: 475px
-            height: 250px
-            top: -122%
-            right: -90%
-
-        &__constellation2
-            position: absolute
-            width: 475px
-            height: 250px
-            top: -163%
-            right: 39%
-
 
         &__title
             // display: inline-block
@@ -778,14 +775,6 @@
         animation-duration: 3.9s
         animation-iteration-count: infinite 
 
-    &__constellation1
-        position: absolute
-        width: 475px
-        height: 250px
-        top: -228%
-        right: 5%
-        z-index: 5
-
     &__comet
         position: absolute
         width: 48px
@@ -793,8 +782,6 @@
         top: 127%
         left: 24%
         z-index: 10
-
-
 
     &__title
         font-family: $font-jost
@@ -943,7 +930,7 @@
 
     50% 
         border: 5px solid #fff
-        box-shadow: 0 0 7px 1px #fff
+        // box-shadow: 0 0 7px 1px #fff
 
     100%
         border: 3px solid #19EA8C
@@ -955,7 +942,7 @@
 
     50% 
         border: 5px solid #fff
-        box-shadow: 0 0 7px 1px #fff
+        // box-shadow: 0 0 7px 1px #fff
 
     100%
         border: 3px solid #13CECF
@@ -967,7 +954,7 @@
 
     50% 
         border: 5px solid #fff
-        box-shadow: 0 0 7px 1px #fff
+        // box-shadow: 0 0 7px 1px #fff
 
     100%
         border: 3px solid #4A87DA
@@ -979,7 +966,7 @@
 
     50% 
         border: 5px solid #fff
-        box-shadow: 0 0 7px 1px #fff
+        // box-shadow: 0 0 7px 1px #fff
 
     100%
         border: 3px solid #8240E0
@@ -1194,20 +1181,26 @@
     margin-bottom: 105px
 
     &__rocket
-        position: absolute
-        top: 115%
-        right: 20%
-        width: 362px
-        height: 297px
-        z-index: 50
+        display: none
+        @media(min-width: 1330px)
+            position: absolute
+            display: inline-block
+            top: 115%
+            right: 20%
+            width: 362px
+            height: 297px
+            z-index: 50
 
     &__meteorit
-        position: absolute
-        width: 755px
-        height: 394px
-        top: 82%
-        right: 5%
-        z-index: 50
+        display: none
+        @media(min-width: 1330px)
+            position: absolute
+            display: inline-block
+            width: 755px
+            height: 394px
+            top: 82%
+            right: 5%
+            z-index: 50
     
     &__star1
         position: absolute
@@ -1230,14 +1223,6 @@
         animation-name: animation-star
         animation-duration: 3s
         animation-iteration-count: infinite 
-
-    &__constellation1
-        position: absolute
-        width: 475px
-        height: 250px
-        top: -231%
-        right: 40%
-        z-index: 5
 
 
     &__title
@@ -1377,7 +1362,16 @@
     @media(min-width: 600px)
         padding-bottom: 96px
 
-    &-img-bg1 
+    &-img-bg1
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 588px
+        object-fit: cover
+        z-index: 50
+    
+    &-img-bg2 
         position: absolute
         left: 0
         bottom: 0
@@ -1385,6 +1379,7 @@
         height: 620px
         object-fit: cover
         z-index: 50
+
 
     & .content-wrapper
         position: relative

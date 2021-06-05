@@ -11,13 +11,22 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		menuBurger.addEventListener('click', () => {
 			menuPopup.classList.add('active');
-			bodyFixPosition();
 		});
 
 		menuPopupClose.addEventListener('click', () => {
 			menuPopup.classList.remove('active');
-			bodyUnfixPosition();
 		});
+
+		// переход по пунктам меню
+			let menuPopupContentLisItem = document.querySelectorAll('.menu-popup__content-list li');//пункты меню
+
+			menuPopupContentLisItem.forEach(elem => {
+				elem.addEventListener('click', () => {
+					menuPopup.classList.remove('active');
+				});
+			});		
+
+
 
 	// ИНИЦИАЛИЗАЦИЯ rellax.js
 		var rellax = new Rellax('.rellax');
