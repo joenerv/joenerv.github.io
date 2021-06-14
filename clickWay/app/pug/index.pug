@@ -3,7 +3,7 @@ html(lang="ru-RU")
     head
         meta(charset = 'utf-8')
         include tamplate/style.pug
-        title ClickWay
+        title clickway
         
     body
 
@@ -92,36 +92,27 @@ html(lang="ru-RU")
                     svg
                         use(xlink:href='img/sprite-svg.svg#button_down')
 
-                //- звезды
-                svg.main__constellation1
-                    use(xlink:href='img/sprite-svg.svg#constellation')
-
-                //- звезды
-                svg.main__constellation2
-                    use(xlink:href='img/sprite-svg.svg#constellation')
-
-
-                .main_bg-1.rellax(data-rellax-speed="-1")
+                .main_bg-1.rellax(data-rellax-speed="-0.5")
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount1')
 
-                .main_bg-2.rellax(data-rellax-speed="-2") 
+                .main_bg-2.rellax(data-rellax-speed="-1") 
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount2')
                 
-                .main_bg-3.rellax(data-rellax-speed="-3") 
+                .main_bg-3.rellax(data-rellax-speed="-1.5") 
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount3')
 
-                .main_bg-4.rellax(data-rellax-speed="-4") 
+                .main_bg-4.rellax(data-rellax-speed="-2") 
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount4')
                 
-                .main_bg-5.rellax(data-rellax-speed="-5") 
+                .main_bg-5.rellax(data-rellax-speed="-2.5") 
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount5')
 
-                .main_bg-6.rellax(data-rellax-speed="-6") 
+                .main_bg-6.rellax(data-rellax-speed="-3") 
                     svg
                         use(xlink:href='img/sprite-svg.svg#mount6')
 
@@ -130,44 +121,45 @@ html(lang="ru-RU")
                         use(xlink:href='img/sprite-svg.svg#mount7')
 
 
+                
+
+                .main-header
+
+                    button(arial-label="кнопка открытия меню").main-header__button.js_main_header_button
+                        svg(xmlns='http://www.w3.org/2000/svg' width='55' height='40' viewbox='0 0 55 40')
+                            g(id='иконка_меню' data-name='иконка меню' transform='translate(-102 -102)')
+                                rect(id='Прямоугольник_2_копия_2' data-name='Прямоугольник 2 копия 2' width='55' height='4.72' rx='2' transform='translate(102 137.28)' fill='#fff')
+                                rect(id='Прямоугольник_2_копия' data-name='Прямоугольник 2 копия' width='55' height='4.69' rx='2' transform='translate(102 119.66)' fill='#fff')
+                                rect(id='Прямоугольник_2' data-name='Прямоугольник 2' width='55' height='4.72' rx='2' transform='translate(102 102)' fill='#fff')
+
+                    nav 
+                        ul.main-header__menu
+
+                            li.main-header__menu-item
+                                a(href="#who-we") Кто мы
+                            li.main-header__menu-item
+                                a(href="#work-stages") Этапы работы
+                            li.main-header__menu-item 
+                                a(href="#connection") Связь
+
+
+                    a(href="mailto:info@clickway.pro").main-header__email info@clickway.pro
+
+                .main__title 
+                    img(src="img/clickway_logo.png", alt="логотип")
+
+
+                section.main__text 
+                    span 
+                        |Центр создания заряженных креативов 
+                        br 
+                        |для продвижения 
+                        br 
+                        |мобильных игр и приложений
+
+                    .main__text-line
 
                 .content-wrapper
-
-                    .main-header
-
-                        button(arial-label="кнопка открытия меню").main-header__button.js_main_header_button
-                            svg(xmlns='http://www.w3.org/2000/svg' width='55' height='40' viewbox='0 0 55 40')
-                                g(id='иконка_меню' data-name='иконка меню' transform='translate(-102 -102)')
-                                    rect(id='Прямоугольник_2_копия_2' data-name='Прямоугольник 2 копия 2' width='55' height='4.72' rx='2' transform='translate(102 137.28)' fill='#fff')
-                                    rect(id='Прямоугольник_2_копия' data-name='Прямоугольник 2 копия' width='55' height='4.69' rx='2' transform='translate(102 119.66)' fill='#fff')
-                                    rect(id='Прямоугольник_2' data-name='Прямоугольник 2' width='55' height='4.72' rx='2' transform='translate(102 102)' fill='#fff')
-
-                        nav 
-                            ul.main-header__menu
-
-                                li.main-header__menu-item
-                                    a(href="#who-we") Кто мы
-                                li.main-header__menu-item
-                                    a(href="#work-stages") Этапы работы
-                                li.main-header__menu-item 
-                                    a(href="#connection") Связь
-
-
-                        a(href="mailto:info@clickway.pro").main-header__email info@clickway.pro
-
-                    .main__title 
-                        img(src="img/clickway_logo.png", alt="логотип")
-
-
-                    section.main__text 
-                        span 
-                            |Центр создания заряженных креативов 
-                            br 
-                            |для продвижения 
-                            br 
-                            |мобильных игр и приложений
-
-                        .main__text-line
 
                     section.main-greeting(id="who-we")
                         span Приветствуем!
@@ -225,11 +217,6 @@ html(lang="ru-RU")
                         //- планета
                         svg.main-year__palnet.rellax(data-rellax-speed="-5")
                             use(xlink:href='img/sprite-svg.svg#palnet')
-
-                        
-
-
-
 
 
                         .main-year__title

@@ -53,22 +53,7 @@
         100% 
             top: 0
 
-    &__constellation1
-        position: fixed
-        width: 475px
-        height: 250px
-        top: 10%
-        left: 5%
-        z-index: 1
-
-    &__constellation2
-        position: fixed
-        width: 475px
-        height: 250px
-        top: 18%
-        right: 8%
-        z-index: 1
-
+    
     &_bg-1,
     &_bg-2,
     &_bg-3,
@@ -124,7 +109,7 @@
         @media(min-width: 360px)
             top: 260px
         @media(min-width: 1200px)
-            top: 538px
+            top: 507px
 
     &_bg-2
         top: 150px
@@ -134,6 +119,7 @@
             top: 210px
         @media(min-width: 1200px)
             top: 457px
+    
     &_bg-3
         top: 56px
         height: 503px
@@ -142,6 +128,7 @@
             top: 116px
         @media(min-width: 1200px)
             top: 316px
+    
     &_bg-4
         top: 22px
         height: 679px
@@ -150,6 +137,7 @@
             top: 82px
         @media(min-width: 1200px)
             top: 182px
+    
     &_bg-5
         top: 29px
         height: 647px
@@ -190,10 +178,13 @@
         @media(min-width: 1800px)
             top: 450px
 
+
     &-header
         display: flex
-        // align-items: center
         justify-content: space-between
+        margin-top: 100px
+        margin-left: 100px
+        margin-right: 100px
         @media(max-width: 1200px)
             display: none
 
@@ -203,14 +194,17 @@
             min-width: 40px
             height: 25px
             margin-right: 20px
+            width: 206px
+            display: flex
+            justify-content: flex-start
             @media(min-width: 1200px)
                 min-width: 55px
                 height: 40px
             @media(min-width: 1500px)
                 margin-right: 0
             & svg
-                width: 100%
-                height: 100%
+                width: 55px
+                height: 40px
                 object-fit: contain
 
         &__menu
@@ -228,13 +222,16 @@
                         font-size: 25px
                         font-weight: 100
                         color: #FFFFFF
+       
         &__email
+            display: inline-block
+            width: 206px
             font-size: 18px 
             line-height: 130%
             font-weight: 500
             color: #fff
             border-bottom: 5px solid #C0178F
-            margin-left: 20px
+            margin-left: 20px          
             @media(min-width: 1200px)
                 font-size: 25px 
             @media(min-width: 1500px)
@@ -368,6 +365,7 @@
             // top: -23px
             display: inline-block
             width: 100%
+
             &-line
 
                 &-horizontal
@@ -411,10 +409,11 @@
                     margin-bottom: 32px
                     font-size: 25px
 
-
                 &:last-child
                     margin-bottom: 0
+
                     & span:last-child::before
+                        margin-right: 19px
                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='163.91' height='23.22' viewBox='0 0 163.91 23.22'%3E%3Cg id='круг_копия_8' data-name='круг копия 8' transform='translate(-1216.59 -1874.94)'%3E%3Cellipse id='Эллипс_5_копия' data-name='Эллипс 5 копия' cx='6.72' cy='6.7' rx='6.72' ry='6.7' transform='translate(1362.09 1879.85)' fill='%237e2e39'/%3E%3Cg id='Эллипс_5' data-name='Эллипс 5' transform='translate(1357.16 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.67' cy='11.61' rx='11.67' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.67' cy='11.61' rx='10.67' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_7' data-name='круг копия 7' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-2' data-name='Эллипс 5' transform='translate(1328.84 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_6' data-name='круг копия 6' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-3' data-name='Эллипс 5' transform='translate(1300.5 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_5' data-name='круг копия 5' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-4' data-name='Эллипс 5' transform='translate(1273.18 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_4' data-name='круг копия 4' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-5' data-name='Эллипс 5' transform='translate(1244.84 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.69' cy='11.61' rx='11.69' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.69' cy='11.61' rx='10.69' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='круг_копия_3' data-name='круг копия 3' transform='translate(-1216.59 -1874.94)'%3E%3Cg id='Эллипс_5-6' data-name='Эллипс 5' transform='translate(1216.59 1874.94)' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cellipse cx='11.66' cy='11.61' rx='11.66' ry='11.61' stroke='none'/%3E%3Cellipse cx='11.66' cy='11.61' rx='10.66' ry='10.61' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
 
                 &-wrap
@@ -430,6 +429,7 @@
                     width: 100%
                     position: relative
                     text-align: right
+
 
                     &:first-child
                         margin-bottom: 5px
@@ -449,10 +449,8 @@
                             height: 18px
                             width: 125px
                         @media(min-width: 1600px)
-                            width: 164px
+                            width: 140px
                             height: 20px
-                            margin-right: 0
-                            height: 23px
 
     &-year
         position: relative
@@ -705,27 +703,27 @@
                 @media(min-width: 900px)
                     font-size: 80px
                     line-height: 59px
+                    margin-bottom: 15px
                 @media(min-width: 1200px)
                     font-size: 100px
                     line-height: 75px
                 @media(min-width: 1600px)
                     font-size: 125px
                     line-height: 96px
+                    margin-bottom: 30px
 
                 
                 & span:last-child
-                        font-weight: 100
+                    font-weight: 100
 
             &-text
                 font-family: $font-roboto
                 font-weight: 100
                 font-size: 19px  
-                line-height: 19px              
+                line-height: 125%            
                 @media(min-width: 900px)
                     font-size: 22px
-                    margin-bottom: 15px
                 @media(min-width: 1600px)
-                    margin-bottom: 32px
                     font-size: 25px
                 & span:first-child
                     display: inline-block
@@ -899,27 +897,27 @@
         &:nth-child(1) span 
             border: 3px solid #19EA8C
             animation-name: animation-ring-one
-            animation-duration: 2s
+            animation-duration: 0.8s
             animation-timing-function: linear
             @media(min-width: 1400px)
                 margin-left: 26px
         &:nth-child(2) span 
             border: 3px solid #13CECF
             animation-name: animation-ring-two
-            animation-duration: 2s
-            animation-delay: 2s
+            animation-duration: 0.8s
+            animation-delay: 0.8s
             animation-timing-function: linear
         &:nth-child(3) span
             border: 3px solid #4A87DA
             animation-name: animation-ring-three
-            animation-duration: 2s
-            animation-delay: 4s
+            animation-duration: 0.8s
+            animation-delay: 1.6s
             animation-timing-function: linear
         &:nth-child(4) span 
             border: 3px solid #8240E0
             animation-name: animation-ring-four
-            animation-duration: 2s
-            animation-delay: 6s
+            animation-duration: 0.8s
+            animation-delay: 2.4s
             animation-timing-function: linear
             margin-right: 0
 
@@ -929,7 +927,7 @@
         border: 3px solid #19EA8C
 
     50% 
-        border: 5px solid #fff
+        border: 3px solid #fff
         // box-shadow: 0 0 7px 1px #fff
 
     100%
@@ -941,7 +939,7 @@
         border: 3px solid #13CECF
 
     50% 
-        border: 5px solid #fff
+        border: 3px solid #fff
         // box-shadow: 0 0 7px 1px #fff
 
     100%
@@ -953,7 +951,7 @@
         border: 3px solid #4A87DA
 
     50% 
-        border: 5px solid #fff
+        border: 3px solid #fff
         // box-shadow: 0 0 7px 1px #fff
 
     100%
@@ -965,7 +963,7 @@
         border: 3px solid #8240E0
 
     50% 
-        border: 5px solid #fff
+        border: 3px solid #fff
         // box-shadow: 0 0 7px 1px #fff
 
     100%
@@ -1172,7 +1170,6 @@
 
     100%
         color: #5954D8
-
 
 .work-together
     position: relative

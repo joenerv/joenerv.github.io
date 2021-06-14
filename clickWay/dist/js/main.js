@@ -55,9 +55,6 @@ window.addEventListener('DOMContentLoaded', function() {
 				}
 			});
  
-
-
-
 	// 1. Фиксация <body>
 		function bodyFixPosition() {
 
