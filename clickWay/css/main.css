@@ -1665,6 +1665,13 @@ input, button, textarea, select {
     @media (min-width: 600px) {
       .work-together__input-message {
         margin-bottom: 105px; } }
+
+  .work-together__input-message::placeholder {
+    opacity: 0.5;
+  }
+
+
+
   .work-together__button {
     position: relative;
     left: 50%;
