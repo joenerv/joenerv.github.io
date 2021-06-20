@@ -286,6 +286,8 @@ input, button, textarea, select {
       @media (min-width: 1200px) {
         .main-header__menu {
           display: flex;
+          position: relative;
+          top: -4px;
           width: 775px;
           display: flex;
           justify-content: space-between; }
@@ -296,21 +298,27 @@ input, button, textarea, select {
             line-height: 22px;
             font-weight: 100;
             color: #FFFFFF; } }
+
     .main-header__email {
       display: inline-block;
-      width: 164px;
+      width: 158px;
+      height: 30px;
       font-size: 17px;
       line-height: 130%;
       font-weight: 500;
       color: #fff;
       border-bottom: 5px solid #C0178F;
-      margin-left: 20px; }
+      margin-left: 20px;
+     }
       @media (min-width: 1200px) {
         .main-header__email {
-          font-size: 20px; } }
+          position: relative;
+          top: -3px;
+          font-size: 19px; } }
       @media (min-width: 1500px) {
         .main-header__email {
           margin-left: 0; } }
+
   .main__title {
     padding-top: 35px;
     text-align: center;
@@ -1752,7 +1760,9 @@ input, button, textarea, select {
     .footer-contact__text {
       font-family: "Roboto", serif;
       font-size: 17px;
-      line-height: 20px; }
+      line-height: 20px;
+      opacity: 0.388;
+     }
       @media (min-width: 1200px) {
         .footer-contact__text {
           font-size: 19px;
