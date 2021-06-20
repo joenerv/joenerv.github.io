@@ -1439,7 +1439,7 @@ input, button, textarea, select {
 .work-together {
   position: relative;
   z-index: 100;
-  padding-top: 140px;
+  padding-top: 215px;
   margin-bottom: 300px; }
   .work-together__rocket {
     display: none; }
@@ -1951,6 +1951,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  overflow: hidden;
  }
 
 
