@@ -46,6 +46,12 @@ input, button, textarea, select {
   font: inherit;
   outline: none; }
 
+.content-wrapper {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main {
   position: relative;
   overflow: hidden; }
@@ -328,7 +334,7 @@ input, button, textarea, select {
     margin-bottom: 390px; }
     @media (min-width: 1200px) {
       .main__title {
-        padding-top: 210px;
+        padding-top: 140px;
         margin-bottom: 435px; } }
     .main__title img {
       width: 280px; }
@@ -379,7 +385,7 @@ input, button, textarea, select {
     @media (min-width: 1200px) {
       .main-greeting {
         font-size: 22px;
-        line-height: 120%; } }
+        line-height: 25px; } }
     @media (min-width: 1300px) {
       .main-greeting {
         margin-left: 100px;
@@ -719,7 +725,7 @@ input, button, textarea, select {
         @media (min-width: 1200px) {
           .main-year__content-text {
             font-size: 22px;
-            line-height: 23px; } }
+            line-height: 25px; } }
         .main-year__content-text span:last-child {
           display: inline-block;
           margin-top: 10px; }
@@ -823,7 +829,10 @@ input, button, textarea, select {
         line-height: 125%; }
         @media (min-width: 900px) {
           .main-photo-block__content-text {
-            font-size: 22px; } }
+            font-size: 22px; 
+            line-height: 25px;
+          
+          } }
         
         .main-photo-block__content-text span:first-child {
           display: inline-block;
@@ -966,12 +975,12 @@ input, button, textarea, select {
     @media (min-width: 900px) {
       .why-work__text {
         font-size: 22px;
-        line-height: 24px;
+        line-height: 25px;
         margin-left: 70px; } }
     @media (min-width: 1600px) {
       .why-work__text {
         font-size: 22px;
-        line-height: 27px; } }
+        line-height: 25px; } }
     @media (min-width: 1650px) {
       .why-work__text {
         margin-left: 268px; } }
@@ -1012,7 +1021,9 @@ input, button, textarea, select {
         width: 50%; } }
     @media (min-width: 900px) {
       .why-work__item {
-        font-size: 22px; } }
+        font-size: 22px;
+        line-height: 25px;
+       } }
     @media (min-width: 1200px) {
       .why-work__item {
         width: auto; } }
@@ -1249,13 +1260,13 @@ input, button, textarea, select {
     @media (min-width: 1200px) {
       .why-done__subtitle {
         font-size: 22px;
-        line-height: 24px;
+        line-height: 25px;
         margin-left: 90px;
         margin-bottom: 80px; } }
     @media (min-width: 1600px) {
       .why-done__subtitle {
         font-size: 22px;
-        line-height: 27px; } }
+        line-height: 25px; } }
     @media (min-width: 1750px) {
       .why-done__subtitle {
         margin-left: 160px; } }
@@ -1278,7 +1289,7 @@ input, button, textarea, select {
       font-family: "Roboto", serif;
       font-weight: 500;
       font-size: 22px;
-      line-height: 22px;
+      line-height: 25px;
       color: #8849D5; }
       @media (min-width: 900px) {
         .why-done__project-row {
@@ -1578,7 +1589,7 @@ input, button, textarea, select {
     @media (min-width: 1200px) {
       .work-together__email {
         font-size: 22px;
-        line-height: 27px; } }
+        line-height: 25px; } }
   .work-together__form {
     width: 100%;
     background-color: rgba(23, 23, 23, 0.8);
@@ -1602,7 +1613,7 @@ input, button, textarea, select {
       @media (min-width: 1200px) {
         .work-together__form input {
           font-size: 22px;
-          line-height: 27px; } }
+          line-height: 25px; } }
       .work-together__form input::-moz-placeholder {
         font-family: "Roboto", serif;
         font-size: 20px;
@@ -1624,13 +1635,13 @@ input, button, textarea, select {
         @media (min-width: 1200px) {
           .work-together__form input::-moz-placeholder {
             font-size: 22px;
-            line-height: 27px; }
+            line-height: 25px; }
           .work-together__form input:-ms-input-placeholder {
             font-size: 22px;
-            line-height: 27px; }
+            line-height: 25px; }
           .work-together__form input::placeholder {
             font-size: 22px;
-            line-height: 27px; } }
+            line-height: 25px; } }
       .work-together__form input:focus {
         border-bottom: 1px solid #eac995;
         transition: all 0.3s; }
@@ -1659,7 +1670,7 @@ input, button, textarea, select {
     border-radius: 14px;
     font-family: "Roboto", serif;
     font-size: 22px;
-    line-height: 22px;
+    line-height: 25px;
     font-weight: 300;
     text-transform: uppercase;
     color: #fff;
