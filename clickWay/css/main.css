@@ -292,7 +292,8 @@ input, button, textarea, select {
           .main-header__menu-item a {
             display: inline-block;
             position: relative;
-            font-size: 20px;
+            font-size: 19px;
+            line-height: 22px;
             font-weight: 100;
             color: #FFFFFF; } }
     .main-header__email {
@@ -378,7 +379,7 @@ input, button, textarea, select {
     @media (min-width: 1700px) {
       .main-greeting {
         margin-left: 395px;
-        font-size: 25px; } }
+      } }
     .main-greeting span {
       display: inline-block; }
       .main-greeting span:first-child {
@@ -494,7 +495,7 @@ input, button, textarea, select {
         @media (min-width: 1600px) {
           .main-who-we__content-text {
             margin-bottom: 32px;
-            font-size: 25px; } }
+           } }
         .main-who-we__content-text:last-child {
           margin-bottom: 0; }
           .main-who-we__content-text:last-child span:last-child::before {
@@ -815,9 +816,7 @@ input, button, textarea, select {
         @media (min-width: 900px) {
           .main-photo-block__content-text {
             font-size: 22px; } }
-        @media (min-width: 1600px) {
-          .main-photo-block__content-text {
-            font-size: 25px; } }
+        
         .main-photo-block__content-text span:first-child {
           display: inline-block;
           width: 100%;
@@ -1236,12 +1235,13 @@ input, button, textarea, select {
         margin-left: 50px; } }
     @media (min-width: 900px) {
       .why-done__subtitle {
-        font-size: 20px;
-        line-height: 24px;
+        
         margin-left: 70px;
         margin-bottom: 75px; } }
     @media (min-width: 1200px) {
       .why-done__subtitle {
+        font-size: 22px;
+        line-height: 24px;
         margin-left: 90px;
         margin-bottom: 80px; } }
     @media (min-width: 1600px) {
