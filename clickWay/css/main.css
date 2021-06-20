@@ -1052,6 +1052,8 @@ input, button, textarea, select {
               animation-name: animation-ring-one;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
       @media (min-width: 1400px) {
@@ -1063,8 +1065,8 @@ input, button, textarea, select {
               animation-name: animation-ring-two;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 0.8s;
-              animation-delay: 0.8s;
+      -webkit-animation-delay: 2.8s;
+              animation-delay: 2.8s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(3) span {
@@ -1073,8 +1075,8 @@ input, button, textarea, select {
               animation-name: animation-ring-three;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 1.6s;
-              animation-delay: 1.6s;
+      -webkit-animation-delay: 3.6s;
+              animation-delay: 3.6s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(4) span {
@@ -1083,8 +1085,8 @@ input, button, textarea, select {
               animation-name: animation-ring-four;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 2.4s;
-              animation-delay: 2.4s;
+      -webkit-animation-delay: 4.4s;
+              animation-delay: 4.4s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear;
       margin-right: 0; }
