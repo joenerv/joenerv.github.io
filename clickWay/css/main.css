@@ -65,7 +65,7 @@ input, button, textarea, select {
   .main-button-scroll {
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    bottom: 24px;
     width: 42px;
     height: 31px;
     border: none;
@@ -73,8 +73,8 @@ input, button, textarea, select {
     transition: all 0.3s; }
     @media (min-width: 1200px) {
       .main-button-scroll {
-        width: 57px;
-        height: 46px;
+        /* width: 57px;
+        height: 46px; */
         right: 74px;
         bottom: 40px; } }
     .main-button-scroll svg {
@@ -288,7 +288,7 @@ input, button, textarea, select {
         .main-header__button {
           margin-right: 0; } }
       .main-header__button svg {
-        width: 55px;
+        width: 30px;
         height: 40px;
         -o-object-fit: contain;
            object-fit: contain; }
@@ -362,15 +362,15 @@ input, button, textarea, select {
       line-height: 23px;
       font-weight: 100;
       text-align: center;
-      margin-bottom: 26px; }
+      margin-bottom: 15px; }
       @media (min-width: 1200px) {
         .main__text span {
           font-size: 22px;
           line-height: 25px; } }
     .main__text-line {
       display: inline-block;
-      width: 55px;
-      height: 5px;
+      width: 28px;
+      height: 3px;
       background-color: #18F18D;
       border-radius: 2px; }
   .main-greeting {
@@ -468,7 +468,7 @@ input, button, textarea, select {
       width: 100%; }
       .main-who-we__content-line-horizontal {
         display: inline-block;
-        width: 100%;
+        width: 94%;
         height: 1px;
         background-color: #C21AD1;
         margin-bottom: 20px; }
@@ -634,7 +634,7 @@ input, button, textarea, select {
       padding-left: 20px; }
       @media (min-width: 600px) {
         .main-year__title {
-          padding-left: 50px;
+          padding-left: 65px;
           font-size: 70px;
           line-height: 50px; } }
       @media (min-width: 1600px) {
@@ -1052,8 +1052,8 @@ input, button, textarea, select {
               animation-name: animation-ring-one;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 2s;
-              animation-delay: 2s;
+      -webkit-animation-delay: 1.5s;
+              animation-delay: 1.5s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
       @media (min-width: 1400px) {
@@ -1065,8 +1065,8 @@ input, button, textarea, select {
               animation-name: animation-ring-two;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 2.8s;
-              animation-delay: 2.8s;
+      -webkit-animation-delay: 2.3s;
+              animation-delay: 2.3s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(3) span {
@@ -1075,8 +1075,8 @@ input, button, textarea, select {
               animation-name: animation-ring-three;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 3.6s;
-              animation-delay: 3.6s;
+      -webkit-animation-delay: 3.1s;
+              animation-delay: 3.1s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(4) span {
@@ -1085,8 +1085,8 @@ input, button, textarea, select {
               animation-name: animation-ring-four;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 4.4s;
-              animation-delay: 4.4s;
+      -webkit-animation-delay: 3.9s;
+              animation-delay: 3.9s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear;
       margin-right: 0; }
