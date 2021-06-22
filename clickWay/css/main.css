@@ -289,7 +289,7 @@ input, button, textarea, select {
           margin-right: 0; } }
       .main-header__button svg {
         width: 30px;
-        height: 40px;
+        height: 29px;
         -o-object-fit: contain;
            object-fit: contain; }
     .main-header__menu {
@@ -298,7 +298,6 @@ input, button, textarea, select {
         .main-header__menu {
           display: flex;
           position: relative;
-          top: -4px;
           width: 775px;
           display: flex;
           justify-content: space-between; }
@@ -318,13 +317,12 @@ input, button, textarea, select {
       line-height: 130%;
       font-weight: 500;
       color: #fff;
-      border-bottom: 5px solid #C0178F;
+      border-bottom: 5px solid #e222aa;
       margin-left: 20px;
      }
       @media (min-width: 1200px) {
         .main-header__email {
           position: relative;
-          top: -3px;
           font-size: 19px; } }
       @media (min-width: 1500px) {
         .main-header__email {
@@ -378,27 +376,26 @@ input, button, textarea, select {
     line-height: 120%;
     font-weight: 100;
     width: 90%;
-    margin-left: 30px;
+    margin-left: 85px;
     margin-bottom: 30px; }
     @media (min-width: 600px) {
       .main-greeting {
         width: 500px;
-        margin-left: 100px; } }
+        margin-left: 95px; } }
     @media (min-width: 900px) {
       .main-greeting {
-        margin-left: 150px; } }
-    @media (min-width: 1200px) {
+        margin-left: 165px; } }
+    @media (min-width: 1500px) {
       .main-greeting {
-        font-size: 22px;
-        line-height: 25px; } }
-    @media (min-width: 1300px) {
-      .main-greeting {
-        margin-left: 100px;
-        margin-left: 250px; } }
-    @media (min-width: 1700px) {
-      .main-greeting {
-        margin-left: 395px;
+        margin-left: 262px;
       } }
+
+
+
+
+
+
+
     .main-greeting span {
       display: inline-block; }
       .main-greeting span:first-child {
@@ -577,6 +574,7 @@ input, button, textarea, select {
     @media (min-width: 1500px) {
       .main-year {
         margin-left: 197px; } }
+
     .main-year__star1 {
       position: absolute;
       width: 35px;
@@ -605,13 +603,7 @@ input, button, textarea, select {
               animation-duration: 4s;
       -webkit-animation-iteration-count: infinite;
               animation-iteration-count: infinite; }
-    .main-year__comet {
-      position: absolute;
-      width: 48px;
-      height: 69px;
-      top: 165%;
-      left: 200%;
-      z-index: 10; }
+    
     .main-year__palnet {
       position: absolute;
       top: -66%;
@@ -892,13 +884,7 @@ input, button, textarea, select {
             animation-duration: 3.9s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
-  .why-work__comet {
-    position: absolute;
-    width: 48px;
-    height: 69px;
-    top: 127%;
-    left: 24%;
-    z-index: 10; }
+  
   .why-work__constellation1 {
     position: absolute;
     right: 11%;
@@ -1052,8 +1038,6 @@ input, button, textarea, select {
               animation-name: animation-ring-one;
       -webkit-animation-duration: 0.8s;
               animation-duration: 0.8s;
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
       @media (min-width: 1400px) {
@@ -1063,30 +1047,30 @@ input, button, textarea, select {
       border: 3px solid #13CECF;
       -webkit-animation-name: animation-ring-two;
               animation-name: animation-ring-two;
-      -webkit-animation-duration: 0.8s;
-              animation-duration: 0.8s;
-      -webkit-animation-delay: 2.3s;
-              animation-delay: 2.3s;
+      -webkit-animation-duration: 0.9s;
+              animation-duration: 0.9s;
+      -webkit-animation-delay: 0.9s;
+              animation-delay: 0.9s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(3) span {
       border: 3px solid #4A87DA;
       -webkit-animation-name: animation-ring-three;
               animation-name: animation-ring-three;
-      -webkit-animation-duration: 0.8s;
-              animation-duration: 0.8s;
-      -webkit-animation-delay: 3.1s;
-              animation-delay: 3.1s;
+      -webkit-animation-duration: 0.9s;
+              animation-duration: 0.9s;
+      -webkit-animation-delay: 1.8s;
+              animation-delay: 1.8s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear; }
     .why-work__item:nth-child(4) span {
       border: 3px solid #8240E0;
       -webkit-animation-name: animation-ring-four;
               animation-name: animation-ring-four;
-      -webkit-animation-duration: 0.8s;
-              animation-duration: 0.8s;
-      -webkit-animation-delay: 3.9s;
-              animation-delay: 3.9s;
+      -webkit-animation-duration: 0.9s;
+              animation-duration: 0.9s;
+      -webkit-animation-delay: 2.7s;
+              animation-delay: 2.7s;
       -webkit-animation-timing-function: linear;
               animation-timing-function: linear;
       margin-right: 0; }
@@ -1221,21 +1205,21 @@ input, button, textarea, select {
     text-transform: uppercase;
     font-size: 50px;
     line-height: 40px;
-    margin-left: 25px; }
+    margin-left: 20px; }
     @media (min-width: 600px) {
       .why-done__title {
         font-size: 60px;
         line-height: 50px;
         margin-bottom: 39px;
-        margin-left: 50px; } }
+        margin-left: 45px; } }
     @media (min-width: 900px) {
       .why-done__title {
         font-size: 80px;
         line-height: 65px;
-        margin-left: 70px; } }
+        margin-left: 65px; } }
     @media (min-width: 1200px) {
       .why-done__title {
-        margin-left: 90px;
+        margin-left: 85px;
         margin-bottom: 80px; } }
     @media (min-width: 1600px) {
       .why-done__title {
@@ -1244,9 +1228,11 @@ input, button, textarea, select {
     @media (min-width: 1750px) {
       .why-done__title {
         margin-left: 160px; } }
-    @media (min-width: 1850px) {
+    @media (min-width: 1845px) {
       .why-done__title {
-        margin-left: 260px; } }
+        margin-left: 255px; } }
+
+
     .why-done__title span:first-child {
       font-weight: normal;
       font-weight: 900; }
