@@ -465,7 +465,7 @@ input, button, textarea, select {
       width: 100%; }
       .main-who-we__content-line-horizontal {
         display: inline-block;
-        width: 94%;
+        width: 90%;
         height: 1px;
         background-color: #C21AD1;
         margin-bottom: 20px; }
@@ -681,7 +681,7 @@ input, button, textarea, select {
           @media (min-width: 600px) {
             .main-year__content-item:nth-child(5) .main-year__content-year {
               width: auto;
-              margin-right: 90px; } }
+              margin-right: 82px; } }
         .main-year__content-item:last-child {
           margin-bottom: 0; }
           .main-year__content-item:last-child .main-year__content-year {
@@ -711,7 +711,7 @@ input, button, textarea, select {
             width: 200px;
             font-size: 69px;
             line-height: 69px;
-            margin-right: 79px; } }
+            margin-right: 68px; } }
       .main-year__content-text {
         display: flex;
         flex-direction: column;
