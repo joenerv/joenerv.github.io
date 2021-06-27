@@ -118,11 +118,14 @@ input, button, textarea, select {
     top: 5px; }
   100% {
     top: 0; } }
+
+  /* горы на верху */
   .main_bg-1, .main_bg-2, .main_bg-3, .main_bg-4, .main_bg-5, .main_bg-6, .main_bg-7 {
     position: absolute;
     left: -100%;
     width: 300%;
     z-index: 100; }
+    
     @media (min-width: 390px) {
       .main_bg-1, .main_bg-2, .main_bg-3, .main_bg-4, .main_bg-5, .main_bg-6, .main_bg-7 {
         left: -90%;
@@ -177,67 +180,73 @@ input, button, textarea, select {
   .main_bg-1 {
     top: 200px;
     height: 280px;
-    z-index: 6; }
+    z-index: 10; }
     @media (min-width: 360px) {
       .main_bg-1 {
         top: 260px; } }
     @media (min-width: 1200px) {
       .main_bg-1 {
         top: 507px; } }
+
   .main_bg-2 {
     top: 150px;
     height: 430px;
-    z-index: 5; }
+    z-index: 9; }
     @media (min-width: 360px) {
       .main_bg-2 {
         top: 210px; } }
     @media (min-width: 1200px) {
       .main_bg-2 {
         top: 457px; } }
+
   .main_bg-3 {
     top: 56px;
     height: 503px;
-    z-index: 4; }
+    z-index: 8; }
     @media (min-width: 360px) {
       .main_bg-3 {
         top: 116px; } }
     @media (min-width: 1200px) {
       .main_bg-3 {
         top: 316px; } }
+
   .main_bg-4 {
     top: 22px;
     height: 679px;
-    z-index: 3; }
+    z-index: 7; }
     @media (min-width: 360px) {
       .main_bg-4 {
         top: 82px; } }
     @media (min-width: 1200px) {
       .main_bg-4 {
         top: 182px; } }
+
   .main_bg-5 {
     top: 29px;
     height: 647px;
-    z-index: 2; }
+    z-index: 6; }
     @media (min-width: 360px) {
       .main_bg-5 {
         top: 89px; } }
     @media (min-width: 1200px) {
       .main_bg-5 {
         top: 289px; } }
+
   .main_bg-6 {
     top: -30px;
     height: 727px;
-    z-index: 1; }
+    z-index: 5; }
     @media (min-width: 360px) {
       .main_bg-6 {
         top: 20px; } }
     @media (min-width: 1200px) {
       .main_bg-6 {
         top: 160px; } }
+  
   .main_bg-7 {
     top: -120px;
     height: 1582px;
-    z-index: 7; }
+    z-index: 11; }
     @media (min-width: 340px) {
       .main_bg-7 {
         top: -99px; } }
@@ -262,6 +271,62 @@ input, button, textarea, select {
     @media (min-width: 1800px) {
       .main_bg-7 {
         top: 450px; } }
+  
+
+  .star-bg1 {
+    position: absolute;
+    top: 1500px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    opacity: 0.5;
+    object-fit: contain;
+  }
+
+  @media(max-width: 1200px) {
+    .star-bg1 { 
+      top: 1000px;
+
+    }
+
+  }
+
+  .star-bg2 {
+    position: absolute;
+    top: 1565px;
+    left: 135px;
+    width: 1315px;
+    height: calc(100% - 1565px);
+    z-index: 4;
+  }
+
+  @media(max-width: 1200px) {
+    .star-bg2  { 
+      top: 1000px;
+      left: 0;
+    }
+  }
+
+
+
+  .star-bg3 {
+    position: absolute;
+    top: 1980px;
+    left: 130px;
+    width: 1764px;
+    height: calc(100% - 1980px);
+    z-index: 4;
+  }
+
+  @media(max-width: 1200px) {
+    .star-bg3  { 
+      top: 1000px;
+      left: 0;
+    }
+  }
+
+
   .main-header {
     display: flex;
     justify-content: space-between;
@@ -376,15 +441,21 @@ input, button, textarea, select {
     line-height: 120%;
     font-weight: 100;
     width: 90%;
-    margin-left: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* margin-left: 85px; */
     margin-bottom: 30px; }
     @media (min-width: 600px) {
       .main-greeting {
         width: 500px;
-        margin-left: 95px; } }
+        margin-left: 95px; 
+        padding-left: 0;
+        padding-right: 0;
+      } }
     @media (min-width: 900px) {
       .main-greeting {
-        margin-left: 165px; } }
+        margin-left: 165px; 
+      } }
     @media (min-width: 1500px) {
       .main-greeting {
         margin-left: 262px;
@@ -608,14 +679,7 @@ input, button, textarea, select {
       position: absolute;
       top: -66%;
       right: -130%; }
-    .main-year__constellation1 {
-      position: absolute;
-      left: -120px;
-      top: -100px; }
-    .main-year__constellation2 {
-      position: absolute;
-      right: -90%;
-      top: 42%; }
+    
     .main-year__title {
       position: relative;
       z-index: 100;
@@ -885,10 +949,7 @@ input, button, textarea, select {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
   
-  .why-work__constellation1 {
-    position: absolute;
-    right: 11%;
-    top: 120px; }
+
   .why-work__title {
     position: relative;
     font-family: "Jost", serif;
@@ -932,6 +993,7 @@ input, button, textarea, select {
             margin-right: 48px; } }
       .why-work__title span:last-child {
         font-weight: 100; }
+
   .why-work__content {
     position: relative;
     width: 100%;
@@ -956,6 +1018,7 @@ input, button, textarea, select {
           display: inline-block;
           right: auto;
           left: 200px; } }
+
   .why-work__text {
     font-family: "Roboto", serif;
     font-weight: 100;
@@ -977,6 +1040,7 @@ input, button, textarea, select {
         margin-left: 268px; } }
     .why-work__text span:last-child {
       color: #18F18D; }
+
   .why-work__descr {
     width: 100%;
     margin-left: 0;
@@ -1185,14 +1249,7 @@ input, button, textarea, select {
     width: 171px;
     height: 144px;
     z-index: 10; }
-  .why-done__constellation1 {
-    position: absolute;
-    top: -13%;
-    left: 19%; }
-  .why-done__constellation2 {
-    position: absolute;
-    top: 10%;
-    right: 1%; }
+
   .why-done .content-wrapper {
     position: relative;
     z-index: 100; }
@@ -1464,6 +1521,16 @@ input, button, textarea, select {
             animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
+
+  @media (max-width: 600px) { 
+
+    .work-together__star1 { 
+      display: none;
+    }
+
+  }
+        
+            
   .work-together__star2 {
     position: absolute;
     right: 10%;
@@ -1477,21 +1544,16 @@ input, button, textarea, select {
             animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
-  .work-together__constellation1 {
-    position: absolute;
-    top: 5%;
-    right: 25%;
-    z-index: 1; }
-  .work-together__constellation2 {
-    position: absolute;
-    top: 41%;
-    right: 2%;
-    z-index: 1; }
-  .work-together__constellation3 {
-    position: absolute;
-    top: 50%;
-    right: 40%;
-    z-index: 1; }
+
+  @media (max-width: 600px) { 
+
+    .work-together__star2 { 
+      display: none;
+    }
+
+  }
+
+
   .work-together__title {
     font-family: "Jost", serif;
     font-weight: 100;
