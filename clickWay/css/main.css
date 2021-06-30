@@ -359,6 +359,7 @@ input, button, textarea, select {
            object-fit: contain; }
     .main-header__menu {
       display: none; }
+      
       @media (min-width: 1200px) {
         .main-header__menu {
           display: flex;
@@ -366,13 +367,16 @@ input, button, textarea, select {
           width: 775px;
           display: flex;
           justify-content: space-between; }
-          .main-header__menu-item a {
+
+          .main-header__menu-item {
             display: inline-block;
             position: relative;
             font-size: 19px;
             line-height: 22px;
             font-weight: 100;
-            color: #FFFFFF; } }
+            color: #FFFFFF; } 
+          
+          }
 
     .main-header__email {
       display: inline-block;
