@@ -374,7 +374,9 @@ input, button, textarea, select {
             font-size: 19px;
             line-height: 22px;
             font-weight: 100;
-            color: #FFFFFF; } 
+            color: #FFFFFF; 
+            cursor: pointer;
+            } 
           
           }
 
@@ -1911,18 +1913,21 @@ input, button, textarea, select {
     display: flex;
     justify-content: space-between; }
     .menu-popup__content-list-item {
-      margin-bottom: 30px; }
-      .menu-popup__content-list-item a {
-        font-size: 48px;
+      margin-bottom: 30px; 
+      font-size: 48px;
         line-height: 50px;
         font-weight: bold;
         color: #6A6A6A;
-        transition: all 0.3s; }
-        .menu-popup__content-list-item a:hover {
+        transition: all 0.3s; 
+        cursor: pointer;
+    }
+        .menu-popup__content-list-item:hover {
           color: #fff;
           transition: all 0.3s; }
+
       .menu-popup__content-list-item:last-child {
         margin-bottom: 0; }
+
     .menu-popup__content-line {
       position: absolute;
       top: 0;
