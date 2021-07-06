@@ -1786,24 +1786,50 @@ input, button, textarea, select {
   @media (min-width: 1200px) {
     .footer {
       padding-bottom: 96px; } }
+
   .footer-img-bg1 {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 150%;
     height: 588px;
+    margin-left: -25%;
+    margin-right: -25%;
     -o-object-fit: cover;
        object-fit: cover;
     z-index: 50; }
+
+  @media (min-width: 1200px) { 
+    .footer-img-bg1 { 
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+  }
+
+
   .footer-img-bg2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 150%;
     height: 620px;
+    margin-left: -25%;
+    margin-right: -25%;
     -o-object-fit: cover;
        object-fit: cover;
     z-index: 50; }
+
+    @media (min-width: 1200px) {  
+      .footer-img-bg2 { 
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    
+
   .footer .content-wrapper {
     position: relative;
     display: flex;
