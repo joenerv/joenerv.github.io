@@ -1787,7 +1787,23 @@ input, button, textarea, select {
     .footer {
       padding-bottom: 96px; } }
 
-  .footer-img-bg1 {
+
+
+  .land-down__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/land_down.svg);
+    background-position: 50% 50%;
+    z-index: 50;
+
+  }
+
+  /* .footer-img-bg1 {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1806,10 +1822,10 @@ input, button, textarea, select {
       margin-right: 0;
     }
     
-  }
+  } */
 
 
-  .footer-img-bg2 {
+  /* .footer-img-bg2 {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1828,7 +1844,7 @@ input, button, textarea, select {
         margin-right: 0;
       }
     }
-    
+     */
 
   .footer .content-wrapper {
     position: relative;
