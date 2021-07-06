@@ -400,12 +400,12 @@ input, button, textarea, select {
           margin-left: 0; } }
 
   .main__title {
-    padding-top: 35px;
+    padding-top: 140px;
     text-align: center;
     font-family: "Jost", serif;
     font-size: 70px;
     line-height: 110%;
-    margin-bottom: 390px; }
+    margin-bottom: 260px; }
     @media (min-width: 1200px) {
       .main__title {
         padding-top: 140px;
@@ -485,7 +485,7 @@ input, button, textarea, select {
     width: 280px;
     margin-right: 20px;
     margin-left: auto;
-    margin-bottom: 40px; }
+    margin-bottom: 85px; }
     @media (min-width: 400px) {
       .main-who-we {
         width: 300px; } }
@@ -494,6 +494,7 @@ input, button, textarea, select {
         width: 400px; } }
     @media (min-width: 900px) {
       .main-who-we {
+        margin-bottom: 115px;
         width: 450px; } }
     @media (min-width: 900px) {
       .main-who-we {
@@ -638,11 +639,12 @@ input, button, textarea, select {
     width: 80%;
     font-family: "Jost", serif;
     margin-left: 20px;
-    padding-bottom: 137px;
+    padding-bottom: 60px;
     z-index: 10; }
     @media (min-width: 600px) {
       .main-year {
         width: 500px;
+        padding-bottom: 137px;
         margin-left: 30px; } }
     @media (min-width: 900px) {
       .main-year {
@@ -849,15 +851,24 @@ input, button, textarea, select {
          object-fit: cover; }
     .main-photo-block__content {
       position: absolute;
-      top: 14%;
+      top: 10%;
       right: 5%;
       width: 80%;
       height: 310px; }
       @media (min-width: 700px) {
         .main-photo-block__content {
-          top: 25%;
+          top: 22%;
           right: 5%;
           width: 400px; } }
+
+      @media (min-width: 900px) {
+        .main-photo-block__content {
+          top: 16%;
+          right: 5%;
+          width: 400px; } }
+
+
+
       @media (min-width: 1200px) {
         .main-photo-block__content {
           top: 35%;
@@ -1259,6 +1270,7 @@ input, button, textarea, select {
   .why-done .content-wrapper {
     position: relative;
     z-index: 100; }
+
   .why-done__title {
     display: inline-block;
     font-family: "Jost", serif;
@@ -1267,27 +1279,32 @@ input, button, textarea, select {
     margin-bottom: 29px;
     text-transform: uppercase;
     font-size: 50px;
-    line-height: 40px;
+    line-height: 46px;
     margin-left: 20px; }
+
     @media (min-width: 600px) {
       .why-done__title {
         font-size: 60px;
         line-height: 50px;
         margin-bottom: 39px;
         margin-left: 45px; } }
+
     @media (min-width: 900px) {
       .why-done__title {
         font-size: 80px;
         line-height: 65px;
         margin-left: 65px; } }
+
     @media (min-width: 1200px) {
       .why-done__title {
         margin-left: 85px;
         margin-bottom: 80px; } }
+
     @media (min-width: 1600px) {
       .why-done__title {
         font-size: 90px;
         line-height: 66px; } }
+
     @media (min-width: 1750px) {
       .why-done__title {
         margin-left: 160px; } }
@@ -1490,10 +1507,20 @@ input, button, textarea, select {
 .work-together {
   position: relative;
   z-index: 100;
-  padding-top: 215px;
+  padding-top: 115px;
   margin-bottom: 300px; }
+
+  @media (min-width: 900px) { 
+    .work-together { 
+      padding-top: 215px;
+    }
+  }
+
+
+
   .work-together__rocket {
     display: none; }
+
     @media (min-width: 1330px) {
       .work-together__rocket {
         position: absolute;
@@ -1567,7 +1594,7 @@ input, button, textarea, select {
     margin-bottom: 77px;
     text-transform: uppercase;
     font-size: 55px;
-    line-height: 45px;
+    line-height: 48px;
     margin-left: 25px; }
     @media (min-width: 600px) {
       .work-together__title {
@@ -1991,14 +2018,14 @@ body {
   line-height: 110%;
   color: #fff; }
   body::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-    background-color: #fff; }
+    width: 1px;
+    height: 1px;
+    background-color: transparent; }
   body::-webkit-scrollbar-thumb {
-    background-color: #C4C4C4;
+    background-color: transparent;
     border-radius: 3px;
-    width: 6px;
-    height: 6px; }
+    width: 1px;
+    height: 1px; }
 
 .wrapper {
   position: relative;
