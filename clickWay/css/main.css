@@ -54,10 +54,21 @@ input, button, textarea, select {
 
 .main {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden; 
+  margin-top: -60px;
+}
+
+@media (min-width: 1200px) { 
+  .main { 
+    margin-top: 0;
+  }
+}
+
+
+
   .main .content-wrapper {
     position: relative;
-    padding-top: 50px;
+    padding-top: 25px;
     z-index: 20; }
     @media (min-width: 1200px) {
       .main .content-wrapper {
@@ -432,10 +443,11 @@ input, button, textarea, select {
       font-weight: 100;
       text-align: center;
       margin-bottom: 15px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
     
     }
+
       @media (min-width: 1200px) {
         .main__text span {
           font-size: 22px;
@@ -493,9 +505,11 @@ input, button, textarea, select {
   }
     @media (min-width: 400px) {
       .main-who-we {
+        margin-bottom: 210px; 
         width: 300px; } }
     @media (min-width: 600px) {
       .main-who-we {
+        margin-bottom: 170px; 
         width: 400px; } }
     @media (min-width: 900px) {
       .main-who-we {
@@ -676,14 +690,18 @@ input, button, textarea, select {
                 height: 20px; } }
   .main-year {
     position: relative;
-    width: 80%;
+    width: 100%;
     font-family: "Jost", serif;
-    margin-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 60px;
     z-index: 10; }
+
     @media (min-width: 600px) {
       .main-year {
         width: 500px;
+        padding-left: 0;
+        padding-right: 0;
         /* padding-bottom: 137px; */
         margin-left: 30px; } }
     @media (min-width: 900px) {
@@ -764,10 +782,12 @@ input, button, textarea, select {
         .main-year__title span:last-child {
           font-weight: 100;
           margin-left: 20px; }
+
     .main-year__content {
       position: relative;
-      position: relative;
       z-index: 100; }
+
+
       .main-year__content .main-who-we__content-line-vertical {
         display: none; }
         @media (min-width: 600px) {
@@ -791,30 +811,56 @@ input, button, textarea, select {
           .main-year__content-item {
             margin-left: -20px;
             margin-bottom: 34px; } }
+
         .main-year__content-item:nth-child(4) .main-year__content-year {
           width: 100%;
+          color: #8e00e0;
           margin-bottom: 15px; }
+
           @media (min-width: 600px) {
             .main-year__content-item:nth-child(4) .main-year__content-year {
               width: auto; } }
+              
+
+          @media (min-width: 1200px) {
+            .main-year__content-item:nth-child(4) .main-year__content-year {
+              color: #381A5E; } }
+
+          
+
+
         .main-year__content-item:nth-child(5) .main-year__content-year {
-          color: #5A168D;
+          color: #8e00e0;
           width: 100%;
           margin-bottom: 15px; }
           @media (min-width: 600px) {
             .main-year__content-item:nth-child(5) .main-year__content-year {
               width: auto;
-              margin-right: 82px; } }
+              margin-right: 82px;} }
+
+          @media (min-width: 1200px) {
+            .main-year__content-item:nth-child(5) .main-year__content-year {
+              
+              color: #5A168D; } }
+
         .main-year__content-item:last-child {
           margin-bottom: 0; }
+
           .main-year__content-item:last-child .main-year__content-year {
-            color: #7117AF;
+            color: #8e00e0;
             width: 100%;
             margin-bottom: 15px; }
-            @media (min-width: 600px) {
-              .main-year__content-item:last-child .main-year__content-year {
-                width: auto;
-                margin-right: 80px; } }
+
+          @media (min-width: 600px) {
+            .main-year__content-item:last-child .main-year__content-year {
+              width: auto;
+              margin-right: 80px; } }
+
+          @media (min-width: 1200px) {
+            .main-year__content-item:last-child .main-year__content-year {
+              color: #7117AF; } }
+
+
       .main-year__content-year {
         display: inline-block;
         font-family: "Jost", serif;
@@ -862,7 +908,7 @@ input, button, textarea, select {
             margin-right: 6px;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 297 297' style='enable-background:new 0 0 297 297;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%237117AF;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M151.8,0C92.5,0,44.3,49.7,44.3,110.8c0,91,96.8,179.9,100.9,183.6c1.9,1.7,4.2,2.6,6.6,2.6 c2.3,0,4.7-0.9,6.6-2.6c4.1-3.7,100.9-92.6,100.9-183.6C259.3,49.7,211,0,151.8,0z M151.8,272.7c-21.4-21.4-87.6-93-87.6-161.9 c0-49.8,39.3-90.3,87.6-90.3s87.6,40.5,87.6,90.3C239.4,179.7,173.2,251.3,151.8,272.7z'/%3E%3Cpath class='st0' d='M151.8,59.2c-27.4,0-49.8,23.2-49.8,51.6c0,28.5,22.3,51.6,49.8,51.6s49.8-23.2,49.8-51.6 C201.5,82.3,179.2,59.2,151.8,59.2z M151.8,141.9c-16.5,0-29.9-14-29.9-31.1c0-17.2,13.4-31.1,29.9-31.1s29.9,14,29.9,31.1 S168.2,141.9,151.8,141.9z'/%3E%3C/g%3E%3C/svg%3E%0A"); }
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 297 297' style='enable-background:new 0 0 297 297;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%238e00e0;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M151.8,0C92.5,0,44.3,49.7,44.3,110.8c0,91,96.8,179.9,100.9,183.6c1.9,1.7,4.2,2.6,6.6,2.6 c2.3,0,4.7-0.9,6.6-2.6c4.1-3.7,100.9-92.6,100.9-183.6C259.3,49.7,211,0,151.8,0z M151.8,272.7c-21.4-21.4-87.6-93-87.6-161.9 c0-49.8,39.3-90.3,87.6-90.3s87.6,40.5,87.6,90.3C239.4,179.7,173.2,251.3,151.8,272.7z'/%3E%3Cpath class='st0' d='M151.8,59.2c-27.4,0-49.8,23.2-49.8,51.6c0,28.5,22.3,51.6,49.8,51.6s49.8-23.2,49.8-51.6 C201.5,82.3,179.2,59.2,151.8,59.2z M151.8,141.9c-16.5,0-29.9-14-29.9-31.1c0-17.2,13.4-31.1,29.9-31.1s29.9,14,29.9,31.1 S168.2,141.9,151.8,141.9z'/%3E%3C/g%3E%3C/svg%3E%0A"); }
             @media (min-width: 900px) {
               .main-year__content-text span:last-child::before {
                 width: 19px;
@@ -870,7 +916,8 @@ input, button, textarea, select {
             @media (min-width: 1200px) {
               .main-year__content-text span:last-child::before {
                 width: 20px;
-                height: 20px; } }
+                height: 20px; 
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 297 297' style='enable-background:new 0 0 297 297;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%237117AF;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M151.8,0C92.5,0,44.3,49.7,44.3,110.8c0,91,96.8,179.9,100.9,183.6c1.9,1.7,4.2,2.6,6.6,2.6 c2.3,0,4.7-0.9,6.6-2.6c4.1-3.7,100.9-92.6,100.9-183.6C259.3,49.7,211,0,151.8,0z M151.8,272.7c-21.4-21.4-87.6-93-87.6-161.9 c0-49.8,39.3-90.3,87.6-90.3s87.6,40.5,87.6,90.3C239.4,179.7,173.2,251.3,151.8,272.7z'/%3E%3Cpath class='st0' d='M151.8,59.2c-27.4,0-49.8,23.2-49.8,51.6c0,28.5,22.3,51.6,49.8,51.6s49.8-23.2,49.8-51.6 C201.5,82.3,179.2,59.2,151.8,59.2z M151.8,141.9c-16.5,0-29.9-14-29.9-31.1c0-17.2,13.4-31.1,29.9-31.1s29.9,14,29.9,31.1 S168.2,141.9,151.8,141.9z'/%3E%3C/g%3E%3C/svg%3E%0A");} }
             @media (min-width: 1600px) {
               .main-year__content-text span:last-child::before {
                 width: 23px;
@@ -921,7 +968,7 @@ input, button, textarea, select {
          object-fit: cover; }
     .main-photo-block__content {
       position: absolute;
-      top: 10%;
+      top: 15%;
       right: 5%;
       width: 80%;
       height: 310px; }
@@ -1045,7 +1092,8 @@ input, button, textarea, select {
     font-size: 50px;
     line-height: 46px;
     /* margin-left: 25px; */
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: 100;
     text-align: center;
     margin-bottom: 15px;
@@ -1063,6 +1111,8 @@ input, button, textarea, select {
       .why-work__title {
         text-align: left;
         margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 20px;
         margin-left: 70px; } }
     @media (min-width: 1200px) {
       .why-work__title {
@@ -1313,7 +1363,7 @@ input, button, textarea, select {
 
 .why-done {
   position: relative;
-  padding-top: 60px; }
+  padding-top: 40px; }
 
   @media (min-width: 900px) { 
     .why-done {
@@ -1615,7 +1665,7 @@ input, button, textarea, select {
   position: relative;
   z-index: 100;
   padding-top: 60px;
-  margin-bottom: 220px; }
+  margin-bottom: 190px; }
 
   @media (min-width: 900px) { 
     .work-together { 
@@ -1699,7 +1749,7 @@ input, button, textarea, select {
     font-family: "Jost", serif;
     font-weight: 100;
     color: #18F18D;
-    margin-bottom: 77px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     font-size: 55px;
     line-height: 48px;
@@ -1745,7 +1795,15 @@ input, button, textarea, select {
     .work-together__title span:first-child {
       display: inline-block;
       font-weight: 900;
-      margin-right: 20px; }
+      margin-right: 0; }
+    
+    @media (min-width: 500px) { 
+      .work-together__title span:first-child {
+        
+        margin-right: 20px; }
+    }
+
+
       
   .work-together__content {
     display: inline-block;
@@ -1788,11 +1846,13 @@ input, button, textarea, select {
       font-size: 20px;
       line-height: 23px;
       font-weight: 100;
-      margin-bottom: 47px; }
+      margin-bottom: 27px; }
       @media (min-width: 1200px) {
         .work-together__content span {
           font-size: 22px;
+          margin-bottom: 47px;
           line-height: 25px; } }
+
   .work-together__email {
     display: inline-block;
     position: relative;
@@ -1805,10 +1865,11 @@ input, button, textarea, select {
     color: #fff;
     border-bottom: 6px solid #D99934;
     border-radius: 2px;
-    margin-bottom: 45px; }
+    margin-bottom: 25px; }
     @media (min-width: 1200px) {
       .work-together__email {
         font-size: 22px;
+        margin-bottom: 45px;
         line-height: 25px; } }
   .work-together__form {
     width: 100%;
