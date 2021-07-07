@@ -314,7 +314,7 @@ input, button, textarea, select {
 
   @media(max-width: 1200px) {
     .star-bg2  { 
-      top: 1000px;
+      top: 300px;
       left: 0;
     }
   }
@@ -521,11 +521,13 @@ input, button, textarea, select {
         margin-right: 30px; } }
     @media (min-width: 1200px) {
       .main-who-we {
+
         width: 631px;
-        margin-bottom: 0;
+        margin-bottom: 100px;
         margin-right: 150px; } }
     @media (min-width: 1600px) {
       .main-who-we {
+        margin-bottom: 50px;
         margin-right: 200px; } }
     .main-who-we__title {
       width: 100%;
@@ -760,6 +762,7 @@ input, button, textarea, select {
 
       @media (min-width: 900px) {
         .main-year__title {
+          display: inline-block;
           padding-left: 65px;
           font-size: 70px;
           line-height: 50px; 
@@ -1143,8 +1146,8 @@ input, button, textarea, select {
   .why-work__content {
     position: relative;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     z-index: 100; }
     @media (min-width: 1400px) {
       .why-work__content {
@@ -1683,8 +1686,8 @@ input, button, textarea, select {
       .work-together__rocket {
         position: absolute;
         display: inline-block;
-        top: 115%;
-        right: 20%;
+        top: 130%;
+        right: 13%;
         width: 362px;
         height: 297px;
         z-index: 50; } }
@@ -1696,8 +1699,8 @@ input, button, textarea, select {
         display: inline-block;
         width: 755px;
         height: 394px;
-        top: 82%;
-        right: 5%;
+        top: 90%;
+        right: 2%;
         z-index: 50; } }
   .work-together__star1 {
     position: absolute;
