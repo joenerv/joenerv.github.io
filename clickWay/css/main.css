@@ -1928,6 +1928,7 @@ input, button, textarea, select {
             line-height: 25px; } }
       .work-together__form input:focus {
         border-bottom: 1px solid #eac995;
+        background-color: transparent;
         transition: all 0.3s; }
   .work-together__input-name {
     margin-bottom: 15px; }
