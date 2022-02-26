@@ -1,0 +1,50 @@
+/* Указываем box sizing
+
+*
+	box-sizing: border-box
+
+	&::before, &::after
+		box-sizing: border-box
+
+/* Убираем внутренние отступы
+
+ul[class], ol[class]
+	padding: 0
+
+/* Убираем внешние отступы
+
+body, h1, h2, h3, h4, p, ul, ol[class], li, figure, figcaption, blockquote, dl, dd
+	margin: 0
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class
+
+ul[class], ol[class]
+	list-style: none
+ul, ol
+	padding: 0
+	margin: 0
+
+li 
+	list-style-type: none
+
+a 
+	text-decoration: none
+	color: #000
+
+button 
+	cursor: pointer
+	background: transparent
+	padding: 0
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей
+
+a:not([class])
+	text-decoration-skip-ink: auto
+
+/* Наследуем шрифты для инпутов и кнопок
+
+input, button, textarea, select
+	font: inherit
+	outline: none
+	border: none

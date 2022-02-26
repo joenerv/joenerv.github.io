@@ -1,0 +1,357 @@
+@import "reset" //сброс 
+
+* 
+	transition: all 0.3s
+
+html 
+	box-sizing: border-box
+  
+
+body
+	font-family: 'Noah'
+	font-weight: normal
+	font-size: 20px
+	line-height: 120%
+	min-width: 320px
+	color: #000
+	
+
+	//для хром
+	&::-webkit-scrollbar 
+		width: 0 /* ширина для вертикального скролла */
+		height: 0
+		background-color: #fff
+
+	&::-webkit-scrollbar-thumb
+		background-color: #98ADB7
+		border-radius: 3px
+		width: 0
+		height: 0
+
+	// для ff
+	&::-moz-scrollbar 
+		width: 0 /* ширина для вертикального скролла */
+		height: 0
+		background-color: #fff
+
+	&::-moz-scrollbar-thumb
+		background-color: #98ADB7
+		border-radius: 3px
+		width: 0
+		height: 0
+
+
+
+
+// СТИЛИ ДЛЯ СТРАНИЦЫ
+.banner
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	width: 100%
+	height: 100vh
+	background: linear-gradient(105.53deg, #142664 -43.43%, #000000 100%)
+	border-radius: 20px
+
+	&__mail
+		position: absolute
+		top: 20px
+		right: 22px
+		font-size: 10px
+		line-height: 12px
+		color: #00E6B3
+		@media(min-width: 1200px)
+			display: none
+
+	&__logo
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 42px
+		height: 63px
+		border-radius: 20px
+		background: #fff
+		margin-bottom: 15px
+		@media(min-width: 1200px)		
+			width: 92px
+			height: 138px
+			margin-bottom: 32px
+			border-radius: 50px
+
+		&-ring
+			position: relative
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			background: #07303c
+			@media(min-width: 1200px)
+				width: 52px
+				height: 52px
+			
+
+			&::after
+				content: ""
+				position: absolute
+				display: inline-block
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: #fff
+				@media(min-width: 1200px)
+					width: 16px
+					height: 16px
+			
+
+	& h1 
+		font-size: 42px
+		line-height: 120%
+		font-weight: normal
+		color: #fff
+		@media(min-width: 1200px)
+			font-size: 55px
+			line-height: 120%
+
+		& span 
+			padding: 0
+
+			&:nth-child(1)
+				color: #00E6B3
+
+			&:nth-child(2)
+				color: #FF2E93
+
+	&__text
+		font-size: 13px
+		color: #fff
+		@media(min-width: 1200px)
+			display: none
+
+	&__down
+		display: none
+		@media(min-width: 1200px)
+			position: absolute
+			display: inline-block
+			bottom: 16px
+			left: calc(50% - 12px)
+
+.info
+	padding-top: 37px
+	padding-bottom: 231px
+
+	&__header
+		width: 100%
+		padding-left: 58px
+		padding-right: 58px
+		margin-bottom: 178px
+
+		&-cnt
+			display: none
+			@media(min-width: 1200px)
+				display: flex
+				justify-content: space-between
+				max-width: 1612px
+				background: #111111
+				border-radius: 20px
+				padding: 14px 32px
+
+		&-text 
+			display: flex
+			align-items: center
+			font-size: 20px
+			line-height: 25px
+			color: #00E6B3
+
+			& svg 
+				margin-right: 30px
+
+		&-button
+			font-size: 20px
+			line-height: 25px
+			text-decoration-line: underline
+			color: #FFFFFF
+
+			&:hover
+				opacity: 0.8
+
+		&-link
+			display: flex
+			align-items: center
+			
+			& a 
+				font-size: 20px
+				line-height: 25px
+				color: #00E6B3
+
+				&:nth-child(1)
+					margin-right: 45px
+
+				&:hover 
+					opacity 0.5
+	
+	&__text
+		text-align: center
+
+		& h2 
+			font-weight: 400
+			font-size: 30px
+			line-height: 37px
+			color: #000000
+
+		& p 
+			max-width: 1028px
+			font-size: 60px
+			line-height: 70px
+			text-align: center
+			text-transform: uppercase
+			color: #111111
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 70px
+
+		&-icon
+
+			& svg 
+
+				&:nth-child(1)
+					margin-right: 26px
+
+	&__phones
+		position: relative
+		margin-bottom: 92px
+
+		& img 
+			position: absolute
+
+			&:nth-child(1)
+				position: relative
+				top: 0
+				left: 0
+
+			&:nth-child(2)
+				top: 0
+				left: 22%
+
+			&:nth-child(3)
+				top: 300px
+				right: 12%
+
+			&:nth-child(4)
+				top: 0
+				right: 0
+
+	&__sliders
+
+		&-text 
+			font-size: 40px
+			line-height: 34px
+			color: #111111
+			margin-bottom: 111px
+			margin-left: 149px
+
+		&-item
+
+			& .swiper-slide
+				width: auto
+				font-size: 40px
+				line-height: 50px
+
+			&:nth-child(2)
+				margin-bottom: 29px
+
+.why 
+	position: relative
+	background: linear-gradient(315.24deg, #000000 -6.76%, #142664 130%)
+	border-radius: 20px
+	color: #fff
+	padding-top: 124px
+	padding-bottom: 305px 
+	padding-left: 20px
+	padding-right: 20px
+
+	&__logo
+		position: absolute
+
+		&:nth-child(1)
+			top: -3%
+			left: 0
+		
+		&:nth-child(2)
+			bottom: -3%
+			right: 0
+			z-index: 50
+
+
+	&__wrap
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 1400px
+
+	&__subtitle
+		text-align: center
+		font-size: 30px
+		line-height: 37px
+
+	& h2 
+		display: flex
+		justify-content: center
+		font-weight: 400
+		font-size: 80px
+		line-height: 85px
+		margin-bottom: 63px
+
+		& span 
+
+			&:nth-child(1)
+				color: #00E6B3
+			
+			&:nth-child(2)
+				color: #db4897
+				font-style: italic
+
+	&__items
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 25px
+		line-height: 26px
+		margin-bottom: 185px
+
+		& span 
+			display: inline-block
+			width: 30%
+			font-weight: 400
+
+	& ul 
+
+		& li 
+			padding-top: 75px
+			padding-bottom: 75px
+			border-bottom: 1px solid #00E6B3
+
+			&:first-child
+				border-top: 1px solid #00E6B3
+
+			& span 
+				font-size: 40px
+				line-height: 30px
+
+				&:nth-child(1)
+					display: inline-block
+					font-size: 40px
+					line-height: 83px
+					text-transform: uppercase
+					color: #00E6B3
+					margin-right: 94px
+					
+
+				
+
+			
+
+
+
+
+
