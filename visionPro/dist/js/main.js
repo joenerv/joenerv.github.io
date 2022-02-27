@@ -2,19 +2,40 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	'use strict';
 
+	/*
+	let info = document.querySelector('.info');//header
+
+	window.addEventListener('scroll', () => {
+		if(window.pageYOffset > window.innerHeight) {
+			info.classList.add('scroll');
+		} else {
+			info.classList.remove('scroll');
+		}
+	});
+
+	*/
+
+	// скролл вниз при клике на кнопку
+	let bannerDown = document.querySelector('.js_banner_down');//
+
+	bannerDown.addEventListener('click', () => {
+		window.scrollTo({
+			top: window.innerHeight,
+			behavior: 'smooth'
+		})
+	});
+
 	const infoSlidersLeft = new Swiper('.js_info_sliders_left', {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
 		slidesPerView: 'auto',
-		speed: 1200,
+		speed: 2000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: false,
 		  },
-	  
-	  
 
 	});
 	
@@ -23,17 +44,37 @@ window.addEventListener('DOMContentLoaded', function() {
 		direction: 'horizontal',
 		loop: true,
 		slidesPerView: 'auto',
-		speed: 1200,
+		speed: 2000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
 			reverseDirection: true,
 		  },
-	  
 
 	});
 
+	// открыть/закрыть модальное окно
+	let popup = document.querySelector('.js_popup');// модальное окно
+	let openPopup = document.querySelectorAll('.open-popup');// класс открытия popup
+	let popupClose = document.querySelector('.js_popup_close');// закрыть popup X
+	let popupInputs = popup.querySelectorAll('input');// inputs
+
+	openPopup.forEach(elem => {
+		elem.addEventListener('click', () => {
+			popup.classList.add('active');
+			bodyFixPosition();
+		});
+	});
+
+	popupClose.addEventListener('click', () => {
+		popup.classList.remove('active');
+		bodyUnfixPosition();
+		popupInputs.forEach(elem => {
+			elem.value = "";
+		});
+	});
 	
+
 	// 1. Фиксация <body>
 	function bodyFixPosition() {
 
