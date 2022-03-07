@@ -1,7 +1,7 @@
 @import "reset" //сброс 
 
 * 
-	transition: all 0.3s
+	// transition: all 0.3s
 
 html 
 	box-sizing: border-box
@@ -14,6 +14,7 @@ body
 	line-height: 120%
 	min-width: 320px
 	color: #000
+
 	
 
 	//для хром
@@ -66,6 +67,7 @@ body
 			display: none
 
 	&__logo
+		position: relative
 		display: flex
 		align-items: center
 		justify-content: center
@@ -81,7 +83,10 @@ body
 			border-radius: 50px
 
 		&-ring
-			position: relative
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
 			width: 24px
 			height: 24px
 			border-radius: 50%
@@ -89,7 +94,6 @@ body
 			@media(min-width: 1200px)
 				width: 52px
 				height: 52px
-			
 
 			&::after
 				content: ""
@@ -102,7 +106,8 @@ body
 				@media(min-width: 1200px)
 					width: 16px
 					height: 16px
-			
+
+	
 
 	& h1 
 		font-size: 42px
@@ -142,20 +147,29 @@ body
 	@media(min-width: 1200px) 
 		padding-bottom: 231px
 
+	&.scroll
+
+		& .info__header-cnt
+			position: fixed
+			top: 10px
+			width: 1200px
+			z-index: 100
+
 	&__header
 		display: none
 		@media(min-width: 1200px)
 			display: inline-block
 			width: 100%
-			padding-left: 58px
-			padding-right: 58px
+			height: 95px
 			margin-bottom: 178px
 			z-index: 80
-			
 
 		&-cnt
 			display: none
 			@media(min-width: 1200px)
+				position: relative
+				left: 50%
+				transform: translate(-50%)
 				display: flex
 				justify-content: space-between
 				max-width: 1612px
