@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 10000,
+		speed: 6000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 10000,
+		speed: 6000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
@@ -72,23 +72,64 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	// открыть/закрыть модальное окно
-	let popup = document.querySelector('.js_popup');// модальное окно
-	let openPopup = document.querySelectorAll('.open-popup');// класс открытия popup
-	let popupClose = document.querySelector('.js_popup_close');// закрыть popup X
-	let popupInputs = popup.querySelectorAll('input');// inputs
+		let popup = document.querySelector('.js_popup');// модальное окно
+		let openPopup = document.querySelectorAll('.open-popup');// класс открытия popup
+		let popupClose = document.querySelector('.js_popup_close');// закрыть popup X
+		let popupInputs = popup.querySelectorAll('input');// inputs
 
-	openPopup.forEach(elem => {
-		elem.addEventListener('click', () => {
-			popup.classList.add('active');
+		openPopup.forEach(elem => {
+			elem.addEventListener('click', () => {
+				popup.classList.add('active');
+			});
 		});
-	});
 
-	popupClose.addEventListener('click', () => {
-		popup.classList.remove('active');
-		popupInputs.forEach(elem => {
-			elem.value = "";
+		popupClose.addEventListener('click', () => {
+			popup.classList.remove('active');
+			popupInputs.forEach(elem => {
+				elem.value = "";
+			});
 		});
-	});
+
+
+	// маска для ввода номера телфона
+		function setCursorPosition(pos, elem) {
+			elem.focus();
+			if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+			else if (elem.createTextRange) {
+				var range = elem.createTextRange();
+				range.collapse(true);
+				range.moveEnd("character", pos);
+				range.moveStart("character", pos);
+				range.select()
+			}
+		}
+		
+	// маска для номера телефона
+		function maskPhone(event) {
+			var matrix = "+7 (___) ___-__-__",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				val = this.value.replace(/\D/g, "");
+			if (def.length >= val.length) val = def;
+			this.value = matrix.replace(/./g, function(a) {
+				return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+			});
+			if (event.type == "blur") {
+				if (this.value.length == 2) this.value = ""
+			} else setCursorPosition(this.value.length, this)
+		};
+
+	// для инпутов с номером телефона
+		let inputPhoneNumber = document.querySelectorAll('.phone-number');//input с номером телефона
+
+		if(inputPhoneNumber) {
+			inputPhoneNumber.forEach(elem => {
+				elem.addEventListener("input", maskPhone, false);
+				elem.addEventListener("focus", maskPhone, false);
+				elem.addEventListener("blur", maskPhone, false); 
+			});	
+		}
+
 	
 		
 });
