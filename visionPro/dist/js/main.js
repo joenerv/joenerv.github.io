@@ -44,12 +44,13 @@ window.addEventListener('DOMContentLoaded', function() {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
+		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 2000,
+		speed: 10000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
-			disableOnInteraction: false,
+			disableOnInteraction: true,
 		  },
 
 	});
@@ -58,11 +59,13 @@ window.addEventListener('DOMContentLoaded', function() {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
+		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 2000,
+		speed: 10000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
+			disableOnInteraction: true,
 			reverseDirection: true,
 		  },
 

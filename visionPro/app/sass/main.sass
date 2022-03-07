@@ -80,7 +80,7 @@ body
 			width: 92px
 			height: 138px
 			margin-bottom: 32px
-			border-radius: 50px
+			border-radius: 40px
 
 		&-ring
 			position: absolute
@@ -310,10 +310,11 @@ body
 				@media(max-width: 500px) 
 					width: 80px
 				
-
 	&__sliders
+		
 
 		&-text 
+			text-align: center
 			font-size: 14px
 			line-height: 16px
 			color: #111111
@@ -322,11 +323,18 @@ body
 			@media(min-width: 1200px) 
 				font-size: 40px
 				line-height: 34px
-				margin-bottom: 111px
+				margin-bottom: 107px
 				margin-left: 149px
 
-
 		&-item
+			padding-top: 15px
+			padding-bottom: 15px
+			@media(min-width: 1200px) 
+				padding-top: 45px
+				padding-bottom: 45px
+
+			& .swiper-wrapper
+				animation-timing-function: linear !important
 
 			& .swiper-slide
 				width: auto
@@ -338,11 +346,13 @@ body
 					line-height: 50px
 					font-style: normal
 
-
 			&:nth-child(2)
-				margin-bottom: 10px
+				border-bottom: 1px solid #000
 				@media(min-width: 1200px) 
-					margin-bottom: 29px
+					border-top: 1px solid #000
+
+			&:nth-child(3)
+				border-bottom: 1px solid #000
 
 .why 
 	position: relative
@@ -352,23 +362,33 @@ body
 	padding: 60px 20px 110px 20px 
 	@media(min-width: 1200px) 
 		background: linear-gradient(315.24deg, #000000 -6.76%, #142664 130%)
-		padding: 124px 20px 124px 20px
-		
+		padding: 388px 20px 124px 20px
+
+	&__img
+		position: absolute
+		top: -11%
+		left: 50%
+		transform: translateX(-21%)
+		@media(min-width: 1800px) 
+			transform: translateX(-5%)
 
 	&__logo
 		position: absolute
 		transform: scale(0.6)
 
-		&:nth-child(1)
+		&:nth-child(2)
 			top: -25px
 			left: -11px
 			@media(min-width: 1200px) 
-				top: -3%
-				left: 0
+				top: -5%
+				left: -30px
 		
-		&:nth-child(2)
+		&:nth-child(3)
 			bottom: -25px
 			right: -11px
+			@media(min-width: 1200px) 
+				bottom: -5%
+				right: -30px
 
 		& svg 
 			width: 53px
@@ -376,7 +396,6 @@ body
 			@media(min-width: 1200px) 
 				width: 149px
 				height: 233px
-
 
 	&__wrap
 		position: relative
@@ -416,21 +435,6 @@ body
 			&:nth-child(2)
 				color: #db4897
 				font-style: italic
-
-	&__items
-		display: none
-		@media(min-width: 1200px) 
-			display: flex
-			align-items: center
-			justify-content: space-between
-			font-size: 25px
-			line-height: 26px
-			margin-bottom: 185px
-
-		& span 
-			display: inline-block
-			width: 30%
-			font-weight: 400
 
 	& ul 
 
@@ -761,7 +765,4 @@ body
 			&:hover 
 				@media(min-width: 1200px) 
 					opacity: 0.8
-
-
-
 
