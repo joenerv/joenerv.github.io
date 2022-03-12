@@ -118,6 +118,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			pin: true
 		});
 
+
 	// маска для ввода номера телфона
 		function setCursorPosition(pos, elem) {
 			elem.focus();
@@ -156,6 +157,9 @@ window.addEventListener('DOMContentLoaded', function() {
 				elem.addEventListener("blur", maskPhone, false); 
 			});	
 		}
+
+	// wow
+		new WOW().init();
 
 	
 		
