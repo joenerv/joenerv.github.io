@@ -6,8 +6,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	let info = document.querySelector('.info');//header
 
 	window.addEventListener('scroll', () => {
-		console.log(window.innerHeight);
-		console.log(window.pageYOffset);
 		if(window.pageYOffset > window.innerHeight) {
 			info.classList.add('scroll');
 		} else {
@@ -15,20 +13,20 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 
+	// паралакс
+	const rellax = new Rellax('.rellax');
 
 	// для поворота глаза
 	let bannerLogoRing = document.querySelector('.js_banner_logo_ring');
 
 	document.querySelector('body').addEventListener('mousemove', (e) => {
-		let x = e.clientX * 100 / window.innerWidth + "%";
-		let y = e.clientY * 100 / window.innerHeight + "%";
-		console.log(x + ' ' + y);
+		let x = e.clientX * 90 / window.innerWidth + "%";
+		let y = e.clientY * 90 / window.innerHeight + "%";
 		bannerLogoRing.style.left = x ;
 		bannerLogoRing.style.top = y;
 		bannerLogoRing.style.transform = "translate(-" + x + ", -" + y + ")";
 
 	});
-
 
 	// скролл вниз при клике на кнопку
 	let bannerDown = document.querySelector('.js_banner_down');//
@@ -90,6 +88,35 @@ window.addEventListener('DOMContentLoaded', function() {
 			});
 		});
 
+	// при клике на заказать креативы
+		let infoHeaderButton = document.querySelector('.js_info_header_button');
+
+		infoHeaderButton.addEventListener('click', () => {
+			console.log();
+
+			window.scrollTo({
+				top: (popup.getBoundingClientRect().top + window.pageYOffset) - 150,
+				behavior: 'smooth'
+			})
+
+
+			
+
+		});
+
+	// анимация при скролле
+		const tl = gsap.timeline();
+
+		tl.fromTo('.js_why_list', {x: '80%'}, {x: 0})
+
+		ScrollTrigger.create({
+			animation: tl,
+			trigger: '.why',
+			start: 'top top',
+			end: 'bottom',
+			scrub: true,
+			pin: true
+		});
 
 	// маска для ввода номера телфона
 		function setCursorPosition(pos, elem) {
