@@ -14,19 +14,19 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	// паралакс
-	const rellax = new Rellax('.rellax');
+		const rellax = new Rellax('.rellax');
 
 	// для поворота глаза
-	let bannerLogoRing = document.querySelector('.js_banner_logo_ring');
+		let bannerLogoRing = document.querySelector('.js_banner_logo_ring');
 
-	document.querySelector('body').addEventListener('mousemove', (e) => {
-		let x = e.clientX * 90 / window.innerWidth + "%";
-		let y = e.clientY * 90 / window.innerHeight + "%";
-		bannerLogoRing.style.left = x ;
-		bannerLogoRing.style.top = y;
-		bannerLogoRing.style.transform = "translate(-" + x + ", -" + y + ")";
+		document.querySelector('body').addEventListener('mousemove', (e) => {
+			let x = e.clientX * 90 / window.innerWidth + "%";
+			let y = e.clientY * 90 / window.innerHeight + "%";
+			bannerLogoRing.style.left = x ;
+			bannerLogoRing.style.top = y;
+			bannerLogoRing.style.transform = "translate(-" + x + ", -" + y + ")";
 
-	});
+		});
 
 	// скролл вниз при клике на кнопку
 	let bannerDown = document.querySelector('.js_banner_down');//
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 6000,
+		speed: 10000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		loop: true,
 		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
-		speed: 6000,
+		speed: 10000,
 		spaceBetween: 40,
 		autoplay: {
 			delay: 0,
@@ -105,19 +105,23 @@ window.addEventListener('DOMContentLoaded', function() {
 		});
 
 	// анимация при скролле
-		const tl = gsap.timeline();
 
-		tl.fromTo('.js_why_list', {x: '80%'}, {x: 0})
+		if(window.innerWidth > 1199) {
+			const tl = gsap.timeline();
 
-		ScrollTrigger.create({
-			animation: tl,
-			trigger: '.why',
-			start: 'top top',
-			end: 'bottom',
-			scrub: true,
-			pin: true
-		});
+			tl.fromTo('.js_why_list', {x: '120%'}, {x: 0})
 
+			ScrollTrigger.create({
+				animation: tl,
+				trigger: '.why',
+				start: 'top top',
+				end: 'bottom',
+				scrub: true,
+				pin: true
+			});
+
+		}
+		
 
 	// маска для ввода номера телфона
 		function setCursorPosition(pos, elem) {
