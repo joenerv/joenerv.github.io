@@ -5,7 +5,14 @@ html(lang="ru-RU")
 
         include tamplate/style.pug
 
-        title VisionPro
+        title(itemprop="headline") VisionPro
+        //- meta(name="google-site-verification" content="qPo4qVZAtkwAaK9GVHIFN8Mt44XqEvj982k79udM-E8")
+        meta(property="og:title" content="VisionPro")
+        //- meta(property="og:url" content="https://a101-deti.ru/")
+        meta(property="og:description" content="VISIONPRO - фабрика креативных решений для продвижения мобильных игр и приложений. Мы следим за вашим успехом! Email: info@visionpro.pro")
+        meta(property="og:image" content="img/logo.png")
+        meta(property="og:image:width" content="968")
+        meta(property="og:image:height" content="504")
         
     body
 
@@ -183,10 +190,10 @@ html(lang="ru-RU")
                                     stop(offset='1' stop-color='#40F498')
 
                 .info__phones
-                    img(src="img/phone-img1.png", alt="phone", data-rellax-speed="-3").rellax
-                    img(src="img/phone-img2.png", alt="phone", data-rellax-speed="-1").rellax
-                    img(src="img/phone-img3.png", alt="phone", data-rellax-speed="1").rellax
-                    img(src="img/phone-img4.png", alt="phone", data-rellax-speed="3").rellax
+                    img(src="img/phone-img1.png", alt="phone", data-rellax-speed="0").rellax
+                    img(src="img/phone-img2.png", alt="phone", data-rellax-speed="5").rellax
+                    img(src="img/phone-img3.png", alt="phone", data-rellax-speed="10").rellax
+                    img(src="img/phone-img4.png", alt="phone", data-rellax-speed="15").rellax
 
                 .info__sliders
 
