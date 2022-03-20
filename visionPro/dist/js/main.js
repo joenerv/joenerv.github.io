@@ -45,11 +45,20 @@ window.addEventListener('DOMContentLoaded', function() {
 		loopFillGroupWithBlank: true,
 		slidesPerView: 'auto',
 		speed: 10000,
-		spaceBetween: 40,
+		
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: true,
 		  },
+
+		breakpoints: { 
+			320: {
+				spaceBetween: 16,
+			},
+			1200: {
+				spaceBetween: 40,
+			}
+		}
 
 	});
 	
