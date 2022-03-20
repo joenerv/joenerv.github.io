@@ -1,6 +1,6 @@
 doctype html
 html(lang="ru-RU")
-    head
+    head(itemscope itemtype="http://schema.org/WPHeader")
         meta(charset = 'utf-8')
 
         include tamplate/style.pug
@@ -9,11 +9,16 @@ html(lang="ru-RU")
         title(itemprop="headline") VisionPro
         //- meta(name="google-site-verification" content="qPo4qVZAtkwAaK9GVHIFN8Mt44XqEvj982k79udM-E8")
         meta(property="og:title" content="VisionPro")
-        //- meta(property="og:url" content="https://a101-deti.ru/")
+        meta(property="og:url" content="https://visionpro.pro/")
         meta(property="og:description" content="VISIONPRO - фабрика креативных решений для продвижения мобильных игр и приложений. Мы следим за вашим успехом! Email: info@visionpro.pro")
         meta(property="og:image" content="img/logo.png")
         meta(property="og:image:width" content="968")
         meta(property="og:image:height" content="504")
+
+        meta(name="description" itemprop="description" content="VISIONPRO - фабрика креативных решений для продвижения мобильных игр и приложений. Мы следим за вашим успехом! Email: info@visionpro.pro")
+        meta(itemprop="keywords" name="keywords" content="мобильные приложения, мобильные игры, реклама игр, KPI, SPEND, метрика, реклама мобильных игр, креатив, мобильный креатив, ROAS, UA, UA компания, видео-реклама, mobile game advertising, мислид, misslead, cta")
+
+
         
     body
 

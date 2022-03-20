@@ -451,7 +451,9 @@ main
 		background: rgba(0, 230, 179, 0.44)
 		z-index: 5
 		border-radius: 50%
-		filter: blur(140px)
+		filter: blur(100px)
+		@media(min-width: 1200px) 
+			filter: blur(140px)
 
 	&__bg1
 		width: 100%
@@ -732,6 +734,8 @@ main
 	flex-direction: column
 	background: linear-gradient(180deg, #142664 0%, #111111 100%)	
 	border-radius: 20px
+	@media(min-width: 600px) 
+		height: 500px
 	@media(min-width: 1200px) 
 		height: auto
 		flex-direction: row
