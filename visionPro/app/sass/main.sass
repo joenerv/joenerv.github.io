@@ -60,21 +60,14 @@ main
 	background: linear-gradient(123.4deg, #142664 -16.96%, #000000 99.27%)
 	border-radius: 20px
 	z-index: 50
+	@media(min-width: 800px) 
+		height: 80vh
 	@media(min-width: 1200px) 
 		height: 100vh
 		background: linear-gradient(105.53deg, #142664 -43.43%, #000000 100%)
 
-	&__mail
-		position: absolute
-		top: 20px
-		right: 22px
-		font-size: 10px
-		line-height: 12px
-		color: #00E6B3
-		@media(min-width: 1200px)
-			display: none
-
-	&__bg
+	&::after
+		content: ""
 		position: absolute
 		display: inline-block
 		top: 0
@@ -94,6 +87,18 @@ main
 			height: 660px
 			background: rgba(0, 230, 179, 0.44)
 			filter: blur(150px)
+
+	&__mail
+		position: absolute
+		top: 20px
+		right: 22px
+		font-size: 10px
+		line-height: 12px
+		color: #00E6B3
+		@media(min-width: 1200px)
+			display: none
+
+	
 
 	&__logo
 		position: relative
@@ -141,8 +146,8 @@ main
 
 	&__img 
 		position: relative
-		width: 145px
-		height: 26px
+		width: 170px
+		height: 45px
 		object-fit: contain
 		z-index: 10
 		@media(min-width: 1200px) 
@@ -151,8 +156,8 @@ main
 
 	&__text
 		position: relative
-		z-index: 10
-		font-size: 11px
+		z-index: 13
+		font-size: 13px
 		color: #fff
 		@media(min-width: 1200px) 
 			font-size: 22px
@@ -274,6 +279,11 @@ main
 				@media(max-width: 1200px) 
 					display: inline-block
 					width: 100%
+
+				&:nth-child(3)
+					font-style: italic
+					@media(min-width: 1200px) 
+						font-style: normal
 
 		&-mobile-link
 			font-size: 17px
@@ -445,6 +455,22 @@ main
 	@media(max-height: 900px) 
 		padding: 185px 20px 124px 20px
 
+	&::after 
+		content: ""
+		position: absolute
+		display: inline-block
+		width: 100%
+		height: 234px
+		top: 20%
+		left: 0
+		background: rgba(0, 230, 179, 0.44)
+		z-index: 5
+		border-radius: 50%
+		filter: blur(100px)
+		@media(min-width: 1200px) 
+			display: none
+
+
 	&__bg1,
 	&__bg2,
 	&__bg3
@@ -458,10 +484,7 @@ main
 			filter: blur(140px)
 
 	&__bg1
-		width: 100%
-		height: 234px
-		top: 20%
-		left: 0
+		display: none
 		@media(min-width: 1200px) 
 			width: 511px
 			height: 390px
@@ -745,7 +768,8 @@ main
 		background: linear-gradient(326.19deg, #000000 -6.05%, #142664 137.03%)
 		padding: 200px 150px
 
-	&__bg
+	&::after
+		content: ""
 		position: absolute
 		display: inline-block
 		top: 40%
