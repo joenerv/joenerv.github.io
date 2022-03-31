@@ -161,6 +161,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		};
 
 	// для инпутов с номером телефона
+		/*
 		let inputPhoneNumber = document.querySelectorAll('.phone-number');//input с номером телефона
 
 		if(inputPhoneNumber) {
@@ -170,6 +171,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				elem.addEventListener("blur", maskPhone, false); 
 			});	
 		}
+		*/
 
 	// wow
 		new WOW().init();
