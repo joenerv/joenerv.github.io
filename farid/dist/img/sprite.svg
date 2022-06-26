@@ -1,0 +1,16 @@
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+
+
+</svg>
+
+
+<!-- пример кода для html/pug -->
+
+
+<!-- <svg width="20" height="20">
+    <use xlink:href="img/sprite.svg#dialogue"></use>
+</svg> -->
+
+<!-- svg(width='20' height='20')
+        use(xlink:href='img/sprite.svg#dialogue') -->
+

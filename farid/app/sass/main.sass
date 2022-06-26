@@ -1,0 +1,56 @@
+@import "reset" //сброс 
+@import "components/variables" //переменные
+
+// компоненты страниц
+@import "components/_header" //header
+@import "components/_footer" //footer
+
+
+// Страницы
+@import "_page-main" //главная
+
+* 
+	// transition: all 0.3s
+	//для хром
+	// &::-webkit-scrollbar 
+	// 	width: 0 /* ширина для вертикального скролла */
+	// 	height: 0
+	// 	background-color: #fff
+
+	// &::-webkit-scrollbar-thumb
+	// 	background-color: #98ADB7
+	// 	border-radius: 3px
+	// 	width: 0
+	// 	height: 0
+
+	// // для ff
+	// &::-moz-scrollbar 
+	// 	width: 0 /* ширина для вертикального скролла */
+	// 	height: 0
+	// 	background-color: #fff
+
+	// &::-moz-scrollbar-thumb
+	// 	background-color: #98ADB7
+	// 	border-radius: 3px
+	// 	width: 0
+	// 	height: 0
+
+*, *::before,  *::after 
+    box-sizing: border-box
+
+body
+	font-family: 'Anonymous Pro'
+	min-width: 320px
+	font-weight: normal
+	font-size: 16px
+	line-height: 130%
+	color: #1D1D1D
+	text-transform: uppercase
+
+.wrap-content
+	// width: 1920px
+	max-width: 1920px
+	padding-left: 50px
+	padding-right: 50px
+
+

@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset = 'utf-8')
+
+        include tamplate/style.pug
+
+        title Farid
+        
+    body
+
+        //- миксины
+        include tamplate/mixin
+
+        // header
+        //- include tamplate/header
+
+        // ОСНОВНОЙ КОНТЕНТ
+        include tamplate/pages/main
+        
+
+        // footer
+        //- include tamplate/footer
+
+        //- скрипты
+        include tamplate/script.pug
