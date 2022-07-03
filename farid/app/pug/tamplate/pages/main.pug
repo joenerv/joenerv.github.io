@@ -10,24 +10,36 @@ main
 
                 .main-header__link
 
-                    a(href="#") обо мне
-                    a(href="#") Работы
-                    a(href="#") Контакты
-                    a(href="#") Поделиться
+                    a(href="#about") обо мне
+                    a(href="#work") Работы
+                    a(href="#contacts") Контакты
+                    a(href="#").main-header__link-shared Поделиться
+
+                        .main-header__link-shared-popup
+                            a(href="#" target="_blank") telegram
+                            a(href="#" target="_blank") Instagram
+                            a(href="#" target="_blank") VKontakte
+                            
+
+                button.main-header__burger
+                    span 
+
+
+
 
             .main-quote 
 
                 p «Я борюсь за две вещи в дизайне: простоту и ясность. Из этих двух вещей рождается великолепный дизайн»
                 span Линдон Лидер
 
-        .main-baner 
+        .main-baner(id="about") 
 
             .wrap-content
                 span ui/ux ДИЗАЙНЕР
                 span МЕХТИЕВ
                 span ФАРИД
 
-                a(href="#") 
+                a(href="#contacts") 
                     |свяжитесь со мной
                     svg(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
                         path(fill-rule='evenodd' clip-rule='evenodd' d='M10.9759 10.2512L0.724686 0L0.000488281 0.724198L10.2521 10.9758H3.80672V12L10.9759 12H12.0001L12.0001 12V10.9758H12.0001V3.80664H10.9759V10.2512Z' fill='#1D1D1D')
@@ -83,7 +95,11 @@ main
                     li Отрисовка дизайн-макетов
                     li Адаптация к мобильным устройствам
 
-        .main-works 
+        .main-works(id="work") 
+
+            svg(width='260' height='260' viewBox='0 0 260 260' fill='none' xmlns='http://www.w3.org/2000/svg').main-works__star
+                path(d='M130 0L143.789 116.211L260 130L143.789 143.789L130 260L116.211 143.789L0 130L116.211 116.211L130 0Z' fill='#9225FF')
+
 
             .wrap-content
 
@@ -153,7 +169,11 @@ main
 
                     img(src="img/works-img5.png", alt="photo")
 
-        .main-about 
+        .main-about(id="about") 
+
+            svg(width='260' height='260' viewBox='0 0 260 260' fill='none' xmlns='http://www.w3.org/2000/svg').main-about__star
+                path(d='M130 0L143.789 116.211L260 130L143.789 143.789L130 260L116.211 143.789L0 130L116.211 116.211L130 0Z' fill='#9225FF')
+
 
             .main-about__title обо мне
 
@@ -162,16 +182,48 @@ main
                 span Позиция 
                 span СоЗдания 
                 span 
-                    mark яркого и 
+                    mark яркого 
+                    |и 
                 span функционального 
                 span дизайна.
 
                 .main-about__text-img 
                     img(src="img/photo.png", alt="photo")
 
-        .main-contact
+        .main-contact(id="contacts")
+
+            svg(width='156' height='311' viewBox='0 0 156 311' fill='none' xmlns='http://www.w3.org/2000/svg').main-contact__img
+                path(d='M155.5 0L167.088 97.2456L215.007 11.8367L188.498 106.114L265.455 45.5449L204.886 122.502L299.163 95.9927L213.754 143.912L311 155.5L213.754 167.088L299.163 215.007L204.886 188.498L265.455 265.455L188.498 204.886L215.007 299.163L167.088 213.754L155.5 311L143.912 213.754L95.9927 299.163L122.502 204.886L45.5449 265.455L106.114 188.498L11.8367 215.007L97.2456 167.088L0 155.5L97.2456 143.912L11.8367 95.9927L106.114 122.502L45.5449 45.5449L122.502 106.114L95.9927 11.8367L143.912 97.2456L155.5 0Z' fill='#9225FF')
+
+            svg(width='144' height='144' viewBox='0 0 144 144' fill='none' xmlns='http://www.w3.org/2000/svg').main-contact__img-mobile
+                path(d='M72 0L77.3653 45.0269L99.5532 5.48067L87.279 49.1333L122.912 21.0883L94.8667 56.721L138.519 44.4468L98.9731 66.6347L144 72L98.9731 77.3653L138.519 99.5532L94.8667 87.279L122.912 122.912L87.279 94.8667L99.5532 138.519L77.3653 98.9731L72 144L66.6347 98.9731L44.4468 138.519L56.721 94.8667L21.0883 122.912L49.1333 87.279L5.48067 99.5532L45.0269 77.3653L0 72L45.0269 66.6347L5.48067 44.4468L49.1333 56.721L21.0883 21.0883L56.721 49.1333L44.4468 5.48067L66.6347 45.0269L72 0Z' fill='#9225FF')
 
             .main-contact__title контакты
+
+            .main-contact__cnt
+
+                .main-contact__name Farid mekhtiev
+
+                .main-contact__write
+
+                    span Если у вас есть проект, вы можете написать мне
+                    a(href="mailto:fariduxui@gmail.com") fariduxui@gmail.com
+
+                .main-contact__link
+
+                    .main-contact__link-wrap
+
+                        a(href="#work") РАБОТЫ
+                        a(href="#about") ОБО мНЕ
+
+                    .main-contact__link-wrap
+                        a(href="https://t.me/far_mekh") telegram
+                        a(href="https://www.instagram.com/far_meh/") Instagram
+                        a(href="https://vk.com/id641013465") VKontakte
+
+                
+
+
 
 
 
