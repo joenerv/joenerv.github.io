@@ -2,7 +2,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	'use strict';
 
+	// открыть popup ПОДЕЛИТЬСЯ
+	if(document.querySelector('.js_main_header_link_shared')) {
+		let mainHeaderLinkShared = document.querySelector('.js_main_header_link_shared');
 
+		mainHeaderLinkShared.addEventListener('click', () => {
+			mainHeaderLinkShared.classList.toggle('active');
+		});
+	}
 	
 	// 1. Фиксация <body>
 	function bodyFixPosition() {

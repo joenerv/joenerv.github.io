@@ -2,14 +2,16 @@
     overflow: hidden
 
     &-header
+        position: relative
         display: flex
         justify-content: space-between
         padding-top: 19px
         text-transform: uppercase      
-        margin-bottom: 35px      
+        margin-bottom: 35px     
+        z-index: 100 
         @media(min-width: 1200px) 
             padding-top: 46px
-            margin-bottom: 72px    
+            margin-bottom: 72px   
 
         & span 
             font-weight: 700
@@ -20,7 +22,9 @@
             position: relative
             display: none
             @media(min-width: 1200px) 
+                position: relative
                 display: inline-block
+                z-index: 100
 
             & a 
                 white-space: nowrap
@@ -36,8 +40,16 @@
 
             &-shared
                 position: relative
-                display: inloine-block
+                display: inline-block
                 width: 90px
+                cursor: pointer
+                z-index: 100
+
+                &.active
+
+                    & .main-header__link-shared-popup
+                        opacity: 1
+                        pointer-events: auto
 
                 &-popup
                     position: absolute
@@ -49,6 +61,7 @@
                     opacity: 0
                     transition: all 0.3s
                     pointer-events: none
+                    z-index: 100
 
                     & .main-header__link-shared
                         display: none
@@ -61,18 +74,14 @@
                         letter-spacing: -0.02em
                         text-decoration-line: underline
                         text-align: right
+                        cursor: pointer
 
                         &:not(:last-child)
                             margin-bottom: 10px
                             
-
-
-
-
         &__burger
             @media(min-width: 1200px) 
                 display: none
-
 
     &-quote 
         max-width: 335px
